@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #000000;
+  --color-surface: #0a0a0a;
+  --color-ink: #ffffff;
+  --color-muted: #a1a1a1;
+  --color-line: #2a2a2a;
+  --color-field: #444444;
+  --color-brand: #ffffff;
+  --color-brand-dark: #d4d4d4;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+/* In the base layer so a component can replace the ring with its own focus style
+   (the ask box highlights its field border instead). */
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 2px;
+  }
+}
+
+/* Scroll scene: a pinned stage whose example panel fills in as the page scrolls.
+   components/scroll-scene.tsx sets data-live, data-step and the three progress
+   variables. Without JavaScript, or with reduced motion, none of that is set and
+   the scene renders complete and unpinned. */
+.scene {
+  --p1: 1;
+  --p2: 1;
+  --p3: 1;
+}
+
+.scene-stage {
+  padding-block: 4rem;
+}
+
+.scene-steps {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.scene[data-live] {
+  height: 340vh;
+}
+
+.scene[data-live] .scene-stage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  padding-block: 0;
+}
+
+.scene[data-live] .scene-steps {
+  display: block;
+  position: relative;
+  min-height: 10rem;
+}
+
+.scene[data-live] .scene-step {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 200ms linear;
+}
+
+.scene[data-live][data-step="1"] .scene-step[data-n="1"],
+.scene[data-live][data-step="2"] .scene-step[data-n="2"],
+.scene[data-live][data-step="3"] .scene-step[data-n="3"] {
+  opacity: 1;
+}
+
+.scene-type {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: bottom;
+  max-width: calc(var(--p1) * 27ch);
+}
+
+.scene-match {
+  opacity: clamp(0, calc(var(--p2) * 3 - var(--i)), 1);
+}
+
+.scene-bar > span {
+  display: block;
+  height: 100%;
+  background: var(--color-ink);
+  width: calc(var(--score) * var(--p2) * 100%);
+}
+
+.scene-result {
+  opacity: clamp(0, calc(var(--p3) * 4 - var(--i)), 1);
+}
+
+/* Page progress ruler, bottom right. */
+.ruler-mark {
+  left: calc(var(--page, 0) * 100%);
+}

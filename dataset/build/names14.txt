@@ -1,0 +1,46 @@
+anthropic openai cohere together fireworks groq cerebras
+sambanova graphcore tenstorrent
+nscale nebius crusoe foundry voltage
+scaleway outscale
+lightning gradient saturncloud
+determined iguazio valohai polyaxon
+dominodatalab datarobot h2o dataiku
+alteryx knime rapidminer
+sas stata mathworks wolfram
+overleaf authorea figshare zenodo
+orcid crossref datacite
+jstor elsevier springer wiley taylorfrancis
+scopus dimensions semanticscholar
+researchgate academia
+mendeley zotero paperpile readcube
+labarchives benchling dotmatics
+schrodinger openeye chemaxon
+cresset certara simulations
+ansys comsol cadence synopsys siemens
+altium kicad autodeskfusion onshape
+solidworks ptc dassault
+procore autodeskconstruction bluebeam
+plangrid fieldwire buildertrend
+servicetitan jobber housecallpro simpro
+fergus tradify aroflo
+mindbody vagaro booker fresha squire
+glossgenius boulevard phorest
+shortcuts timely acuity
+setmore simplybook
+toast lightspeed revel touchbistro
+upserve squarerestaurants
+olo chowly otter deliverect
+checkmate itsacheckmate
+doordashdrive ubereatsapi grubhubapi
+flipdish slice owner
+punchh paytronix spendgo
+thanx fivestars belly
+loyaltylion smile yotpo
+okendo judgeme stamped
+gorgias richpanel reamaze gladly
+ada forethought netomi
+intercomapp drift qualified
+chilipiper calendlyapi
+clearbitapi apollo lusha cognism
+zoominfoapi seamless uplead
+"""

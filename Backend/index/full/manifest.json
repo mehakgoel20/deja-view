@@ -1,0 +1,6 @@
+{
+ "name": "full",
+ "count": 2856,
+ "dim": 1536,
+ "embed_model": "text-embedding-3-small"
+}

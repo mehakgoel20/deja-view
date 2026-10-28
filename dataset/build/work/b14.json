@@ -1,0 +1,402 @@
+[
+ {
+  "org": "HubSpot",
+  "date": "2026-04-30",
+  "url": "https://status.hubspot.com/incidents/71mpyt1c37x1",
+  "name": "Workflows Outage",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "Between 9:45 AM EDT (UTC -04:00) on Apr 30, 2026 and 10:30 AM EDT (UTC -04:00) on Apr 30, 2026, some customers experienced errors when creating or updating workflows. The root cause has been resolved, and no data was lost. We apologize for any inconvenience and appreciate your patience as we resolved the issue. || We are investigating an issue impacting Workflows. We will provide an update when we have more information. The information on this page reflects our understanding of the incident and impact at the time of the update."
+ },
+ {
+  "org": "HubSpot",
+  "date": "2026-02-19",
+  "url": "https://status.hubspot.com/incidents/q60qmxhzhpgn",
+  "name": "CRM record creation is unavailable for some customers",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "CRM record creation is now fully accessible. We've identified and addressed the root cause of the issue. The incident has been fully resolved and CRM record creation should be working properly. No data was lost. || We've addressed the issue that caused CRM record creation to be unavailable since 1:11 PM EST (UTC -05:00) on Feb 19, 2026. We're monitoring performance closely to ensure the tools recover properly. We will be back with an update within 15 minutes."
+ },
+ {
+  "org": "InfluxData",
+  "date": "2026-01-09",
+  "url": "https://status.influxdata.com/incidents/cvqssdxm32lm",
+  "name": "Outage in AWS eu-central-1 - visibility to tasks",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved. || Task visibility has been restored to the region and we are continuing to monitor. || We are monitoring the recovery of task visibility in the region and will update here on any change of status. || We\u2019ve identified the root cause and are implementing a remediation. Tasks remain operational, and reporting functionality is in the process of recovering. || Task execution is working correctly. We are still fixing a UI/API display issue, which does not affect task behavior. || We have resolved the issue with regard to task execution, and tasks are running correctly. We are still working on a related issue, where the task execution state is not showing correctly in the UI or APIs. This does not impact the tasks themselves || Tasks are running as expected but Task Run Reporting is still affected. The investigation continues into this and all other service issues. || We are continuing to investigate this issue. || We are continuing to investigate the issue || We are continuing to investigate this issue. || We are currently investigating this issue."
+ },
+ {
+  "org": "InfluxData",
+  "date": "2026-01-06",
+  "url": "https://status.influxdata.com/incidents/hzlc7p3mr657",
+  "name": "Increase in query times in the US-EAST-1 and EU-CENTRAL-1 clusters",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "|| A fix has been implemented and we are monitoring the results. || The root cause of the incident has been identified, and we are monitoring the clusters as they continue to recover. || The root cause of the incident has been identified, and we are monitoring the clusters as they continue to recover."
+ },
+ {
+  "org": "JFrog",
+  "date": "2026-02-07",
+  "url": "https://status.jfrog.io/incidents/dhgknczjbfv5",
+  "name": "Partial outage in JFrog Cloud Platform affecting services on Azure US West",
+  "sev": "High",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "Status: Resolved / Post-Recovery Validation Impact: Services Restored JFrog services are now fully operational following the resolution of a significant upstream infrastructure outage within Azure. Recovery & Ongoing Validation While primary connectivity and service layers have been restored, the JFrog engineering team remains in an active monitoring phase. For further technical details regarding the root cause of the underlying infrastructure failure, please refer to the official Azure Status Page - https://azure.status.microsoft/en-us/status || JFrog Engg have recovered Artifactory services for all customers in the region Azure US West region. This is due to underlying compute issues at the Microsoft Azure infrastructure layer. Action: JFrog Engineers are actively working to mitigate the impact and recover services."
+ },
+ {
+  "org": "JFrog",
+  "date": "2025-06-12",
+  "url": "https://status.jfrog.io/incidents/gdb15036cnk8",
+  "name": "JFrog Google Cloud Platform degraded performance",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved. || We are continuing to monitor for any further issues. || A fix has been implemented and we are monitoring the results. || We're impacted by a global outage affecting Google Cloud's multi-regional services. This incident has been identified by GCP and they are actively working on rolling out an emergency patch to restore service. For real-time updates from Google Cloud, pls refer to: https://status.cloud.google.com/incidents/ow5i3PPK96RduMcb1SsW || Google Cloud Platform report a major outage for Storage, affecting Artifactory's uploads and downloads. ETA for their next update is within the close half an hour. || Multiple customers across multiple JFrog's GCP regions are experiencing an outage due to a GCP global outage"
+ },
+ {
+  "org": "JFrog",
+  "date": "2025-10-20",
+  "url": "https://status.jfrog.io/incidents/j7w7p8g9q1mq",
+  "name": "Artifactory Service outage affecting multiple customers across several AWS regions",
+  "sev": "Critical",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "All services are up and running - see also https://health.aws.amazon.com/health/status || AWS are resuming their services and we see a positive impact on JFrog services. SLO is almost 100% and all Artifactory transactions have been resumed. We are still monitoring the systems health. AWS Incident status chronology can be referred here: https://health.aws.amazon.com/health/status || Service disruption confirmed to be caused by an issue with the AWS Cloud vendor. JFrog Engg teams are engaged, analyzing the vendor's progress, and monitoring service stability || We are currently investigating this issue."
+ },
+ {
+  "org": "JFrog",
+  "date": "2025-10-10",
+  "url": "https://status.jfrog.io/incidents/3st2jv04cmrk",
+  "name": "JFrog Cloud Platform Service disruption affecting a subset of customers in Azure US East region",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "All customer services are fully functional and have remained stable for a substantial period. || JFrog engineers have identified the root cause to the recent brief Azure Cloud service unavailability. All customer services have since recovered and are stable. We have engaged Azure engineering to conduct a deeper analysis and will continue to monitor the stability of the services. || JFrog Engineers are actively investigating this event and will shortly update"
+ },
+ {
+  "org": "Kinsta",
+  "date": "2026-08-11",
+  "url": "https://status.kinsta.com/incidents/7hlqxhbwzjcv",
+  "name": "Mykinsta file manager issue with uploading larger files",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "We have determined that this is caused by an update to our network firewall systems for security. We will continue to explore other options for allowing larger uploads through MyKinsta, but at this time, files larger than 500MB should now only be uploaded via SFTP. If you have any other questions, please contact our support team via chat from your MyKinsta dashboard, or by emailing us at support@kinsta.com. || Our investigation is still underway and is likely to continue into next week. We thank you for your continued patience. || The issue is still being investigated by our engineers. We appreciate your continued patience. || We are still investigating the issue, thank you for your continued patience. || We are still investigating the issue, thank you for your continued patience. || We are still investigating the issue, thank you for your continued patience. || We are still investigating the issue, thank you for your continued patience. || We are still investigating the issue, thank you for your continued patience. || The issue is still being investigated by our engineers. We appreciate your continued patience. || The issue is still being investigated by our engineers. We appreciate your continued patience. || The issue is still being investigated by our engineers. || The issue is still being investigated by our engineers. || We are still investigating the issue. Thank you for your patience. || We are still investigating the issue. Thank you for your patience. || We are stil"
+ },
+ {
+  "org": "Kinsta",
+  "date": "2026-07-14",
+  "url": "https://status.kinsta.com/incidents/5pqglxqnjhd6",
+  "name": "Service disruption at the Amsterdam (NL) data center",
+  "sev": "High",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "Our Engineers have confirmed again that service has been successfully restored to all affected sites in the Amsterdam (NL) data center. || Our Engineers have confirmed that service has been successfully restored to all affected sites in the Amsterdam (NL) data center. || Our Engineers have identified that the issue is caused by our upstream provider for one of our compute instances."
+ },
+ {
+  "org": "Kinsta",
+  "date": "2026-06-01",
+  "url": "https://status.kinsta.com/incidents/pzrxtjkbvx4m",
+  "name": "Mykinsta dashboard issues",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "|| A permanent fix has been successfully deployed, and dashboard access is fully restored. || We have deployed a temporary workaround that should restore dashboard access for most users, but the underlying issue is not yet fully resolved and may surface again. We are continuing to work toward a permanent fix. || We have identified the root cause of the dashboard inaccessibility."
+ },
+ {
+  "org": "Kinsta",
+  "date": "2026-05-22",
+  "url": "https://status.kinsta.com/incidents/0fs11dqkj5sm",
+  "name": "Errors on Domains page or when adding domains in MyKinsta",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "|| A fix has been implemented; please re-try any previously failed actions in MyKinsta and contact support if you are still experiencing difficulties. || Errors when attempting to add domains are affecting site and staging environment creations as well; this will also be resolved when Cloudflare's fix is in place: https://www.cloudflarestatus.com/incidents/znll7lfnd35h || We are seeing a number of errors on the Domains page for sites in MyKinsta, and errors when attempting to add domains. Upon further investigation we determined this is due to an API outage at Cloudflare: https://www.cloudflarestatus.com/incidents/znll7lfnd35h They are currently working on implementing a fix for this."
+ },
+ {
+  "org": "Kinsta",
+  "date": "2026-02-27",
+  "url": "https://status.kinsta.com/incidents/0knxpswkf1nk",
+  "name": "Issue with Analytics data",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "The MyKinsta analytics system has continued to operate normally. This issue is now resolved. If you are still experiencing issues while accessing analytics data in MyKinsta please contact our support team. We do apologize for any inconvenience caused by this disruption. || A fix has been implemented by Cloudflare, and analytics should now be logging properly. We'll continue to monitor for the time being, but this appears to be resolved. || We are continuing to investigate this issue. || We are investigating issues with Analytics data which might not be logged at the moment: Visits, Bandwidth, Requests, Request Path. We'll provide updates as we make progress."
+ },
+ {
+  "org": "Klaviyo",
+  "date": "2026-05-05",
+  "url": "https://status.klaviyo.com/incidents/yyh7s59brj67",
+  "name": "Klaviyo Service Disruption",
+  "sev": "Critical",
+  "cat": "authentication",
+  "pm": false,
+  "text": "All Klaviyo services have been fully restored and final recovery work is complete. || Klaviyo services remain restored and operating as expected. || Klaviyo services remain restored and operating as expected. || Klaviyo services have been restored. || Access to klaviyo.com and core platform services has been restored. || Our engineering team has restored the impacted services and confirmed that systems have resumed functioning as intended. || Access to klaviyo.com has been restored, and dependent services are progressively coming back online. Our engineering team is actively investigating the root cause."
+ },
+ {
+  "org": "Klaviyo",
+  "date": "2026-05-07",
+  "url": "https://status.klaviyo.com/incidents/t5nwjvl3jf78",
+  "name": "Processing delays",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "We determined the delays resulted from instability with an upstream infrastructure provider (AWS). || Segmentation has been restored to real-time processing, and campaign and forms analytics have now recovered. || Segmentation has been restored to realtime processing. Access to reporting pages has been restored and our engineering team is actively working to bring segmentation and analytics back to real time. For campaigns, sends may not reach the most up-to-date audience due to segmentation delays. Segment-triggered flows may also fail to trigger correctly as profiles may not be added to or removed from segments as expected."
+ },
+ {
+  "org": "Klaviyo",
+  "date": "2026-07-08",
+  "url": "https://status.klaviyo.com/incidents/hkgllq0dj71h",
+  "name": "Catalog Webhook Processing Delays",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "The repair to catch up on product update webhooks from the window of impact has been completed, and affected product data is up to date. This incident has been resolved. || Product updates from ecommerce integrations are continuing to sync normally in real time. A background repair to fully update records from the earlier impact window (9:45 PM to 11:13 PM US/Eastern on July 8, 2026) is still in progress. We will confirm once this repair is complete. || As of 11:13 PM US/Eastern on July 8, 2026, we have resumed processing webhooks. This means all new webhooks from integrations which use webhooks to update products are now syncing in real time. Our Engineering Team is working implement a repair to catch up on any product update webhooks from during window of impact (9:45 PM and 11:13 PM US/Eastern July 8, 2026). We will confirm once the repair has been complete and the incident has been fully resolved. || As of 9:45 PM US/Eastern on July 8, 2026, we paused processing new webhooks for product catalogs while we continue working on a fix. Catalog data, including in Templates and Customer Hub, will remain out of date until syncing resumes. Our engineering team is actively working to restore realtime catalog updates. We'll provide updates as soon as more information is available. || At 4:00 PM US/Eastern on July 8, 2026, we identified delays syncing product updates from integrations using webhooks. This is causing catalog data, including in Templates and the Customer Hub, to not up"
+ },
+ {
+  "org": "Klaviyo",
+  "date": "2026-06-03",
+  "url": "https://status.klaviyo.com/incidents/y3hyj017l3z4",
+  "name": "Shopify API Outage",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "Some customers may see their integration in a failed state, but the retry processes will automatically fix this. The issue is caused by a partial outage affecting an upstream service, and our team is actively monitoring the situation while automated retry processes work to recover affected requests."
+ },
+ {
+  "org": "Klaviyo",
+  "date": "2026-05-08",
+  "url": "https://status.klaviyo.com/incidents/q7mhx2b18b56",
+  "name": "Campaign and flow page loading errors",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "Analytics processing for campaigns and flows is fully caught up and operating normally. We appreciate your patience throughout this incident. This incident has been resolved. || Analytics processing for campaigns and flows is recovering and the delay is decreasing. Sending, scheduling, and other core functions remain fully operational. We're monitoring closely and will confirm once analytics return to normal operation. || Sending, scheduling, and other core functions are operating normally. Analytics for campaigns and flows are currently delayed by approximately 2 hours. These issues are tied to instability with an upstream infrastructure provider (AWS) and we are continuing to work through them. We'll provide updates as soon as we have more to share. || System performance is improving, and users can now access campaigns pages to complete scheduling. We determined these errors resulted from a combination of instability with an upstream infrastructure provider (AWS) and a significant increase in retry traffic. We continue to monitor closely and appreciate your patience throughout this incident. || We have identified the root cause of the errors and our engineering team is actively working toward a resolution. We'll provide updates as soon as more information is available. || We are currently investigating reports of errors loading campaign and flow pages within Klaviyo. Campaign and flow sending is not impacted. Our engineering team is actively working to identify and resolve "
+ },
+ {
+  "org": "Klaviyo",
+  "date": "2026-06-12",
+  "url": "https://status.klaviyo.com/incidents/bg6k39l6bpgn",
+  "name": "Meta Services Disruption",
+  "sev": "High",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "Meta-connected features in Klaviyo, including WhatsApp messaging, Meta integrations, and Instagram connectivity, have returned to normal. Messages that failed during the disruption were reprocessed, though a small number that did not reach Klaviyo could not be recovered. This incident has been resolved. || We are seeing further recovery with WhatsApp messaging, Meta integrations, and Instagram connectivity. WhatsApp messaging should no longer encounter failures. We've replayed all failed messages during this time period. We continue to monitor and will confirm once recovery has completed. || Customers may continue to experience issues with Meta-connected features in Klaviyo, including WhatsApp messaging, Meta integrations, and Instagram connectivity. This is caused by a disruption at an upstream provider that affects connections to these features. We have begun to see partial recovery, and some messages are now sending successfully. We are working to resolve this quickly and will share another update as soon as more information is available. || Customers are currently experiencing issues with Meta-connected features in Klaviyo, including WhatsApp messaging, Meta integrations, and Instagram connectivity. We are investigating a disruption with an upstream provider and will share another update as soon as we have more information."
+ },
+ {
+  "org": "Klaviyo",
+  "date": "2025-12-03",
+  "url": "https://status.klaviyo.com/incidents/2n6xvpbvr7zs",
+  "name": "Customer Agent Follow Up Prompts not Appearing",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "Monitoring is complete, and this incident has been resolved. We appreciate your patience throughout this incident. || We successfully reverted the change and have confirmed that Customer Agent Web Chat follow-up prompts are sending as expected. We will continue to monitor to ensure there is no further impact. || As of 3:00 PM US/Eastern, we confirmed this issue is only impacted Web Chat. Customer Agent via SMS chat is not impacted. We have identified a recent change as the root cause and will be reverting this shortly. We continue to monitor closely and appreciate your patience throughout this incident. || We are currently investigating an issue impacting Customer Agent follow-up prompts beginning around 11:20 AM US/Eastern. Follow-up prompts are not appearing after replies from the AI Agent. This prevents end users from continuing the conversation or escalating to a human agent. We'll provide updates as more information is available."
+ },
+ {
+  "org": "Klaviyo",
+  "date": "2025-12-22",
+  "url": "https://status.klaviyo.com/incidents/cm84yc4mk981",
+  "name": "Users with access to multiple accounts being unable to switch accounts",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved. || We have confirmed the app is now widely available and are moving the incident to monitoring. 10% of accounts experienced messaging delays during this window. We are working to replay any impacted messages, including unsubscribes, inbound SMS, and flows. Any campaigns that failed during this time will need to be manually resent. We will continue to monitor system performance. || We identified broader service disruption across the Klaviyo app between 5:55 pm and approximately 6:10 pm ET. While initial reports were limited to account switching, we have since confirmed additional impact to app availability and functionality. The underlying issue has been addressed, and the app is now available. Some customers may continue to experience intermittent issues as systems fully recover. We are actively monitoring. || We are investigating reports of users unable to switch accounts once logged into Klaviyo"
+ },
+ {
+  "org": "Klaviyo",
+  "date": "2025-10-29",
+  "url": "https://status.klaviyo.com/incidents/6p557b6qv9z3",
+  "name": "SMS Events Processing Delays",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved. || We have mitigated the delays and we expect SMS event processing to be fully caught up within the next 20 minutes. There was no data loss as a result of this incident. || We are still working to restore normal processing of SMS events. A subset of customers may see delays of up to 90 minutes at this time. SMS Sending remains unaffected. || We want to acknowledge that downstream services (Segments and Flows) relying on the SMS events will also be impacted, until the event processing has caught up, which we expect to happen shortly. We'll continue to provide updates as they are available. || Starting at 1:00 PM US/Eastern, we began experiencing delays of up to 40 minutes for SMS events processing. SMS Sending is not impacted. We have identified the issue and are in the process of reverting a change to restore normal processing. We'll provide updates as soon as more information is available."
+ },
+ {
+  "org": "Klaviyo",
+  "date": "2025-07-02",
+  "url": "https://status.klaviyo.com/incidents/z0shl9vsm0cr",
+  "name": "Duplicate Flow Sends",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "The team continues to work through the appropriate adjustments to billing as a result of these duplicate sends. We expect to follow up with impacted customers early next week with more information once this work has been completed. || We're continuing to work through repairs to billing as a result of the duplicate sends and will provide credits to the impacted accounts. We'll provide another update once we have more information to share. || From 1:39-2:47PM US/Eastern on 7/2/25, Klaviyo users may have had duplicate flow messages sent to their profiles. Customers received the original message as expected, but may have received duplicate versions in the minutes to follow. Duplicate sending is no longer occurring. Our Engineering Team is investigating any downstream effects and will provide an update once we have more information."
+ },
+ {
+  "org": "Klaviyo",
+  "date": "2026-06-08",
+  "url": "https://status.klaviyo.com/incidents/clb7hzrrcj97",
+  "name": "Campaign sending delays",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "Campaign sending has been restored and the backlog of delayed campaigns has completed sending. This incident has been resolved. || We have deployed a fix and campaign sending is recovering. We are processing the backlog of delayed campaigns and expect to deliver them shortly. We continue to monitor closely and appreciate your patience throughout this incident. || We are continuing to work through the fix for this issue. We are working to resolve this as quickly as possible and will share another update shortly. || We have identified the root cause and are working on a fix. We will share another update shortly. || Some customers may be experiencing delays with campaign sending, where sends are currently stuck in processing. We are investigating the issue and will provide an update as soon as we have more information."
+ },
+ {
+  "org": "Klaviyo",
+  "date": "2026-04-26",
+  "url": "https://status.klaviyo.com/incidents/pcfm8kkzbmkl",
+  "name": "API 503 Errors",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": false,
+  "text": "We confirmed that all API activity has been stable since the fix was released. Any requests that returned 503 errors during the outage window will need to be retried. This incident has been resolved. || We successfully implemented a fix as of 3:20 AM US/Eastern that restored all API activity. We are continuing to monitor the results. || Starting at approximately 2:27 AM US/Eastern on 04/25/2026, we began experiencing intermittent elevated errors across our APIs. Some customers may experience 503 errors when trying to log into Klaviyo, load certain pages or make API requests. Our Engineering Team has identified the root cause and has implemented mitigations. We'll provide updates as soon as more information is available."
+ },
+ {
+  "org": "Klaviyo",
+  "date": "2025-09-19",
+  "url": "https://status.klaviyo.com/incidents/mbq71wswt1wm",
+  "name": "Delay in Real-Time Event Processing",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved. || Event processing has been restored to real-time. There was no data loss as a result of this incident. We\u2019re continuing to monitor and will post another update once we have fully cleared any backlog of processing data. || A fix has been implemented and we are monitoring the results. We expect real time event processing to be fully restored within 1 hour. || At around 7 AM Eastern time, we began experiencing delays in real-time event processing. Events may be out of date by up to 3 hours. Flows, Segments, Profiles, Reporting, as well as segment-targeted forms, may be impacted. We are actively working to restore real-time processing and will continue to provide updates here."
+ },
+ {
+  "org": "Klaviyo",
+  "date": "2026-06-10",
+  "url": "https://status.klaviyo.com/incidents/tfnf1c3sy4sy",
+  "name": "Errors when attempting to select templates for campaigns",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "Customers should no longer see any errors when selecting a template while creating or editing a campaign. This incident has been resolved. || A fix has been deployed and system performance is improving. Customers should start to be able to successfully select a template. We continue to monitor closely and appreciate your patience throughout this incident. || We have identified the root cause and are working on a fix. We will share another update shortly. || Customers may be experiencing an error when selecting a template while creating or editing a campaign. Our team is actively investigating and will share another update as soon as we have more information."
+ },
+ {
+  "org": "Klaviyo",
+  "date": "2025-06-12",
+  "url": "https://status.klaviyo.com/incidents/95x09qnrck72",
+  "name": "Klaviyo login issue",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": false,
+  "text": "The third party provider has fully restored service, and all login functionality is now operational. || We've mitigated the login issue and are currently monitoring performance. || The issue has been identified and a fix is being implemented. || Due to an outage of a third party provider, there may be an issue preventing users from logging in to Klaviyo."
+ },
+ {
+  "org": "Klaviyo",
+  "date": "2025-09-03",
+  "url": "https://status.klaviyo.com/incidents/799s1csv07hs",
+  "name": "Real-time segmentation delays",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "Real-time segmentation is processing in real-time, and the incident has been resolved. || We have identified a root cause and are implementing a fix. We do not currently have an estimate for when processing will be back to real-time. We will post another update once a timeline is available. || We are currently experiencing delays in real-time segment processing. Segments may be out of date by up to 3 hours. Flows triggered by segments, as well as segment-targeted forms, may be impacted. We are actively working to restore real-time processing and will continue to provide updates here."
+ },
+ {
+  "org": "Klaviyo",
+  "date": "2025-07-08",
+  "url": "https://status.klaviyo.com/incidents/fbvqz42hxw52",
+  "name": "Delays in Event Processing",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "Event processing has been fully restored. This incident is now resolved. || We have mitigated the delays and event-processing has been restored to real-time. There was no data loss as a result of this incident. We\u2019re continuing to monitor and will post another update once we have fully cleared any backlog of processing data. || We are currently experiencing delays in event processing. Customers may see delays in event data syncing, event-triggered flows sending, and real-time segmentation. We are in the process of restoring normal operations and will continue to provide updates here."
+ },
+ {
+  "org": "Klaviyo",
+  "date": "2026-06-06",
+  "url": "https://status.klaviyo.com/incidents/3sh5m87wtk20",
+  "name": "WhatsApp Disruption",
+  "sev": "Critical",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "Our Engineering team has monitored performance and see that WhatsApp services have been restored including message sending, integration setup and template editing. || All WhatsApp functionality is currently unavailable for customers due to an upstream provider outage (including sending, integration setup and template editing)."
+ },
+ {
+  "org": "Klaviyo",
+  "date": "2025-11-02",
+  "url": "https://status.klaviyo.com/incidents/2cxrb47jcxkb",
+  "name": "Facebook Ads are not syncing correctly",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "All delayed data for Facebook Integrations, which occurred between 1:00 AM and 2:00 AM, has been fully restored. || A fix has been identified and we are monitoring the results. The root cause has been successfully identified, and our engineering team is actively working on deploying the necessary fix."
+ },
+ {
+  "org": "Lambda Labs",
+  "date": "2026-03-02",
+  "url": "https://status.lambdalabs.com/incidents/01KJRBFZX0EX0BZZ6M8ZKWPQ8R",
+  "name": "Launches Failing in Multiple Regions",
+  "sev": "Critical",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "**Severity Level:** [High] Our Engineering team was able to identify and remediate the root cause of the issue. Users that were experiencing instance launch failures should no longer be impacted. In the event you\u2019re unsure as to whether your service is still impacted by this incident, please open a support ticket. We\u2019ll get back to you as soon as possible. \u2022 [https://support.lambdalabs.com/hc/en-us/requests/new](https://support.lambdalabs.com/hc/en-us/requests/new \"https://support.lambdalabs.com/hc/en-us/requests/new\") To be automatically notified when the status of this incident changes, please click on the \u201cSubscribe to updates\u201d button. Thank you for your patience and understanding during this time. || Severity Level: [High] We're currently investigating an issue with On-Demand Cloud instance launches across multiple regions. An issue with Firewall Rulesets is causing instance launches to fail or enter an Alert status for customers when creating new Firewall Rulesets in the affected regions. We have re-enabled launches, however customers without existing Firewall Rulesets may still experience failures in the following regions: \u2022 us-east-1 \u2022 us-midwest-1 \u2022 us-west-1 \u2022 us-west-2 \u2022 me-west-1 \u2022 europe-central-1 \u2022 ap-southeast-2 \u2022 asia-northeast-2 Please note that you will not be charged for an instance until it has reached a healthy boot state. In the event you\u2019re unsure as to whether your service is impacted by this incident, please open a support ticket. We\u2019ll get back to you"
+ },
+ {
+  "org": "Lambda Labs",
+  "date": "2026-05-20",
+  "url": "https://status.lambdalabs.com/incidents/01KS1ESXBF02DFWBQVPJM5WQMC",
+  "name": "Launches and Terminations Failing in Multiple Regions",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "Instance Launches and Terminations have been disabled for the following regions: asia-northeast-1 asia-northeast-2 asia-south-1 australia-east-1 europe-central-1 me-west-1 us-east-1 us-midwest-1 us-west-1 us-west-2 Our teams are actively working to identify the root cause and mitigate or resolve the issue."
+ },
+ {
+  "org": "Lambda Labs",
+  "date": "2026-09-10",
+  "url": "https://status.lambdalabs.com/incidents/01M252C62E2SJC8ATZP5P0B6C4",
+  "name": "Issue with Cloud Services API Keys",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "The issue preventing users from viewing and creating Cloud Service API keys has been fixed, and API key functionality has been fully restored. We have continued monitoring since the fix was deployed and confirmed the service is operating normally. || **Severity Level:** High We have deployed a fix for the Cloud Service API keys issue and are closely monitoring the situation. Our teams are actively working to identify the root cause and mitigate or resolve the issue. Our teams are actively working to identify the root cause and mitigate or resolve the issue."
+ },
+ {
+  "org": "Lambda Labs",
+  "date": "2026-06-20",
+  "url": "https://status.lambdalabs.com/incidents/01KVHWRVW22V0P5F7YA0BHCH2K",
+  "name": "US-SOUTH-2 Booting Failures of Newly Launched Instance",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "**Severity Level:** High A fix has been implemented and we\u2019re monitoring the results. || **Severity Level:** [High] Our engineers have pushed a fix to remediate the problem of new instance launches failing to boot in US-SOUTH-2. Our teams are actively working to identify the root cause and mitigate or resolve the issue. Our teams are actively working to identify the root cause and mitigate or resolve the issue. Our teams are actively working to identify the root cause and mitigate or resolve the issue."
+ },
+ {
+  "org": "Lambda Labs",
+  "date": "2026-08-03",
+  "url": "https://status.lambdalabs.com/incidents/01KZ4VZ1THJPGWKQWNJ3DNJ1BA",
+  "name": "Degraded Performance in us-midwest-2",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "Our teams are actively working to identify the root cause and mitigate or resolve the issue. || **Severity Level:** Medium We identified an issue within the InfiniBand fabric and implemented changes to address it. Our teams are actively working to identify the root cause and mitigate or resolve the issue."
+ },
+ {
+  "org": "Lambda Labs",
+  "date": "2026-07-26",
+  "url": "https://status.lambdalabs.com/incidents/01KYFW3DHZ7JJEQ4PTD21TBE96",
+  "name": "DAL01 - COLO Internet Connectivity Disruption (Upstream Provider)",
+  "sev": "Medium",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "**Severity Level:** Medium The incident has been resolved. The network is now working as expected. Thank you for your patience. ----------------------------------------------------------------------------- Again, in the event you\u2019re unsure as to whether your service is still impacted by this, please open a support ticket and we\u2019ll get back to you as soon as possible. \u2022 [https://support.lambdalabs.com/hc/en-us/requests/new](https://support.lambdalabs.com/hc/en-us/requests/new \"https://support.lambdalabs.com/hc/en-us/requests/new\") To be automatically notified when the status of this incident changes, please click on the \u201cSubscribe to updates\u201d button. || **Severity Level: Medium** DAL01 - COLO Internet Connectivity Disruption (Upstream Provider) We continue to work with our upstream provider to resolve the DIA circuit outage affecting DAL01. Our team is actively engaged and we're in regular contact as we work toward restoration. Customers with IP addresses in the **38.147.81.0/24** range remain impacted until service is restored. We do not have an ETA at this time but will share another update as soon as we have new information. Thank you for your patience while we work through this with our provider. ----------------------------------------------------------------------------- In the event you\u2019re unsure as to whether your service is impacted by this incident, please open a support ticket. We\u2019ll get back to you as soon as possible. \u2022 [https://support.lambdalabs.com/hc/en-us/req"
+ },
+ {
+  "org": "Lambda Labs",
+  "date": "2026-08-15",
+  "url": "https://status.lambdalabs.com/incidents/01M03AXJY701RDTD9P2KBDWQ0A",
+  "name": "Instances Unreachable in us-south-2 region",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "The network issue affecting our us-south-2 region has been fixed, and connectivity to instances, including via SSH and Jupyter, has been fully restored. The region has remained stable since the fix was implemented. || **Severity Level:** [High] A fix has been implemented and we\u2019re monitoring the results. Our teams have made progress in narrowing down the cause and are actively working to mitigate and resolve the issue. Our teams are actively working to identify the root cause and mitigate or resolve the issue."
+ },
+ {
+  "org": "Lambda Labs",
+  "date": "2026-03-24",
+  "url": "https://status.lambdalabs.com/incidents/01KMH25AA3X65KC5BZ4G8TXP5P",
+  "name": "Global Firewall Rulesets Page Not Loading",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "**Severity Level:** Medium The incident has been resolved. The Firewall page is now working as expected. ----------------------------------------------------------------------------- Again, in the event you\u2019re unsure as to whether your service is still impacted by this, please open a support ticket and we\u2019ll get back to you as soon as possible. \u2022 [https://support.lambdalabs.com/hc/en-us/requests/new](https://support.lambdalabs.com/hc/en-us/requests/new \"https://support.lambdalabs.com/hc/en-us/requests/new\") To be automatically notified when the status of this incident changes, please click on the \u201cSubscribe to updates\u201d button. || **Severity Level:** Medium A fix has been implemented and we\u2019re monitoring the results. To be automatically notified when the status of this incident changes, please click on the \u201cSubscribe to updates\u201d button. Thank you for your patience and understanding during this time. || **Severity Level:** Medium We\u2019re currently investigating a potential issue with our Firewall rulesets page on our Cloud Dashboard. Users may experience an error that \"something went wrong\" when viewing the page. We've identified the issue and will be implementing a fix shortly. Thank you for your patience and understanding during this time. ----------------------------------------------------------------------------- In the event you\u2019re unsure as to whether your service is impacted by this incident, please open a support ticket. We\u2019ll get back to you as soon as possible. \u2022 [http"
+ }
+]

@@ -1,0 +1,402 @@
+[
+ {
+  "org": "Snowflake",
+  "date": "2026-07-25",
+  "url": "https://status.snowflake.com/incidents/0yt2v05n42gz",
+  "name": "INC20000106",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000106](https://community.snowflake.com/s/article/INC20000106)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-06-23",
+  "url": "https://status.snowflake.com/incidents/j3xz9wrt22vp",
+  "name": "INC20000047",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000047](https://community.snowflake.com/s/article/INC20000047)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-06-15",
+  "url": "https://status.snowflake.com/incidents/x9085gh79r3x",
+  "name": "INC20000034",
+  "sev": "Critical",
+  "cat": "authentication",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000034](https://community.snowflake.com/s/article/INC20000034)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-06-16",
+  "url": "https://status.snowflake.com/incidents/dt63jcq37152",
+  "name": "INC0159144",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC0159144](https://community.snowflake.com/s/article/INC0159144)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-08-03",
+  "url": "https://status.snowflake.com/incidents/ns7hfk8pbqfy",
+  "name": "INC20000128",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000128](https://community.snowflake.com/s/article/INC20000128)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-05-29",
+  "url": "https://status.snowflake.com/incidents/4w8gm09dsr8p",
+  "name": "Azure - West US 2 (Washington): INC0157956",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC0157956](https://community.snowflake.com/s/article/INC0157956)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-09-11",
+  "url": "https://status.snowflake.com/incidents/x3f2pxm6l9zw",
+  "name": "INC20000213",
+  "sev": "Critical",
+  "cat": "authentication",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000213](https://community.snowflake.com/s/article/INC20000213)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-06-22",
+  "url": "https://status.snowflake.com/incidents/zn8xxp2qzpr1",
+  "name": "AWS - US West (Oregon): INC0159680",
+  "sev": "Critical",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC0159680](https://community.snowflake.com/s/article/INC0159680)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-05-05",
+  "url": "https://status.snowflake.com/incidents/z2h7mnkrxdxh",
+  "name": "Azure - West US 2 (Washington): INC0156645",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC0156645](https://community.snowflake.com/s/article/INC0156645)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-03-27",
+  "url": "https://status.snowflake.com/incidents/xj5gygqqc5w8",
+  "name": "INC0154408",
+  "sev": "High",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC0154408](https://community.snowflake.com/s/article/INC0154408)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-08-31",
+  "url": "https://status.snowflake.com/incidents/09f44bx0y6lj",
+  "name": "INC20000188",
+  "sev": "Critical",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000188](https://community.snowflake.com/s/article/INC20000188)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-03-12",
+  "url": "https://status.snowflake.com/incidents/kpkc19wpf1m0",
+  "name": "INC0153465",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC0153465](https://community.snowflake.com/s/article/INC0153465)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-01-21",
+  "url": "https://status.snowflake.com/incidents/s2j1bnnjshl4",
+  "name": "AWS - US West (Oregon): INC0150359",
+  "sev": "Critical",
+  "cat": "authentication",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC0150359-and-INC0150440](https://community.snowflake.com/s/article/INC0150359-and-INC0150440)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-09-01",
+  "url": "https://status.snowflake.com/incidents/847dlygl25yb",
+  "name": "INC20000190",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000190](https://community.snowflake.com/s/article/INC20000190)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-04-07",
+  "url": "https://status.snowflake.com/incidents/g47n1w0d9v90",
+  "name": "Azure - East US 2 (Virginia): INC0155020",
+  "sev": "Critical",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC0155020](https://community.snowflake.com/s/article/INC0155020)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-09-04",
+  "url": "https://status.snowflake.com/incidents/fl9tkpj8d7hk",
+  "name": "INC20000199",
+  "sev": "Critical",
+  "cat": "authentication",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000199](https://community.snowflake.com/s/article/INC20000199)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-07-10",
+  "url": "https://status.snowflake.com/incidents/kw59fjhlv3jq",
+  "name": "INC20000082",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000082](https://community.snowflake.com/s/article/INC20000082)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-08-20",
+  "url": "https://status.snowflake.com/incidents/n54hrszdq7h7",
+  "name": "INC20000168",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000168](https://community.snowflake.com/s/article/INC20000168)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-08-18",
+  "url": "https://status.snowflake.com/incidents/yk5sqhcjp266",
+  "name": "INC20000163",
+  "sev": "High",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000163](https://community.snowflake.com/s/article/INC20000163)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-08-24",
+  "url": "https://status.snowflake.com/incidents/mhntf8gmn065",
+  "name": "INC20000173",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000173](https://community.snowflake.com/s/article/INC20000173)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-06-24",
+  "url": "https://status.snowflake.com/incidents/w9qjc26y18rn",
+  "name": "INC20000052",
+  "sev": "Critical",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/inc20000052](https://community.snowflake.com/s/article/inc20000052)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-08-05",
+  "url": "https://status.snowflake.com/incidents/j7drswl3ssy7",
+  "name": "INC20000139",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000139](https://community.snowflake.com/s/article/INC20000139)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-07-30",
+  "url": "https://status.snowflake.com/incidents/0js22rxjm66q",
+  "name": "INC20000115",
+  "sev": "Critical",
+  "cat": "authentication",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000115](https://community.snowflake.com/s/article/INC20000115)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-06-12",
+  "url": "https://status.snowflake.com/incidents/g4d0vxhf0tns",
+  "name": "INC20000033",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000033](https://community.snowflake.com/s/article/INC20000033)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-08-27",
+  "url": "https://status.snowflake.com/incidents/7wg7mlfgzdyr",
+  "name": "INC20000182",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000182](https://community.snowflake.com/s/article/INC20000182)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-03-07",
+  "url": "https://status.snowflake.com/incidents/6ghqh8nfw4wc",
+  "name": "AWS - Europe (Z\u00fcrich): INC0153183",
+  "sev": "High",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC0153183](https://community.snowflake.com/s/article/INC0153183)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-01-22",
+  "url": "https://status.snowflake.com/incidents/0w11t7x10rzg",
+  "name": "AWS - US West (Oregon): INC0150440",
+  "sev": "Critical",
+  "cat": "other",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC0150359-and-INC0150440](https://community.snowflake.com/s/article/INC0150359-and-INC0150440)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-09-25",
+  "url": "https://status.snowflake.com/incidents/g8td4vy3qjk7",
+  "name": "INC20000237",
+  "sev": "Critical",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000237](https://community.snowflake.com/s/article/INC20000237)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-01-27",
+  "url": "https://status.snowflake.com/incidents/r32lgfpkzw0y",
+  "name": "Azure - Central US (Iowa): INC0150687",
+  "sev": "Critical",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC0150687](https://community.snowflake.com/s/article/INC0150687)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-03-21",
+  "url": "https://status.snowflake.com/incidents/p3x136d3mcsp",
+  "name": "AWS - US West (Oregon): INC0154019",
+  "sev": "Critical",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC0154019](https://community.snowflake.com/s/article/INC0154019)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-04-29",
+  "url": "https://status.snowflake.com/incidents/3g6k24d9ws1k",
+  "name": "Azure - UK South (London): INC0156355",
+  "sev": "Critical",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC0156355](https://community.snowflake.com/s/article/INC0156355)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-08-14",
+  "url": "https://status.snowflake.com/incidents/v8nyb5fhd95v",
+  "name": "INC20000158",
+  "sev": "Critical",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000158](https://community.snowflake.com/s/article/INC20000158)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-08-25",
+  "url": "https://status.snowflake.com/incidents/3s0hdzy30jww",
+  "name": "INC20000175",
+  "sev": "Critical",
+  "cat": "payment_processing",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000175](https://community.snowflake.com/s/article/INC20000175)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-03-16",
+  "url": "https://status.snowflake.com/incidents/cy1j8q1htyy9",
+  "name": "INC0153706",
+  "sev": "Medium",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC0153706](https://community.snowflake.com/s/article/INC0153706)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-06-30",
+  "url": "https://status.snowflake.com/incidents/rqkrpr2hf7f7",
+  "name": "INC20000063",
+  "sev": "Critical",
+  "cat": "authentication",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000063](https://community.snowflake.com/s/article/INC20000063)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-06-23",
+  "url": "https://status.snowflake.com/incidents/0nxtj28g9ycc",
+  "name": "INC20000046",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000046](https://community.snowflake.com/s/article/INC20000046)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-07-11",
+  "url": "https://status.snowflake.com/incidents/46l87jjm2m5f",
+  "name": "INC20000085",
+  "sev": "Medium",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000085](https://community.snowflake.com/s/article/INC20000085)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-02-23",
+  "url": "https://status.snowflake.com/incidents/8mj6n9xzhc96",
+  "name": "Azure - Canada Central (Toronto): INC0152309",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC0152309](https://community.snowflake.com/s/article/INC0152309)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-05-15",
+  "url": "https://status.snowflake.com/incidents/mkbgc4vgdhdb",
+  "name": "INC0157230",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC0157230](https://community.snowflake.com/s/article/INC0157230)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-06-08",
+  "url": "https://status.snowflake.com/incidents/655fr2b9cl57",
+  "name": "INC20000030",
+  "sev": "Critical",
+  "cat": "authentication",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000030](https://community.snowflake.com/s/article/INC20000030)"
+ }
+]

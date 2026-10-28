@@ -1,0 +1,402 @@
+[
+ {
+  "org": "Sanity",
+  "date": "2026-01-05",
+  "url": "https://status.sanity.io/incidents/347tqql57x0m",
+  "name": "Elevated error rates on our API CDN",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "The issue was related to a higher than expected load which has been resolved. All operations are back to normal and we'll continue to monitor our systems closely. || We've mitigated the original issue and are no longer seeing elevated error rates. We're continuing to monitor and while we investigate the root cause. || Beginning around 13:40 UTC we began experiencing elevated error rates on our API CDN in certain regions. As a result, some requests may respond with a 5xx status. We're investigating the issue now."
+ },
+ {
+  "org": "Sanity",
+  "date": "2026-02-24",
+  "url": "https://status.sanity.io/incidents/3g9rpzhsfz0w",
+  "name": "Elevated listener latency impacting Studio performance",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "The incident has been resolved || We are continuing to monitor for any further issues. || We are continuing to monitor for any further issues. || A fix has been implemented and we are monitoring the results. || We are currently investigating an issue where elevated listener latency may result in slower performance and lag within Sanity Studio for some customers. Our team is actively working to identify the root cause and mitigate the impact. We\u2019ll provide further updates as more information becomes available."
+ },
+ {
+  "org": "Segment",
+  "date": "2026-03-19",
+  "url": "https://status.segment.com/incidents/nbxw9kv356wy",
+  "name": "Audience Overview Page Degradation",
+  "sev": "Low",
+  "cat": "database_issue",
+  "pm": false,
+  "text": "Summary: Between 9:24 AM PST on March 19 and 9:38 AM PST on March 19, the engineering team performed a database upgrade. During this window, users may have experienced degraded performance specifically on the Audiences Overview webpage. Notification Update: Some customers may have received automated email notifications citing \"Audience Run Failures\" during this time. Please be advised that these were false positives triggered by the maintenance; no actual failures occurred, and all background processes completed successfully. Status: Functionality was fully restored and all systems were confirmed stable as of 9:38 AM PST. We apologize for the inconvenience."
+ },
+ {
+  "org": "Segment",
+  "date": "2025-11-23",
+  "url": "https://status.segment.com/incidents/8t8k4lb2tg8t",
+  "name": "Elevated errors in Facebook Destinations",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "We've confirmed that the impacted destinations have recovered. || We are continuing to monitor for any further issues. || All impacted destinations have recovered and normal operations have resumed. We will continue to monitor closely. || We are observing early signs of success. We will continue to monitor. || We have identified the root cause of the incident and we are working towards a fix. || We are observing elevated errors in the following Facebook destinations (actions-facebook-conversions-api, actions-facebook-custom-audiences, facebook-app-events, facebook-offline-conversions, facebook-pixel-server-side, personas-facebook-ads)."
+ },
+ {
+  "org": "Segment",
+  "date": "2026-04-27",
+  "url": "https://status.segment.com/incidents/fzd22x6vwkt3",
+  "name": "Audience Preview Failures",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "Summary: From 10:20 AM to 3:00 PM PDT on April 27th, a global Databricks Compute outage resulted in failed audience preview queries across external workspaces. Details: The disruption was caused by an upstream infrastructure failure at Databricks, which prevented some preview queries from executing successfully. This issue was localized to the dashboard preview tool; real-time event delivery and audience activations were not impacted. Resolution: The underlying compute issue has been resolved by the vendor. We have confirmed that preview functionality is fully restored and operating normally."
+ },
+ {
+  "org": "Segment",
+  "date": "2026-04-29",
+  "url": "https://status.segment.com/incidents/qgkzhcwzd9wx",
+  "name": "Destinations Failing to Load in UI",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "This incident has been resolved. || The issue is now mitigated. We\u2019ve deployed a fix, and the Destinations page is loading as expected for all workspaces that were previously impacted. We are monitoring the results. || We\u2019ve identified the root cause and are currently implementing a fix. The issue is isolated to a subset of workspaces with connected RETL destinations. || We are currently investigating an issue affecting the Destinations page in the Segment application UI. For some customers, the Destinations are failing to load."
+ },
+ {
+  "org": "Sentry",
+  "date": "2026-06-11",
+  "url": "https://status.sentry.io/incidents/ccv3pcf00mbt",
+  "name": "Notification delivery",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "This issue has been resolved. || The issue involving some alerts not firing has been mitigated. We will continue to monitor the situation to ensure it does not reoccur. || We have identified an issue with one of our cloud providers that might have caused some alert notifications to not fire starting at around 4:00 AM GMT+2. Since around 1:30 PM GMT+2, alert notifications are now fully operational in the US region, while delivery is still partially degraded in the EU region. || Notifications delivery is now close to fully functional in US and DE. We have identified the root cause as caused by one of our cloud providers, and are closely monitoring the situation. || We are continuing to investigate the degraded notifications. || We are continuing to investigate the degraded notifications. || We're currently investigating degraded notification delivery."
+ },
+ {
+  "org": "Sentry",
+  "date": "2026-05-11",
+  "url": "https://status.sentry.io/incidents/w39v80r1tw7p",
+  "name": "Sentry.io timeouts",
+  "sev": "Low",
+  "cat": "database_issue",
+  "pm": false,
+  "text": "Database performance has returned to normal || We have implemented a fix and are monitoring the situation || We are working on restoring normal service. API and application performance should be improved, ingestion still has delays. || Our event database continues to have issues and we are actively investigating the issue. || Ingestion for spans, replays, and crons is delayed by about 15 minutes. || We are continuing to investigate degraded database performance. || We are seeing increased UI and API timeouts and errors, due to an overloaded database cluster. Ingestion and alerting should not be affected"
+ },
+ {
+  "org": "Shopify",
+  "date": "2019-10-25",
+  "url": "https://status.shopify.com/incidents/x7y62nyy43mt",
+  "name": "Network connectivity issues with some customers from Italy",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "While the root cause of this issue is still outside of Shopify, we have implemented a solution which has successfully restored connectivity for the majority of stores from the affected ISPs. If you are still experiencing this issue, please contact Shopify support for assistance. || We are continuing to investigate this issue. || We appreciate your patience while we continue to investigate this issue. || We are continuing to investigate this issue. || We are continuing to investigate this issue. || We are continuing to investigate the ongoing issue related to accessing Shopify storefronts through various ISPs in Italy. We thank you for your patience throughout this investigation. We have assembled a team who are continuing all efforts to resolve this issue with the various ISPs involved and can confirm this issue remains outside of Shopify. We encourage you to reach out to our Support team for additional assistance during this time. || We continue to see connectivity issues for some customers in Italy. We are still working with our network service provider to assist with diagnosing the issue. Affected merchants can contact Shopify Support for more details. || Customers in Italy using Wind 3 and Fastweb internet service providers are continuing to experience connectivity issues. Some customers using the TIM internet service provider are also affected. While the issue is outside of Shopify, we are continuing to work with our network service provider to assist with diagnosing the"
+ },
+ {
+  "org": "Sinch",
+  "date": "2026-09-17",
+  "url": "https://status.sinch.com/incidents/qfyddt19fdhh",
+  "name": "Services | Operator Services | Potential delay in delivery of MO, MT and DLR | TT#MNOC-65291 (MNOC-65292)",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "Issue has remained stable. Resolving incident. || A fix has been implemented. Queues are depleting and delays should be mitigated. Technical teams are monitoring for service stability. || A network issue was identified which could result in certain customers observing a potential delay in delivery. Technical resources are engaged and actively working on repair of the issue. Updates will continue to be provided. || Ticket Number: MNOC-65291 Services: SMSx, MM4 Description: Currently, we are observing queues related to MO, MT and DLR traffic within our SMSx/MM4 Few customers may observe a potential delay in delivery for MO, MT and DLR traffic. Our technical teams are actively working to identify the root cause and implement a resolution as quickly as possible. We will continue to provide updates as more information becomes available. We appreciate your patience and understanding. Impact: Mobile Terminating (MT) Traffic: Potential delay in delivery Mobile Originated (MO) Traffic: Potential delay in delivery DR Notification: Potential delay in delivery Report Manager Access: (remove if not applicable) Report Manager Statistics : (remove if not applicable) Incident Start Date & Time (GMT) : September 17, 06:45 UTC If you have any questions, please contact the Operator Service NOC immediately at operatorservices.noc@sinch.com or +1 470.300.8394 (select \u2018Support\u2019 from the menu, option 2 for Digital Interconnect, and then option 1) and reference this notification."
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-08-28",
+  "url": "https://status.snowflake.com/incidents/9p16kxkml7v2",
+  "name": "INC20000150",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "Incident start time: 08:41 UTC August 09, 2026 Preliminary root cause: A third-party cloud platform is experiencing constrained compute capacity in the specified region, limiting the availability of compute resources for Snowpark Container Services and causing delays or failures when provisioning or resuming virtual warehouses. This is a short-term mitigation; Gen1 capacity is limited and performance characteristics may differ. Incident start time: 08:41 UTC August 09, 2026 Preliminary root cause: A third-party cloud platform experienced constrained compute capacity, causing limited availability of compute resources for Snowpark Container Services and delays or failures when provisioning or resuming virtual warehouses in the specified region."
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-09-14",
+  "url": "https://status.snowflake.com/incidents/8c1snlr8gskb",
+  "name": "INC20000217",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": false,
+  "text": "Current status: We've implemented the fix for this issue and monitored the environment to confirm that service was restored. Customer experience: Customers hosted in the affected deployments may have experienced performance degradation or issues logging into Snowflake, including delayed sign-ins, and SSO login loops. Incident start time: 22:22 UTC September 13, 2026 Incident end time: 05:18 UTC September 14, 2026 Preliminary root cause: An update intended to improve authentication handling caused a subset of single sign-on (SSO) sign-in attempts across multiple regions to fail or loop, preventing affected users from logging in to Snowflake. A root cause analysis (RCA) will be conducted and a summary will be made available within 5 business days. || Current status: We've implemented the fix for this issue, and we'll continue to monitor the environment until we're confident all services are functioning properly. Customer experience: Customers hosted in the affected deployments may have experienced performance degradation or issues logging into Snowflake, including delayed sign-ins, and SSO login loops. Incident start time: 23:35 UTC September 13, 2026 Incident end time: 05:18 UTC September 14, 2026 Preliminary root cause: An update intended to improve authentication handling caused a subset of single sign-on (SSO) sign-in attempts across multiple regions to fail or loop, preventing affected users from logging in to Snowflake. || Current status: We've identified the source of th"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-09-09",
+  "url": "https://status.snowflake.com/incidents/wkhkwq8lfmb2",
+  "name": "INC20000211",
+  "sev": "Critical",
+  "cat": "database_issue",
+  "pm": false,
+  "text": "Current status: We've monitored the environment and confirmed that service has been restored. Incident start time: 21:26 UTC September 09, 2026 Incident end time: 21:55 UTC September 09, 2026 Preliminary root cause: A subset of our metadata database infrastructure became unavailable, resulting in failures across multiple Snowflake services. A root cause analysis (RCA) will be conducted and a summary will be made available within 5 business days. || Current status: We've implemented the fix for this issue, and we'll continue to monitor the environment until we're confident all services are functioning properly. Incident start time: 21:26 UTC September 09, 2026 Incident end time: 21:55 UTC September 09, 2026 Preliminary root cause: A subset of our metadata database infrastructure became unavailable, resulting in failures across multiple Snowflake services. || Current status: We've identified the source of the issue, and we're implementing a fix to restore service. ETA: Our current estimate is that service will be restored within 15-30 minutes."
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-09-27",
+  "url": "https://status.snowflake.com/incidents/3ykqqwk3s758",
+  "name": "INC20000239",
+  "sev": "Critical",
+  "cat": "other",
+  "pm": false,
+  "text": "Current status: We've coordinated with our third-party cloud platform to implement the fix for this issue, and we've monitored the environment to confirm that service was restored. Incident start time: 00:25 UTC September 27, 2026 Incident end time: 01:00 UTC September 27, 2026 Preliminary root cause: An issue with our third-party cloud platform caused impact to multiple Snowflake services and features. A root cause analysis (RCA) will be conducted and a summary will be made available within 10 business days. || Current status: We identified an issue with our third-party cloud platform that caused impact to Snowflake services. We've coordinated with our third-party cloud platform to implement the fix for this issue, and we'll continue to monitor the environment until we're confident all services are functioning properly. Incident start time: 00:25 UTC September 27, 2026 Incident end time: 01:00 UTC September 27, 2026 Preliminary root cause: An issue with our third-party cloud platform caused impact to multiple Snowflake services and features."
+ },
+ {
+  "org": "Square",
+  "date": "2026-03-19",
+  "url": "https://issquareup.com/incidents/01KM2TP04APPN006MYFG5GXQE2",
+  "name": "Degraded performance : QUICPay and iD payments ",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "Due to an issue at one of our third party partner, payments with QUICPay and iD could not be processed between 6:14 p.m. || Due to the issue in our partner company, we are currently experiencing a disruption that is impacting QUICPay and iD payments since 6:14pm JST. We understand how important it is for your business for all of our services to be up and running, and our partner is actively working on a fix."
+ },
+ {
+  "org": "Square",
+  "date": "2026-04-30",
+  "url": "https://issquareup.com/incidents/01KQG9H0SD8PVSHT2ZE2266ZA5",
+  "name": "Degraded Performance: Instant Transfers",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "The disruption that impacted the ability to initiate Instant Transfers to debit cards is now resolved. We understand how important it is for all of our services to be running for your business, and our Engineering team is actively discussing with our banking partners how to prevent future disruptions like this one. Thank you for your patience with us as we worked to resolve this issue. || Due to a third-party disruption with one of our banking partners, we are experiencing an increase in failures for some Instant Transfers to debit cards. While recovery has begun, Sellers experiencing issues with Instant Transfers can try linking a VISA debit card from a different banking institution and retry the transfer. We will continue to provide updates from our partner as we receive them. Thank you for your patience."
+ },
+ {
+  "org": "Square",
+  "date": "2026-09-10",
+  "url": "https://issquareup.com/incidents/01M26JQB738FAP206RSWNKVM28",
+  "name": "Payments Disruption",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "The issue affecting some debit-card transactions is now resolved. Your business operations are essential to us, and our Engineering team has implemented measures to strengthen our systems against similar incidents. We appreciate your patience throughout this resolution process. || We are continuing to work on a fix for payment processing. Sellers will experience a disruption with some debit-card transactions that may fail or be unavailable due to an issue with a third-party payment-processing partner. Sellers can use another available payment method as an alternative for now. We understand how important it is for all of our services to be running for your business, we'll be back with further updates as they come to hand. Thank you for your patience with us as we work to resolve this issue."
+ },
+ {
+  "org": "Square",
+  "date": "2026-03-19",
+  "url": "https://issquareup.com/incidents/01KM32BT3T12HA1CJCMGK2488N",
+  "name": "PayPay payments acceptance issue",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "From 3:05pm to 3:20pm JST, we experienced a disruption that impacted PayPay payment acceptance due to the issue at our partner company. Should you have any questions regarding your PayPay transaction history as a result of this incident, please contact Square Support at: [ https://squ.re/info](https://squ.re/info). We understand how important it is for all of our services to be running for your business and our partner company is actively discussing how to prevent future disruptions like this one. Thank you for your patience with us as we worked to resolve this issue."
+ },
+ {
+  "org": "Sumo Logic",
+  "date": "2026-07-23",
+  "url": "https://status.sumologic.com/incidents/j3t3fdqdzrl4",
+  "name": "Problem with Microsoft Azure Metrics Collection in North America 2 (US2)",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "We are no longer seeing issues with Microsoft Azure Metrics Collection and normal operation has been restored at this time. || Microsoft Azure has identified and rolled back a change that was causing the networking issue in the West US region. This issue is caused by a networking problem on Microsoft Azure's infrastructure in the West US region, which is impacting connectivity to Azure services. Microsoft is actively investigating and working on mitigation options for the affected network devices."
+ },
+ {
+  "org": "Supabase",
+  "date": "2026-08-14",
+  "url": "https://status.supabase.com/incidents/6q5902p2xd9f",
+  "name": "401 errors due to JWT rejections",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "|| The deployment process changes have been rolled out across all regions. || We have rolled out the deployment process changes to eu-central-2 and continue to monitor. || To resolve this issue, our fleet requires a change to our deploy process. In an effort to resolve this sooner, we have opted to make this deployment process change and ask users to upgrade. A targeted fix has been written and is undergoing internal testing. We will update the status page when the fix is rolled out. || We have seen reports that the JWT rejection issue persisted with 14.17, and due to some unintended performance side effects , we have rolled back to Postgrest 14.5. || We continue to monitor the fixes introduced by this latest rollout. || We are continuing to rollout the fixes for intermittent HTTP 401 errors. This fix has been applied to the following regions: ap-east-1 ap-northeast-1 ap-northeast-2 ap-south-1 ap-southeast-1 ap-southeast-2 ca-central-1 eu-central-1 eu-central-2 eu-north-1 eu-west-2 eu-west-3 We will continue rolling out this fix to the remaining regions throughout this week and provide updates as more regions are successful. || We are continuing to test and rollout the fixes for intermittent HTTP 401 errors. We will monitor eu-central-2 over the weekend and are preparing for the fix to be pushed to all regions starting Monday. Thank you for your patience while we've worked on multiple fixes for this issue. This has been fixed and we can see the error rates have subsided. || F"
+ },
+ {
+  "org": "Supabase",
+  "date": "2026-09-29",
+  "url": "https://status.supabase.com/incidents/w91bvbjhqf0f",
+  "name": "Intermittent latency in Eastern US",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "A fix for this issue has been implemented and our data shows recovery for users on projects that have previously been affected. || Our networking partners have implemented a mitigation to the latency issue at the problematic PoP in the Eastern US, and we have since observed significant improvement in rates of high latency across the region. We are continuing to work with those partners to isolate any additional root causes of latency and improve the reliability of our networking infrastructure across the region. || We are working with our networking partners on a permanent fix. || A mitigation for this issue was applied earlier today, but we do not have sufficient evidence to conclude that the mitigation resulted in improvement to this eastern US latency issue. || We are continuing our work to fix this latency issue, which has been observed to impact clients connecting to Supabase Projects from the eastern United States. || We have identified an issue with increased latency for clients in the eastern US during spikes caused by bursty traffic. We are actively working on a fix. We will provide updates as the fix is implemented."
+ },
+ {
+  "org": "Supabase",
+  "date": "2026-07-30",
+  "url": "https://status.supabase.com/incidents/y0tjlh6hhxlv",
+  "name": "Issues with Edge Function Deployment",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "A preventative fix (Supabase CLI v2.111.0 ) has been released to ensure that new Function deployments are not affected. As the underlying issue has been addressed and new deployments should no longer be affected, we are resolving this incident. All impacted users are now able to re-deploy their Functions again. || We are working on a permanent fix for issue affecting bulk Function deployments. || Our fix has completed rollout and we are monitoring for full resolution. || The issue has been identified and a fix is being implemented. || We continue to investigate the root cause of this issue. Some deployment operations have recovered, but we are still investigating reports of failures affecting bulk deployments and updates to existing Edge Functions. || We are still identifying the root cause of the issue; however, if you are experiencing issues with your Edge Functions, redeployment should resolve that issue. || Per-function deployment appears to be working successfully. However, bulk function deployments with the `supabase functions deploy` command appear to still be experiencing issues. Additionally, we are aware of reports of issues updating existing function deployments. || We have determined and rolled back the change that led to this issue. Users who were experiencing issues with deployments should now be able to deploy successfully. || Only a subset of users appear to be impacted by the issue with Edge Function deployments. We are investigating the root cause. || We are"
+ },
+ {
+  "org": "Supabase",
+  "date": "2026-07-16",
+  "url": "https://status.supabase.com/incidents/xmg8tmj6lsk4",
+  "name": "Projects in stuck state in EU-CENTRAL-1 (Frankfurt)",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "The mitigation work for this incident has been completed, and we have not observed any further impact following the restoration of affected projects. || All impacted projects have now been successfully restarted, and functionality has been restored. || The majority of impacted projects have now been recovered, and functionality has been restored for most customers. || The majority of impacted projects have now been recovered, and functionality has been restored for most customers. || We are continuing to work on a fix for this issue."
+ },
+ {
+  "org": "Supabase",
+  "date": "2026-07-31",
+  "url": "https://status.supabase.com/incidents/4ymz5r933c1c",
+  "name": "Management API Performance Degradation",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "|| We have identified the root cause and deployed a fix. || We are continuing mitigation efforts for the intermittent issues with the Management API. We are doing work to ensure the accuracy of the understood cause in order to have confidence in the mitigation method under consideration. || We've isolated the cause of the network issues with the Management API and we are working on a fix. || We have been alerted that our Management API is experiencing performance degradation due to intermittent network issues. We are actively investigating a persistent fix."
+ },
+ {
+  "org": "Supabase",
+  "date": "2026-08-19",
+  "url": "https://status.supabase.com/incidents/1kzddpb0fhwr",
+  "name": "Sign-in failures for `signInWithIdToken` (OIDC) logins on free-tier projects",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": false,
+  "text": "We have confirmed that the fix has been effective and are marking this incident as resolved. || We've identified that starting 4pm UTC on August 18th we began seeing sign-in failures with signInWithIdToken (OIDC) logins on free-tier projects. Users authenticating with OIDC providers other than Google/Apple/Firebase may have seen failed login attempts. We've identified the root cause and fix has been rolled out. We are monitoring for continued stability. || We've identified that starting 4pm UTC on August 18th we began seeing sign-in failures with signInWithIdToken (OIDC) logins on free-tier projects. Users authenticating with OIDC providers other than Google/Apple/Firebase may have seen failed login attempts. We've identified the root cause and fix has been rolled out. || We've identified an issue causing sign-in failures for `signInWithIdToken` (OIDC) logins on free-tier projects. Users authenticating with non-Google/Apple/Firebase OIDC providers may see failed login attempts. We've identified the root cause and fix has been rolled out. Impacted timeframe was 18th August 4pm UTC - 19th Aug 10:30am UTC"
+ },
+ {
+  "org": "Supabase",
+  "date": "2026-07-17",
+  "url": "https://status.supabase.com/incidents/xhs8d4l3wtsc",
+  "name": "Project Actions Failing Across Multiple Regions",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "|| The mitigation has returned project activity to normal performance. || We have identified a problem with a specific job in us-east-1, we have mitigated the job and are observing the results. || We are testing mitigation options to attempt to restore project action performance. We are pursuing root cause and mitigation options in parallel."
+ },
+ {
+  "org": "Supabase",
+  "date": "2026-08-11",
+  "url": "https://status.supabase.com/incidents/srkdws515yyf",
+  "name": "MCP connection error to branch environments",
+  "sev": "Low",
+  "cat": "authentication",
+  "pm": false,
+  "text": "|| We have pushed a fix to address the root cause and are monitoring the situation. || UPDATE: We are currently pushing a fix to address the root cause. We'll provide another update once the fix has been fully deployed. || We're still working on implementing a fix for the identified root cause. || We've identified the root cause that was leading to permission errors on MCP connections to branch environments."
+ },
+ {
+  "org": "Supabase",
+  "date": "2026-09-23",
+  "url": "https://status.supabase.com/incidents/4rbrdl79zz9p",
+  "name": "Storage search failing for restored projects",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "Storage is now operating normally. We apologise for the disruption. Hardening measures are being put in place to prevent recurrence and will be communicated upon completion. || A fix has been implemented for the affected tenants and we are monitoring the results. We will continue to monitor the situation and will provide further updates as more information becomes available. || We have identified an issue with Storage for projects are restoring from backups. Users may experience increased 500 errors. We are working to identify the root cause and will notify for any progress as soon as we have an update"
+ },
+ {
+  "org": "Supabase",
+  "date": "2026-08-24",
+  "url": "https://status.supabase.com/incidents/yx5g3m1wb58q",
+  "name": "Increased rates of Pooler connection timeouts in us-east-1",
+  "sev": "Low",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "This incident has been resolved. || We have identified a degraded Supavisor node and we have rolled out a fix. We are monitoring to ensure continued stability. Confirmed Impact: On Aug 24, 2026 between 14:30 and 15:20 UTC we observed increased rates of connection timeouts connecting to Supavisor in us-east-1 due to a degraded node. || We are aware of reports of increased rates of connection timeouts for users connecting to Projects in us-east-1 via Supavisor."
+ },
+ {
+  "org": "Tailscale",
+  "date": "2026-08-10",
+  "url": "https://status.tailscale.com/incidents/01KZP71YTTQQB95JEFNMY0J15A",
+  "name": "Certificate creation issues",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "|| We have identified the problem, and a fix has been deployed. This problem affects manual certificate issuance and the deployment of new services through Tailscale Serve or Tailscale Funnel. || A fix has been deployed and we are monitoring for any further problems. || We have identified the problem and are rolling out a fix. This problem affects manual certificate issuance and the deployment of new services through Tailscale Serve or Tailscale Funnel. || A fix has been deployed and we are monitoring for any further problems. || We have identified the problem and are rolling out a fix. This problem affects manual certificate issuance and the deployment of new services through Tailscale Serve or Tailscale Funnel."
+ },
+ {
+  "org": "Tailscale",
+  "date": "2026-08-03",
+  "url": "https://status.tailscale.com/incidents/01KZ3CF6SZ9A893D48CVST981A",
+  "name": "Certificate creation issues",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "|| A fix has been deployed and we are monitoring for any further problems. || During our monitoring of this fix, we have noticed an increase in the error rate, which our engineers are investigating further. || A fix has been deployed and we are monitoring for any further problems. This problem affects manual certificate issuance and the deployment of new services through Tailscale Serve and Funnel."
+ },
+ {
+  "org": "Temporal",
+  "date": "2026-06-03",
+  "url": "https://status.temporal.io/incidents/0vgj9dj2wpzw",
+  "name": "Some customers may be experiencing stuck workflows or activities",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "Incident is fully mitigated and resolved. Incident is fully mitigated and resolved. No additional impact has been observed since mitigation was implemented, and we continue to closely monitor the environment. || As refresh of closed workflows progresses, some users may see unblocked stuck parent workflows from closed child workflows; this is happening because the missed task for closed child workflows is refreshed and delivered to parent. It could also happen on other stuck workflows that are waiting for task updates which were missed due to this incident. || A bug in the recent update in History pagination caused a rare edge case where an extra task could be added before the response was returned. We will be refreshing all executions in cells where the update was deployed and will monitor these closely. || We're rolling back the recent update as a possible mitigation to avoid any further occurrences of this issue. We are however still in the process of investigating root cause and will post updates as we have them. Please report any stuck workflows or activities to support so we can help unblock them as we work on root cause investigation and resolution."
+ },
+ {
+  "org": "Temporal",
+  "date": "2026-05-28",
+  "url": "https://status.temporal.io/incidents/qj5dg09mtv2y",
+  "name": "Some customers in AWS us-east-1 experienced a small number of gRPC UNIMPLEMENTED errors",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "A permanent fix for the region is now in-progress. We are continuing to monitor closely while work progresses on a permanent fix to prevent recurrence. || We have confirmed the service is now stable and are now working to ensure a permanent fix is in place to prevent any recurrence. We will continue to monitor for errors until the fix is deployed. || The gRPC UNIMPLEMENTED errors previously observed have been mitigated. We are continuing to monitor the situation and are working towards a permanent fix at this time. We have identified a root cause and are currently working towards a permanent fix."
+ },
+ {
+  "org": "Temporal",
+  "date": "2026-07-07",
+  "url": "https://status.temporal.io/incidents/clj1lf3rrcr2",
+  "name": "Customers in GCP us-east4 may experience elevated API latencies",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "The latencies were caused by issues with a downstream service which resolved after we scaled up. We've been monitoring for errors and latencies and have not seen any further issues. This issue is now considered resolved. || We are continuing to monitor for any further issues. || We are continuing to monitor for any further issues. || We have rolled out a change and have paused further investigation overnight pending validation under daytime traffic. || We are continuing to work on the investigation and remediation of the elevated API latencies in GCP us-east4. We will provide further updates within one hour. || We are currently working to remediate the elevated API latencies that were observed in GCP us-east4. || We are continuing to investigate the elevated API latencies in GCP us-east4 and will provide more details as they become available. || Customers in GCP us-east4 may experience elevated API latencies."
+ },
+ {
+  "org": "Temporal",
+  "date": "2026-07-08",
+  "url": "https://status.temporal.io/incidents/rq2bghcn2hp7",
+  "name": "Some customers in AWS us-east-1 may experience elevated rate of API errors and elevated latencies",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "A set of fixes have been implemented and no further latency or failures have been observed in AWS us-east-1 since 17:00 UTC. We continue to investigate the root cause of the elevated latencies and API errors observed in AWS us-east-1 and are monitoring for any further occurrences. || We are currently investigating the root cause of the elevated latencies and API errors observed in AWS us-east-1 and are working to mitigate any recurring impact. || A fix has been implemented and we are monitoring the results. || The issue has been identified and a fix is being implemented. || A fix has been implemented and we are monitoring the results."
+ },
+ {
+  "org": "Temporal",
+  "date": "2026-05-29",
+  "url": "https://status.temporal.io/incidents/42yk9nxtf00s",
+  "name": "Some customers in us-west-2 may experience elevated rate of API errors & higher latencies",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "Remediation has been completed at this time and we have confirmed the recovery of all affected namespaces. || Latencies and error rates are stable after remediation and we are continuing to monitoring it. || Error rates remain stable, and we continue to implement remediation measures while monitoring service performance closely. || We continue to investigate the root cause while implementing remediation measures. Error rates have recovered. || Failover was initiated for the affected HA namespaces while we keep investigating the root cause. || Some customers in us-west-2 may experience elevated rate of API errors & higher latencies"
+ },
+ {
+  "org": "Travis CI",
+  "date": "2022-12-20",
+  "url": "https://www.traviscistatus.com/incidents/nhjcl3364tgg",
+  "name": "Synchronization with GitHub fails",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "We will be monitoring the situation over next hours, looking for any remaining issues caused by the incident. || The issue has been identified, fix is being implemented. The symptoms are that either adding new repository or installing Travis CI GitHub App from scratch results in repositories not being activated and builds cannot be triggered."
+ },
+ {
+  "org": "Travis CI",
+  "date": "2019-08-08",
+  "url": "https://www.traviscistatus.com/incidents/bmh7gcb0v95t",
+  "name": "Network Connectivity Errors",
+  "sev": "High",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "This incident has been resolved. || Builds are back to running normally. We will continue to monitor the situation for a short while before closing the incident. || Builds that were running on the affected pool have now finished and all builds are back to normal. We're monitoring closely and will post again once we're in the clear. || We have identified the production systems affected by this issue and have removed these from the pool. No new builds will be affected by this, existing builds in the pool will be allowed to finish but might have network connectivity issues. Please expect additional updates shortly. Thank you || We are continuing to investigate this issue. || We have received several reports of builds failing due to an unsuccessful TLS handshake to *whereami.travis-ci.com:443* on one of our production servers. We are opening this incident to acknowledge the issue and also keep you posted on our work to solve it. Thank you for your patience."
+ },
+ {
+  "org": "Trello",
+  "date": "2024-10-14",
+  "url": "https://status.trello.com/incidents/37cnbg16jcvh",
+  "name": "Boards are demonstrating slow performance for Workspace Guests",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "On October 15th, we identified that some boards were performing slowly for Workspace Guests. A fix has been released to all affected users, and the slow performance issue is fixed. || On October 15th, we identified that some boards were performing slowly for Workspace Guests. We have taken action to mitigate this issue and we will continue to monitor for the next 30 minutes before marking the incident as resolved. || We've identified the issue that caused the issue for slow performance for boards when loading them and opening cards for Workspace Guests, and we're now working on a fix for the problem and will provide a new update here soon."
+ },
+ {
+  "org": "Trello",
+  "date": "2025-07-14",
+  "url": "https://status.trello.com/incidents/0bs9tk5dh7qb",
+  "name": "Users experiencing issues with Email to Board failing",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "The faulty configuration has now been reverted and Email to Board functionality should now be working as expected. We apologise again for any inconvenience caused by this issue. || We are aware of some users experiencing issues where Email to Board functionality is failing with an error message similar to 'This message could not be delivered due to a recipient error."
+ }
+]

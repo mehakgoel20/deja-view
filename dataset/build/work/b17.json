@@ -1,0 +1,402 @@
+[
+ {
+  "org": "Miro",
+  "date": "2026-08-31",
+  "url": "https://status.miro.com/incidents/01M1C3Q046HQDEZ69N9ZNFK5H2",
+  "name": "Intermittent Issues with User Registration and Login",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": false,
+  "text": "The issue affecting user registrations and logins has been resolved. Normal system operations have resumed. || We have successfully implemented a fix and closely monitored the results. We can confirm that user registration and login processes are fully recovered and functioning normally. Thank you for your patience while we worked to resolve this issue. || We are currently identifying an issue affecting a small percentage of users attempting to log in or register. Some users may encounter an error when trying to sign up or sign in to Miro. Workaround: If you encounter an error during registration, please refresh the page and try again. A subsequent attempt should be successful. Our engineering team is actively looking into the root cause, and we will provide another update shortly. We apologize for any inconvenience this may cause."
+ },
+ {
+  "org": "Miro",
+  "date": "2026-03-04",
+  "url": "https://status.miro.com/incidents/01KJWXGPVC0QZMDWH3XQNTCM1J",
+  "name": "Issue affecting our service performance",
+  "sev": "Medium",
+  "cat": "database_issue",
+  "pm": false,
+  "text": "We are still monitoring to ensure the experience is restored. || Identified the issue and have mitigated the impact. We identified elevated CPU utilization on our content database, which is causing performance degradation. What We're Doing: Our engineering team is actively investigating the root cause and exploring mitigation options to restore normal service performance."
+ },
+ {
+  "org": "Miro",
+  "date": "2026-05-21",
+  "url": "https://status.miro.com/incidents/01KS5HMCMPZTHS7FX5B5HSYTWP",
+  "name": "Functionality degradation in Miro AI",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "The issue affecting Miro AI has been fully resolved. We apologize for the inconvenience caused and appreciate your understanding. If you continue to experience any issues, please reach out to our support team. || We have implemented a fix. Miro AI availability has returned to normal levels. Our team will continue to monitor the systems closely to ensure stability. We will confirm the resolution shortly if no further issues are detected. || We are currently investigating reports of functionality degradation affecting Miro AI. Users may experience slower response times, delays or unavailability when accessing Miro AI. Our engineering team is working to identify the root cause and will provide updates as we learn more. We apologize for any inconvenience this may cause and appreciate your patience."
+ },
+ {
+  "org": "Miro",
+  "date": "2025-08-19",
+  "url": "https://status.miro.com/incidents/01K30R1F4HZ0FK0KGQ49MRGQ62",
+  "name": "Issues with Tables and Timelines in EU region",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "The issue affecting Tables and Timelines has been fully resolved. We apologize for the inconvenience caused and appreciate your understanding. If you continue to experience any issues, please reach out to our support team. || We have rolled out the fix. Tables and Timelines performance has returned to normal levels. Our team will continue to monitor the systems closely to ensure stability. || We identified the issue with Tables and Timelines that our customers may experience in EU region. We are actively investigating the issue and working on restoring normal performance. We will provide further updates when the fix is rolled out."
+ },
+ {
+  "org": "Miro",
+  "date": "2025-05-19",
+  "url": "https://status.miro.com/incidents/01JVM02CS6688D63V6VDB91RRD",
+  "name": "Degradation in image upload functionality within AI features",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "The issue causing degraded image upload functionality within AI features has been fully resolved. We apologize for the inconvenience caused and appreciate your understanding. If you continue to experience any issues, please reach out to our support team. || We've identified the root cause of the image upload issues affecting AI features and are working on a fix. || We\u2019re currently investigating a degradation in image upload functionality within AI features. This is impacting related features like image generation and alteration, which may not work reliably. We\u2019ll share updates as we learn more."
+ },
+ {
+  "org": "Miro",
+  "date": "2025-05-26",
+  "url": "https://status.miro.com/incidents/01JW5Z03HSCDKHR515R7CN7VH3",
+  "name": "Users are unable to use Blueprint templates",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "We apologize for the inconvenience caused and appreciate your understanding || We identified the cause of the issue with the Blueprints. We are actively working on a fix to restore normal performance || We are currently investigating issues affecting opening and using Blueprint templates. Our engineering team is working to identify the root cause and will provide updates as we learn more."
+ },
+ {
+  "org": "Miro",
+  "date": "2026-02-26",
+  "url": "https://status.miro.com/incidents/01KJD245QK5ZAEPPHNPVA8H7JB",
+  "name": "MCP server performance degraded",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "The Performance Degradation affecting MCP server has been fully resolved. We apologize for the inconvenience caused and appreciate your understanding. If you continue to experience any issues, please reach out to our support team. || We are currently investigating reports of Performance Degradation affecting Miro _MCP server_. Users may experience slower response times or delays when accessing the _MCP._ Our engineering team is working to identify the root cause and will provide updates as we learn more. We apologize for any inconvenience this may cause and appreciate your patience."
+ },
+ {
+  "org": "Miro",
+  "date": "2025-05-19",
+  "url": "https://status.miro.com/incidents/01JVM56TTA6ZD1KPQYQKN1V836",
+  "name": "Email Delivery Issue for Team Invitations",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "The issue that was preventing team invitation emails from being delivered correctly has been fully resolved. We apologize for the inconvenience caused and appreciate your understanding. If you continue to experience any issues, please reach out to our support team. || We\u2019ve identified an issue affecting some users on the Enterprise plan where team invitations are successfully created and processed, but the invitation email is not delivered to the invitee. We\u2019ve identified the root cause and are working on a fix."
+ },
+ {
+  "org": "Miro",
+  "date": "2025-10-20",
+  "url": "https://status.miro.com/incidents/01K80CZ70SR41FT8JBV97YJZMA",
+  "name": "Potential Service Disruptions (External Incident)",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "Earlier disruptions were due to a significant Amazon Web Services outage. While AWS is completing their remediation, the majority of their services are now operational and we have observed recovery in multiple third-party systems. || We\u2019re aware of widespread external issues that may be affecting some third-party integrations with Miro. While Miro itself is fully operational, certain features may experience temporary disruptions until these external issues are resolved."
+ },
+ {
+  "org": "Monday.com",
+  "date": "2026-04-20",
+  "url": "https://status.monday.com/incidents/40x7x7pfzb14",
+  "name": "Issue with Emails & Activities in CRM and communication in monday Service",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "The issue has been successfully resolved. Please refresh your browser to access the platform. Thank you for your patience || The issue with sending emails should be fully resolved. Our team is still investigating the issue with the error message \u201cAn administrator removed access to the Emails & Activities timeline. Only members can access it\" and access to the timeline in CRM and monday Service. || The issue with sending emails should be fully resolved. Our team is still investigating the issue with the error message \u201cAn administrator removed access to the Emails & Activities timeline. Only members can access it\" and access to the timeline. || When sending emails from E&A in CRM and monday service, the error message \"Email wasn't sent due to an issue on our end - please try again\" is returned. Some users are also seeing the message \u201cAn administrator removed access to the Emails & Activities timeline. Only members can access it,\" blocking access to emails in the timeline and the email settings section. Our team is aware of this and is working to bring this back to normal."
+ },
+ {
+  "org": "Monday.com",
+  "date": "2026-04-26",
+  "url": "https://status.monday.com/incidents/pqfx11kyhxjr",
+  "name": "Investigating issues with our automations and workflow builder",
+  "sev": "Critical",
+  "cat": "other",
+  "pm": false,
+  "text": "Thank you for your patience || A fix has been implemented and we are monitoring results to ensure full stability with automations and the workflow builder. Some automations may still be delayed || Our team has identified the root cause of the issue affecting automations and the workflow builder and is working to resume regular service usage."
+ },
+ {
+  "org": "Monday.com",
+  "date": "2026-07-13",
+  "url": "https://status.monday.com/incidents/kvnr70xmbg8z",
+  "name": "Issues with platform latency",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "This incident has been resolved. || A fix has been implemented and we are monitoring the results. || We are currently experiencing platform latency issues/not loading affecting some services, including Boards, Dashboards, Columns, Docs, Automations, My Work, Templates, AI features, Vibe, formula builder, and Campaigns. Our team is actively investigating the issue and working to restore full service as quickly as possible. We appreciate your patience and understanding. || Our team has identified the root cause of the issue and is working to resume regular service usage. We will continue to provide updates on their progress."
+ },
+ {
+  "org": "Monday.com",
+  "date": "2026-04-23",
+  "url": "https://status.monday.com/incidents/xydls2grlv0t",
+  "name": "Investigating reports of monday docs issues across accounts",
+  "sev": "Critical",
+  "cat": "other",
+  "pm": false,
+  "text": "The issue has been successfully resolved. Please refresh your browser to access the platform. Thank you for your patience || A fix has been implemented and we are monitoring results to ensure full system stability. || Our team has identified the root cause of the issue and is working to resume regular service usage. We will continue to provide updates on their progress. || We are currently investigating reports of Monday Docs issues across the platform. Our team is looking into this and will provide you with a response shortly."
+ },
+ {
+  "org": "Monday.com",
+  "date": "2026-03-11",
+  "url": "https://status.monday.com/incidents/f769xk2qlzyl",
+  "name": "Issue with Outlook Integration Connection Issues",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "The connectivity issues with Outlook have been successfully resolved. Please refresh your browser to access the platform. Thank you for your patience! || Our team has identified the root cause of the issue and is working to fix the behavior with Outlook. We will continue to provide updates on their progress. || We are having an issue with the Outlook integration getting disconnected, and we are unable to reconnect it. Our team is aware of the issue and is currently looking into it. We appreciate your patience in the meantime."
+ },
+ {
+  "org": "Monday.com",
+  "date": "2025-09-29",
+  "url": "https://status.monday.com/incidents/xn785sy5zxn3",
+  "name": "Investigating issues with Templates",
+  "sev": "Critical",
+  "cat": "other",
+  "pm": false,
+  "text": "The issue has been successfully resolved. Please refresh your browser to access the platform. Thank you for your patience || A fix has been implemented and we are monitoring results to ensure full system stability. || Our team has identified the root cause of the issue and is working to resume regular service usage. We will continue to provide updates on their progress. || We are currently experiencing issues related to pre-built templates. Our dedicated team is working to resolve this as quickly as possible"
+ },
+ {
+  "org": "Monday.com",
+  "date": "2025-09-03",
+  "url": "https://status.monday.com/incidents/nk0gjl8vd4wx",
+  "name": "Identified the issue affecting our automations and integrations",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "Thank you for your patience || A fix has been implemented, and we are monitoring results to ensure full stability with automations and integrations. || Our team has identified the root cause of the issue affecting automations and integrations, and is working to resume regular service usage."
+ },
+ {
+  "org": "Monday.com",
+  "date": "2026-05-26",
+  "url": "https://status.monday.com/incidents/68ycl2tvs3zx",
+  "name": "Investigating issues with Emails and Activities",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved. || A fix has been implemented and we are monitoring results to ensure full system stability. || Our team has identified the root cause of the issue and is working to resume regular service usage. We will continue to provide updates on their progress. || We are currently investigating reports of issues related to Emails and Activities in the CRM and Service products. Our team is looking into this and will provide you with a response shortly."
+ },
+ {
+  "org": "MongoDB Atlas",
+  "date": "2026-03-19",
+  "url": "https://status.mongodb.com/incidents/ts5bjz6km9f9",
+  "name": "MongoDB Atlas for Government: SSO login failures for some users",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": false,
+  "text": "This incident has been resolved. || A fix has been implemented and we are monitoring the results. Users who were previously unable to log in via SSO should now be able to authenticate successfully. || Impact: Some users may be unable to log into the Atlas for Government UI using SSO. Specifically, users accessing Atlas for Government via a saved SSO login URL may receive an error, and users attempting to log in via a federated identity provider link may be unable to complete authentication. Root cause: We have identified an issue with SSO routing that is preventing some federated login flows from completing successfully. These issues started around 2026-03-18 2:30 UTC. What you might see: - A 400 error when navigating to Atlas for Government via a bookmarked or direct SSO URL. - An inability to complete login when using a federated identity provider link. Our actions: A fix is being implemented. Actively working to restore full SSO login functionality for affected users. User action: As a workaround, users can log in by entering their email address directly at https://account.mongodbgov.com and following the standard prompts. If you have time-sensitive changes that are blocked and need urgent assistance, please contact MongoDB Support. Next update: We will provide updates on this page as we progress toward resolution, or if we observe any change in impact to Atlas for Government."
+ },
+ {
+  "org": "MongoDB Atlas",
+  "date": "2026-03-02",
+  "url": "https://status.mongodb.com/incidents/rtbthsrxzt6x",
+  "name": "MongoDB Atlas Admin API: Temporary failures for tools using older API versions",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "This behavior was triggered by our planned retirement process for older API versions, but the resulting user impact was unintended because these versions were still in active use. We have extended the end-of-life date for the affected API versions to mid-2027 (tentative date 2027-07-01) and deployed a configuration change to restore compatibility for these workflows."
+ },
+ {
+  "org": "MongoDB Atlas",
+  "date": "2026-07-17",
+  "url": "https://status.mongodb.com/incidents/qjk952jxg2kk",
+  "name": "MongoDB Atlas and Atlas for Government: New AWS Backup and AWS Data Transfer costs will be unavailable between July 17 and 20",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "This incident has been resolved. || The upstream issue has been corrected. After approximately 0400 UTC on 2026-07-21, most, if not all, of the updated backup and network consumption on AWS will be reflected in MongoDB Atlas and Atlas for Government. Thank you for your patience during this incident. || Due to an ongoing incident with AWS's billing data, MongoDB Atlas and Atlas for Government will not be updating AWS network or backup consumption data over this weekend, 2026-07-17 through 2026-07-20. The products themselves will remain fully available. When the upstream issue has been resolved, we intend to display and bill for the correct amounts. Charges will have usage dates that correctly express the usage, but will have the billed date of when this is corrected. Cluster and backup health are unaffected. Other cloud providers' billing data is unaffected. You can follow the upstream incident at https://health.aws.amazon.com/health/status"
+ },
+ {
+  "org": "MongoDB Atlas",
+  "date": "2026-03-25",
+  "url": "https://status.mongodb.com/incidents/gch8hbs1yfz5",
+  "name": "Intermittent 503 Errors on Atlas Admin API and Automation Tooling",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "We are no longer seeing intermittent spikes in HTTP 503 errors. || We continue to monitor our systems for intermittent spikes in 503 HTTP errors following our deployed fix. We will provide another update tomorrow by 3 PM UTC. || The team has identified the root cause of intermittent spikes of HTTP 503 errors and has applied a fix. || We are currently investigating intermittent spikes of HTTP 503 errors affecting Atlas control plane operations performed via the Atlas Admin API and automation tooling such as Terraform. Impacted requests typically fail for a short period and succeed on retry. Atlas database connectivity and data plane operations remain healthy. Our engineering teams are working to resolve the issue with high urgency and to prevent recurrence. Customers encountering 503 responses are advised to retry failed Admin API and Terraform operations with appropriate retry logic and backoff while we continue our investigation."
+ },
+ {
+  "org": "MongoDB Atlas",
+  "date": "2026-05-07",
+  "url": "https://status.mongodb.com/incidents/1t1nk96wgyx3",
+  "name": "AWS Cluster DNS Changes Degraded Performance",
+  "sev": "High",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "We've since patched this metadata and are seeing recovery in ACME updates for cluster topology changes. || We are still seeing cases where new cluster update requests are failing to go through due to ACME related DNS issues. || Mitigation is in progress; recovery for DNS operations and downstream cluster topology changes has begun."
+ },
+ {
+  "org": "MongoDB Atlas",
+  "date": "2026-08-18",
+  "url": "https://status.mongodb.com/incidents/8t1spyy2s5rl",
+  "name": "Atlas UI and API Periodic Unavailability",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved. Following the incident, we identified an issue that caused some internal Atlas jobs not to start as scheduled, resulting in delays to certain changes. The issue was related to this incident \"Atlas UI and API Periodic Unavailability\" which has been remediated. Customer clusters and their data were not affected; the impact was limited to the timing of control-plane operations. This jobs issue has been resolved as well. || We have disabled the workload and are monitoring the situation || We have identified a new workload that was putting more load than expected on the backing system. We are working on disabling it. Customer clusters remain unaffected. || We are investigating an issue where customers periodically cannot access the Atlas UI or utilize the API. Customer clusters are unaffected."
+ },
+ {
+  "org": "MongoDB Atlas",
+  "date": "2026-05-23",
+  "url": "https://status.mongodb.com/incidents/t2tkv1n35tx0",
+  "name": "Authentication failures when running search queries for some clusters",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": false,
+  "text": "This incident has been resolved. || We have resolved the issue for all impacted clusters. We continue to monitor the fleet for any residual impact. || We have identified the root cause of the search query failures and are working on a mitigation for impacted clusters. Clusters with dedicated search nodes are unaffected. Some clusters with colocated search nodes may see search query failures. || We are investigating an issue impacting some clusters that causes search queries to fail with authentication failures."
+ },
+ {
+  "org": "MongoDB Atlas",
+  "date": "2026-07-09",
+  "url": "https://status.mongodb.com/incidents/q5ybj217pv4m",
+  "name": "Atlas Data Federation and Online Archive cloud-provider IAM authentication error",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": false,
+  "text": "This incident has been resolved. || A fix has been implemented and we are monitoring the results. || We have identified that the issue is caused by a recent configuration change to IAM authentication and are working on a fix. || Users of Atlas Data Federation and Online Archive using cloud-provider IAM authentication may see pipelines fail with an error when querying backing Atlas clusters. Other authentication methods are unaffected. As a temporary workaround, users can use SCRAM authentication."
+ },
+ {
+  "org": "MongoDB Atlas",
+  "date": "2026-06-25",
+  "url": "https://status.mongodb.com/incidents/3n6m136ll01g",
+  "name": "MongoDB Atlas: Atlas UI loading issues",
+  "sev": "Low",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "From 2026-06-25 06:55 UTC to 2026-06-25 07:10 UTC, some users may have experienced intermittent Atlas UI loading failures. We identified elevated traffic to a number of endpoints that increased latency in the Atlas UI service. This caused internal health checks to fail and temporarily reduced healthy Atlas UI capacity. We restored healthy Atlas UI capacity and applied additional rate limiting to the affected traffic paths. We are continuing follow-up work to further reduce the risk of recurrence."
+ },
+ {
+  "org": "MongoDB Atlas",
+  "date": "2026-02-13",
+  "url": "https://status.mongodb.com/incidents/mlzl2k4dcqlt",
+  "name": "DNS Resolution failures for public IP addresses within 31.89.0.0/24",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "The DNS records have been backfilled and clusters that had these IP addresses should be recovered. || We have identified the root cause and are working on backfilling those records with AWS support. We have also disabled that ip range for new clusters so moving forward this issue will not be hit for new AWS clusters. || We are investigating an issue with DNS resolution for public IP addresses within 31.89.0.0/24. We are engaging with AWS support to remediate the situation."
+ },
+ {
+  "org": "MongoDB Atlas",
+  "date": "2026-03-30",
+  "url": "https://status.mongodb.com/incidents/b66vgs5vz8rz",
+  "name": "Delays in cluster creation and adding new cluster nodes in Azure East US 2 region",
+  "sev": "Low",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "We are no longer seeing capacity issues in Azure East US 2. This issue is now resolved. || Identified: Some clusters in the Azure East US 2 region will see delays provisioning new clusters or adding additional nodes to their existing clusters due to Azure capacity constraints. What you might see: Delays in provisioning new clusters or adding additional nodes in Azure East US 2 region. User action: As a workaround, users can provision clusters in other Azure regions."
+ },
+ {
+  "org": "MongoDB Atlas",
+  "date": "2026-07-29",
+  "url": "https://status.mongodb.com/incidents/rhj2h4scwdhk",
+  "name": "Delayed cluster configuration affecting free and flex users",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "This incident has been resolved. || We have seen errors subsiding and cluster configurations for free and flex customers should be operating normally again. || We have identified the root cause and are rolling out a configuration change to remediate the delayed cluster configuration changes. || We are investigating an issue with cluster configuration updates getting delayed for a subset of users on free and flex tiers. Cluster access is unaffected."
+ },
+ {
+  "org": "Monzo",
+  "date": "2020-09-21",
+  "url": "https://status.monzo.com/incidents/88fvd9f941px",
+  "name": "Transactions were delayed",
+  "sev": "High",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "We identified an issue affecting some customers from 15:48 BST until 15:52 BST. || We identified an issue affecting some customers from 15:48 BST until 16:08 BST. || We identified an issue affecting some customers from 15:48 BST until 16:08 BST. || We're getting all the information we need to fix this and will update the status page as soon as we can."
+ },
+ {
+  "org": "Monzo",
+  "date": "2021-10-28",
+  "url": "https://status.monzo.com/incidents/3qz5y5r2gnnq",
+  "name": "Lending applications should be working again",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "The issue with the credit reference agency is now resolved. || The issue with our credit reference agency has re-occurred, applications for overdrafts, loans, and Monzo Flex may not work currently. || The credit reference agency has told us the issue should be resolved, we're slowly re-opening lending applications and will continue to monitor the situation. || We're currently experiencing some issues processing lending applications due to an issue at a credit reference agency. This will impact applications to take out overdrafts, loans, and Monzo Flex. We're investigating the issue with them now and will provide updates as soon as we have them. || We're currently experiencing some issues processing lending applications due to a an issue at a credit reference agency. This will impact applications to take out overdrafts, loans, and Monzo Flex. We're investigating the issue with them now and will provide updates as soon as we have them."
+ },
+ {
+  "org": "Monzo",
+  "date": "2026-08-19",
+  "url": "https://status.monzo.com/incidents/qjrccspb2559",
+  "name": "We are experiencing platform issues",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "Thanks for your patience while we worked on the fix \ud83d\ude4f || This afternoon, we identified some issues affecting Monzo and activated Monzo Stand-in, our fully independent backup bank. We're rolling out a fix and moving quickly to get full service back up and running for everyone. || The problems affecting delayed payments aren\u2019t fixed yet."
+ },
+ {
+  "org": "Monzo",
+  "date": "2024-07-19",
+  "url": "https://status.monzo.com/incidents/ql6ys5y14278",
+  "name": "Global IT outage: Our services are working as normal",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "Our third parties have fixed the issues caused by the global IT outage. All services are working as normal. || You can now pay in cheques through the app again and we\u2019ll process them as normal. || Monzo isn\u2019t directly impacted by the global Crowdstrike and Microsoft IT outage and our services are working as normal. You can make payments and do your day-to-day banking as usual. The outage is impacting some of our third party suppliers, meaning submitting cheques in-app, crediting in-app cheque payments and viewing credit insights aren\u2019t available right now. They'll be back up and running once the outage is fixed."
+ },
+ {
+  "org": "Mux",
+  "date": "2025-10-23",
+  "url": "https://status.mux.com/incidents/g4wcv5cm02sg",
+  "name": "Investigating elevated playback errors on Chrome version 141.0.7390.123 and later",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "However, in this version there is a bug that can result in playback errors of all HLS content (not just Mux content), resulting in errors with error code 3, or sometimes 4. The patch for this bug has been submitted to chromium, and will likely be included in version 143 (and future versions), though that is not guaranteed at this time. The Chrome team is aware of the issue and working on releasing this fix. However, the patch for the Chrome bug has not yet been included in this release. We will update this page as soon as we have confirmation that the bug has been fixed and is being released in a future version of Chrome. Updated Mux Player packages: \u2022 https://www.npmjs.com/package/@mux/mux-player \u2022 https://www.npmjs.com/package/@mux/mux-player-react Implementation details: https://github.com/muxinc/elements/pull/1221 || The Google Chrome team has identified the root cause of the playback issue and is preparing a fix. For users not on Mux Player, the following mitigations remain available: \u2022 Configure your player (e.g., HLS.js) to prefer MSE playback as described in the HLS.js documentation: https://github.com/video-dev/hls.js?tab=readme-ov-file#using-hlsjs \u2022 Alternatively, detect affected Chrome versions and selectively fall back to MSE using this reference implementation: https://codesandbox.io/p/sandbox/lntnr2?file=%2Findex.html We\u2019ll continue to monitor Chrome\u2019s rollout and will update this post once the patch in Chrome 142 becomes generally available."
+ },
+ {
+  "org": "Mux",
+  "date": "2026-07-15",
+  "url": "https://status.mux.com/incidents/2lbpdvprvn9s",
+  "name": "video live and playback issues",
+  "sev": "Critical",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "This incident has been resolved. || All customer impact has been mitigated. Traffic remains directed away from the affected infrastructure while we work with our cloud provider on the underlying issue. We will remain in this state until we have fully validated the issue is resolved and we can safely restore normal operation. Once normal operation is restored, we will update and close this incident accordingly. || We have identified service disruption in underlying cloud infrastructure in a single availability zone, which impacted a portion of video ingestion and playback. We have routed traffic away from the affected infrastructure and are continuing to monitor while we work with the service provider on resolution. || A fix has been implemented and we are monitoring the results. || Customers may experience issues with video live and/or playback. Root cause has been identified and fix is being worked on. More updates to come as we have it."
+ },
+ {
+  "org": "Mux",
+  "date": "2025-09-22",
+  "url": "https://status.mux.com/incidents/8y4zzslm4jgl",
+  "name": "Elevated error rates for video ingest and playback for assets and live streams",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "This Incident has been Resoled. || We are continuing to monitor for any further issues. || Our team has implemented a fix to resolve the issue, and is monitoring the situation. Though we believe the issue is resolved for all users, we will be monitoring and will post an update as soon as the issue is fully resolved. || Error rates have improved and returning to normal. The team are continuing to investigate the root cause of this error spike. We will continue to provide updates as we have more details. || The previous status update was marked resolved unintentionally. Our systems are still experiencing elevated error rates, and our team is actively investigating."
+ },
+ {
+  "org": "Mux",
+  "date": "2025-08-19",
+  "url": "https://status.mux.com/incidents/6ggd9jjtbv8n",
+  "name": "Some assets generated from live streams stalling at the end",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "This incident has been resolved. || For the issue of live streams stalling for playbacks, and the delay of creating static renditions for those assets, we have identified the root cause. Affected assets were created from live streams from 8/18 9:03 PM (UTC) to 8/19 8:29 AM (UTC). The issue has been mitigated as of 8/19 8:34 AM (UTC). We are continuing to monitor the situation and will be reaching out to impacted customers directly. || We are currently investigating an issue where for some live streams, the assets generated from the live streams may stall for playbacks at the very end, and creating static renditions for those assets may be delayed"
+ },
+ {
+  "org": "Mux",
+  "date": "2025-10-20",
+  "url": "https://status.mux.com/incidents/p92gsdhkh7dm",
+  "name": "Mux Player embeds increased error rates",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "|| We are continuing to monitor our systems, as our underlying cloud providers continue to investigate the root cause. || We are continuing to monitor for any issues while the underlying cloud vendor continues to investigate the root cause. || From 07:30 UTC, Mux Player embeds are were experiencing increased error rates caused by an outage with an underlying cloud vendor."
+ },
+ {
+  "org": "Mux",
+  "date": "2026-02-01",
+  "url": "https://status.mux.com/incidents/6cdvwf3n59bh",
+  "name": "Monitoring dashboard data delayed",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "This incident has been resolved. || We've taken corrective action and are monitoring the results. Tail latencies have fully recovered. || Elevated latency in the processing of incoming monitoring data began approximately 21:35 UTC. This impacted most customers that have access to monitoring data. Latency has starting improving, and we continue to investigate root cause. || We are investigating an issue where monitoring data is significantly delayed"
+ },
+ {
+  "org": "Netlify",
+  "date": "2026-03-30",
+  "url": "https://status.netlify.com/incidents/qvlyvz9rj25f",
+  "name": "Environment Variables Issues",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "We\u2019ve deployed a fix for the environment variables issue affecting some sites, and this all sites have received this fix as of 4:45pm UTC 3-31. || We\u2019ve identified the root cause of the environment variables issue affecting some sites and have deployed a fix. The fix is now live, and impacted sites should have automatically received it. || We've identified the issue and applied a fix. No new sites are affected by the issue and we are applying a fix for previously affected customers. || The issue has been identified and a fix is being implemented."
+ }
+]

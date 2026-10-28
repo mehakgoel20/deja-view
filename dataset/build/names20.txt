@@ -1,0 +1,50 @@
+cybersource authorizenet moneris elavon vantiv
+heartland fiserv fisglobal jackhenry ncr diebold
+tsys globalpayments evertec euronet
+bambora payvision ingenico verifone
+sumup squareup clover toast lightspeedhq
+zettle izettle mypos payworks
+checkoutcom primer gr4vy spreedly
+basistheory verygoodsecurity skyflow
+veza opal sgnl aembit entitle
+clutch descope authzed openfga permify
+oso cerbos warrant topaz aserto
+infisical akeyless doppler envkey
+spacelift env0 scalr terrateam atlantis
+digger terramate terragrunt
+uffizzi okteto garden tilt devspace
+telepresence skaffold draft
+earthly dagger depot blacksmith namespacelabs
+warpbuild buildjet actuated cirrus
+nx turborepo moonrepo rush lerna changesets
+chromatic percy applitools argos reg
+lost-pixel vrt
+checkly ghostinspector rainforestqa testim mabl
+functionize reflect qawolf autify
+playwright cypress webdriverio nightwatch
+testcafe puppeteer selenium appium detox
+maestro waldo bitbar kobiton perfecto
+browserling lambdatest crossbrowsertesting
+k6 gatling locust artillery vegeta
+flood blazemeter loadninja neoload
+pyroscope parca polarsignals
+opentelemetry jaegertracing zipkin
+signoz uptrace openobserve highlightio
+hyperdx quickwit
+vector fluentd fluentbit logstash filebeat
+cribl calyptia
+graylog humio falcon logscale
+sumologic devo exabeam securonix
+chronicle siemplify demisto cortexxsoar
+tines torq blinkops swimlane
+dropzone prophetsecurity radiantsecurity
+jit ox arnica legitsecurity cycode
+endorlabs socketdev phylum chainbench
+stacklok minder sigstore
+chainguard wolfi distroless
+anchore syft grype trivy clair
+kubescape kubebench polaris datree
+gatekeeper kyverno opa conftest
+fairwinds robusta komodor zesty
+cast densify spot kubecost opencost
+vantage finout cloudzero ternary

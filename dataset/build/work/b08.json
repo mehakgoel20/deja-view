@@ -1,0 +1,402 @@
+[
+ {
+  "org": "Atlassian",
+  "date": "2023-09-15",
+  "url": "https://status.atlassian.com/incidents/4jkh49j0jjh6",
+  "name": "Infrastructure outage affecting attachments and Bitbucket Pipelines in all regions",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "Between 04:00 UTC to 05:00 UTC, we experienced a partial outage for Bitbucket Pipelines, issues viewing in-product attachments; and degraded performance across all products. The issue has been resolved and all services are operating normally. || We have identified the root cause, initiated mitigation actions, and are seeing a reduction in errors when scaling up in response to customer traffic. We are still monitoring closely and will continue to provide updates. || A major infrastructure outage is affecting our ability to scale up in response to customer traffic. We are pre-emptively disabling any downscaling to minimize future impact. This is primarily affecting Bitbucket Pipelines, and attachment storage for all products. All regions are affected. We will provide more details in the next hour. || A major infrastructure outage is affecting our ability to scale up in response to customer traffic. We are pre-emptively disabling any downscaling to minimize future impact. This is primarily affecting Bitbucket Pipelines, and attachment storage for all products. All regions are affected. We will provide more details in the next hour."
+ },
+ {
+  "org": "Atlassian",
+  "date": "2024-09-09",
+  "url": "https://status.atlassian.com/incidents/d8jljnw353f3",
+  "name": "High RDS CPU on multiple environments",
+  "sev": "Low",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "|| We identified the root cause of the RDS problems causing issues for Jira, Jira Service Management, and Jira Work Management. We mitigated the issue and are now monitoring the fix. || We are investigating issues with Latency and 5xx errors for Jira, Jira Service Management, Jira Work Management due to High RDS CPU on several EU-Central environment and will provide updates here soon."
+ },
+ {
+  "org": "Atlassian",
+  "date": "2024-07-03",
+  "url": "https://status.atlassian.com/incidents/2spys43jxslj",
+  "name": "Some products are hard down",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "Between 03-07-2024 20:08 UTC to 03-07-2024 20:31 UTC, we experienced downtime for some of the products . JIRA product impacted with issue creation and project creation. While Confluence was impacted with public link access by anonymous user and the mission control page. Confluence issue was fixed at 04-07-2024 02:30 UTC. The issue has been resolved and the service is operating normally. || We have mitigated the problem and continue looking into the root cause. The outage was between 8:08pm 03/07 UTC - 08:31pm 03/07 UTC We are now monitoring closely. || We are investigating an issue with that is impacting Atlassian, Atlassian Partners, Atlassian Support, Confluence, Jira Work Management, Jira Service Management, Jira, Opsgenie, Atlassian Developer, Atlassian (deprecated), Trello, Atlassian Bitbucket, Guard, Jira Align, Jira Product Discovery, Atlas, Atlassian Analytics, and Rovo Cloud customers. We will provide more details within the next hour."
+ },
+ {
+  "org": "Atlassian",
+  "date": "2024-09-02",
+  "url": "https://status.atlassian.com/incidents/kl4d5mfn26kc",
+  "name": "Slowness in Jira.",
+  "sev": "Low",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "We have identified the root cause of the issue with an internal infrastructure component that has been impacting the provisioning process for the Mumbai Region with several Atlassian Cloud products. || We have identified the root cause of an issue with an internal infrastructure component that has been impacting the provisioning process for the Mumbai Region. We are working on a fix to resolve the issue and recovery is in progress."
+ },
+ {
+  "org": "Atlassian",
+  "date": "2023-10-04",
+  "url": "https://status.atlassian.com/incidents/b2lqb2yxry16",
+  "name": "For a limited number of customers, activation for new products on some tenants is blocked",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "100% resolved and services running normally || 99% of issues fixed and services are back to normal. Last 1% are manually begin fixed || We've solved 52% of the issues and are still on track to recover 100% within the original timeframe || We've solved 15% of the issues and have a plan to recover 100% exponentially within the hour || We started fixing the affected tenants, we will post an update on the estimated time to resolve all tenants in the next hour || We identified an issue with the product provisioning service. We identified the issue and we are working on a fix. We will post an update in the next hour with estimated fix time"
+ },
+ {
+  "org": "Atlassian",
+  "date": "2020-09-28",
+  "url": "https://status.atlassian.com/incidents/wkg98r6wc1b5",
+  "name": "Login / Signup with Microsoft not working",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": false,
+  "text": "Between 2020-09-28 21:32 UTC to 2020-09-29 00:09 UTC, we experienced a degradation in functionality for users attempting to authenticate using Microsoft. This affected Confluence, Jira Core, Jira Service Desk, Jira Software, Opsgenie, Atlassian Developer, Trello, and Atlassian Bitbucket. The issue has been resolved and the service is operating normally. || We are investigating reports of intermittent errors for some Atlassian, Confluence, Jira Core, Jira Service Desk, Jira Software, Opsgenie, Atlassian Developer, Trello, and Atlassian Bitbucket Cloud customers. We will provide more details once we identify the root cause."
+ },
+ {
+  "org": "Atlassian",
+  "date": "2024-06-06",
+  "url": "https://status.atlassian.com/incidents/4dh7m57xqhfq",
+  "name": "Some of the www.atlassian.com pages are inaccessible",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "Between 05 June 23:30 UTC and 06 June 04:34 UTC, we experienced issues with some of the pages on www.atlassian.com. The issue has been resolved, and the pages are operating normally. || We continue to work on resolving the issue with www.atlassian.com. We have identified the root cause and expect recovery shortly. || We are investigating reports of intermittent errors on some Atlassian, Opsgenie, Atlassian Access, and Compass-related www.atlassian.com web pages. Once we identify the root cause, we will provide more details."
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-09-30",
+  "url": "https://auth0.statuspage.io/incidents/mjc4bwn34z2d",
+  "name": "Elevated Errors on US-5 Public Cloud",
+  "sev": "Critical",
+  "cat": "authentication",
+  "pm": false,
+  "text": "After monitoring the environment to ensure stability, we observe that services have been restored. A root cause analysis (RCA) will be posted here within 7 business days. The service disruption has been mitigated and we're monitoring the ensure stability. Meanwhile, our investigation is continuing and we're collaborating with our third-party provider's technical teams to identify and address the root cause of the issue within their hosted infrastructure. We'll continue to provide updates as we proceed to address the root cause of the service disruption. Our team is actively working to understand the root cause and mitigate the issue."
+ },
+ {
+  "org": "Auth0",
+  "date": "2025-11-08",
+  "url": "https://auth0.statuspage.io/incidents/f2x3yqmgvc1v",
+  "name": "Tenant Logging Issue in AU-1 Public Cloud Environment",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "After monitoring the environment for stability, we have confirmed that logging is functioning successfully, remediating impact to users. We consider this issue resolved. || We've performed a configuration change to the affected environment and are observing successful recovery in logging functionality. We are monitoring the environment to ensure stability. || We have narrowed down the issue to a potential configuration discrepancy, and we are currently in the process of remediating the issue. We will continue to update as our status changes. || We are continuing to investigate the issue with tenant log streaming functionality. An assessment of recent changes to the affected environment is being conducted to narrow down potential root cause. We will continue to update as our status changes or as we make progress in our investigation. || We are investigating an issue occurring within the AU-1 Public Cloud environment that is impacting tenant logging functionality. We will continue to post updates as we progress in our investigation and as our status changes. || We are currently investigating an incident that impacted our services. Our team is actively working to understand the root cause and mitigate the issue. We will provide updates as we gather more information."
+ },
+ {
+  "org": "Auth0",
+  "date": "2025-12-04",
+  "url": "https://auth0.statuspage.io/incidents/2454r2qxkggz",
+  "name": "Elevated Errors on US-1 Public Cloud Environment",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": false,
+  "text": "We've monitored the environment to ensure stability, and error rates have remain subsided. This issue is now fully resolved. We sincerely apologize for the impact this had on you and your users. || This event has self-resolved and error rates subsided within the affected environment. Authentication functionality has recovered, and users should no longer be impacted by this issue. We will continue to investigate root cause while we monitor the environment to ensure stability. || We are investigating the errors associated with this event, and are observing that they are currently trending back to normal thresholds. After further analysis we believe this issue may have affected only a small subset of tenants. We will continue to update with changes in our status. || We are currently investigating an incident that impacted our services. Our team is actively working to understand the root cause and mitigate the issue. We will provide updates as we gather more information."
+ },
+ {
+  "org": "Auth0",
+  "date": "2025-09-10",
+  "url": "https://auth0.statuspage.io/incidents/n1xbs0jppdnq",
+  "name": "Errors in EU-1 Public Cloud",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "Our Engineering team has confirmed that the issue was due to a configuration set by the customer. Our Engineering team has confirmed that the issue was due to a configuration set by the customer and we are working with them directly to mitigate the issue. Our team is actively working to understand the root cause and mitigate the issue."
+ },
+ {
+  "org": "Auth0",
+  "date": "2025-07-03",
+  "url": "https://auth0.statuspage.io/incidents/n5twy1zv9hcq",
+  "name": "We have detected an issue.",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "We have thoroughly investigated the service interruption encountered in this event and determined that the errors indicate issues with the customer configuration. Our Support team will continue to engage with the customer to resolve these errors and avoid the recurrence of this issue. || We are currently investigating an incident that impacted our services. Our team is actively working to understand the root cause and mitigate the issue. We will provide updates as we gather more information."
+ },
+ {
+  "org": "BigCommerce",
+  "date": "2026-08-04",
+  "url": "https://status.bigcommerce.com/incidents/my8rbv0d8gcs",
+  "name": "Impossible to vault payment instrument when credit cart option is disabled in the PayPal Commerce and BigCommerce Payments integrations",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "The fix for this issue has been deployed to production and PayPal vaulting is working as expected. || Commerce engineers have identified a fix for this issue. || Commerce engineers are continuing to work on a fix for this issue. || Commerce Engineers have found the root cause of this issue for both the PayPal Commerce and BigCommerce Payments integrations, and are developing a fix."
+ },
+ {
+  "org": "Bitbucket",
+  "date": "2026-10-01",
+  "url": "https://status.bitbucket.org/incidents/vtywt50wxvtz",
+  "name": "Job processing and scheduling is degraded affecting multiple Atlassian products",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "We have now implemented a fix and and services have been restored to normal operation for affected customers. || Our teams have taken corrective steps to mitigate the issue and are observing some improvements. || Our teams have identified the root cause of this incident and is now actively working on mitigating the issue."
+ },
+ {
+  "org": "Bitbucket",
+  "date": "2025-02-20",
+  "url": "https://status.bitbucket.org/incidents/b2lqtrftlywf",
+  "name": "Degraded website performance for some customers.",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "After monitoring, this incident is now resolved. If you continue to see issues, please ensure you are not using a stale / old tab and are loading a fresh version of Bitbucket in your browser. || We have rolled out a fix for this issue and are seeing recovery for Bitbucket users. Please refresh the page and it should fix the issue. We are currently monitoring the fix and further investigating root cause. || We've identified an issue with some customers DNS configuration not resolving Atlassian domains correctly. If you are experiencing errors accessing Bitbucket, we advise allowlisting the following domains in your DNS configuration: https://support.atlassian.com/organization-administration/docs/ip-addresses-and-domains-for-atlassian-cloud-products/ We are still investigating the issue with vendors and will update statuspage as we learn more. || We've identified an issue with some customers DNS configuration that can be blocking some Bitbucket assets. We are still investigating and will update statuspage with more information shortly. || We are currently investigating an issue impacting some customers who are seeing intermittent errors accessing the Bitbucket.org website."
+ },
+ {
+  "org": "Bitbucket",
+  "date": "2024-07-24",
+  "url": "https://status.bitbucket.org/incidents/s5k290vb0tr1",
+  "name": "Pipelines failing to start.",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "|| A fix has been implemented and API performance has begun to recover. We are working on implementing a fix to restore service and will post a follow up within one hour. || We are currently investigating an issue affecting pipelines creation due to an increased API error rate, we're investigating and will provide a follow-up soon."
+ },
+ {
+  "org": "Bitbucket",
+  "date": "2026-03-12",
+  "url": "https://status.bitbucket.org/incidents/l8hf15zcrvt0",
+  "name": "Degraded performance of Bitbucket cloud",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "We have successfully mitigated the incident, and the affected service is now fully operational. Our teams have verified that normal functionality has been restored and the service is performing as expected. || Our engineers continue to work actively to identify the root cause. Meanwhile, the affected service is now stable and the error rate has decreased. We will share more details within the next hour, or sooner if more information becomes available. || Our engineers are actively working to resolve the Bitbucket Cloud disruption. No new updates at this moment. We will share more details within the next hour or as soon as we more information is available. || We are actively investigating reports of a service disruption affecting Bitbucket Cloud. We'll share updates here within the next hour or as more information is available. || We are actively investigating a service disruption impacting Bitbucket for some customers. We'll share updates here as more information is available."
+ },
+ {
+  "org": "Bitbucket",
+  "date": "2026-09-11",
+  "url": "https://status.bitbucket.org/incidents/5vtp93dq1351",
+  "name": "Intermittent reliability issue with Bitbucket Cloud",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "On September 11 2026, between 5:30 UTC and 6:45 UTC, users experienced intermittent reliability issue that affected pull requests, commits view, related Bitbucket pages, and some Pipelines activity. Users may have also seen pages fail to load and timed out. The issue is now resolved and services have been restored to normal operation for all the affected customers. || We have identified the root cause of this incident and taken corrective steps to address it, with some improvements observed. We continue to monitor the situation to ensure stability. || Bitbucket Cloud is experiencing an intermittent reliability issue affecting some users. The issue is impacting pull requests, commits view, related Bitbucket pages, and some Pipelines activity. Users may see pages fail to load, time out, or continue spinning without completing. We will provide further updates within an hour, or sooner if we have significant progress to share."
+ },
+ {
+  "org": "Bitbucket",
+  "date": "2025-09-16",
+  "url": "https://status.bitbucket.org/incidents/tn0sgc4kc36t",
+  "name": "Delays in running Bitbucket Pipelines",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "Between 03:30 UTC to 03:50 UTC, we experienced delyas in running pipelines for Atlassian Bitbucket. The issue has been resolved and the service is operating normally. || We have identified the root cause of the Pipelines delays and have mitigated the problem. We are now monitoring closely. || We continue to work on resolving the delayed Pipelines for Atlassian Bitbucket. We have identified the root cause and expect recovery shortly. || We are investigating cases of degraded performance for Atlassian Bitbucket Cloud Pipelines customers. We will provide more details within the next hour. We have mitigated the impact on self-hosted runners but cloud users are continuing to see delays on pipelines starting."
+ },
+ {
+  "org": "Bitbucket",
+  "date": "2025-06-25",
+  "url": "https://status.bitbucket.org/incidents/f6sxn03s1b2t",
+  "name": "Bitbucket is slow in responding to customers",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "|| We have identified the root cause of the degraded performance and have mitigated the problem. || We continue to work on resolving the degraded performance and intermittent failures (due to slow loading times) for Atlassian Bitbucket. We have identified the root cause and taken mitigations to handle the increased load and expect recovery shortly."
+ },
+ {
+  "org": "Bitbucket",
+  "date": "2024-11-04",
+  "url": "https://status.bitbucket.org/incidents/17t7xvw846ms",
+  "name": "Unable to invite new users due to missing recaptcha token",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "|| We continue to work on resolving the invitation workflow in admin.atlassian.com We have identified the root cause and performed changes in the environment to mitigate the issue. || We are investigating reports of intermittent errors for some Atlassian customers when they are trying to invite users using their admin panels (admin.atlassian.com) We will provide more details once we identify the root cause."
+ },
+ {
+  "org": "Bitbucket",
+  "date": "2025-05-25",
+  "url": "https://status.bitbucket.org/incidents/5g63f45f729y",
+  "name": "Users receiving errors when attempting to load BitBucket",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "Our team has mitigated the issue that caused error messages when loading Bitbucket. || Our team has mitigated the issue that caused error messages when loading Bitbucket. We are continuing to monitor at this time to ensure performance has been restored, and resolve the root cause."
+ },
+ {
+  "org": "Bugsnag",
+  "date": "2024-01-24",
+  "url": "https://status.bugsnag.com/incidents/55w6h6g2xtkc",
+  "name": "Email outage",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "Unfortunately all emails that would have been delivered during this outage have been lost - please accept our apologies for any inconvenience caused by this. BugSnag uses a third-party supplier to deliver emails. That supplier had temporarily suspended our account and they have acknowledged that this was due to a false positive with their internal tooling."
+ },
+ {
+  "org": "Buildkite",
+  "date": "2026-08-26",
+  "url": "https://buildkitestatus.com/incidents/hclyxydrwn9p",
+  "name": "Issues identified with buildkite-agent registration",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "Mitigation strategies worked as expected and now agent registration is back to normal. || We have rolled out a few changes to fix the underlying issues and are seeing signs of recovery. || We identified issues affecting certain customers when the buildkite-agent attempts to register with Buildkite. We've identified a potential root case and are attempting changes to fix it."
+ },
+ {
+  "org": "Buildkite",
+  "date": "2026-04-28",
+  "url": "https://buildkitestatus.com/incidents/klqc4f7yfc2y",
+  "name": "Increased dispatch latency and error rates",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "|| We have mitigated the issue causing increased Hosted Agents dispatch latency and intermittent timeout errors for a subset of customers. We identified abnormal workload activity that was placing elevated load on a supporting service, and have now blocked that activity and applied additional protections. || The issue has been identified and a fix is being implemented."
+ },
+ {
+  "org": "Buildkite",
+  "date": "2026-09-01",
+  "url": "https://buildkitestatus.com/incidents/9hd5d7qxhtq4",
+  "name": "Delivery issues with email notifications",
+  "sev": "Medium",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "Our outbound email queue has finished processing all previously failed deliveries. Email notifications are processing successfully. || We are seeing successful email deliveries and are monitoring processing of our outbound email queue. || Our on-call engineers are working on failing over to an alternative upstream email provider to restore outbound email notifications. No other Buildkite services have been impacted by this disruption. || We are experiencing delivery issues with email notifications due to an issue with an upstream provider."
+ },
+ {
+  "org": "Bunny CDN",
+  "date": "2026-05-21",
+  "url": "https://status.bunny.net/incidents/j1syhng2crfy",
+  "name": "DNS issues with bunny.net",
+  "sev": "High",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "We have identified the root cause internally and are implementing additional safeguards and escalation procedures to ensure this cannot happen again. We will publish a full public RCA once the incident is fully resolved, including additional details around the timeline, service impact, root cause, and the preventative measures being implemented. || A fix has been implemented and all impacted services have recovered. We're working to fix it."
+ },
+ {
+  "org": "Bunny CDN",
+  "date": "2026-04-30",
+  "url": "https://status.bunny.net/incidents/gpm8dsfrptw1",
+  "name": "Isolated 502s for Magic Containers",
+  "sev": "High",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "We identified and resolved an issue that could cause endpoint updates to experience delayed propagation after CDN services had been running for an extended period of time. || Our Engineering team are still investigating the root cause for isolated 502s in the NA region. || We have made some routing adjustments to mitigate the timeouts on Database and is fully operational again."
+ },
+ {
+  "org": "Bunny CDN",
+  "date": "2026-06-18",
+  "url": "https://status.bunny.net/incidents/lfcxys3wsnlf",
+  "name": "Free certificate issuance with degraded performance",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "As per Lets Encrypt status page, this has been resolved - we similarly have observed no degradation/failures on certificate renewals since their update went out. || We identified that this is due to an issue currently experienced by the Let's Encrypt service. Existing certificates on custom domains will continue to function as normal - however new and cert renewals via our free certificate option may experience errors to the certificate issuance. You can follow https://letsencrypt.status.io/ for more details. || We have identified an issue with free certificate issuance and renewals for custom CDN domains."
+ },
+ {
+  "org": "Bunny CDN",
+  "date": "2026-05-14",
+  "url": "https://status.bunny.net/incidents/ffld8hd1295l",
+  "name": "Degraded Performance in Singapore",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "This incident has now been cleared. || We identified an outage in relation to an upstream network provider that resulted in partial degradation in Singapore, this is now resolved. We are currently monitoring the situation. || We are continuing to investigate this issue. || We are continuing to investigate this issue. || We are currently experiencing a network issue in our Singapore region, and as a result there may be degraded performance on CDN, Storage, Magic Containers and Database from the region. Our Engineering team are investigating the problem."
+ },
+ {
+  "org": "Bunny CDN",
+  "date": "2026-01-28",
+  "url": "https://status.bunny.net/incidents/k8zjzbrlz0m2",
+  "name": "Stream API/Upload, Storage and CDN Partial Outage",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "This was caused by an upstream network provider experiencing a network outage. While CDN traffic was not affected, supporting services such as Stream, Storage and our Core API may have been intermittently returning timeout errors. This has now been rectified and plans are in motion to further build redundancy into these products. || We identified a network issue pertaining to our Stream, API and Storage (Frankfurt) platform. CDN services with Frankfurt storage may have been partially affected. We are currently investigating the problem."
+ },
+ {
+  "org": "Bunny CDN",
+  "date": "2025-12-05",
+  "url": "https://status.bunny.net/incidents/y5q8sdh87cqw",
+  "name": "Ticketing System & Documentation Unavailable - Third-Party Outage",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "The incident appears to be resolved. || We\u2019re currently experiencing an outage affecting our ticketing system and documentation portal. This disruption is caused by an ongoing third-party incident impacting multiple internet services and third-party tools, including our ticketing system. As a result, you may be unable to submit or view tickets, and some documentation pages may fail to load. We\u2019re monitoring the status and will restore full functionality as soon as upstream services stabilize."
+ },
+ {
+  "org": "Bunny CDN",
+  "date": "2025-12-01",
+  "url": "https://status.bunny.net/incidents/ns5s0b5jk78g",
+  "name": "Delayed Billing Process",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "This incident has been resolved. || We have identified an issue where a number of users may not have been billed correctly since 11:30AM CET Friday, and our Engineering team have identified the issue. Affected users will have billing delay processed over the next 24 hours or so, but any accounts moved into a negative balance state as a result of the correction will not have their account disabled for a period of time thereafter to avoid disruption to services."
+ },
+ {
+  "org": "CircleCI",
+  "date": "2026-06-29",
+  "url": "https://status.circleci.com/incidents/njbxb52z1g1y",
+  "name": "Some customers are unable to access their organizations",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": false,
+  "text": "This incident has been resolved. || Error rates viewing orgs are recovering. We will continue to monitor to verify the fix resolves the issues. || We have identified the cause of errors accessing orgs. We are implementing a fix, and will monitor for recovery as the change rolls out. || We are continuing to investigate reports that some customers cannot access their organizations in CircleCI. Our investigation continues to point to an authorization issue between CircleCI and GitHub. Some affected users have received a 403 from GitHub indicating the resource is SAML protected and the OAuth token may not be authorized. We previously shared re-authenticating as a potential workaround. We have since received reports that this didn't restore access for all affected customers, so we don't consider it a reliable resolution at this time. Our engineering team is continuing to investigate this to determine the cause and next steps. We will post another update as soon as we have more information. We apologize for the continued disruption and appreciate your patience. || We are still investigating reports that some customers cannot access their organizations in CircleCI. Early findings suggest the problem may be related to GitHub authorization, where affected users receive a 403 from GitHub indicating the resource is SAML protected and the OAuth token may not be authorized. We have not yet confirmed this as the root cause. As a potential workaround, some users may be able to restore acces"
+ },
+ {
+  "org": "CircleCI",
+  "date": "2026-06-11",
+  "url": "https://status.circleci.com/incidents/brp558x5kfn1",
+  "name": "Issue authenticating only Bitbucket users",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": false,
+  "text": "Customers using Bitbucket as their VCS provider or as their login provider experienced errors when interacting with Bitbucket repositories and authenticating to CircleCI. This was caused by an incident with Atlassian Bitbucket's OAuth service, which has now been resolved and all affected functionality has returned to normal. || What's happening Atlassian Bitbucket has moved their OAuth service incident to monitoring. You can follow their status at https://bitbucket.status.atlassian.com/incidents/h51sr145gsmx What's impacted Customers using Bitbucket as their VCS provider may be experiencing disruptions. What can you expect You may see errors when CircleCI attempts to interact with your Bitbucket repositories. Customers using Bitbucket as their login provider may also be unable to authenticate to CircleCI. Thank you for your patience while we continue to monitor recovery. || What's happening Atlassian Bitbucket has acknowledged an incident affecting their OAuth service, which is the cause of the errors our customers are experiencing. The status of their incident is available at: https://bitbucket.status.atlassian.com/incidents/h51sr145gsmx What's impacted Customers using Bitbucket as their VCS provider may be experiencing disruptions. What can you expect You may see errors when CircleCI attempts to interact with your Bitbucket repositories. Customers using Bitbucket as their login provider may also be unable to authenticate to CircleCI. We will provide an update as soon as we "
+ },
+ {
+  "org": "ClickHouse",
+  "date": "2026-09-15",
+  "url": "https://status.clickhouse.com/incidents/01M2K6X3SMPMBKJKK5FHA0M7ZB",
+  "name": "ClickPipes failing on Kinesis in AWS us-east-1",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "The root cause was a recent change that introduced a defect in how RegisterStreamConsumer requests are authorized, causing each request to be evaluated against the specific consumer resource (for example, `arn:aws:kinesis: : :stream/ /consumer/ `) rather than the stream resource (for example, `arn:aws:kinesis: : :stream/ `). The root cause was a recent change that introduced a defect in how RegisterStreamConsumer requests are authorized, causing each request to be evaluated against the specific consumer resource (for example, `arn:aws:kinesis: : :stream/ /consumer/ `) rather than the stream resource (for example, `arn:aws:kinesis: : :stream/ `). While we work with AWS to mitigate this issue, we recommend to update your IAM policy to include a trailing wildcard (`/*`) to the resource for the `kinesis:RegisterStreamConsumer` action like so: ``` { \"Effect\": \"Allow\", \"Action\": [ \"kinesis:RegisterStreamConsumer\" ], \"Resource\": [ \"arn:aws:kinesis:{REGION}:{ACCOUNT_ID}:stream/{STREAM_NAME}/*\" ] } ``` Once this is applied, you must restart your ClickPipe for the changes to take affect."
+ },
+ {
+  "org": "ClickHouse",
+  "date": "2026-09-22",
+  "url": "https://status.clickhouse.com/incidents/01M34MADB3V6FHJNAN4GCV2VRR",
+  "name": "We are investigating an issue with CH servers in Azure germanywestcentral region",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "|| Azure support shared they are working on fixing the underlying issue, we started seeing some recovery but the incident is not completely resolved yet. We are working with Azure to get this fixed as soon as possible. An excerpt from Azure incident status: > As per our investigation, we believe this stemmed from multiple underlying storage systems becoming unavailable at the same time, which led to attached virtual machines becoming unresponsive, restarting unexpectedly, or being temporarily unavailable. || The problem is caused by Azure outage in the germanywestcentral region. \u2022 Some services may experience higher latency due to reduced capacity."
+ },
+ {
+  "org": "ClickHouse",
+  "date": "2026-07-06",
+  "url": "https://status.clickhouse.com/incidents/01KWVPRA7ZN7CE6P2A6X3S1YP7",
+  "name": "Slow provisioning and operations in AWS us-east-1 region",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "For details, please refer to the AWS Health status page: [https://health.aws.amazon.com/health/status](https://health.aws.amazon.com/health/status \"https://health.aws.amazon.com/health/status\") || The issue is caused by AWS outage, please see [https://health.aws.amazon.com/health/status](https://health.aws.amazon.com/health/status \"https://health.aws.amazon.com/health/status\") || We have identified an issue with provisioning of new instances and autoscaling operations in AWS us-east-1 region. Connection latencies for CH servers can be also affected due to slow provisioning of compute nodes. ClickHouse Cloud is working with AWS support team to fix the issue."
+ },
+ {
+  "org": "ClickHouse",
+  "date": "2026-08-17",
+  "url": "https://status.clickhouse.com/incidents/01M0854N5TNMNBWB1Y09HYPG61",
+  "name": "Provisioning of new CDC pipes for Postgres might be delayed or failing",
+  "sev": "Medium",
+  "cat": "database_issue",
+  "pm": false,
+  "text": "This issue has been resolved. New CDC pipes for Postgres are provisioning normally. || We are seeing signs of recovery. The team is closely monitoring and will report any updates. In case if any pipe gets stuck provisioning, our team can assist with manual operation to make it happen. || We identified an issue where new CDC ClickPipes can't be provisioned due to dependency on GitHub availability ([https://www.githubstatus.com/incidents/zkxwbgr0cnmx](https://www.githubstatus.com/incidents/zkxwbgr0cnmx \"https://www.githubstatus.com/incidents/zkxwbgr0cnmx\")). Team is monitoring the issue and tries to find a possible workaround."
+ },
+ {
+  "org": "ClickHouse",
+  "date": "2026-09-24",
+  "url": "https://status.clickhouse.com/incidents/01M398NR0CWF2PH1M3F65PQN48",
+  "name": "Some ClickPipes CDC pipes paused and can't be resumed",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "All stuck pipes were resumed. ClickHouse team will continue monitoring and identifying the root cause to prevent similar issues in future. || All regions recovered except us-east-1 region. It is also progressing and expected to be remediated soon. || We are seeing signs of improvements in most regions and pipes are resumed. || The issue happened during planned maintenance. ClickHouse team is applying a remediation to resume paused pipes. || We are aware about an issue where CDC ClickPipes were paused and can't be operated via API. ClickHouse team is investigating the issue. The issue affects subset of customers."
+ }
+]

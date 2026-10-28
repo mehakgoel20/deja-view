@@ -1,0 +1,62 @@
+[
+ {"n": 1, "expected": "configuration_deployment", "style": "clear", "query": "API error rate jumped to 30% within two minutes of rolling out version 4.12 to production; rolling back fixed it"},
+ {"n": 2, "expected": "configuration_deployment", "style": "clear", "query": "After a Terraform apply, the load balancer stopped forwarding traffic to the new target group and the site returned 503s"},
+ {"n": 3, "expected": "configuration_deployment", "style": "clear", "query": "A feature flag was enabled for all customers instead of 5% and the checkout page started throwing errors"},
+ {"n": 4, "expected": "configuration_deployment", "style": "clear", "query": "Kubernetes pods stuck in CrashLoopBackOff after a config map change removed a required environment variable"},
+ {"n": 5, "expected": "configuration_deployment", "style": "noisy", "query": "hey team, deploy went out at 9:40 and now the mobile app shows a blank screen for android users only, ios fine??"},
+ {"n": 6, "expected": "configuration_deployment", "style": "clear", "query": "A CDN rule change cached authenticated pages and some users saw other people's dashboards"},
+ {"n": 7, "expected": "configuration_deployment", "style": "clear", "query": "Webhooks stopped being delivered after we rotated the outbound proxy configuration"},
+ {"n": 8, "expected": "configuration_deployment", "style": "vague", "query": "Something we shipped this morning broke exports"},
+
+ {"n": 9, "expected": "database_issue", "style": "clear", "query": "Primary Postgres database hit 100% CPU, queries timing out and replica lag growing past 10 minutes"},
+ {"n": 10, "expected": "database_issue", "style": "clear", "query": "Writes failing with 'integer out of range' on the events table primary key"},
+ {"n": 11, "expected": "database_issue", "style": "clear", "query": "MySQL failover promoted a replica that was behind, and some recent orders disappeared"},
+ {"n": 12, "expected": "database_issue", "style": "clear", "query": "Database connection pool exhausted, application threads blocked waiting for connections"},
+ {"n": 13, "expected": "database_issue", "style": "clear", "query": "A long-running migration locked the users table and logins hung for 20 minutes"},
+ {"n": 14, "expected": "database_issue", "style": "noisy", "query": "ERROR: could not extend file base/16384/2619: No space left on device -- prod db"},
+ {"n": 15, "expected": "database_issue", "style": "clear", "query": "Elasticsearch cluster went red after two data nodes ran out of disk; search results empty"},
+
+ {"n": 16, "expected": "api_latency", "style": "clear", "query": "p99 latency on the public REST API went from 200ms to 8 seconds during peak hours, no recent deploy"},
+ {"n": 17, "expected": "api_latency", "style": "clear", "query": "Requests to the search endpoint are slow and intermittently time out with HTTP 504 from the gateway"},
+ {"n": 18, "expected": "api_latency", "style": "clear", "query": "A large customer started sending ten times their normal request volume and every tenant saw slow responses"},
+ {"n": 19, "expected": "api_latency", "style": "clear", "query": "Background job queue backlog grew to 2 million messages and notifications are delayed by hours"},
+ {"n": 20, "expected": "api_latency", "style": "noisy", "query": "dashboard taking forever to load for everyone since lunch, spinner just spins"},
+ {"n": 21, "expected": "api_latency", "style": "clear", "query": "A cache cluster was restarted and the cold cache sent all traffic to the database, causing slow page loads"},
+
+ {"n": 22, "expected": "networking_dns", "style": "clear", "query": "Customers in us-east cannot resolve our domain; intermittent NXDOMAIN responses"},
+ {"n": 23, "expected": "networking_dns", "style": "clear", "query": "A BGP route leak from an upstream ISP sent our traffic through the wrong network and users saw timeouts"},
+ {"n": 24, "expected": "networking_dns", "style": "clear", "query": "Packet loss between two availability zones caused services to fail health checks and flap"},
+ {"n": 25, "expected": "networking_dns", "style": "clear", "query": "TLS handshakes failing for clients in Europe after our DNS provider changed nameserver records"},
+ {"n": 26, "expected": "networking_dns", "style": "clear", "query": "VPN tunnel between our data center and the cloud dropped and internal services could not reach the database"},
+ {"n": 27, "expected": "networking_dns", "style": "vague", "query": "Some customers can reach the site, others can't, depends on their ISP"},
+
+ {"n": 28, "expected": "authentication", "style": "clear", "query": "Login fails for all users with invalid token errors after SSO certificate rotation"},
+ {"n": 29, "expected": "authentication", "style": "clear", "query": "OAuth login with Google returns redirect_uri_mismatch for every user since this afternoon"},
+ {"n": 30, "expected": "authentication", "style": "clear", "query": "Users are logged out every few minutes because session tokens expire immediately"},
+ {"n": 31, "expected": "authentication", "style": "clear", "query": "MFA codes sent by SMS are not arriving so users cannot finish signing in"},
+ {"n": 32, "expected": "authentication", "style": "noisy", "query": "getting 401 unauthorized on every api call with valid keys, started ~3pm"},
+
+ {"n": 33, "expected": "hardware_infra", "style": "clear", "query": "A storage array controller failed and virtual machines on that host became read-only"},
+ {"n": 34, "expected": "hardware_infra", "style": "clear", "query": "Power outage in one data center hall took down a rack of servers; failover to the other region was slow"},
+ {"n": 35, "expected": "hardware_infra", "style": "clear", "query": "Cloud provider had an outage in one availability zone and our instances there became unreachable"},
+ {"n": 36, "expected": "hardware_infra", "style": "clear", "query": "Disk failures on several Kafka brokers caused under-replicated partitions and producer errors"},
+ {"n": 37, "expected": "hardware_infra", "style": "clear", "query": "Cooling failure in the data center caused servers to thermal throttle and then shut down"},
+
+ {"n": 38, "expected": "payment_processing", "style": "clear", "query": "Checkout payments failing with timeouts from our card processor since 10am"},
+ {"n": 39, "expected": "payment_processing", "style": "clear", "query": "Customers were charged twice for the same order after the payment service retried on a timeout"},
+ {"n": 40, "expected": "payment_processing", "style": "clear", "query": "Payouts to merchants delayed because the bank file transfer job failed overnight"},
+ {"n": 41, "expected": "payment_processing", "style": "clear", "query": "3-D Secure verification page not loading, card payments in the EU stuck at authentication"},
+
+ {"n": 42, "expected": "security_incident", "style": "clear", "query": "An API key was accidentally committed to a public GitHub repo and used to read customer data"},
+ {"n": 43, "expected": "security_incident", "style": "clear", "query": "A massive DDoS attack overwhelmed our edge and the website was unavailable for an hour"},
+ {"n": 44, "expected": "security_incident", "style": "clear", "query": "A compromised npm dependency in our build shipped malicious code to the browser extension"},
+
+ {"n": 45, "expected": "memory_leak", "style": "clear", "query": "Service memory grows steadily for days until pods are OOM-killed and restart, then it starts again"},
+ {"n": 46, "expected": "memory_leak", "style": "clear", "query": "Java heap usage climbs after each request to the report generator and full GC pauses freeze the app"},
+
+ {"n": 47, "expected": "concurrency_race_condition", "style": "clear", "query": "Two workers sometimes process the same job at once and create duplicate records, only under high load"},
+ {"n": 48, "expected": "concurrency_race_condition", "style": "clear", "query": "Intermittent data corruption when two requests update the same account balance at the same time"},
+
+ {"n": 49, "expected": "other", "style": "clear", "query": "Our email provider had an outage and password reset emails were not sent"},
+ {"n": 50, "expected": "other", "style": "vague", "query": "Customers report that the mobile app is acting weird today"}
+]

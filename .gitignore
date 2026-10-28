@@ -1,0 +1,10 @@
+.env
+venv/
+.venv/
+__pycache__/
+.DS_Store
+node_modules/
+dist/
+
+# Raw scraped pages the gold dataset was extracted from (~330 MB), too large to publish
+dataset/build/raw/

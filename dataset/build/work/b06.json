@@ -1,0 +1,402 @@
+[
+ {
+  "org": "Snowflake",
+  "date": "2026-08-14",
+  "url": "https://status.snowflake.com/incidents/ylfhrtlppdlt",
+  "name": "INC20000157",
+  "sev": "Critical",
+  "cat": "authentication",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000157](https://community.snowflake.com/s/article/INC20000157)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-04-16",
+  "url": "https://status.snowflake.com/incidents/0lj68wp0lphb",
+  "name": "GCP - US Central 1 (Iowa): INC0155608",
+  "sev": "High",
+  "cat": "other",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC0155608](https://community.snowflake.com/s/article/INC0155608)"
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-06-11",
+  "url": "https://status.snowflake.com/incidents/980k6ghp4qwb",
+  "name": "INC20000032",
+  "sev": "Critical",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000032](https://community.snowflake.com/s/article/INC20000032)"
+ },
+ {
+  "org": "Travis CI",
+  "date": "2020-09-24",
+  "url": "https://www.traviscistatus.com/incidents/b6qspf0wg8y3",
+  "name": "Builds are not triggering for travis-ci.com",
+  "sev": "High",
+  "cat": "other",
+  "pm": true,
+  "text": "We are extremely sorry about the outage on this incident and we would like to share some action that has been taken; * Issue reported date: The issue has been reported on 24.09.2020 09:12 UTC. * Issue: **Unstable VCS service, high memory usage** * Reason: Issue in Bitbucket implementation, infinity loop when a user has been suspended or without permissions to the repository * Solution: Check suspended flag before API calls, infinite loop retries removed. * Fixed time: 24.09.2020 10:14 UTC * Action required from users: None * Issue status: Fixed Thank you for your understanding."
+ },
+ {
+  "org": "Travis CI",
+  "date": "2020-03-19",
+  "url": "https://www.traviscistatus.com/incidents/9861dc7dtsb0",
+  "name": "MacOS Builds Failing on .COM and .ORG",
+  "sev": "Critical",
+  "cat": "hardware_infra",
+  "pm": true,
+  "text": "Please see the MacStadium Post-Mortem \\[1\\] for details about this incident. Thank you! \\[1\\] [https://status.macstadium.com/incidents/l464rrkdg4yn](https://status.macstadium.com/incidents/l464rrkdg4yn)"
+ },
+ {
+  "org": "Trello",
+  "date": "2026-05-17",
+  "url": "https://status.trello.com/incidents/h11gfkgvjhhk",
+  "name": "Trello - degraded performance",
+  "sev": "Medium",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "# Root Cause The incident was caused by a bug in our database (MongoDB) which surfaced during a project to optimize the performance and scale of one of our largest collections. Rather than aborting the resharding process, the database bug caused the cluster to put the new database servers into rotation without their indexes, despite logs and metrics saying otherwise. Due to the enormous amount of data in this collection, having no indexes means that there is essentially no way to query for the data you want (i.e. We scaled all the database servers up in order to help the process move faster, however due to the single-threaded nature of this process, more compute did not equate to more speed. Once the reindex process had completed, all functionality was restored. However, we discovered that cards which were moved to a different board during the rebuild were left in a broken state. The team moved into a new phase of writing code to safely remediate all of the remaining data issues in batches, with the final batch of fixes completing by June 5th 2026 at 21:37 UTC. To ensure we don\u2019t run into this issue again in the future, the team is taking the following actions: - Working closely with our database vendor to ensure the original bug is fixed (update: the fix is shipping in the next version) - Working to create a standard set of tools and processes to ensure index rebuilds proceed as fast as possible "
+ },
+ {
+  "org": "Trello",
+  "date": "2026-05-07",
+  "url": "https://status.trello.com/incidents/5sl4l83t29fb",
+  "name": "Multiple Atlassian services are experiencing issues",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "* Between 00:22 and 06:08, an infrastructure incident in our hosting provider triggered an ingestion failure in our event processing pipeline. * By 18:48, Automation had processed their backlog of events that were created while processing **Automation** Between 00:22 and 02:50, customers with automation rules triggered by events originating from the prod-east region experienced a significant reduction in rule executions. During this window, event-triggered automation rules were not firing because the events that trigger them were not being delivered. Rule authoring, saving, and rules triggered manually, by schedules, or by webhooks were not affected. At 02:50, the event processing infrastructure failed over to an unaffected availability zone, restoring delivery of live events to Automation and allowing new event-triggered rules to begin executing normally. During the replay window, customers may have experienced automation rules executing later than expected, a small number of rules reaching daily processing limits due to compressed replay, and time-sensitive rules not completing as expected if internal timeout thresholds were exceeded. This affected automation rules triggered by Jira events, AI agent orchestration in Jira, notifications for issue updates and transitions, search indexing for newly created or modified issues, and event-driven integrations between Jira and other Atlassian products."
+ },
+ {
+  "org": "Trello",
+  "date": "2025-10-20",
+  "url": "https://status.trello.com/incidents/7sp5kn3m9vmq",
+  "name": "Atlassian Cloud Services impacted",
+  "sev": "Low",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "The service disruptions were triggered due to an [AWS DynamoDB outage](https://aws.amazon.com/message/101925/#:~:text=1%3A50%20PM.-,DynamoDB,-Between%2011%3A48) and further affected by subsequent failures in [AWS EC2](https://aws.amazon.com/message/101925/#:~:text=service%20disruption%20event.-,Amazon%20EC2,-Between%2011%3A48) and [AWS Network Load Balancer](https://aws.amazon.com/message/101925/#:~:text=service%20disruption%20event.-,Amazon%20EC2,-Between%2011%3A48) within the us-east-1 region. Products such as Jira and Confluence are deployed across multiple AWS regions. This disruption was caused by AWS's inability to allocate AWS EC2 instances and elevated errors in AWS Network Load Balancer \\(NLB\\). This disruption was caused by the regional frontend service entering an unhealthy state during this specific time interval. Unfortunately, a latent bug existed in the local fallback path."
+ },
+ {
+  "org": "Trello",
+  "date": "2023-11-30",
+  "url": "https://status.trello.com/incidents/gtyfsmrpb4nc",
+  "name": "Trello is unavailable",
+  "sev": "Critical",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "The event was triggered by the release of a code change that eventually overloaded a critical part of the Trello database. The incident was detected immediately by our automated monitoring systems and was mitigated by disabling the relevant code change. ### **ROOT CAUSE** The issue was caused by a series of changes intended to standardize Trello\u2019s approach to authorizing requests, but had the unintended side effect of modifying a database query from a [targeted operation](https://www.mongodb.com/docs/manual/core/sharded-cluster-query-router/#std-label-sharding-mongos-targeted) to a [broadcast operation](https://www.mongodb.com/docs/manual/core/sharded-cluster-query-router/#std-label-sharding-mongos-broadcast). The first change of this type was deployed over a period of seven days at the end of August and changed the authorization type used by our websocket service. Therefore, our monitoring systems only detected a slight increase in resource usage and flagged this change as a low priority performance regression. We acknowledged the regression and created a task to identify and reduce the resource demands of these new queries. The second change of this type was deployed over the course of a few days before being fully rolled out on Nov 29, 2023, the day before this incident. The change was fully deployed at 19:34 UTC on Nov 29, which was during a low traffic period."
+ },
+ {
+  "org": "Trello",
+  "date": "2025-05-05",
+  "url": "https://status.trello.com/incidents/64dml3bwzqxw",
+  "name": "Trello is slow or unavailable for some users",
+  "sev": "High",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "The event was triggered by an unexpected error encountered by our infrastructure management tools, which resulted in an incorrect DNS configuration being deployed to a portion of our database. The incident was detected within four minutes by automated monitoring systems and mitigated by identifying the faulty portion of the database and performing a failover, which put Atlassian systems into a known good state. Additionally, some Trello customers would have experienced a service disruption due to our use of load-shedding tools during the incident to strategically block portions of our traffic to aid in recovery. ### **ROOT CAUSE** The day before the incident, on May 4, our infrastructure management tooling encountered an unexpected error when attempting to fetch the networking metadata on a particular host. These database sessions are usually short-lived and automatically expire when no longer needed, but the DNS misconfiguration prevented this automatic expiration. While we have a number of testing and preventative processes in place, this specific issue wasn\u2019t identified due to the isolated nature of the database session resource and monitoring gaps around this resource and around DNS resolution."
+ },
+ {
+  "org": "Trello",
+  "date": "2026-05-14",
+  "url": "https://status.trello.com/incidents/96m441rms560",
+  "name": "Users experiencing issues accessing multiple Atlassian products",
+  "sev": "Critical",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "The issue was caused by a race condition in our internal deployment orchestration platform during a routine rollback operation of a core identity service in the us-east region. The incident was detected within a minute by automated monitoring systems and mitigated in 56 minutes. This was caused by a core identity service in the us-east region becoming unavailable. ### **ROOT CAUSE** The incident was caused by a race condition in our internal deployment orchestration platform during a routine rollback operation of a core identity service in the us-east region. Atlassian is prioritizing the following actions to help prevent similar incidents in future: * **Refine deployment orchestration safeguards** * Harden our deployment platform to prevent similar race conditions or resulting capacity loss during a rollback operation. * Streamline mitigation steps when a service becomes unavailable in a region."
+ },
+ {
+  "org": "Trello",
+  "date": "2025-11-21",
+  "url": "https://status.trello.com/incidents/z4jbxrgm72z6",
+  "name": "Multiple Atlassian services experiencing degraded performance",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "The event was triggered by a bug encountered in the software running our edge proxy fleet, which proxies customer traffic to Atlassian cloud services. The incident was detected within 1 minute by our automated monitoring systems, and mitigated by a scale up of of fleet size, which put Atlassian systems into a known good state. ### **ROOT CAUSE** The issue was caused by a change to CPU architecture from AMD64 to ARM on our edge proxy fleet. This led to a bug that caused these instances to stall under high load, and refuse up to 52% of new connections. While we deploy our changes progressively by cloud region to avoid broad impact, on this occasion, our pre-change load testing had not accurately reflected production loads. As part of our response to this incident, and to help prevent recurrence, we rolled back all edge proxy fleets from ARM to AMD64 CPU architecture globally. To minimise the impact of breaking changes to our environments, we plan to implement additional preventative measures such as: * Adding improved load tests into edge proxy fleet deployment pipelines to catch load-related bugs before deployment to production."
+ },
+ {
+  "org": "Trello",
+  "date": "2025-12-26",
+  "url": "https://status.trello.com/incidents/mdwnkr5ct66x",
+  "name": "Outbound Email, Mobile Push Notifications, and Support Ticket Delivery Impacting All Cloud Products",
+  "sev": "Critical",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "The issue was triggered when **TLS certificates used by Atlassian\u2019s monitoring infrastructure expired**, causing parts of our metrics pipeline to stop accepting traffic. All impacted services were fully restored by **05:20 UTC**, around **2.5 hours** after customer impact began. ### ROOT CAUSE The incident was caused by: 1. **Expired TLS certificates** on domains used by our monitoring and metrics infrastructure caused by **misconfigured DNS authorization record** which prevented automatic renewal."
+ },
+ {
+  "org": "Trello",
+  "date": "2026-02-09",
+  "url": "https://status.trello.com/incidents/hlvn1w1s45xl",
+  "name": "Trello performance is degraded",
+  "sev": "Low",
+  "cat": "memory_leak",
+  "pm": true,
+  "text": "The event was triggered by Trello servers reaching maximum memory limits and a subsequent failure to automatically scale for the traffic. Two parallel mitigation efforts were undertaken to restore access: 1\\) manual scaling to address concerns with high utilization of hosts, and 2\\) temporarily limiting traffic from free customers. Access was restored for paid users approximately 43 minutes after the onset, with full service restoration for free users 10 minutes later. ### **ROOT CAUSE** The issue was cause by increased memory requirements during the transition from the weekend to EU business hours, combined with Auto Scaling group scaling rules based on CPU utilization."
+ },
+ {
+  "org": "Trello",
+  "date": "2025-05-15",
+  "url": "https://status.trello.com/incidents/2pf1zsf2h2tb",
+  "name": "Trello was temporarily inaccessible",
+  "sev": "High",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "The event was triggered by a database plan cache expiring and high resource usage caused by subsequent database query planning operations. The incident was detected within two minutes by the automated monitoring system and mitigated by increasing resources available to the affected database shard, which put Atlassian systems into a known good state. ### **ROOT CAUSE** The issue was caused by a query plan expiring from the database cache, which caused incoming queries to go through a replanning operation. While we have a number of testing and preventative processes in place, this specific issue wasn\u2019t identified because it would only occur under very distinct conditions, including the amount of load and the order of database queries."
+ },
+ {
+  "org": "Trello",
+  "date": "2024-02-13",
+  "url": "https://status.trello.com/incidents/r1fz52194pcx",
+  "name": "Trello is slow or unavailable",
+  "sev": "Critical",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "The event was triggered by a buildup of long-running queries against our database, leading to slowed API response times and causing Trello to be degraded or unavailable for users. The root cause of the incident was identified as a compression change in our database deployed approximately 11 hours earlier during a low-traffic period. The incident was detected by our monitoring system at 8:07 AM UTC and was mitigated by reverting the compression change and restarting components of our database system. ### **ROOT CAUSE** The issue was caused by a compression change in our database, which resulted in the build up of queries in the system. We are prioritizing the following actions to avoid repeating this incident and reduce time to resolution: * Improve our process for releasing incremental configuration changes which would have allowed the team to identify the root cause before a peak load period and prevent similar incidents."
+ },
+ {
+  "org": "Trello",
+  "date": "2024-06-03",
+  "url": "https://status.trello.com/incidents/1vwmyw2ygcd4",
+  "name": "Error responses across multiple Cloud products",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "The event was triggered by a change to the infrastructure API Gateway, which is responsible for routing the traffic to the correct application backends. The incident was detected by the automated monitoring system within five minutes and mitigated by correcting a faulty release feature flag, which put Atlassian systems into a known good state. _The Incident caused service disruption to customers in all regions and affected the following products:_ * Jira Software * Jira Service Management * Jira Work Management * Jira Product Discovery * Jira Align * Confluence * Trello * Bitbucket * Opsgenie * Compass ### **ROOT CAUSE** A policy used in the infrastructure API gateway was being updated in production via a feature flag. The combination of an erroneous value entered in a feature flag, and a bug in the code resulted in the API Gateway not processing any traffic. While we have several testing and preventative processes in place, this specific issue wasn\u2019t identified because the change did not go through our regular release process and instead was incorrectly applied through a feature flag."
+ },
+ {
+  "org": "Trello",
+  "date": "2024-02-14",
+  "url": "https://status.trello.com/incidents/nwtpdd286qgk",
+  "name": "Service Disruptions Affecting Atlassian Products",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "The issue was identified and resolved through the rollback of the faulty deployment to restore the domain names and Atlassian systems to a stable state. ### **ROOT CAUSE** As part of a security and compliance uplift, we had scheduled the deletion of unused and legacy domain names that were being used for internal service-to-service connections. The detection was delayed because existing testing & monitoring focused on service health rather than the entire system\u2019s availability."
+ },
+ {
+  "org": "Trello",
+  "date": "2025-12-12",
+  "url": "https://status.trello.com/incidents/b5skqhpbz9b8",
+  "name": "500 Errors being experienced by Trello users",
+  "sev": "Critical",
+  "cat": "other",
+  "pm": true,
+  "text": "### Summary On December 12, 2025, between 05:31 UTC and 07:11 UTC, Trello customers experienced errors or slow loading times due to a dependency library upgrade that caused high resource usage. The incident was detected within 1 minute by the automated monitoring system and mitigated by rolling back the version of the dependency library which put Atlassian systems into a known good state. ### **ROOT CAUSE** The issue was caused by an upgrade to a dependency library. Because every worker on the instance failed to startup within the expected time, the instance entered a startup loop that required intervention. * Improve monitoring during workers startup and restarts due to unresponsiveness."
+ },
+ {
+  "org": "Trello",
+  "date": "2025-04-25",
+  "url": "https://status.trello.com/incidents/r0k6f35rqy7h",
+  "name": "Trello is slow or unavailable",
+  "sev": "Critical",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "The event was triggered by temporarily reduced capacity following a rollback deployment, with insufficient nodes to handle the load. Automated monitoring systems detected the incident within one minute and mitigated it by scaling up the deployment, which put Atlassian systems into a known-good state. ### **ROOT CAUSE** The root cause of the incident was a failure to scale our nodes to optimal capacity caused by a release rollback. If an issue is found during a deployment, we can roll back to a previous release."
+ },
+ {
+  "org": "Upstash",
+  "date": "2026-05-05",
+  "url": "https://status.upstash.com/incidents/9vxb0srq33b0",
+  "name": "QStash US Region: Schedule Degradation",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "The issue has been resolved, and all affected schedules have been restored. On May 1, a bug caused the system to revert to the legacy path. ## **Root Cause** During the transition, the new scheduling infrastructure became the source of truth for schedule state. Due to a bug, the system unexpectedly reverted traffic to the legacy scheduling path, which began accepting updates independently from the new system. Restored the new scheduling system as the active source of truth 2. Performed conflict resolution to preserve user data and schedule continuity In some cases, schedules that had previously been paused or deleted were restored to avoid permanent data loss."
+ },
+ {
+  "org": "Upstash",
+  "date": "2026-06-19",
+  "url": "https://status.upstash.com/incidents/4rshtsqjhn3c",
+  "name": "QStash Service Disruption in the EU Region",
+  "sev": "High",
+  "cat": "payment_processing",
+  "pm": true,
+  "text": "Between **09:11 and 09:45 UTC**, a subset of QStash instances had degraded egress connectivity, and some dispatched messages may have failed on their initial attempt. QStash's automatic retries delivered many affected messages on subsequent attempts once connectivity was restored, and QStash is now operating normally. ## Customer impact Impact was limited to the EU region and to two effects within the window above: * **Delivery delays / failures** _\\(09:11 \u2013 09:45 UTC\\)_ \u2014 messages dispatched through affected instances may have failed on their first attempt. ## Root cause A routine networking configuration change contained an error that: 1."
+ },
+ {
+  "org": "Upstash",
+  "date": "2025-04-02",
+  "url": "https://status.upstash.com/incidents/kg3gf7hftk83",
+  "name": "QStash: Degraded performance in request processing and event logs",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "### Product: QStash ### Incident Summary Due to high load, the volume of QStash event logs reached to a point which caused latency in the underlying data store operations. After deploying a hot fix and configuration changes, we eventually turned on event logging and system went back to stable state again. ### Root Cause At 07:15 UTC we received alerts on the performance degradation and started the investigation. We discovered long running queries for synching event logs from main QStash servers to QStash event server. We deployed a hotfix during the day to remove some redundant calls and alleviate the impact. Around 16:20 UTC, we observed another performance degradation on QStash requests due to a load increase, and disabled event log processing again. In the following hours, we deployed a configuration change to relax the job interval durations for event log tasks and turned on event logging again. Duplicate event deliveries were observed due to a number of restarts during the incident."
+ },
+ {
+  "org": "Upstash",
+  "date": "2026-06-23",
+  "url": "https://status.upstash.com/incidents/45rxy9q1zzc2",
+  "name": "QStash EU Region \u2014 Degraded Performance",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "The issue was caused by a regression introduced in a recent enhancement to Flow Control scheduling logic. ### **Root Cause** We recently deployed an enhancement to our Flow Control feature, designed to improve fairness between independent flow controls when unused global parallelism capacity was available. Under production load, the new behavior introduced a regression that significantly increased resource utilization. ### **Resolution** After identifying the regression as the source of the slowdown, we rolled back the deployment to the last known stable version. * Rollback completed: 2026-06-23 19:18:46.84 UTC Following the rollback, system performance returned to normal levels and service stability was restored. * Add resource utilization regression checks to the deployment pipeline."
+ },
+ {
+  "org": "Upstash",
+  "date": "2024-11-13",
+  "url": "https://status.upstash.com/incidents/x1cpxkl3lby2",
+  "name": "Performance degradation on QStash",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "To mitigate the high load, we have increased the capacity as our initial response while investigation proceeds. Eventually, fixes for the issues are confirmed with an issue reproducer and deployed to production. ## Root Cause Analysis In a certain type of usage, failure handling of [failureFunction](https://upstash.com/docs/workflow/basics/serve#failurefunction) can cause recursive calls which causes a leak in the queue of the tasks, causing a severe load on the QStash servers. This also triggered an edge case which caused some of the events to be delivered multiple times. ## Resolution Two hotfixes to the QStash processes are deployed 1. These are verified to successfully resolve the root cause, normalizing server load and restoring standard event processing operations. Customers do not need to take any corrective action, as workflows have returned to normal and preventive fixes are deployed."
+ },
+ {
+  "org": "Upstash",
+  "date": "2026-05-08",
+  "url": "https://status.upstash.com/incidents/ny2tc6h0mbgy",
+  "name": "QStash US Region Service Disruption",
+  "sev": "Critical",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "**Root Cause Analysis** On **April 24**, we deployed a more optimized scheduler implementation in the **US East \\(N. Due to a bug introduced in the new scheduler implementation, this code path did not return early as intended. Because of another bug in the panic recovery path, the panic was not properly caught, which caused the worker process handling the scheduled job to terminate. **Resolution** We deployed two fixes: * Added the missing early return in the deleted-account cleanup path, preventing the nil pointer dereference. Even if a future bug triggers a panic in this area, it will be isolated and reported rather than causing process-level failure."
+ },
+ {
+  "org": "Upstash",
+  "date": "2025-02-25",
+  "url": "https://status.upstash.com/incidents/bczmd5tg3rbj",
+  "name": "Regional AWS eu-west-1 Cluster Performance Degradation Issue",
+  "sev": "Medium",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "### Incident Summary During a maintenance update to the regional Upstash Redis databases in AWS eu-west-1, several databases hosted in that region has unnecessarily triggered a full synchronisation between their primary and backup replicas. ### Root Cause A full synchronisation is the invalidation of the whole data in the target replica and starting a fresh re-population from the source replica. A fix has been prepared to avoid this unnecessary full synchronisation on regional databases, and will be deployed shortly."
+ },
+ {
+  "org": "Upstash",
+  "date": "2026-05-12",
+  "url": "https://status.upstash.com/incidents/zjy39rtm1skv",
+  "name": "Fly.io Upstash Redis Service Distruption",
+  "sev": "Critical",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "After investigating with Fly's team, we identified the root cause as a bad interaction between a recent guest kernel update on Fly's newer machines and an upstream Cloud Hypervisor bug \\([cloud-hypervisor#7672](https://github.com/cloud-hypervisor/cloud-hypervisor/issues/7672)\\) affecting log writes from inside the VM. We mitigated by disabling the affected logging paths, and Fly has since rolled out a hypervisor-side patch, fully resolving the issue."
+ },
+ {
+  "org": "Upstash",
+  "date": "2026-05-11",
+  "url": "https://status.upstash.com/incidents/47bg91tdj0hz",
+  "name": "Fly.io Upstash Redis service distruption (FRA region)",
+  "sev": "High",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "After investigating with Fly's team, we identified the root cause as a bad interaction between a recent guest kernel update on Fly's newer machines and an upstream Cloud Hypervisor bug \\([cloud-hypervisor#7672](https://github.com/cloud-hypervisor/cloud-hypervisor/issues/7672)\\) affecting log writes from inside the VM. We mitigated by disabling the affected logging paths, and Fly has since rolled out a hypervisor-side patch, fully resolving the issue."
+ },
+ {
+  "org": "Upstash",
+  "date": "2026-03-06",
+  "url": "https://status.upstash.com/incidents/774krfq667vd",
+  "name": "Region ap-northeast-1 outage on Upstash Global",
+  "sev": "Critical",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "On March 6, between approximately 13:44\u201314:07 UTC, some databases experienced elevated latency and connection errors in the Tokyo \\(ap-northeast-1\\) region. The issue was caused by a sudden spike in traffic that significantly increased network utilization and connection load on a subset of nodes. Our team mitigated the incident by scaling up capacity in the region and redistributing load across additional nodes. Service recovered once the additional capacity was brought online. Resolution We have increased the number of machines in the Tokyo region to provide additional headroom and reduce the likelihood of similar incidents during traffic spikes. Next Steps We are continuing to review capacity safeguards and connection-handling limits to improve resilience against sudden traffic surges."
+ },
+ {
+  "org": "Upstash",
+  "date": "2025-06-11",
+  "url": "https://status.upstash.com/incidents/kj6y893b91pq",
+  "name": "Degraded Performance",
+  "sev": "Critical",
+  "cat": "other",
+  "pm": true,
+  "text": "A routine system maintenance operation at the OS level led to the application of system updates across multiple EC2 instances in our clusters in several AWS regions. These updates included changes to networking components, which inadvertently triggered restarts. As a result, several EC2 nodes failed health checks and temporarily dropped out of the cluster, disrupting high availability and causing partial connectivity issues for some clients and operations. We have since reproduced the issue in a controlled environment and verified the root cause. To prevent a recurrence, we are updating our node maintenance strategy to ensure greater control over the timing and impact of system-level changes and excluding networking components from automated upgrades."
+ },
+ {
+  "org": "Upstash",
+  "date": "2025-06-10",
+  "url": "https://status.upstash.com/incidents/bxlv420gfw65",
+  "name": "Performance Degradation",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": true,
+  "text": "A routine system maintenance operation at the OS level led to the application of system updates across multiple EC2 instances in our clusters in several AWS regions. These updates included changes to networking components, which inadvertently triggered restarts. As a result, several EC2 nodes failed health checks and temporarily dropped out of the cluster, disrupting high availability and causing partial connectivity issues for some clients and operations. We have since reproduced the issue in a controlled environment and verified the root cause. To prevent a recurrence, we are updating our node maintenance strategy to ensure greater control over the timing and impact of system-level changes and excluding networking components from automated upgrades."
+ },
+ {
+  "org": "Upstash",
+  "date": "2025-08-18",
+  "url": "https://status.upstash.com/incidents/pw4q7vh1zc7w",
+  "name": "Connectivity Issues in us-east-1",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "The root cause was identified as a misconfiguration in the routing rules, which caused certain requests to experience timeouts during the initial phase of a gradual deployment. Upon detection, the deployment was immediately rolled back, restoring normal service. We are reviewing our deployment and configuration validation processes to prevent similar issues in the future."
+ },
+ {
+  "org": "Vimeo",
+  "date": "2025-06-12",
+  "url": "https://status.vimeo.com/incidents/7cjfqrxnzhwv",
+  "name": "Degraded Service",
+  "sev": "Critical",
+  "cat": "other",
+  "pm": true,
+  "text": "On June 12, from approximately 2:00 PM to 3:15 PM EDT, a widespread outage at our cloud provider caused most Vimeo services to become temporarily unavailable. During this time, Vimeo users received generic error messages when attempting to access core aspects of the service, including upload, playback, transcoding, API, analytics, and live streaming. Vimeo service was restored when our cloud provider resolved the issue, although residual effects continued until 4:30 PM EDT while our systems worked through large backlogs in the transcoding pipeline. As a result of this outage, our engineering leadership is reviewing our plan for multilevel cloud failure to improve recovery time in the future."
+ },
+ {
+  "org": "Vimeo",
+  "date": "2025-09-04",
+  "url": "https://status.vimeo.com/incidents/qw2s5rvh3bdh",
+  "name": "Homepage is not loading",
+  "sev": "Critical",
+  "cat": "authentication",
+  "pm": true,
+  "text": "# **What happened** On September 4, between approximately 10:00 AM and 11:00 AM EDT, some Vimeo users experienced partially rendered pages across the site. Affected pages displayed the top menu bar but were missing portions of the expected page content. # **What caused it** During a site update, some required files weren\u2019t uploaded correctly. # **How we responded** We received internal notification of the issue almost as it occurred and began investigating immediately. We quickly confirmed the outage and reverted to a prior stable version of Vimeo. This restored all affected pages within one hour. We then investigated the root cause and implemented a permanent fix by roughly 1:30 PM. # **What we\u2019re doing to prevent a recurrence** We changed the order in which Vimeo source code is uploaded and checked so that lagging updates won\u2019t cause similar outages in the future."
+ },
+ {
+  "org": "Vimeo",
+  "date": "2025-08-19",
+  "url": "https://status.vimeo.com/incidents/4d11hfffwxzq",
+  "name": "China delivery domains under videoji.cn are down",
+  "sev": "Critical",
+  "cat": "other",
+  "pm": true,
+  "text": "We began investigating it immediately, determined that the cause was external, and confirmed the outage with our provider once their ability to provide status updates was restored. # **What we\u2019re doing to prevent a recurrence** While outages caused by external infrastructure are outside our direct control, we\u2019re improving our monitoring to include a continuous health check on the provider\u2019s service, so that we know from the outset whether the outage is external."
+ },
+ {
+  "org": "Vimeo",
+  "date": "2025-07-15",
+  "url": "https://status.vimeo.com/incidents/wrjwd3s29bzn",
+  "name": "New uploads not transitioning to playable",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "# **What caused it** A recent update introduced a bug into the video processing pipeline that prevented some processed videos from being marked as playable. # **How we responded** We promptly identified the bug, rolled back the changes, and deployed a script to mark the affected videos as playable. By 7:00 PM EDT, all impacted videos had been fixed. # **What we\u2019re doing to prevent a recurrence** We\u2019re reviewing our internal testing and monitoring policies to make bugs like the one that caused the incident easier to detect and harder to introduce in the first place."
+ },
+ {
+  "org": "1Password",
+  "date": "2025-10-29",
+  "url": "https://status.1password.com/incidents/6kksj541mrsr",
+  "name": "Some Trelica users experiencing issues",
+  "sev": "Medium",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "|| The upstream provider deployed the mitigation and we also implemented mitigation steps. || The upstream provider is deploying the mitigation. || The upstream provider identified the issue and initiated the deployment to mitigate. || Due to an issue with an upstream provider, some Trelica users are experiencing errors. Workflow runs will reprocess once the service is restored."
+ },
+ {
+  "org": "1Password",
+  "date": "2025-11-13",
+  "url": "https://status.1password.com/incidents/2tvk2wqqlbv6",
+  "name": "Item Usage Metrics Not Updating in Real Time",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "|| We've completed mitigation work and item usage metrics appear to be updating in real time. || We've completed mitigation work and are monitoring results. || We've observed signs of improvement from steps we've taken so far, and we are continuing work to mitigate the issue. || We've identified the issue and our team is taking steps towards mitigating. We identified a potential root cause and work is in progress to confirm."
+ },
+ {
+  "org": "1Password",
+  "date": "2025-10-28",
+  "url": "https://status.1password.com/incidents/n8fb9ygzvnrp",
+  "name": "Some MSP users are unable to access Managed Companies",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "|| The engineering team released a mitigation to production and MSP users should be able to access Managed Companies successfully. || The engineering team is in the final stages of releasing the mitigation to production. || The engineering team tested the mitigation and is in the process of releasing to production. || The engineering team is deploying a mitigation. || The engineering team is preparing to deploy a mitigation. || The engineering team is continuing to work on a mitigation. || We identified the issue and the engineering team is working on a mitigation."
+ }
+]

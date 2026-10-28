@@ -1,0 +1,42 @@
+{
+ "n": 572,
+ "alpha": 0.0,
+ "dense": {
+  "category_hit_at_5": 0.666,
+  "category_precision_at_5": 0.248,
+  "top1_same_category": 0.278,
+  "knn_vote": {
+   "category_accuracy": 0.313,
+   "category_macro_f1": 0.276,
+   "severity_accuracy": 0.357,
+   "severity_within_one": 0.794
+  }
+ },
+ "bm25": {
+  "category_hit_at_5": 0.652,
+  "category_precision_at_5": 0.243,
+  "top1_same_category": 0.28,
+  "knn_vote": {
+   "category_accuracy": 0.306,
+   "category_macro_f1": 0.256,
+   "severity_accuracy": 0.351,
+   "severity_within_one": 0.82
+  }
+ },
+ "hybrid": {
+  "category_hit_at_5": 0.691,
+  "category_precision_at_5": 0.243,
+  "top1_same_category": 0.292,
+  "knn_vote": {
+   "category_accuracy": 0.313,
+   "category_macro_f1": 0.267,
+   "severity_accuracy": 0.355,
+   "severity_within_one": 0.801
+  }
+ },
+ "nearest_train_cosine": {
+  "median": 0.623,
+  "max": 1.0,
+  "count_above_0.9": 17
+ }
+}

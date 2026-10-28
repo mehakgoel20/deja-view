@@ -1,0 +1,402 @@
+[
+ {
+  "org": "Datadog",
+  "date": "2026-05-07",
+  "url": "https://status.datadoghq.com/incidents/wjrkhvg9ydc1",
+  "name": "Delayed Monitors Notifications",
+  "sev": "Critical",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "We are continuing to work on a fix. We are continuing to work on a fix. We are continuing to work on a fix. || We have identified due to upstream provider issues, we are continuing to see unavailability of telemetry data coming from AWS into Datadog. We are continuing to work on a fix. Counts, rates and gauge metrics are being processed normally for most customers || We have identified due to upstream provider issues, we are continuing to see unavailability of telemetry data coming from AWS into Datadog. We are continuing to work on a fix. We are working on a fix. We are working on a fix. https://health.aws.amazon.com/health/status || Due to upstream provider issues, we are also continuing to see unavailability of telemetry data coming from AWS into Datadog."
+ },
+ {
+  "org": "Datadog",
+  "date": "2026-04-15",
+  "url": "https://status.datadoghq.com/incidents/7ht7d7xsnbhy",
+  "name": "Delayed Metrics",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "To prevent false monitor alerts due to delayed data, monitors affected by the delay will not notify and will automatically resume once current data is available. To prevent false monitor alerts due to delayed data, monitors affected by the delay will not notify and will automatically resume once current data is available."
+ },
+ {
+  "org": "Datadog",
+  "date": "2026-07-29",
+  "url": "https://status.datadoghq.com/incidents/2c2287dz638f",
+  "name": "Real user monitoring, distribution and custom processes metrics delayed",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "|| A fix has been implemented and we are monitoring the results. We're continuing to mitigate the issues on distribution metrics. || The issue has been identified and a fix is being implemented. To prevent false alerts caused by delayed data, affected monitors will not notify and will automatically resume once current data is available."
+ },
+ {
+  "org": "Datadog",
+  "date": "2026-02-11",
+  "url": "https://status.datadoghq.com/incidents/g5vw545yn7vt",
+  "name": "Delayed Traces in APM Trace Search",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "|| A fix has been implemented and we are monitoring the results. || Teams continue to work to mitigate the impact of this issue. Distribution Metrics monitors were delayed between 21:35 and 22:15 UTC || Teams continue to work to mitigate the impact of this issue. At this time, APM Trace Processing, APM Trace Monitors are still delayed and Distribution Metrics monitors are delayed starting from 21:35 UTC || Teams have identified the issue and are working to mitigate at this time || We are investigating increased latency processing Traces in APM Trace Search."
+ },
+ {
+  "org": "Datadog",
+  "date": "2026-03-26",
+  "url": "https://status.datadoghq.com/incidents/1qdv7gx89vwv",
+  "name": "Delayed Monitors Notifications",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "|| A fix has been implemented and we are monitoring the results. || We are continuing to work on a fix for this issue. || We are continuing to work on a fix for this issue. || We are continuing to work on a fix for this issue. || The issue has been identified and a fix is being implemented. We've identified the root cause and are working on a fix."
+ },
+ {
+  "org": "Datadog",
+  "date": "2026-10-02",
+  "url": "https://status.datadoghq.com/incidents/yrkfn68nnnnr",
+  "name": "Delayed RUM sessions",
+  "sev": "Low",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "As a result of this issue, some users may see gaps or delays in RUM graphs as well as empty or partial query results on RUM Sessions, RUM Analytics, and RUM Application pages since Oct 2, 2026, 11:42 AM UTC To prevent false monitor alerts due to delayed data, monitors affected by the delay will not notify and will automatically resume once current data is available."
+ },
+ {
+  "org": "Datadog",
+  "date": "2026-09-30",
+  "url": "https://status.datadoghq.com/incidents/41hx12qtkl7x",
+  "name": "Delayed Events",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "|| We have deployed a mitigation and we are monitoring the results. || We have identified the issue and are working on a mitigation strategy. As a result of this issue, some users may see delays or gaps in the event stream or for event queries on dashboards since Sep 30, 2026, 5:25 PM UTC To prevent false monitor alerts due to delayed data, monitors affected by the delay will not notify and will automatically resume once current data is available."
+ },
+ {
+  "org": "Datadog",
+  "date": "2026-02-23",
+  "url": "https://status.datadoghq.com/incidents/qqb6y9g81rw6",
+  "name": "Delayed RUM data",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "This incident has been resolved. || We have deployed a fix and we are monitoring the results. We will provide another update once the issue is fully resolved. || We have identified the underlying issue and are working on a fix. It is important to note that no data has been lost, and it will be backfilled and available once the service is operational again. || We are investigating increased latency processing RUM data. As a result of this issue, some users may see gaps or delays in RUM graphs as well as empty or partial query results on RUM Sessions, RUM Analytics, RUM Application, and Error Tracking pages."
+ },
+ {
+  "org": "Datadog",
+  "date": "2026-01-18",
+  "url": "https://status.datadoghq.com/incidents/476hf8wnc4l0",
+  "name": "Delayed Events",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "This incident is resolved. There's no more delay for the processing of Events, nor impact on the event stream, event based widgets and event based monitors. || Recovery is in progress and the new estimated time of recovery would be 14h30 UTC. || We have identified the issue and scaled up for recovery, with a recovery estimated to be around 14h30 UTC. We'll continue to give updates as recovery progresses. || We are investigating increased latency processing Events. As a result of this issue, some users may see delays or gaps in the event stream or for event based widgets or event based monitors."
+ },
+ {
+  "org": "Datadog",
+  "date": "2026-08-06",
+  "url": "https://status.datadoghq.com/incidents/0yvjrwkfc2np",
+  "name": "Delayed Processes data",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "|| A fix has been implemented and we are monitoring the results. || The issue has been identified and a fix is being implemented. To prevent false monitor alerts due to delayed data, monitors affected by the delay will not notify and will automatically resume once current data is available."
+ },
+ {
+  "org": "Datadog",
+  "date": "2026-02-11",
+  "url": "https://status.datadoghq.com/incidents/vkqm21bfss9c",
+  "name": "Delayed Traces in APM",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "This incident has been resolved. || The remaining impact is limited to AWS Streams metrics. We are continuing to monitor for any further issues. || A fix has been implemented and we are monitoring the results. || The issue has been identified and a fix is being implemented. || We are investigating increased latency processing Traces in APM Trace Search and AWS streams metrics. As a result of this issue, some users may see missing or delayed traces in APM Trace Search, and delayed AWS stream metrics since 00:13 UTC."
+ },
+ {
+  "org": "Datadog",
+  "date": "2026-06-26",
+  "url": "https://status.datadoghq.com/incidents/29t1p0vx8sjz",
+  "name": "Delayed APM Trace Metrics",
+  "sev": "Low",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "|| A fix has been implemented and we are monitoring the results. || We have identified increased latency processing APM Trace Metrics and are working on a fix. To prevent false monitor alerts due to delayed data, monitors affected by the delay will not notify and will automatically resume once current data is available."
+ },
+ {
+  "org": "Datadog",
+  "date": "2026-06-18",
+  "url": "https://status.datadoghq.com/incidents/7l0kwdnv43j8",
+  "name": "Delayed Events",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "|| A fix has been implemented and we are monitoring the results. As a result of this issue, some users may see delays or gaps in the event stream or for event queries on dashboards To prevent false monitor alerts due to delayed data, monitors affected by the delay will not notify and will automatically resume once current data is available."
+ },
+ {
+  "org": "Datadog",
+  "date": "2025-12-12",
+  "url": "https://status.datadoghq.com/incidents/rxrmt186707r",
+  "name": "Delayed Processes data",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "This incident has been resolved. || A fix has been implemented and we are monitoring the results. || The issue has been identified and a fix is being implemented. || We are continuing to investigate this issue. || We are investigating increased latency processing Processes data. As a result of this issue, some users may see delays or gaps for data based on Process Monitoring. To prevent spurious alerts, we have temporarily disabled monitors based on this data."
+ },
+ {
+  "org": "Datadog",
+  "date": "2026-09-03",
+  "url": "https://status.datadoghq.com/incidents/4zd1rbp4pbt5",
+  "name": "Delayed CICD Optimization, Code Coverage, Code Security, and DORA data",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "The issue is now resolved. || We have applied remediations, and recovery is in progress. We are continuing to monitor the issue. || We are monitoring the issue. || We identified the issue. || We are monitoring the issue. || We identified the issue. || We are investigating increased latency processing CICD Optimization, Code Coverage, Code Security, and DORA data. As a result of this issue, some users may see delays with test runs and pipeline executions."
+ },
+ {
+  "org": "Datadog",
+  "date": "2026-07-02",
+  "url": "https://status.datadoghq.com/incidents/rpj3lwgx1s3s",
+  "name": "Errors Pulling Container Images",
+  "sev": "Critical",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "This incident has been resolved. || A fix has been implemented and we are monitoring the results. || The issue has been identified and a fix is being implemented. || We are investigating errors pulling Datadog container images from registry.datadoghq.com. As a result of this issue, some users may be unable to download or deploy the Datadog Agent, Cluster Agent, and other Datadog container images. Containers that are already running are not affected."
+ },
+ {
+  "org": "Deepgram",
+  "date": "2026-06-17",
+  "url": "https://status.deepgram.com/incidents/q42y5d4s41d9",
+  "name": "Elevated errors when using Google Gemini models with Voice Agent",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "This incident has been resolved. || Continuing to monitor; root cause confirmed as the Google API key change. || We have identified the cause of elevated error rates affecting Voice Agent requests that use Google Gemini models. A recent change on Google's side to how API keys operate is causing requests to fail, and our team is rolling out updated credentials to resolve it. Until the update is complete, customers may see intermittent failures for Gemini-model requests \u2014 concentrated in the first half of each hour, with most requests succeeding in the second half. Other Voice Agent models are unaffected. We are actively working on the fix and will update when resolved. || We are currently investigating elevated error rates affecting Voice Agent requests that use Google Gemini models. During this period, some requests to Google models (including gemini-2.5-flash-lite) may fail or time out. Other Voice Agent functionality and non-Google models are not affected. Our team is actively working to identify the cause and restore full service. We will provide an update shortly. To avoid downtime, please define multiple LLM providers (https://developers.deepgram.com/docs/voice-agent-llm-models#using-multiple-llm-providers) in your Voice Agent configuration."
+ },
+ {
+  "org": "Deepgram",
+  "date": "2026-06-15",
+  "url": "https://status.deepgram.com/incidents/ywx3rwsxqk41",
+  "name": "Degraded performance \u2014 Flux streaming Speech-to-Text",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "A degradation affecting a subset of streaming Speech-to-Text (Flux) sessions, where connections terminated before returning a transcript, has been mitigated and service has been operating normally since. || We identified a degradation affecting a subset of Flux streaming Speech-to-Text sessions, where connections terminated before returning a transcript. We've isolated it to specific degraded hosts and are mitigating. || Some streaming Speech-to-Text connections on the Flux model established successfully but then terminated a few seconds into the session due to an internal error, before returning a final transcript."
+ },
+ {
+  "org": "DigitalOcean",
+  "date": "2026-08-08",
+  "url": "https://status.digitalocean.com/incidents/2wql4f4sb13r",
+  "name": "Account Registration, Droplets, and Related Services",
+  "sev": "Medium",
+  "cat": "database_issue",
+  "pm": false,
+  "text": "|| Our Engineering team has implemented a fix for the issue affecting new account registration, Droplets, Reserved IPs, Snapshots, and DOKS clusters across multiple regions, and is currently monitoring the situation. || Our Engineering team continues to work on implementing and rolling out a fix for the issue affecting multiple services across multiple regions, including new account registration, Droplets, Reserved IPs, Automated Backups and Snapshots, Droplet Autoscale, DOKS clusters, GenAI services, the Droplet console, and Database cluster creation. || Our Engineering team has identified the root cause of the issue affecting new account registration, Droplets, Reserved IPs, Snapshots, and DOKS clusters across multiple regions. Customers may experience the following: Unable to create new accounts Unable to create Droplets Unable to allocate Reserved IPs Failures with Automated Backups and Snapshots operations Droplet Autoscale scaling operations not working as expected DOKS cluster operations failing GenAI services impacted Unable to access the Droplet console Database clusters stuck in a \"Creating\" state Our Engineering team is working on implementing a fix and we will provide another update as soon as more information becomes available. Further investigation has found that GenAI services are also affected due to this issue, customers may also be unable to access the Droplet console, and Database clusters may be stuck in a \"Creating\" state."
+ },
+ {
+  "org": "DigitalOcean",
+  "date": "2026-05-14",
+  "url": "https://status.digitalocean.com/incidents/gwgh41d5r0nz",
+  "name": "DNS service, Certificates and Managed MongoDB",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "|| Our Engineering team has implemented a fix for the issue affecting our DNS service and are now seeing DNS record updates successfully propagate to the edge. This is due to the dependency on Let's Encrypt certificate issuance, which requires functional DNS propagation. Our engineering team is actively working to identify the root cause and restore full functionality."
+ },
+ {
+  "org": "DigitalOcean",
+  "date": "2026-08-19",
+  "url": "https://status.digitalocean.com/incidents/qd8v4wddyqjr",
+  "name": "Major Service Interruption in MKC1",
+  "sev": "Critical",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "Our Engineering team has confirmed the regional control plane is healthy and CPU Droplets, Managed databases, Load balancers, Block storage, Kubernetes (DOKS) and Spaces are operating normally. GPU Droplets continue to be impacted and our teams are working to restore all nodes. We will communicate with GPU Droplet customers separately via Slack and email with more information and regular updates. Thank you for your patience throughout this incident. If you continue to experience any issues, please open a support ticket from within your account. || At this time, the regional control plane is fully healthy. CPU Droplets, Managed databases, Load balancers, Block storage and Spaces are operating normally. Droplet create, resize and other management operations are working. Kubernetes (DOKS) control planes are reachable. Our teams are continuing to work with the facility to restore all equipment. GPU Droplets in MKC1 remain offline or unreachable. DOKS GPU worker nodes may remain NotReady, and GPU-backed inference endpoints in this region may be unavailable. We will monitor the regional control plane for a short time and then resolve this incident. GPU customers will receive personalized updates with more information in lieu of this status page. If you have questions about your affected resources, contact support and reference this incident. || Our Engineering team continues to work on the issue affecting the MKC1 region. We are actively working to restore connectivity and bring th"
+ },
+ {
+  "org": "DigitalOcean",
+  "date": "2026-07-13",
+  "url": "https://status.digitalocean.com/incidents/8sjb7kmqnvk9",
+  "name": "Serverless Inference - Gemma4 Latency Issues Causing Timeouts & Slow Responses",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "The deployed fix has successfully restored full functionality, and our monitoring shows that system performance has completely stabilized. || A fix has been deployed to resolve the issue. Our Engineering team has identified a backend configuration issue as the root cause, which is temporarily impacting model performance. Please be assured that our Engineering team is actively working on a fix and is treating this issue with high priority. || A fix has been deployed to resolve the backend configuration issue. Our engineering team has identified a backend configuration issue as the root cause, which is temporarily degrading performance. We are actively working on a fix to restore normal response times and will provide another update as soon as the mitigation is in place"
+ },
+ {
+  "org": "DigitalOcean",
+  "date": "2026-07-16",
+  "url": "https://status.digitalocean.com/incidents/nfhvp4yhyrfl",
+  "name": "Reserved IP routing in TOR1",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "|| Our Engineering team has implemented a fix for the issue affecting Reserved IP routing in the TOR1 region, and we are currently monitoring the results. Inbound and outbound traffic to and from Reserved IPs in TOR1 should now be restored. Our engineering team is now working on implementing a fix. Our engineering team is actively investigating the root cause and working towards a resolution."
+ },
+ {
+  "org": "DigitalOcean",
+  "date": "2026-09-16",
+  "url": "https://status.digitalocean.com/incidents/grb2v0td1nq5",
+  "name": "Support Portal Service Disruption",
+  "sev": "Medium",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "Our Engineering team has confirmed the full resolution of the issue affecting the Support Portal following a fix from our upstream provider. Our upstream provider has applied a fix, and we've verified ticket creation and review are working as expected. || Our Support Portal is currently experiencing issues due to a third-party service disruption impacting our systems."
+ },
+ {
+  "org": "DigitalOcean",
+  "date": "2026-07-19",
+  "url": "https://status.digitalocean.com/incidents/qzbsmdsw9lq8",
+  "name": "Networking in BLR1",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "Our engineering team has resolved the outbound network connectivity issue in the BLR1 region. If you continue to experience problems, please open a ticket with our support team. We apologize for any inconvenience. || Our engineering team has implemented the necessary fixes affecting upstream network connectivity for Droplet-based services in the BLR1 region. Users should now be able to connect to the external endpoints from Droplets in BLR1. We are currently monitoring the situation to ensure that the service has returned to normal operation and remain stable. We appreciate your patience and will provide an update once the issue is fully confirmed as resolved. || Our Engineering team has identified an issue affecting upstream network connectivity for Droplet-based services in the BLR1 region and is actively working with the relevant upstream providers to implement a resolution. Customers may continue to experience intermittent timeouts or connectivity issues when attempting to reach external endpoints from Droplets in BLR1. We will provide another update once the issue has been fully resolved or when additional information becomes available. || We are currently investigating an issue affecting outbound network traffic for Droplets in the BLR1 region. Customers may experience timeout errors or connectivity issues when attempting to reach external services. Our Engineering team is actively investigating the issue and working to identify the root cause. We will provide additiona"
+ },
+ {
+  "org": "DigitalOcean",
+  "date": "2026-06-19",
+  "url": "https://status.digitalocean.com/incidents/nqkv7bnzr4l3",
+  "name": "Monitoring Graphs in the Cloud Control Panel",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "Our engineering team has identified the root cause of the issue and has taken appropriate steps to restore functionality. We can confirm that services have been restored and are functioning as expected. Thank you for your patience and understanding || Our engineering team has implemented the necessary fixes to address the issue affecting the visibility of monitoring graphs within the Cloud Panel."
+ },
+ {
+  "org": "DigitalOcean",
+  "date": "2026-07-24",
+  "url": "https://status.digitalocean.com/incidents/w53965shllfq",
+  "name": "Network Connectivity from India to NYC",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "Between 07:46 UTC & 10:24 UTC today, some users in India accessing resources in the NYC region may have experienced connectivity issues. The impact was limited to users using Airtel as their ISP. Our investigation determined that the issue was caused by an internal network issue within Airtel and was not related to DigitalOcean network. The connectivity issue now appears to be resolved, and users should no longer experience problems accessing their resources. We apologize for any inconvenience this may have caused. However, if you continue to experience any connectivity issues, please don't hesitate to open a support ticket for further investigation; we'll be happy to assist you further. || We are observing improvements in network connectivity for users in India accessing resources in our NYC region. Our team is monitoring the situation to ensure that the service has returned to normal operation and remain stable. We appreciate your patience and will provide an update once the issue is fully confirmed as resolved. || We have noticed \u200b\u200b\u200b\u200b\u200b\u200b\u200bnetwork connectivity issues affecting some users connecting from India to resources in the NYC region. Based on our current investigation, users on Airtel and BSNL have reported increased latency, packet loss, or intermittent connectivity. We apologize for the inconvenience and will provide an update as soon as more information becomes available."
+ },
+ {
+  "org": "DigitalOcean",
+  "date": "2026-05-15",
+  "url": "https://status.digitalocean.com/incidents/lrrw084g3whn",
+  "name": "Anthropic reported outage that's impacting access to their Serverless Inference models",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "The root cause of the issue was an outage with our provider, Anthropic, which affected users of Sonnet 4.6 and Opus 4.7 models. || According to Anthropic's status page (https://status.claude.com/incidents/8z7l5zcy0v3b), they have identified the root cause and are actively working on a fix. We will provide another update once Anthropic has implemented a fix and service is restored."
+ },
+ {
+  "org": "DigitalOcean",
+  "date": "2026-08-06",
+  "url": "https://status.digitalocean.com/incidents/cg3q7h89dbnq",
+  "name": "Functions on App Platform",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "Functions builds, deploys, and requests to Functions endpoints are all working as expected. The fix implemented earlier was successful, and we are no longer seeing any problems affecting Functions. || Our Engineering team has implemented a fix for the issue affecting Functions on App Platform. Functions builds/deploys and requests to Functions endpoints should now be completing successfully. During this time, users may experience build/deploy failures for Functions components, and requests to Functions endpoints may fail with a 504 error, caused by an SSL error when App Platform attempts to forward requests to Functions. This issue currently appears to be isolated to Functions deployed within App Platform."
+ },
+ {
+  "org": "DigitalOcean",
+  "date": "2026-07-01",
+  "url": "https://status.digitalocean.com/incidents/8mvnl6s4cmdt",
+  "name": "Droplet Resize",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "|| Our Engineering team has identified the root cause of the issue affecting Droplet resizes using the \"Downscale Anytime\" option and has implemented a fix. We are actively monitoring the situation to ensure the fix remains effective and will provide another update once the issue has been fully resolved."
+ },
+ {
+  "org": "DigitalOcean",
+  "date": "2026-07-19",
+  "url": "https://status.digitalocean.com/incidents/84v7d9gkkzzf",
+  "name": "Block Storage Volume NYC1, NYC3, SGP1, SYD1 and BLR1",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "|| Our Engineering team has identified the root cause of the issue preventing volume attachments to Droplets in NYC1, NYC3, SGP1, SYD1, and BLR1 and has successfully implemented a fix. We are actively monitoring the situation to ensure the fix remains effective and will provide another update once the issue has been fully resolved."
+ },
+ {
+  "org": "DigitalOcean",
+  "date": "2026-05-20",
+  "url": "https://status.digitalocean.com/incidents/sv0tfb6jhqz8",
+  "name": "Cloud Firewall",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "Our Engineering team has verified that the issue causing incorrect Cloud Firewall rules to display on the cloud panel is fully resolved. The user interface continues to function as expected, and all systems have returned to normal operating conditions. If you continue to experience problems, please open a ticket with our support team. Thank you for your patience throughout this incident. || Our Engineering team has implemented a fix to resolve the issue causing incorrect Cloud Firewall rules to display on the cloud panel. At this time, the user interface is functioning as expected, and we are actively monitoring the situation to ensure continued stability. We will provide a final update once we have verified that the issue is fully resolved. || We are currently investigating an issue with incorrect Cloud Firewall rules appearing on the cloud panel. Our engineering team is aware of the situation and actively working to identify the root cause. Since this is a user interface issue, users should not experience any problems with other services or networking. We apologize for the inconvenience and appreciate your patience. We will continue to provide updates as we learn more."
+ },
+ {
+  "org": "DigitalOcean",
+  "date": "2026-05-08",
+  "url": "https://status.digitalocean.com/incidents/h9t3sfjx36l3",
+  "name": "Multiple Services in NYC2",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "|| Our Engineering team has identified the issue and implemented a fix to resolve the issues with multiple services, and is monitoring the situation. Our engineering team is aware of the situation and is working to identify the root cause and restore full connectivity as quickly as possible."
+ },
+ {
+  "org": "DigitalOcean",
+  "date": "2026-06-27",
+  "url": "https://status.digitalocean.com/incidents/psk2b3pgbblq",
+  "name": "Anthropic Inference Model Availability",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "Our Engineering team has resolved the issue that was causing HTTP 400 errors for requests to Anthropic models. Users should now be able to access Anthropic models without any issues. If you continue to experience problems, please open a ticket with our Support team so we can investigate further. We apologize for any inconvenience this may have caused. || Our Engineering team has mitigated an issue with Anthropic models. Previously, users may have encountered 400 errors when attempting to use any Anthropic model. Although the root cause of the issue is still being addressed by Anthropic, users should now be able to access and use Anthropic models again. We will continue to monitor the situation and provide updates if necessary. If you continue to experience problems, please open a ticket with our Support team. We apologize for any inconvenience this may have caused."
+ },
+ {
+  "org": "DigitalOcean",
+  "date": "2026-04-27",
+  "url": "https://status.digitalocean.com/incidents/5gsk0hfctqp5",
+  "name": "Serverless Inference - Intermittent Rate Limiting Affecting Some Customers Using Anthropic Models",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "The issue is resolved, and service is operating normally. || We identified the cause of intermittent HTTP 429 responses affecting some customers using Anthropic models on DigitalOcean Serverless Inference and applied a mitigation. Service has recovered, and we are monitoring stability. || We are investigating an issue affecting some customers using DigitalOcean Serverless Inference with Anthropic models. Over the last two hours, impacted customers may have experienced intermittent request failures, including HTTP 429 responses, on some Anthropic model requests. Our engineering team is actively investigating the issue. We apologize for the inconvenience and will share another update as soon as more information is available."
+ },
+ {
+  "org": "Discord",
+  "date": "2026-09-16",
+  "url": "https://status.discord.com/incidents/1z5kbv8r5pkv",
+  "name": "Google Pay Outage",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved. || We're currently experiencing an issue that prevents users from completing purchases (including Nitro subscriptions and Shop items) through the Android app. This is caused by an ongoing outage with Google Play. Purchases on other platforms (iOS, web, and desktop) are unaffected, and existing subscriptions remain active. We're monitoring Google's status and will post an update as soon as service is restored. No action is needed on your part \u2014 please try again later. https://pay.google.com/status/incidents/gQJsjf662F7KwPyiNqav"
+ },
+ {
+  "org": "Duo Security",
+  "date": "2025-07-24",
+  "url": "https://status.duo.com/incidents/ft0p122cv79t",
+  "name": "GB VoIP Failures",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": false,
+  "text": "|| We are currently investigating an issue caused by our UK telephony providers regarding VoIP failures with Duo on DUO70 and are working to correct the issue as soon as possible. || We are currently investigating an issue caused by our UK telephony providers regarding VoIP failures with Duo on DUO70 and are working to correct the issue as soon as possible."
+ },
+ {
+  "org": "Duo Security",
+  "date": "2026-03-22",
+  "url": "https://status.duo.com/incidents/cmcggmg964fn",
+  "name": "Duo Phone Call Authentication Failure for US Based Carriers",
+  "sev": "Low",
+  "cat": "authentication",
+  "pm": false,
+  "text": "VoIP authentication has returned to normal operation with sustained success rates observed. || We are now observing high rates of success of VoIP authentication. We will continue to monitor the situation. || We are observing a recovery in voice call processing across the U.S. and are continuing to investigate the root cause of this impact. || We are currently investigating an issue causing VOIP authentication failures in all the deployments in the US region and are working to correct the issue as soon as possible. At this time please use alternative authentication methods such as Duo Mobile Push, or SMS passcodes. A list of all other alternative authentication methods can be found here: https://duo.com/docs/policy#authentication-methods Please check back here or subscribe to updates for any changes."
+ },
+ {
+  "org": "Duo Security",
+  "date": "2025-10-20",
+  "url": "https://status.duo.com/incidents/x8s8xwlhrkkz",
+  "name": "All Deployments: Email delivery issues",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": false,
+  "text": "The issue affecting email delivery has been resolved. System performance has remained stable, and all services are functioning normally across deployments. We\u2019ll continue to monitor to ensure ongoing reliability. Thank you for your patience throughout this incident. || We have identified the cause of the issue with email delivery with the Duo Admin Panel and are actively working to restore service. || We are currently investigating an issue affecting email delivery. Our team is working to identify the root cause and restore full functionality as quickly as possible. We'll provide updates as soon as more information becomes available. Authentication is not impacted. Thank you for your patience."
+ },
+ {
+  "org": "Elastic",
+  "date": "2026-05-29",
+  "url": "https://status.elastic.co/incidents/8htnrfnbyph2",
+  "name": "Upstream Azure Outage Causing Service Degradation",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "A small number of deployments are still not healthy. Customers with deployments not configured for high availability in this region may continue to experience intermittent connectivity errors, degraded performance, or delays when performing deployment operations. Deployments configured for high availability across multiple availability zones are not expected to be affected. We will provide further updates as recovery progresses || We continue to respond to an upstream Microsoft Azure outage in Azure West US 2 (azure-westus2), caused by a datacenter power event reported by Azure. Customers with deployments not configured for high availability in this region may continue to experience intermittent connectivity errors, degraded performance, or delays when performing deployment operations (including create, edit, restart, and delete). Deployments configured for high availability across multiple availability zones are not expected to be affected. || We are continuing to investigate the impact of an upstream Azure WestUS2 outage which is impacting Elastic services and deployment healthiness, including Elastic Serverless projects hosted in this region. Customers whose deployments are not configured for high availability may experience intermittent errors, delays, or inability to access certain features. Deployments configured for high availability across multiple zones are not expected to be affected. Our team is working to mitigate the situation and the impact on our environment. |"
+ }
+]

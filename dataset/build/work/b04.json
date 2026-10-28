@@ -1,0 +1,402 @@
+[
+ {
+  "org": "Linode",
+  "date": "2026-08-13",
+  "url": "https://status.linode.com/incidents/ldvz7stfxtsg",
+  "name": "Emerging Service Issue - API - All Regions",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": true,
+  "text": "On August 13th, 2026, at approximately 18:15 UTC, Akamai observed a brief service outage affecting [_api.linode.com_](http://api.linode.com). The total service interruption lasted for approximately 3 minutes, concluding at 18:18 UTC. Following the restoration of initial connectivity, elevated API response latency persisted through 19:06 UTC, causing slower response times and intermittent delays for customers interacting with API services. To address the performance impact, Akamai engineering teams identified a configuration discrepancy on the secondary caching infrastructure node that prevented it from absorbing the full traffic load after the failover. Engineers completed a controlled migration and moved request caching traffic back over to the primary host. Following this change, API latency rapidly decreased to normal operational levels. The initial condition was triggered by an unexpected reboot of the primary caching node's physical host. While redundant infrastructure was active, the secondary node was unable to process the failover traffic seamlessly, causing the extended performance degradation. Our engineering teams are conducting a follow-up investigation into the failover mechanisms to optimize execution speeds and align configuration settings across redundant nodes, ensuring secondary systems can handle traffic seamlessly in future events. This summary provides an overview of our current understanding of the incident given the information available. Our investigat"
+ },
+ {
+  "org": "Linode",
+  "date": "2026-05-19",
+  "url": "https://status.linode.com/incidents/krnvfzp0dwr2",
+  "name": "Emerging Service Issue - GPU Deployment",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "On May 19, 2026, at 18:26 UTC, we identified an issue impacting the creation and re-provisioning of Linode instances using any of the four RTX PRO 6000 Blackwell \\(g3-gpu-rtxpro6000-blackwell\\) plans, resulting in API errors. These failures caused a denial of service for customers attempting to deploy g3-gpu-rtxpro6000-blackwell instances via the Cloud Manager or API. With the issue identified, our engineering team developed and tested a hotfix to correct the plan-validation logic. Deployment of the fix began shortly after, and broader customer impact was mitigated as of 21:36 UTC on May 19, 2026, following successful verification in all regions."
+ },
+ {
+  "org": "Linode",
+  "date": "2026-09-21",
+  "url": "https://status.linode.com/incidents/fsgmc1p06swx",
+  "name": "Emerging Service Issue - [DNS] - [eu-west]",
+  "sev": "Low",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "Due to a software logic flaw, customer workload configurations deployed in the last year across the region were disproportionately reliant on this single resolver, causing DNS failures when it became unavailable. At 21:45 UTC, engineering teams deployed an emergency configuration update to rebalance and reorder active DNS resolver assignments in the region, returning DNS query performance to baseline levels. Long-term engineering updates are currently being deployed to ensure provisioning utilities dynamically assign distinct, active DNS resolvers across all regions to prevent recurrence."
+ },
+ {
+  "org": "Linode",
+  "date": "2026-06-16",
+  "url": "https://status.linode.com/incidents/nkkf1pkgkrh4",
+  "name": "Emerging Service Issue - Networking - US-MIA (Miami)",
+  "sev": "Low",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "The Investigation revealed a configuration change on an Akamai device in Miami triggered an underlying vendor software defect within the routing platform's operating system. Actions were taken to mitigate the impact and restore intended routing paths. Root Cause: During a routine, scheduled configuration update to an aggregated network link, an underlying vendor software defect within the routing platform's operating system was triggered. While the configuration change itself was standard and correct, the software bug caused the router to incorrectly process internal MPLS \\(Multiprotocol Label Switching\\) routing tables."
+ },
+ {
+  "org": "Linode",
+  "date": "2026-07-18",
+  "url": "https://status.linode.com/incidents/jjrwrgsvs81d",
+  "name": "Service Issue - Object Storage",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "On July 18, 2026, between approximately 00:30 UTC and 04:00 UTC, users might have experienced 5xx errors while trying to create a new bucket in the Object Storage for the following endpoints. * [us-ord-1.linodeobjects.com](http://us-ord-1.linodeobjects.com) * [us-lax-1.linodeobjects.com](http://us-lax-1.linodeobjects.com) * [us-iad-1.linodeobjects.com](http://us-iad-1.linodeobjects.com) * [us-sea-1.linodeobjects.com](http://us-sea-1.linodeobjects.com) * [fr-par-1.linodeobjects.com](http://fr-par-1.linodeobjects.com) \u200cThe issue began when the infrastructure supporting Object Storage entered a degraded state across all nodes. This prevented the service from processing requests, resulting in failures during bucket creation operations. \u200cTo mitigate the impact, we have applied a fix at the backend system responsible for bucket creation. The impact was mitigated following this action. \u200cOur subject matter experts are investigating the root cause and will take appropriate preventive actions. \u200cWe apologize for the impact and appreciate your patience and ongoing support. We are making configuration and operational changes to our systems to help prevent this from happening again, and remain committed to continuous improvement. \u200cThis summary provides an overview of our current understanding of the incident, given the information available. Our investigation is ongoing, and any information herein is subject to change."
+ },
+ {
+  "org": "Linode",
+  "date": "2026-08-28",
+  "url": "https://status.linode.com/incidents/jddnc1lhxtg4",
+  "name": "Service Issue - US-SEA (Seattle, WA)",
+  "sev": "Low",
+  "cat": "hardware_infra",
+  "pm": true,
+  "text": "The investigation revealed that this was due to a Linux kernel issue that was triggered on a network router due to increased network traffic at this site while a specific BIOS setting was enabled. To mitigate the impact, the Akamai team disabled a problematic setting and rebooted the affected system, restoring service and moving the situation to a monitoring state by 12:18 UTC on August 28, 2026."
+ },
+ {
+  "org": "Linode",
+  "date": "2026-04-29",
+  "url": "https://status.linode.com/incidents/2466t3hw700h",
+  "name": "Object Storage Key creation and validation failing with error 403 in multiple data centers",
+  "sev": "Medium",
+  "cat": "hardware_infra",
+  "pm": true,
+  "text": "Our investigation established that the issue started due to a combination of factors, including: a cascading failure of a background process from one cluster to others and a reconciler appliance not running due to missing metrics and an abnormal system load that led to call failures."
+ },
+ {
+  "org": "Linode",
+  "date": "2026-05-15",
+  "url": "https://status.linode.com/incidents/c73p2yjscsnw",
+  "name": "Investigating - Linode VM Migration Delays (All Regions)",
+  "sev": "Low",
+  "cat": "other",
+  "pm": true,
+  "text": "Starting around 04:00 UTC on May 14, 2026, Akamai identified an issue affecting Linode migration operations, including live, cold, and scheduled migrations. As a result, some customers experienced delays in migration processing, and customers undergoing certain migrations were temporarily unable to access their instances until processing resumed. The issue was caused by an unexpected restart of internal services required to process migrations. Following the restart, those services did not automatically recover as expected, which prevented migration tasks from initiating and led to a backlog of stalled operations. Akamai engineers restored the affected services, and migration processing resumed. Service was largely restored at approximately 03:15 UTC on May 15, 2026. Akamai is continuing to investigate the underlying cause of the unexpected service restart and is reviewing monitoring and recovery procedures to help prevent similar issues in the future. This summary reflects our current understanding of the incident based on available information. Our investigation is ongoing, and details may change as we learn more."
+ },
+ {
+  "org": "Linode",
+  "date": "2026-06-16",
+  "url": "https://status.linode.com/incidents/bklgtykj0n3n",
+  "name": "Service Issue: Longview",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": true,
+  "text": "The impact was limited to reading the existing reporting data only and there was no permanent reporting data loss due to this issue. To mitigate the impact, we manually rebooted identified VM boxes to take effect and resolve Gateway errors. The impact was mitigated at 9:00 UTC on June 16, 2026, following this action. Post-mitigation, all expected data is available in the Longview graph dashboard. We will continue to investigate the root cause and will take appropriate preventive actions."
+ },
+ {
+  "org": "Linode",
+  "date": "2026-08-13",
+  "url": "https://status.linode.com/incidents/tdd8x7fd156w",
+  "name": "Service Issue - Linode Kubernetes Engine Enterprise (LKE-E)- IAD2 (Washington)",
+  "sev": "Medium",
+  "cat": "hardware_infra",
+  "pm": true,
+  "text": "Between 17:25 UTC and 22:50 UTC on August 13, 2026, Linode Kubernetes Engine Enterprise \\(LKE-E\\) customers attempting to deploy G7 dedicated Linode instances in our Washington \\(IAD2\\) data center, received 403 provisioning error messages. Our investigation revealed that while total physical hardware capacity in IAD2 was sufficient, the provisioning request triggered an entitlement check failure due to an initial soft host-allocation threshold. Full deployment capabilities were restored and stabilized at 22:50 UTC."
+ },
+ {
+  "org": "Linode",
+  "date": "2026-05-16",
+  "url": "https://status.linode.com/incidents/dj3h400zlydn",
+  "name": "Service Issue - [Linodes and Linode Kubernetes Engine (LKE)] - [All Regions]",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "On May 15, 2026, at 18:18 UTC, we identified an issue impacting the deployment of Linodes that relied on StackScripts \\(including all newly created Linode Kubernetes Engine \\(LKE\\) and \\(LKE-E\\) nodes\\), resulting in deployment failures. These deployment failures resulted in Linodes created with StackScripts to be unbootable and LKE autoscaling or recycling activity to fail. This credential parser is used in the process of decoding StackScripts and its removal caused Linode deployments relying on StackScripts to fail. We mitigated the broader customer impact by 01:30 UTC on May 16, 2026."
+ },
+ {
+  "org": "Linode",
+  "date": "2026-08-21",
+  "url": "https://status.linode.com/incidents/n8shhnp9c0x8",
+  "name": "Service Issue - US-SEA (Seattle, WA)",
+  "sev": "Low",
+  "cat": "hardware_infra",
+  "pm": true,
+  "text": "The investigation revealed that this was due to a Linux kernel issue that was triggered on a network router due to increased network traffic at this site while a specific BIOS setting was enabled. To mitigate the impact, the Akamai team disabled a problematic setting and rebooted the affected system, restoring service and moving the situation to a monitoring state by 21:59 UTC on August 21, 2026."
+ },
+ {
+  "org": "Linode",
+  "date": "2026-08-13",
+  "url": "https://status.linode.com/incidents/qs8jdh61tyr3",
+  "name": "Service Issue - Linode Kubernetes Engine (IAD2)",
+  "sev": "Medium",
+  "cat": "hardware_infra",
+  "pm": true,
+  "text": "Beginning at approximately 14:50 UTC on August 13, 2026, customers who attempted to provision Linode Kubernetes Engine Enterprise \\(LKE-E\\) clusters in the IAD2 data center were unable to. We identified that the issue was due to the exclusion of two components in IAD2 in a recent software version upgrade which resulted in an API mismatch. We updated the identified components to bring them in sync with the expected state. This mitigated the issue at approximately 16:00 UTC on August 13, 2026. To prevent this issue from occurring in the future, we are reviewing LKE software update processes to ensure that all included components complete version upgrades before being reintroduced to service during platform software updates. This summary provides an overview of our current understanding of the incident given the information available. Our investigation is ongoing and any information herein is subject to change."
+ },
+ {
+  "org": "Linode",
+  "date": "2026-06-24",
+  "url": "https://status.linode.com/incidents/grdjlrm3z9h8",
+  "name": "Service Issue - Debian Package Availability",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "Our upstream third-party Debian repo failed to sync with their own upstream repo chain for an unknown reason. The InRelease files for Debian packages were left to expire starting at approximately 08:12 UTC on June 24, 2026, preventing any Debian packages from getting installed. We didn't have programmatic visibility at that time to know that these files were unable to download or if the expiration date in the InRelease files had been reached. We mitigated the issue at approximately 12:35 UTC on June 24, 2026, by updating which repo we are syncing Debian packages from and purging the stale InRelease files from our cache. We are working to integrate system visibility and alerting around expiration dates of these files in addition to switching to a more reliable upstream repo, i.e. Debian's official repos. This summary provides an overview of our current understanding of the incident given the information available. Our investigation is ongoing and any information herein is subject to change."
+ },
+ {
+  "org": "Linode",
+  "date": "2026-07-09",
+  "url": "https://status.linode.com/incidents/g7x2ys539382",
+  "name": "Emerging Service Issue - Cloud Manager",
+  "sev": "Low",
+  "cat": "authentication",
+  "pm": true,
+  "text": "On July 9, 2026, at 15:43 UTC, customers were unable to login to [cloud.linode.com](http://cloud.linode.com) using username and password. Customers were getting \"wrong password\" error message. Investigation revealed that the issue was due to an internal certificate issue. To mitigate the impact, we fixed the certificate issue on the impacted servers at 17:24 UTC on July 9, 2026. After monitoring our systems for some time, we confirmed the issue was fully resolved. Akamai will deploy a permanent fix to prevent a recurrence of the issue."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-06-22",
+  "url": "https://status.livekit.io/incidents/pg8h9qtm88mw",
+  "name": "Connection failures and SIP transfer errors in US Central",
+  "sev": "High",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "On June 18, 2026 \\(US East 1\\) and again on June 22, 2026 \\(US Central\\), a short packet-loss event in the affected data center triggered a compound failure in this mechanism. This is a separate defect in our agent dispatch routing, and we are fixing it. ## Root Cause The trigger in both incidents was the same: a short packet-loss event in the affected data center."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-05-28",
+  "url": "https://status.livekit.io/incidents/jqcfkrrr9y8f",
+  "name": "Elevated Reports of Participant Connection Latency and Errors In US East Region",
+  "sev": "Critical",
+  "cat": "payment_processing",
+  "pm": true,
+  "text": "## Summary LiveKit Cloud validates incoming API and connection requests via an internal authentication service, accessed over gRPC. The service has been in place since 2022 and is designed for resilience: it runs as multiple redundant instances, has pod-level health monitoring that automatically reaps unhealthy pods, and is backed by in-memory caches so it can survive transient database failures. On 2026-05-28, between 13:55 UTC and 15:45 UTC, a percentage of requests and new connections in our US East region failed or timed out. The root cause was a rare failure mode on a single instance of the authentication service. The instance remained reachable and its TCP connections stayed alive, but it began responding to gRPC requests extremely slowly, in a way that did not trip our existing pod-level health checks or cause gRPC clients to fail over. We sincerely apologize to customers whose traffic was disrupted. We've let you down, and we are taking this very seriously. In addition to the corrective actions outlined below, we are performing a thorough audit of our systems for other failure modes we may not have anticipated. ## Timeline and Impact \\(all times in UTC on 2026-05-28\\) * **13:55**: Elevated rate of authentication failures observed. * **14:15**: On-call team notified; investigation begins. * **14:46**: Error rate continues to climb; incident escalated to Sev 1. * **15:35**: US East drained; error rate begins to subside. * **16:32**: Root cause identified; faulty instanc"
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-04-15",
+  "url": "https://status.livekit.io/incidents/8jbxff0fp27k",
+  "name": "Increased Latency in RoomService APIs, brief period of higher error rate",
+  "sev": "High",
+  "cat": "memory_leak",
+  "pm": true,
+  "text": "## Root Cause The sweeper is a background process that removes rows from the `rooms` table as sessions end. Once we identified the oversized table as the underlying cause, we needed to restore it to a healthy size. Because the table was already contended, deleting rows directly would have taken additional locks and worsened the contention."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-09-15",
+  "url": "https://status.livekit.io/incidents/dbqb4jhxcg9h",
+  "name": "Investigating reports of intermittently increased API latency impacting Egress, Ingress, and SIP",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": true,
+  "text": "### Root Cause Our services share a distributed global metadata database that stores ingress and egress state. Because the client had a transaction open at the time, the database kept that transaction's row locks held. Most other APIs were unaffected, because they never touched the locked rows. ### Mitigations and Follow-ups Completed: * We have set a database-side idle transaction timeout so an abandoned transaction can no longer hold locks for more than 10 seconds."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-05-15",
+  "url": "https://status.livekit.io/incidents/2sjw9ph24lb2",
+  "name": "Intermittent connectivity disruptions in US regions",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": true,
+  "text": "## Root Cause On 2026-05-06, a change was deployed that altered the relay process. The change introduced a subtle bug that required two conditions to occur simultaneously to manifest: 1. Because both conditions are narrow \\(a cold-cache relay region absorbing a sudden burst of traffic\\), the bug did not surface during pre-deploy testing, and it did not trigger on every network blip. We tracked down the root cause on 2026-05-20, and a fix has been fully rolled out across the fleet. ## Corrective Actions & Prevention * **Improved integration tests for relay locks under load.** We are adding tests that exercise the relay process with cold caches and sudden traffic bursts, so this class of contention is caught before deploy."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-08-17",
+  "url": "https://status.livekit.io/incidents/2b79mzcgykjx",
+  "name": "Investigating reports of failed SIP Transfer calls in US East",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "## Summary On 17 August, between 17:24 and 18:05 UTC, a small percentage of SIP call transfers failed in our US East region during a routine configuration rollout. An issue in the automation that manages our SIP signaling servers prevented outgoing servers from being taken out of service safely, and those servers shut down while calls were still active on them. Transfers have completed normally since 18:05 UTC. Calls themselves stayed connected, and no other region was affected. ## Root Cause The configuration change restarts the servers that handle SIP signaling one at a time. Before a server is shut down, it is removed from service so that no new calls reach it, and it is then given some time to finish the calls it is already handling. In this case that removal did not complete expectedly and the outgoing servers kept receiving new calls for the entire drain duration, then shut down on schedule with calls still active on them. ## Timeline \\(UTC\\) * 16:52 - A routine configuration rollout begins in US East. * 17:24 - SIP transfer requests begin to fail for a subset of active calls. * 17:36 - Automated monitoring detects the elevated failure rate and our team begins investigating. * 17:40 - A further subset of active calls is affected. * 17:41 - Replacement capacity comes online. * 18:05 - Last of the impacted calls attempts a transfer and record a failure. ## Scope of Impact Only SIP call transfers \\(`TransferSIPParticipant`\\) in our US East region were affected, between 17:"
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-05-06",
+  "url": "https://status.livekit.io/incidents/j6q3j2t8rgsp",
+  "name": "Outbound SRTP calls are failing",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "**Root cause** A recent code change introduced a regression in how SIP trunk encryption settings were applied to outgoing calls. **Timeline \\(UTC\\)** - 18:07 - Production deployment containing the regression went live. - 19:56 - Fix deployed to production. **Resolution** A fix was deployed that ensures trunk-level SRTP requirements are correctly applied to outbound calls. Regression tests covering this and the adjacent code paths have been added to prevent the same class of issue. **What we are doing to prevent recurrence** - Strengthening pre-deployment validation requirements for changes that affect our SIP infrastructure. - Improving the reliability of our automated test coverage so similar regressions are caught before reaching production. || We are resolving this incident as we have not observed any additional errors since the fix was rolled out."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-07-30",
+  "url": "https://status.livekit.io/incidents/fcs3g0hvxx10",
+  "name": "Intermittent webhook delivery failures",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": true,
+  "text": "## Summary Between 2026-07-16 and 2026-07-29, a caching bug caused webhooks to be intermittently not delivered for about one hour for projects whose configuration was updated during this period. ## Root Cause A bug in an internal configuration service caused webhook settings to be dropped from a project's cached configuration whenever that project's record was updated. Once triggered, our system stopped delivering webhooks until the cache refreshed from the database, up to one hour later. Because of this caching behavior, the impact was intermittent: webhooks would stop, then resume on their own, then stop again after the next project update. ## Timeline \\(UTC\\) * 2026-07-16 23:48 - Change containing the bug reached production; intermittent impact begins * 2026-07-24 - Some customer reports of missing webhooks received; investigation begins * 2026-07-28 16:23 - Root cause identified; fix developed and rollout begins * 2026-07-29 16:26 - Fix deployed to all regions; incident resolved ## Scope of Impact Customers using webhooks were affected across all regions between 2026-07-16 and 2026-07-29, with most impact occurring after 2026-07-22. ## Mitigations and Follow-ups * The bug has been fixed and a regression test has been added. * We are making the configuration cache lifetime adjustable so similar issues can be mitigated quickly in the future."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-09-05",
+  "url": "https://status.livekit.io/incidents/2w95462r0f3l",
+  "name": "Identified increased agent join latencies in eu-central",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "**Root Cause** A configuration change introduced a formatting error in the startup settings for the server pools that run hosted agents in our eu-central region. Agents that were already running were unaffected, but new agent deployments, version rollouts, and automatic scale-ups were delayed or stuck pending until the change was reverted. **Timeline \\(UTC\\)** `2026-09-04 23:56` - Configuration change deployed. `2026-09-05 22:23` - Our monitoring alerted us to agent deployments stuck pending and we began investigating. `2026-09-06 00:50` - We identified the malformed startup configuration and reverted the change. `2026-09-06 01:17` - New capacity provisioned successfully, all pending deployments recovered, and we validated the fix. During the impact window, new agent deployments and rollouts were delayed or stuck pending, and automatic scale-up was blocked. **Mitigations and Follow-ups** * The faulty configuration change was reverted and provisioning has been stable since. || The mitigation was successful and users shouldn't notice any issues with join latencies or creating new agents."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-06-02",
+  "url": "https://status.livekit.io/incidents/2kzn387xggrw",
+  "name": "Degraded Connectivity in US Central",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "We mitigated this by routing SIP traffic away from the affected server, suspending and removing the faulty node, and restoring normal service to the region. **Timeline \\(UTC\\)** * 12:06 \u2014 Start of measurable customer impact * 14:04 \u2014 Chicago SIP traffic drained as mitigation * 14:38 \u2014 Problematic server suspended; customer impact ends * 15:07 \u2014 Chicago SIP service fully restored **Root cause** The incident was caused by a \"gray failure\" of a single node in the Chicago region, a partial failure in which a server appears healthy to automated systems but is not actually functioning correctly. After confirming error rates had returned to normal, we restored full SIP service to the region."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-06-16",
+  "url": "https://status.livekit.io/incidents/21vb9nnhjngs",
+  "name": "Elevated rate of egress ending early in India region",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "* 2026-06-16 06:45 - Mitigation was deployed and monitoring began. Eligible connections were moved to a different region and added redundancy was deployed to the affected internal tooling. * 2026-06-16 20:42 - No further instances were observed since the mitigation was applied. **Resolution** We mitigated the outage by moving eligible connections to a different region and by adding redundancy to the affected internal tooling so it could better tolerate intermittent connectivity loss. As a longer-term fix, we hardened the communication channels between the involved systems. We have not observed any further occurrences since the mitigation was applied, and we are continuing to evaluate additional improvements to our tolerance for this class of failure. || We have not seen further instances of this issue since the mitigation was applied."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-08-14",
+  "url": "https://status.livekit.io/incidents/yjs1wm61hkck",
+  "name": "Hosted agent builds failing in US East",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "### Timeline \\(UTC\\) * 19:54 - Hosted agent builds begin failing in US East * 20:48 - Our team noticed the increased failure rate and began investigating * 21:04 - First mitigation deployed * 21:08 - Most builds succeeding * 22:14 - Second mitigation deployed, covering the remaining affected infrastructure * 22:24 - All builds succeeding ### Scope of Impact Only new hosted agent builds and deploys in US East were affected. Customers who were impacted would have seen their deploy fail with \u201cunable to deploy agent: an error occurred while building your agent, please try again\u201d. ### Mitigations and Follow-ups * We are improving alerting on build failures. || We pushed a second mitigation at 22:14 UTC and all US East builds have been successful since 22:25 UTC. We will follow up with a postmortem describing the timeline, root cause, and follow ups as soon as possible."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-08-20",
+  "url": "https://status.livekit.io/incidents/g3tvqpzhd9m0",
+  "name": "Investigating reports of elevated egress & connector API errors",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "\u200c **Root Cause** An internal routing service lost one of its two instances, and a concurrent infrastructure issue with our cloud provider was preventing new compute nodes from provisioning in US East, so the replacement couldn't start. \u200c **Timeline \\(UTC\\)** * Aug 20, 20:52 - Automated maintenance removes last instance in the pool; customer-facing errors begin * Aug 20, 21:01 - Service restored * Aug 21, 03:00 - Cloud provider resolves the underlying infrastructure issue; region fully healthy \u200c **Mitigations & Follow-ups** * The service is restored with two instances guaranteed to run on separate physical nodes."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-09-02",
+  "url": "https://status.livekit.io/incidents/mtw9h7672m33",
+  "name": "Investigating reports of one-way audio issues in LiveKit Phone Numbers",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": true,
+  "text": "This incident has been resolved. We will follow up with a detailed postmortem as soon as possible."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-06-18",
+  "url": "https://status.livekit.io/incidents/859j8gd6ct54",
+  "name": "Investigating connection failure and SIP transfer error reports in US East",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": true,
+  "text": "TransferSIPParticipant for calls happening in US East required a manual intervention to redirect. That API is fully restored as of 17:18 UTC. We will follow up with a postmortem as soon as possible."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-09-15",
+  "url": "https://status.livekit.io/incidents/wrg1yfdmxm0g",
+  "name": "Monitoring reports of intermittently increased API latency impacting Egress, Ingress, and SIP",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": true,
+  "text": "Please see a full postmortem [here](https://status.livekit.io/incidents/dbqb4jhxcg9h). || We have resolved the underlying issue and have not observed any further occurrences of this incident. We will follow up with a detailed postmortem in the original incident."
+ },
+ {
+  "org": "Monday.com",
+  "date": "2025-10-20",
+  "url": "https://status.monday.com/incidents/4kmzt4ckfm9g",
+  "name": "Investigating connectivity issues across accounts and devices due to an AWS outage",
+  "sev": "Critical",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "The issue was caused by an outage of our third-party provider, AWS, which primarily impacted the US region, but also created downstream effects globally. \u200c **What caused it:** This incident was caused by a major outage at our third-party provider, AWS \\(Amazon Web Services\\), in one of their U.S. As AWS implemented mitigation efforts to restore functionality, our team actively worked to maintain stability and recovery as services gradually returned to normal. As AWS began to recover, we restored platform functionality in stages to ensure everything remained stable. Full functionality, including automations, integrations, and API was restored once reliability was confirmed in all regions."
+ },
+ {
+  "org": "Monday.com",
+  "date": "2025-12-05",
+  "url": "https://status.monday.com/incidents/ycx8zkrr5n5n",
+  "name": "Connectivity Issues across accounts and devices",
+  "sev": "Low",
+  "cat": "other",
+  "pm": true,
+  "text": "**What caused it:** This incident was caused by a major outage at our third-party cloud service provider, Cloudflare. As Cloudflare began to recover, we restored platform functionality in stages to ensure stability. By 4:11am EST, access to accounts in the AUS server was fully restored. By 4:40am EST, full access was restored to accounts on our US server."
+ },
+ {
+  "org": "Monday.com",
+  "date": "2026-01-05",
+  "url": "https://status.monday.com/incidents/gnnhpbt3vk2s",
+  "name": "Investigating connectivity issues across accounts and devices",
+  "sev": "Critical",
+  "cat": "other",
+  "pm": true,
+  "text": "**What Happened:** On January 5th \\(09:19 AM EST\\), customers on our US server began to experience around 8 minutes of difficulty loading boards, followed by 23 minutes of system downtime due to an application-level issue, totaling a 31-minute incident. There was no data loss or security risk to our customers during this incident, and EMEA and APAC servers were not impacted by the platform access issue. \u200c **What caused it:** A recent code change in our left pane feature created an overload on our system, which as a result, affected data retrieval. \u200c **How we responded:** Our monitoring system promptly identified the issue, triggering an immediate response from our engineering team. While working to resolve the issue, the loading issue turned into a full platform downtime. Our team resolved the issue by scaling our data layer servers and restoring normal service by 09:50 AM EST. \u200c **What we're doing to prevent recurrence:** We will implement a new performance process in our pre-production environment that enables us to proactively identify and prevent similar issues, thereby minimizing their impact on our customers. To enhance system resilience, we are implementing additional layers of automated testing and protection, including strengthening our error detection and recovery processes. \u200c We know that any access disruption to your [monday.com](http://monday.com) workflows impacts your productivity, and we're sorry for any frustration or inconvenience caused. We remain committed"
+ },
+ {
+  "org": "Monday.com",
+  "date": "2026-02-16",
+  "url": "https://status.monday.com/incidents/481klbb7qqnq",
+  "name": "Investigating connectivity issues across accounts and devices",
+  "sev": "Critical",
+  "cat": "payment_processing",
+  "pm": true,
+  "text": "**What Happened:** On February 16th \\(09:04 AM EST\\), our US customers experienced a 28-minute system downtime due to an application-level bug. \u200c **What caused it:** A recent code change in the billing subsystem responsible for updating account plans introduced an edge-case bug that dramatically increased platform load, which caused system downtime. By activating failover mechanisms, reverting the problematic code change, and blocking the affected endpoint, we restored normal service by 09:32 AM EST."
+ },
+ {
+  "org": "Pusher",
+  "date": "2025-10-21",
+  "url": "https://status.pusher.com/incidents/hsd5vvd2kn9b",
+  "name": "Elevated API Errors in AP4 Cluster",
+  "sev": "High",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "## **Root Cause Analysis: Elevated API Errors and Outage in AP4 Cluster** **Incident Date:** October 20, 2025 **Status:** Resolved ### **Summary** Between **October 20 and October 21, 2025**, customers using the **AP4 cluster** experienced elevated API errors, latency, and message publishing failures. During system recovery and while implementing mitigations from a previous incident on Oct 18th, a **misconfigured Redis container** in the AP4 cluster failed to start correctly, preventing caching operations needed for API requests. This misconfiguration went undetected by proactive monitoring, delaying full recovery until October 21 at 17:43 UTC. ### **Impact** Throughout the incident period, customers in the **AP4 cluster** experienced: * **High API error rates** when attempting to publish messages through the Channels API * **Failed or delayed message delivery** for connected clients * **Temporary downtime** for end-customer applications relying on real-time messages Other clusters remained operational, though some minor latency was observed in isolated regions due to dependencies on shared services. ### **Root Cause** This incident resulted from **a chain of events** involving both external and internal factors: 1. **Misconfigured Redis Container \\(October 21\\)** As systems in the AP4 cluster attempted to scale during recovery, one of the backend **Redis cache containers** failed to start due to a **misconfigured environment variable**. **Monitoring Gap** Existing monitoring"
+ },
+ {
+  "org": "Pusher",
+  "date": "2025-10-19",
+  "url": "https://status.pusher.com/incidents/pnk5mbyk6bbn",
+  "name": "Increased latency - US2 cluster",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "## **Root Cause Analysis: Increased Latency and Message Delivery Failures \u2013 US2 Cluster** **Incident Date:** October 19, 2025 **Duration:** 00:44 UTC \u2013 08:17 UTC **Status:** Resolved ### **Summary** On October 19, 2025, customers using Pusher experienced increased latency and message delivery failures. Latency stabilized at 08:17 UTC after mitigation actions were completed. ### **Root Cause** The primary cause of the incident was IP address saturation within the subnet assigned to the public Pusher clusters. When traffic levels increased, the **US2 cluster** was unable to scale out further because the available IP addresses in its subnet were fully utilized. * **03:11 UTC** \u2013 Engineers identified subnet capacity as a contributing factor; mitigations began. ### **Preventative Actions** To prevent recurrence, Pusher has initiated the following actions: * **Rate Limits:** We will re-evaluate how rate limits are implemented to better mitigate content from neighboring customers on the shared clusters."
+ },
+ {
+  "org": "Pusher",
+  "date": "2025-10-20",
+  "url": "https://status.pusher.com/incidents/cj9xt8hxgp9k",
+  "name": "US3 cluster - major outage",
+  "sev": "High",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "## Root Cause Analysis: Redis Cluster Startup Failures \u2013 US3 Cluster **Incident Date:** October 20, 2025 **Duration:** 18:36 UTC \u2013 20:41 UTC **Status:** Resolved ## **Summary** On October 20, 2025, customers experienced a significant outage affecting the US3 cluster. Service was fully restored at 20:41 UTC after engineers identified and resolved the underlying startup issue, confirming stability across all Redis clusters. ## **Root Cause** The outage was caused by a failure of Redis clusters to start correctly following an infrastructure update due to a missing configuration flag upon startup. An unexpected upgrade to the Docker runtime running our Redis cluster introduced a breaking change that prevented container startup for certain Redis deployments. **Timeline of events:** * **18:36 UTC** \u2013 Increased latency and 503 errors observed in US3 cluster * **19:01 UTC** \u2013 Engineering began investigation into Redis startup failures * **19:04 UTC** \u2013 Incident declared a major outage; mitigation efforts initiated * **19:59 UTC** \u2013 Root cause identified and configuration fix applied * **20:20 UTC** \u2013 Services operational; monitoring for recovery stability * **20:41 UTC** \u2013 All Redis nodes confirmed healthy; incident resolved ## **Resolution** The engineering team: * Implemented a temporary fix to the Redis environments ensure Redis instances could initialize successfully * Blocked further automated replacements in other clusters until validated * Verified recovery and stability acros"
+ },
+ {
+  "org": "Rollbar",
+  "date": "2025-09-03",
+  "url": "https://status.rollbar.com/incidents/01K487YKY1CR8RG4VPBQHRGVYD",
+  "name": "Elevated API error rate",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "This incident has been resolved. We'll publish a postmortem in the coming days."
+ },
+ {
+  "org": "Snowflake",
+  "date": "2026-08-03",
+  "url": "https://status.snowflake.com/incidents/xfv4kdj30rcb",
+  "name": "INC20000129",
+  "sev": "Critical",
+  "cat": "authentication",
+  "pm": true,
+  "text": "Snowflake Engineering has completed the postmortem of this service incident. A detailed Root Cause Analysis \\(RCA\\) is available on the Snowflake Community site: [https://community.snowflake.com/s/article/INC20000129](https://community.snowflake.com/s/article/INC20000129)."
+ }
+]

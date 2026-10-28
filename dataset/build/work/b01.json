@@ -1,0 +1,402 @@
+[
+ {
+  "org": "Auth0",
+  "date": "2026-02-22",
+  "url": "https://auth0.statuspage.io/incidents/kknl0nbdzbvx",
+  "name": "Elevated Errors on US-3 Public Cloud",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/website/20260222_-_Authentication_Errors_on_the_US-3_Public_Cloud_Environment.pdf](https://cdn.auth0.com/website/20260222_-_Authentication_Errors_on_the_US-3_Public_Cloud_Environment.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-02-28",
+  "url": "https://auth0.statuspage.io/incidents/63xknm9ky444",
+  "name": "Intermittent Session Timeouts in US-4 Public Cloud Environment",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/website/2026-02-28_-_Authentication_Errors_on_US-4_Public_Cloud_Environment.pdf](https://cdn.auth0.com/website/2026-02-28_-_Authentication_Errors_on_US-4_Public_Cloud_Environment.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2025-10-29",
+  "url": "https://auth0.statuspage.io/incidents/nbdmtpvgvngf",
+  "name": "Increase in Error Rates and Response Times on Authentication and Management APIs- US5",
+  "sev": "Critical",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/website/20251029_Increased_Errors_Impacting_Public_Cloud_US5_Environment.pdf](https://cdn.auth0.com/website/20251029_Increased_Errors_Impacting_Public_Cloud_US5_Environment.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-03-05",
+  "url": "https://auth0.statuspage.io/incidents/ksx23nfybhmh",
+  "name": "Authentication Services Impacted on Public Cloud Environment",
+  "sev": "High",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/blog/20260304\\_-\\_Action\\_State\\_Persistence\\_in\\_All\\_Regional\\_Public\\_Cloud\\_Environments.pdf](https://cdn.auth0.com/blog/20260304_-_Action_State_Persistence_in_All_Regional_Public_Cloud_Environments.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2025-08-21",
+  "url": "https://auth0.statuspage.io/incidents/pmsqxcfwfk00",
+  "name": "Network Issue Under Investigation",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/blog/20250821\\_Edge\\_Provider\\_Colocation\\_Failure\\_Impacting\\_US\\_Traffic.pdf](https://cdn.auth0.com/blog/20250821_Edge_Provider_Colocation_Failure_Impacting_US_Traffic.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-06-22",
+  "url": "https://auth0.statuspage.io/incidents/5jqv6svrtqr0",
+  "name": "Elevated Errors on AU-1 Public Cloud Environment",
+  "sev": "High",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/blog/2026-06-22\\_-\\_Elevated\\_Errors\\_on\\_AU-1\\_and\\_US-5\\_Public\\_Cloud\\_Environments.pdf](https://cdn.auth0.com/blog/2026-06-22_-_Elevated_Errors_on_AU-1_and_US-5_Public_Cloud_Environments.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-06-22",
+  "url": "https://auth0.statuspage.io/incidents/l1x4t8801bjx",
+  "name": "Elevated Errors on US-5 Public Cloud Environment",
+  "sev": "High",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/website/2026-06-22_-_Elevated_Errors_on_AU-1_and_US-5_Public_Cloud_Environments.pdf](https://cdn.auth0.com/website/2026-06-22_-_Elevated_Errors_on_AU-1_and_US-5_Public_Cloud_Environments.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-06-01",
+  "url": "https://auth0.statuspage.io/incidents/7h41vcb7t9xj",
+  "name": "Elevated Errors on US-1 Public Cloud",
+  "sev": "High",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/website/2026-06-01_-_Increased_Error_Rates_on_US-1_Public_Cloud.pdf](https://cdn.auth0.com/website/2026-06-01_-_Increased_Error_Rates_on_US-1_Public_Cloud.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2025-11-16",
+  "url": "https://auth0.statuspage.io/incidents/hykzwhgmgn8z",
+  "name": "Increased Error Rates on US-3 Public Cloud",
+  "sev": "Critical",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/website/20251116_Increased_Errors_in_US3_Public_Cloud_Environment.pdf](https://cdn.auth0.com/website/20251116_Increased_Errors_in_US3_Public_Cloud_Environment.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-07-14",
+  "url": "https://auth0.statuspage.io/incidents/2nz8nfffj7vy",
+  "name": "We have detected an issue.",
+  "sev": "High",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/blog/2026-07-14\\_-\\_Tenant\\_Logs\\_Impacted\\_on\\_US-1\\_Public\\_Cloud\\_Environment.pdf](https://cdn.auth0.com/blog/2026-07-14_-_Tenant_Logs_Impacted_on_US-1_Public_Cloud_Environment.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2025-11-18",
+  "url": "https://auth0.statuspage.io/incidents/hdwf387t3nx7",
+  "name": "Errors with Edge Provider",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/blog/20251118\\_Global\\_Edge\\_Provider\\_Outage\\_Impacting\\_Public\\_and\\_Private\\_Cloud\\_Environments.pdf](https://cdn.auth0.com/blog/20251118_Global_Edge_Provider_Outage_Impacting_Public_and_Private_Cloud_Environments.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2025-07-09",
+  "url": "https://auth0.statuspage.io/incidents/vns8964kxkvn",
+  "name": "Increased Error Rates Impacting EU-1 Public Cloud",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/website/20250709_Increased_Error_Rates_in_EU1_Public_Cloud_Environment.pdf](https://cdn.auth0.com/website/20250709_Increased_Error_Rates_in_EU1_Public_Cloud_Environment.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-04-28",
+  "url": "https://auth0.statuspage.io/incidents/455930w451q2",
+  "name": "Elevated Errors on Public Cloud Environments",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/blog/20260428\\_-\\_Increased\\_Error\\_Rates\\_on\\_Public\\_Cloud\\_Environments.pdf](https://cdn.auth0.com/blog/20260428_-_Increased_Error_Rates_on_Public_Cloud_Environments.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2025-09-18",
+  "url": "https://auth0.statuspage.io/incidents/7g7k0zpl905y",
+  "name": "Errors on Auth0 Dashboard",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/blog/20250918\\_Auth0\\_Dashboard\\_Settings\\_Not\\_Saving.pdf](https://cdn.auth0.com/blog/20250918_Auth0_Dashboard_Settings_Not_Saving.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2025-11-17",
+  "url": "https://auth0.statuspage.io/incidents/f49mx5pj4fjz",
+  "name": "Elevated Error Rates in Prod-JP-1 Public Cloud Environment",
+  "sev": "High",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/website/20251117_-_Elevated_Errors_in_JP-1_Public_Cloud_Environment.pdf](https://cdn.auth0.com/website/20251117_-_Elevated_Errors_in_JP-1_Public_Cloud_Environment.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2025-11-20",
+  "url": "https://auth0.statuspage.io/incidents/13224k02ylnb",
+  "name": "Tenant Dashboards unavailable",
+  "sev": "Critical",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/website/20251120_-_Manage_Dashboard_Impacted_in_Multiple_Public_Cloud_Environments.pdf](https://cdn.auth0.com/website/20251120_-_Manage_Dashboard_Impacted_in_Multiple_Public_Cloud_Environments.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-08-06",
+  "url": "https://auth0.statuspage.io/incidents/3z7fgvlxwlm8",
+  "name": "Support Center is Unavailable",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/blog/2026-08-06\\_-\\_Increased\\_Error\\_Rates\\_on\\_Support\\_Portal\\_SSO\\_Login.pdf](https://cdn.auth0.com/blog/2026-08-06_-_Increased_Error_Rates_on_Support_Portal_SSO_Login.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-02-06",
+  "url": "https://auth0.statuspage.io/incidents/c9djjs8by3zd",
+  "name": "Auth0 Multi-Service Outage",
+  "sev": "Critical",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/blog/20260206\\_-\\_Multi-Service\\_Outage\\_on\\_Global\\_Public\\_Cloud\\_Environments.pdf](https://cdn.auth0.com/blog/20260206_-_Multi-Service_Outage_on_Global_Public_Cloud_Environments.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-02-20",
+  "url": "https://auth0.statuspage.io/incidents/vd2j687ktq1k",
+  "name": "Management Service Disruption on Multiple Public Cloud Environments",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/blog/20260302\\_-\\_Management\\_Service\\_Disruption\\_on\\_Multiple\\_Public\\_Cloud\\_Environments.pdf](https://cdn.auth0.com/blog/20260302_-_Management_Service_Disruption_on_Multiple_Public_Cloud_Environments.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2025-10-09",
+  "url": "https://auth0.statuspage.io/incidents/5r195p2rwjc0",
+  "name": "Impacted Functionality on Auth0 Dashboard",
+  "sev": "Critical",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/blog/20251009\\_-\\_Manage\\_Auth0\\_Unavailable\\_on\\_Multiple\\_Public\\_Cloud\\_Environments.pdf](https://cdn.auth0.com/blog/20251009_-_Manage_Auth0_Unavailable_on_Multiple_Public_Cloud_Environments.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-07-23",
+  "url": "https://auth0.statuspage.io/incidents/wcy7vw81qs5w",
+  "name": "Quota Utilization Page Issue on Support Center",
+  "sev": "High",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/blog/2026-07-23\\_-\\_Customers\\_Unable\\_to\\_Access\\_Specific\\_Support\\_Center\\_Pages.pdf](https://cdn.auth0.com/blog/2026-07-23_-_Customers_Unable_to_Access_Specific_Support_Center_Pages.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-08-25",
+  "url": "https://auth0.statuspage.io/incidents/l0755b4xh51f",
+  "name": "Tenant Logs Service Impacted on EU-2 Public Cloud",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/blog/2026-08-14\\_-\\_Tenant\\_Logs\\_Service\\_Disruption\\_on\\_Multiple\\_Environments.pdf](https://cdn.auth0.com/blog/2026-08-14_-_Tenant_Logs_Service_Disruption_on_Multiple_Environments.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2025-11-09",
+  "url": "https://auth0.statuspage.io/incidents/sfzxn8v06x78",
+  "name": "Elevated Errors in the EU-2 Public Cloud Environment",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/website/2025-11-09_-_Authentication_Errors_in_the_EU-2_Public_Cloud_Environment.pdf](https://cdn.auth0.com/website/2025-11-09_-_Authentication_Errors_in_the_EU-2_Public_Cloud_Environment.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-04-22",
+  "url": "https://auth0.statuspage.io/incidents/8457pvkpcxq3",
+  "name": "Elevated Errors on Public Cloud Environments",
+  "sev": "High",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at:[https://cdn.auth0.com/blog/20260422\\_-\\_Elevated\\_Errors\\_on\\_Public\\_Cloud\\_from\\_DNS\\_Resolution\\_Failures.pdf](https://cdn.auth0.com/blog/20260422_-_Elevated_Errors_on_Public_Cloud_from_DNS_Resolution_Failures.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-04-22",
+  "url": "https://auth0.statuspage.io/incidents/ktytrr8qbnx0",
+  "name": "Elevated Errors on Public Cloud Environments",
+  "sev": "Critical",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at:[https://cdn.auth0.com/blog/20260422\\_-\\_Elevated\\_Errors\\_on\\_Public\\_Cloud\\_from\\_DNS\\_Resolution\\_Failures.pdf](https://cdn.auth0.com/blog/20260422_-_Elevated_Errors_on_Public_Cloud_from_DNS_Resolution_Failures.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-02-11",
+  "url": "https://auth0.statuspage.io/incidents/6c7fk50dl63h",
+  "name": "CDN Functionality Impacted by Third-Party Provider Outage",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/blog/20260210\\_-\\_CDN\\_Functionality\\_Impacted\\_by\\_Global\\_Third-Party\\_Outage.pdf](https://cdn.auth0.com/blog/20260210_-_CDN_Functionality_Impacted_by_Global_Third-Party_Outage.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-08-27",
+  "url": "https://auth0.statuspage.io/incidents/ljbh37vpdslx",
+  "name": "We have detected an issue.",
+  "sev": "High",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/website/2026-08-27_-_Increased_Error_Rates_in_US-3_Public_Cloud_Environment.pdf](https://cdn.auth0.com/website/2026-08-27_-_Increased_Error_Rates_in_US-3_Public_Cloud_Environment.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2025-11-14",
+  "url": "https://auth0.statuspage.io/incidents/kmwdwmbxlrq1",
+  "name": "Increase in Error Rates and Response Times on Authentication services - US-5 and CA-1",
+  "sev": "Critical",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/website/20251114_Increased_Error_Rates_in_CA1_and_US5_Public_Cloud_Environments.pdf](https://cdn.auth0.com/website/20251114_Increased_Error_Rates_in_CA1_and_US5_Public_Cloud_Environments.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-09-16",
+  "url": "https://auth0.statuspage.io/incidents/27j7bqxjjljn",
+  "name": "We have detected an issue.",
+  "sev": "High",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/website/2026-09-16_-_Elevated_Errors_on_US-5_Public_Cloud_Environment.pdf](https://cdn.auth0.com/website/2026-09-16_-_Elevated_Errors_on_US-5_Public_Cloud_Environment.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2025-07-18",
+  "url": "https://auth0.statuspage.io/incidents/c342wkjpvzxj",
+  "name": "Service Disruption where 'loginWithPopup' is not completing in JP-1, US-3 and EU-2",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/website/20250718-PopupLoginNotCompletinginMultiplePublicCloudEnvironments.pdf](https://cdn.auth0.com/website/20250718-PopupLoginNotCompletinginMultiplePublicCloudEnvironments.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-04-28",
+  "url": "https://auth0.statuspage.io/incidents/y3j8wmxb5w2r",
+  "name": "Regional Connectivity Issues in CA Public Cloud",
+  "sev": "High",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/blog/20260428\\_-\\_Error\\_Rates\\_caused\\_by\\_Regional\\_Infrastructure\\_Failure.pdf](https://cdn.auth0.com/blog/20260428_-_Error_Rates_caused_by_Regional_Infrastructure_Failure.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-09-01",
+  "url": "https://auth0.statuspage.io/incidents/1kfdtvb4x0w2",
+  "name": "Elevated Error Rates on Multiple Cloud Environments",
+  "sev": "Critical",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/website/2026-09-01_-_Elevated_Errors_On_Multiple_Public_and_Private_Cloud_Environments.pdf](https://cdn.auth0.com/website/2026-09-01_-_Elevated_Errors_On_Multiple_Public_and_Private_Cloud_Environments.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-05-21",
+  "url": "https://auth0.statuspage.io/incidents/76nv6lqq6byc",
+  "name": "[Retroactive] Elevated Errors in Authentication API",
+  "sev": "High",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/website/2026-05-20_-_Elevated_Errors_on_Multiple_EU-Region_Cloud_Environments.pdf](https://cdn.auth0.com/website/2026-05-20_-_Elevated_Errors_on_Multiple_EU-Region_Cloud_Environments.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2025-12-05",
+  "url": "https://auth0.statuspage.io/incidents/1fzp354vpdtm",
+  "name": "Edge Network Services Impacted",
+  "sev": "Critical",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/website/20251205_-_Edge_Provider_Upgrade_Activity_Impacting_Multiple_Cloud_Environments.pdf](https://cdn.auth0.com/website/20251205_-_Edge_Provider_Upgrade_Activity_Impacting_Multiple_Cloud_Environments.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-06-26",
+  "url": "https://auth0.statuspage.io/incidents/z8sc9m1gzqb7",
+  "name": "We have detected an issue.",
+  "sev": "High",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/website/2026-06-26_-_Increased_Error_Rates_on_US-1_Public_Cloud_Environment.pdf](https://cdn.auth0.com/website/2026-06-26_-_Increased_Error_Rates_on_US-1_Public_Cloud_Environment.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-07-24",
+  "url": "https://auth0.statuspage.io/incidents/3nq8fmgv47tg",
+  "name": "Regional Service Disruption on Public Cloud Environments",
+  "sev": "Critical",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/website/2026-07-24_-_Multiple_Cloud_Environments_Impacted_by_Regional_Outage.pdf](https://cdn.auth0.com/website/2026-07-24_-_Multiple_Cloud_Environments_Impacted_by_Regional_Outage.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2025-11-18",
+  "url": "https://auth0.statuspage.io/incidents/kbzgxsy74y6l",
+  "name": "Increased Error Rates CA-1",
+  "sev": "Critical",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/website/20251118_-_Increased_Errors_on_CA-1_Public_Cloud_Environment.pdf](https://cdn.auth0.com/website/20251118_-_Increased_Errors_on_CA-1_Public_Cloud_Environment.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-06-11",
+  "url": "https://auth0.statuspage.io/incidents/pfq53t8dbxmg",
+  "name": "We have detected an issue.",
+  "sev": "High",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/website/2026-06-11_-_Increased_Error_Rates_on_JP-1_Public_Cloud_Environment.pdf](https://cdn.auth0.com/website/2026-06-11_-_Increased_Error_Rates_on_JP-1_Public_Cloud_Environment.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2025-07-14",
+  "url": "https://auth0.statuspage.io/incidents/f6q5b857n433",
+  "name": "Partial Service Disruption for Email and SMS Delivery",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/blog/20250714\\_Increased\\_Error\\_Rates\\_in\\_EU2\\_Public\\_Cloud.pdf](https://cdn.auth0.com/blog/20250714_Increased_Error_Rates_in_EU2_Public_Cloud.pdf)"
+ },
+ {
+  "org": "Auth0",
+  "date": "2025-12-28",
+  "url": "https://auth0.statuspage.io/incidents/7ynfx7ty3538",
+  "name": "Elevated Errors on EU-2 Public Cloud",
+  "sev": "High",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/website/20251228_-_Elevated_Errors_on_EU-2_Public_Cloud.pdf](https://cdn.auth0.com/website/20251228_-_Elevated_Errors_on_EU-2_Public_Cloud.pdf)"
+ }
+]

@@ -1,0 +1,402 @@
+[
+ {
+  "org": "Marqeta",
+  "date": "2026-06-21",
+  "url": "https://status.marqeta.com/incidents/4ft7x3drhxst",
+  "name": "Marqeta Dashboard Outage and Delayed Clearing",
+  "sev": "Critical",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "All affected services are now fully restored. Our team is continuing to actively investigate the root cause and remediate the clearing file process. Our team is actively investigating the root cause and assessing the full scope of impact. Marqeta Dashboard has recovered, and clearing file delivery is being monitored to ensure continuity has been restored. Our team is continuing to actively investigate the root cause and assessing the full scope of impact. Our team is actively investigating the root cause and assessing the full scope of impact."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-09-24",
+  "url": "https://status.marqeta.com/incidents/fk096sthcgz8",
+  "name": "STIPs on Mastercard",
+  "sev": "High",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "Mastercard has acknowledged the anomaly on their network and is continuing to investigate the underlying root cause; Marqeta will incorporate any further findings once Mastercard's analysis is complete. Mastercard has confirmed a network-side anomaly and their teams are actively investigating the root cause. Our team is actively investigating the root cause and assessing the full scope of impact."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-06-01",
+  "url": "https://status.marqeta.com/incidents/jhcwd798m092",
+  "name": "Intermittent Apple Pay Errors",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "Engineers have observed Apple Pay in-app provisioning errors are no longer occurring. || We are continuing to investigate intermittent errors impacting Apple Pay in-app provisioning requests across multiple regions. The team has identified a possible issue with certificate chain verification related to expired certificates being sent from user devices. Our engineers are still actively investigating this issue and are continuing to engage external partners for additional context. The next update will take place once engineers have gathered this context and are able to determine next steps. || We are continuing to investigate intermittent errors impacting Apple Pay in-app provisioning requests across multiple regions. The team has identified a possible issue with certificate chain verification related to expired certificates being sent from user devices. Our engineers are still actively investigating this issue and are continuing to engage external partners for additional guidance. We will update this page again in 30 minutes. || We are continuing to investigate intermittent errors impacting Apple Pay in-app provisioning requests across multiple regions. The team has identified a possible issue with certificate chain verification related to expired certificates being sent from user devices. Our engineers are actively investigating this issue and have initiated contact with external partners for additional guidance. We will update this page again in 30 minutes. || We are continu"
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-06-16",
+  "url": "https://status.marqeta.com/incidents/1j5gvlz70534",
+  "name": "API Response Degraded in Sandbox",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "Our engineering team identified the root cause, successfully deployed a fix across all affected environments, and completed a monitoring period to verify full stability. Our engineering team successfully deployed a fix across all affected environments as of 13:09 PT (21:09 UTC). All impacted services have been restored and are currently under active monitoring to ensure full stability. Our engineering team has identified the root cause and initiated a hot-fix across all affected environments. We are actively monitoring the fix progress and will provide a further update once the fix is complete and service has been fully verified. Our team is aware of the root cause and is continuing to actively work to resolve the impact. Our team is aware of the root cause and is actively working to resolve the impact."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-05-12",
+  "url": "https://status.marqeta.com/incidents/qwl5lz882tzb",
+  "name": "Elevated STIPs on the Pulse Network",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "|| Following up on our previous updates, Pulse has informed us that the responsible acquirer has implemented a change to resolve the root cause, and Marqeta has cross-verified that (STIP) levels returned to normal parameters as of 08:40 AM PT. We will provide an update as soon as we have confirmation of the fix and an estimated time to resolution from Pulse. || To keep our customers updated , we have initiated a joint T.S session with Pulse team, and we are working jointly to investigate the root cause and secure a path for remediation. We will provide an update as soon as we have a confirmed fix or an estimated time to resolution. To mitigate the impact and confirm the necessary fix, we have engaged the Pulse team for clarity on this new data behavior, and Pulse has raised an incident from their side to investigate. We will provide an update as soon as we have confirmation of the fix and an estimated time to resolution.\""
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-06-03",
+  "url": "https://status.marqeta.com/incidents/scl37sv834st",
+  "name": "STIPs on Multiple Card Networks",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "On Thursday, June 11th, 2026, Marqeta engineers have confirmed that the the physical network connection has been successfully restored, and operations have returned to normal across all affected card networks. Our ongoing technical investigation has isolated the root cause of this incident to a degraded physical network connection. In the interim, Marqeta engineers are continuously monitoring the affected infrastructure and managing traffic loads to mitigate any further customer impact. Mitigations remain in place and the root cause is being investigated throughout the day. Our team has drained the affected region to stabilize the STIPs, and will continue investigating the root cause. Our team is actively investigating the root cause and assessing the full scope of impact."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-07-15",
+  "url": "https://status.marqeta.com/incidents/8x5mstvhtd59",
+  "name": "Degraded traffic on Mastercard 3DS",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": false,
+  "text": "Although we continue to await an RCA from Mastercard, evidence indicates they deployed a broken certificate bundle and have been progressively redeploying them them. Mastercard is continuing to work to determine the root cause and correct it. Our team is actively investigating with Mastercard to determine the root cause and assess the full scope of impact. Our team is actively investigating the root cause and assessing the full scope of impact."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-07-21",
+  "url": "https://status.marqeta.com/incidents/bxdp02bjpcpk",
+  "name": "API Endpoint intermittent Connectivity Issues",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "The issue was caused by an insufficient number of service instances in a specific availability zone, which led to resource constraints and connection limit exhaustion under load. No further intermittent SSL handshake connection failures are currently observed .We are continuing to closely monitor our systems and analyze metrics to determine the root cause and ensure full service stability."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-09-15",
+  "url": "https://status.marqeta.com/incidents/kh45hbqrj1pl",
+  "name": "Intermittent Service disruptions affecting Visa \"Click to Pay\" API endpoints.",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "We will continue to work with Visa on a full root cause analysis and will share further findings as they become available. We will continue to monitor for long-term stability and will follow up with our partner for a root cause on the underlying connectivity issue on their side. Visa confirmed that this is due to an ongoing issue on their side. Our engineering team is actively collaborating with Visa to identify the root cause and restore full functionality as quickly as possible."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-08-13",
+  "url": "https://status.marqeta.com/incidents/b07mh1141s86",
+  "name": "Intermittent Service disruptions affecting Visa \"Click to Pay\" API endpoints.",
+  "sev": "Medium",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "They have confirmed that they have a team working on root cause analysis and are also working on a plan to expedite the resolution. Our team has raised high priority case with Visa and is working directly with their support to identify the root cause and expedite the resolution. Our engineering team is actively collaborating with Visa to identify the root cause and restore full functionality as quickly as possible."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-07-31",
+  "url": "https://status.marqeta.com/incidents/4cgd8z665n11",
+  "name": "MQD and Diva Access issue",
+  "sev": "Critical",
+  "cat": "database_issue",
+  "pm": false,
+  "text": "The root cause was an infrastructure configuration change that inadvertently restricted network connectivity for our production database environment, which has since been remediated. || Our engineering team has identified the root cause of the service disruption affecting the Marqeta Dashboard, Diva, and 3DS. We are currently implementing a fix to restore the service . Our teams are actively working to mitigate the issue and restore full service.A follow-up notification with more detail will be sent within 30 minutes."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-07-15",
+  "url": "https://status.marqeta.com/incidents/hs4spwsmmf00",
+  "name": "Mastercard 3DS Degraded Traffic",
+  "sev": "Critical",
+  "cat": "authentication",
+  "pm": false,
+  "text": "Traffic continues to be steady and the upstream 3D Secure service is reporting there is no further impact detected or reported to them. We are continuing to await Mastercard's confirmation and any additional details about the cause of their outage. We will reopen this status page if we become aware of any change in their status. || We see traffic returning but we have not heard confirmation from Mastercard that the issue is resolved, we are continuing to monitor to ensure full resolution from the network || We see traffic returning but we have not heard confirmation from Mastercard that the issue is resolved, we are continuing to monitor to ensure full resolution from the network || On Wednesday, July 15, 2026, Marqeta engineers detected an issue affecting Mastercard 3D Secure (3DS) authentication requests, starting at approximately 00:48 PT (07:48 UTC). Our team has contacted Mastercard and they have confirmed this as their network-side outage affecting 3DS. They have confirmed they are continuing to investigate and will begin to provide updates as they determine them. A follow-up notification with more detail will be posted here as soon as Mastercard shares it. || On Wednesday, July 15, 2026, Marqeta engineers detected an issue affecting Mastercard 3D Secure (3DS) authentication requests, starting at approximately 00:48 PT (07:48 UTC). Our team is actively investigating the root cause and assessing the full scope of impact. A follow-up notification with more detail will be "
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-07-29",
+  "url": "https://status.marqeta.com/incidents/p0kgsss3ydcj",
+  "name": "Mastercard Digital Wallet Token Outage",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "Marqeta engineers have confirmed digital wallet token operations have returned to normal. We will continue to engage with Mastercard to provide an RCA. || We are currently experiencing an issue affecting Mastercard digital wallet token operations, including activating, suspending, resuming, and removing tokens. All requests of this type are currently failing across all affected programs. The issue began at approximately 11:44 UTC. Our team has escalated with Mastercard, and they have confirmed an issue on their side that they are actively investigating. We will post another update as soon as we have more information. || We are currently experiencing an issue affecting Mastercard digital wallet token operations, including activating, suspending, resuming, and removing tokens. All requests of this type are currently failing across all affected programs. The issue began at approximately 11:44 UTC. Our team has escalated with Mastercard and are actively checking for the root cause and working toward a resolution. We will post another update as soon as we have more information. || We are currently experiencing an issue affecting Mastercard digital wallet token operations, including activating, suspending, resuming, and removing tokens. All requests of this type are currently failing across all affected programs. The issue began at approximately 11:44 UTC. Our team is actively checking for the root cause and working toward a resolution. We will post another update as soon as we hav"
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-09-26",
+  "url": "https://status.marqeta.com/incidents/chpkgqbh5b57",
+  "name": "STIPs and transaction declines",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "On Saturday, September 26, 2026. Marqeta detected an issue affecting stand-in transaction processing (STIPs) and transaction declines with impact start time at approximately 5:31 PM PT. We immediately engaged our upstream infrastructure provider, who identified the root cause and applied a fix, restoring full connectivity by approximately 6:00 PM PT that same evening. Marqeta engineers continued monitoring systems closely throughout the weekend to confirm stability, and we observed normal transaction processing with no recurrence of the issue. This incident is now resolved. We appreciate your patience throughout this incident. || As of 17:31 PT, Marqeta engineers detected an issue causing STIPs and transaction declines. There is no longer any active impact. Marqeta engineers have engaged an upstream infrastructure vendor to investigate. We will continue to press the vendor for their investigation and will continue monitoring throughout the weekend. || As of 17:31 PT, Marqeta engineers detected an issue causing STIPs and transaction declines. There is no longer any active impact. Marqeta engineers have engaged an upstream infrastructure vendor to investigate. We will update this page again upon any substantial change in status."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-06-29",
+  "url": "https://status.marqeta.com/incidents/9mqtlwnbk7gf",
+  "name": "Apple Pay Push Provisioning Drops",
+  "sev": "High",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "Marqeta engineers have successfully verified that Apple Pay provisioning is fully operational. Following a period of sustained stability, this incident is now resolved. || Marqeta engineers have observed a significant improvement in Apple Pay provisioning success rates over the last 30 minutes, and we are currently no longer seeing any new instances of failed requests. We will continue to closely monitor the stability of provisioning and provide another update in approximately 30 minutes. || Marqeta engineers are continuing to investigate the issue originally detected at approximately 12:30 PT (19:30 UTC). The issue is specifically limited to Apple Pay provisioning. Our team has contacted Apple Pay directly to check for external network outages and we are currently awaiting their response. We will provide another update as soon as we have more information. || On Monday, June 29, 2026, Marqeta engineers detected an issue causing traffic drops for Apple Pay transaction requests and push provisioning, starting at approximately 12:30 PT (19:30 UTC). Our team is actively investigating the root cause and assessing the full scope of impact. The next update will be in approximately 30 minutes."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-08-18",
+  "url": "https://status.marqeta.com/incidents/mrwdgd9k09k2",
+  "name": "Intermittent STIPs on the Mastercard network",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "Marqeta and our network partner confirmed the underlying networking issue causing delayed delivery of standing advice was fixed as of 12:38 PST, and no further abnormalities have been observed during the monitoring period. || On Tuesday, August 18, 2026, Marqeta engineers detected an intermittent issue affected Stand-In Processing (STIP) across card Master card network due to latency in receiving standing advices from our payment network partner. Our team is actively engaged with the partner to identify the root cause and restore normal processing times as quickly as possible."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-08-26",
+  "url": "https://status.marqeta.com/incidents/9ydl986k9pnx",
+  "name": "STIPs on the Visa Network",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": false,
+  "text": "Marqeta raised a high priority incident with Visa to provide the root cause of the suspected external connectivity issue. Our team is engaging our emergency contacts at Visa to actively investigate the root cause, and we are continuing to assess the full scope of impact. Our team is actively investigating the root cause and assessing the full scope of impact."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-07-09",
+  "url": "https://status.marqeta.com/incidents/kczr7cfn98m6",
+  "name": "Visa Settlement Delay",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "The Issue has been fully resolved as of July 9, 2026 at 3:41 PM PT (22:41 UTC) . Visa successfully implemented corrective actions, and concluded reconciliation and validation activities. Our monitoring period has concluded successfully with no issues identified. We thank you for your patience throughout this incident. || On July 9, 2026, Marqeta investigated an issue reported on Visa\u2019s Settlement Wires Service affecting a subset of international settlement wires, resulting in delays to settlement processing. Visa confirmed the identification of the source of the disruption and proceeded with the mitigation as of 3:41 PM PT (22:41 UTC) on July 9, 2026. Our engineering teams are actively monitoring to ensure long-term system stability. || Marqeta is investigating a Visa settlement delay affecting today's incoming and outgoing transfers. We have been in direct contact with Visa and they have confirmed that they are addressing the root cause. We are actively monitoring the situation and will provide an update as soon as we have more information."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-09-25",
+  "url": "https://status.marqeta.com/incidents/vfth6ltfv7pr",
+  "name": "STIPs on Visa",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": false,
+  "text": "Engineers have put mitigations into place and will continue to monitor over the weekend. There is no ongoing impact at this time, however our team is actively investigating the root cause and assessing the full scope of the impact. Our team is actively investigating the root cause and assessing the full scope of impact."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-07-14",
+  "url": "https://status.marqeta.com/incidents/354wm1fcmjcz",
+  "name": "STIPs on Multiple Card Networks",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "Following a successful monitoring period with no further anomalies detected, we have confirmed that the issue has been fully resolved and all systems are operating normally. || On Tuesday, July 14, 2026, Marqeta engineers detected an issue affecting Stand-In Processing (STIP) across multiple card networks starting at approximately 13:35 PT. Our engineering team has identified the root cause as a brief network connectivity issue that has been restored. We are actively monitoring our systems to ensure continued stability and will provide a final resolving update once monitoring is concluded. || On Tuesday, July 14, 2026, Marqeta engineers detected an issue affecting Stand-In Processing (STIP) across multiple card networks starting at approximately 13:35 PT. Our team is actively investigating the root cause and assessing the full scope of impact. We will follow up with additional details as soon as more information is available. A follow-up notification with more detail will be sent within 30 minutes."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-08-21",
+  "url": "https://status.marqeta.com/incidents/f0c89wdm09rv",
+  "name": "STIPs on the Visa Network",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "Marqeta raised a high priority incident with Visa to provide the root cause of the suspected external connectivity issue and we have conducted a monitoring period to confirm long-term stability and no abnormality was observed. Our team is actively engaging our network partner to isolate the root cause, and will complete monitoring the system for long term stability.We appreciate your patience throughout the resolution process."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-07-01",
+  "url": "https://status.marqeta.com/incidents/2jwj5tt5zvrl",
+  "name": "Misattributed SMS Verification Messages for Australian Cardholders",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "Marqeta's upstream SMS provider has resolved the formatting issue affecting cardholder messages in Australia. All SMS one-time passcode (OTP) messages are once again being delivered with their correct program sender IDs. Following a period of sustained monitoring, we have confirmed that this is now closed. || Marqeta engineers are aware of an issue affecting SMS one-time passcode (OTP) messages sent to cardholders in Australia. Impacted messages are currently being delivered with an \"Unverified\" sender name instead of the program's normal sender ID. Please note that message delivery itself is not blocked, and cardholders are still successfully receiving and able to use their verification codes. We have identified the root cause as an issue with our upstream SMS provider and have escalated it to them for resolution. We are actively monitoring the situation and will provide an update as soon as more information becomes available."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-09-12",
+  "url": "https://status.marqeta.com/incidents/2zqqpvcwv87t",
+  "name": "STIPs on Pulse Network",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "There have been no new occurrences of STIPs on the Pulse network. || On Saturday, September 12, 2026, at approximately 13:53 PT (20:53 UTC), Marqeta engineers detected an issue on Pulse's network causing transactions to be processed by stand-in in one region. The impact was about 10 minutes long and is no longer occurring. Our teams have reached out to Pulse to provide their analysis of the occurrence, we will provide an update if we detect any substantial changes. || On Saturday, September 12, 2026, at approximately 13:58 PT (20:58 UTC), Marqeta engineers detected an issue affecting Pulse network transactions processed by stand-in. Our team is actively investigating the root cause and assessing the full scope of impact. A follow-up notification will be sent once more detail becomes available. We appreciate your patience as we work to resolve this as quickly as possible."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-07-15",
+  "url": "https://status.marqeta.com/incidents/t9qx5tq9plzf",
+  "name": "STIPs on the Visa and Pulse Networks",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "On Wednesday, July 15, 2026, Marqeta engineers detected a brief issue affecting Stand-In Processing (STIP) across Visa and Pulse card networks between 07:05 and 07:10 PT. Our engineering team identified the root cause as a disturbance on the card network side, which caused authorization requests to decline.Our team has since concluded a successful monitoring period with no further anomalies detected and has confirmed long-term stability. We thank you for your patience throughout this incident. || On Wednesday, July 15, 2026, Marqeta engineers detected a brief issue affecting Stand-In Processing (STIP) across Visa and Pulse card networks occurred between 07:05 and 07:10 PT. Our team is actively monitoring the system for long term stability and will be sharing an update once the monitoring concluded. We appreciate your patience throughout the resolution process."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-06-15",
+  "url": "https://status.marqeta.com/incidents/ccr4hxxn7wbp",
+  "name": "Visa SMS File Delay",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "On Monday, June 15, 2026, Marqeta engineers detected an issue affecting Visa SMS file delivery starting at approximately 08:01 PT (15:01 UTC). Visa has sent the files, and the processing is underway as expected. || On Monday, June 15, 2026, Marqeta engineers detected an issue affecting Visa SMS file delivery starting at approximately 08:01 PT (15:01 UTC). Visa has begun sending the delayed files. Processing will begin as soon as the files are successfully transmitted. We will update this page once we have confirmed the files are processing. || On Monday, June 15, 2026, Marqeta engineers detected an issue affecting Visa SMS file delivery starting at approximately 08:01 PT (15:01 UTC). Our team is actively investigating the root cause and assessing the full scope of impact. A follow-up notification with more detail will be sent within 30 minutes."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-07-20",
+  "url": "https://status.marqeta.com/incidents/lsl4ytfpvbsw",
+  "name": "STIPs On Multiple Card Networks",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": false,
+  "text": "There have been no additional effects detected. || On Monday, July 20, 2026, Marqeta engineers detected an issue affecting transaction authorizations processed by network stand-in, starting at approximately 13:09 PT (20:09 UTC). Our engineering team has identified the root cause as a brief network connectivity issue that has been restored. The team is continuing to monitor to ensure there are no additional effects. We will update again if there is a change to the state of the incident. || On Monday, July 20, 2026, Marqeta engineers detected an issue affecting transaction authorizations processed by network stand-in starting at approximately 13:09 PT (20:09 UTC). Our team is actively investigating the root cause and assessing the full scope of impact. A follow-up notification with more detail will be sent within 30 minutes."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-09-16",
+  "url": "https://status.marqeta.com/incidents/2jfgkpqp6cn9",
+  "name": "Google Pay Outage",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "Google has confirmed their outage is resolved, and Marqeta engineers have observed Google Pay token provisioning has returned to normal operation. || On Wednesday, September 16, 2026, at approximately 08:55 PT (15:55 UTC), Marqeta engineers detected an issue affecting Google Pay token provisioning for Mastercard and Visa cards. Google has acknowledged an outage in their API and we are tracking its progress. We will update this page again upon any notable change. || On Wednesday, September 16, 2026, at approximately 08:55 PT (15:55 UTC), Marqeta engineers detected an issue affecting Google Pay token provisioning for Mastercard and Visa cards. Our team is actively investigating the root cause and assessing the full scope of impact. A follow-up notification with more detail will be sent within 30 minutes."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-06-29",
+  "url": "https://status.marqeta.com/incidents/vnckgv9wcng0",
+  "name": "Delay in Receiving Visa Clearing Files",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "All delayed files have been processed. || On Monday, June 29, 2026, Marqeta engineers detected a delay in receiving Visa clearing files, starting at approximately 05:45 PT (12:45 UTC). Visa has addressed an internal issue and has successfully sent the files. This will result in a ~3 hour delay for clearing processing and reporting. We will update this space again once the delay has been addressed, or upon any notable change in status. || On Monday, June 29, 2026, Marqeta engineers detected a delay in receiving Visa clearing files, starting at approximately 05:45 PT (12:45 UTC). Our team is engaging Visa to actively investigate the root cause and provide the files in a timely manner. A follow-up notification with more detail will be sent when we receive context from Visa."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-06-29",
+  "url": "https://status.marqeta.com/incidents/gwlf9f8d7dzk",
+  "name": "Apple Pay Provisioning Stability",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "Marqeta has received confirmation from Apple Pay that they identified the root cause of the in-app provisioning failures and have resolved the issue. Following an extended period of monitoring normal traffic and sustained system stability, we are now closing this incident. || Marqeta engineers detected a recurrence of issues affecting Apple Pay provisioning between 16:00 PT and 16:30 PT. Traffic has since returned to normal, and services are currently operating as expected. We are continuing to closely monitor the situation to ensure sustained stability. The next update will be provided when new information becomes available."
+ },
+ {
+  "org": "MessageBird",
+  "date": "2026-06-12",
+  "url": "https://status.messagebird.com/incidents/w44ynww8vtjj",
+  "name": "WhatsApp message delivery issues",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "|| We are continuing to monitor increased WhatsApp message delivery failures caused by ongoing disruptions in Meta\u2019s services, as confirmed by Meta. || We are investigating increased WhatsApp message delivery failures caused by connectivity issues with Meta services. Our team is actively monitoring the situation and working to mitigate the impact."
+ },
+ {
+  "org": "MessageBird",
+  "date": "2026-05-13",
+  "url": "https://status.messagebird.com/incidents/63v8lwxdx628",
+  "name": "Issues Listing Journeys in UI [EU]",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved. || A fix has been implemented and we are monitoring the results. || The issue has been identified and a fix is being implemented. || We are currently experiencing an issue where journeys are not displaying in the user interface. Journey runs are not affected and continue to execute normally. At this time, the issue is limited to the listing/viewing of journeys in the UI. Our engineering team is actively investigating the root cause."
+ },
+ {
+  "org": "MessageBird",
+  "date": "2026-08-06",
+  "url": "https://status.messagebird.com/incidents/nbzlwytlmkfc",
+  "name": "Connectors failing for some customers.",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "|| A fix has been implemented and we are monitoring the results. || We identified the root cause and continuing to work on a fix for this issue. || We are continuing to work on a fix for this issue. || The issue has been identified and a fix is being implemented. We are investigating to identify the root cause"
+ },
+ {
+  "org": "Miro",
+  "date": "2026-05-04",
+  "url": "https://status.miro.com/incidents/01KQSWV9S3DGDDJ6WDQ6NEQD1E",
+  "name": "Miro is partially down",
+  "sev": "High",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "|| We observe core access to Miro has been restored following the deployment of a fix for the primary issue. || Core access to Miro has been restored following the deployment of a fix for the primary issue. || We identified two issues causing the partial outage. Our team is continuing to investigate and preparing a fix for the second issue. Our engineering team is working to identify the root cause and will provide updates as we learn more."
+ },
+ {
+  "org": "Miro",
+  "date": "2026-02-13",
+  "url": "https://status.miro.com/incidents/01KHBGSP4C6WA0PXCPJ3NZC5K4",
+  "name": "Calls to Public API and MCP server are failing",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "|| We have implemented a fix. We have implemented a fix for this issue and our team will continue to monitor the systems closely to ensure stability. || We have implemented a fix. We are applying and rolling out a fix to the affected systems. || We identified the cause of the failing requests to our Public API. We are actively working on a fix to restore normal performance."
+ },
+ {
+  "org": "Miro",
+  "date": "2025-10-20",
+  "url": "https://status.miro.com/incidents/01K81BQFCS8P3JDDJFGFWF6VMV",
+  "name": "User search degradation",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "Following the completion of the rollout of a fix to all enterprise customers, the degradation affecting user search has been fully resolved. || We have completed the rollout of the fix for the user search degradation to enterprise customers with US and Australia data residency. We continue the gradual rollout of the fix to customers in the EU region. || We\u2019re continuing the gradual rollout of the fix for the user search degradation. || We have identified the cause of the degradation in user search and are gradually rolling out a fix across all of our enterprise customers. Our engineering team is working to identify the root cause and will provide updates as we learn more."
+ },
+ {
+  "org": "Miro",
+  "date": "2025-12-23",
+  "url": "https://status.miro.com/incidents/01KD4VCDPFY0JFB5R9BY2166QT",
+  "name": "Inability to upgrade/reactivate accounts from free/startup tier and start trials",
+  "sev": "High",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "|| We have rolled out a fix to the affected systems and are seeing some improvement, but we are continuing to monitor the situation closely. || We have implemented a fix and waiting for it to propagate to all relevant endpoints. Our engineering team is working to identify the root cause and will provide updates as we learn more."
+ },
+ {
+  "org": "Miro",
+  "date": "2026-01-22",
+  "url": "https://status.miro.com/incidents/01KFKC5JB1JDNFY7KB1J2PK55B",
+  "name": "Enterprise Guard Admin Console issues",
+  "sev": "High",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "|| We identified the cause of the _increased error rates for Content Explorer and other parts of Admin console for Enterprise Guard users_. The issue is related to _a database issue._ We are actively working on a fix to restore normal performance. Our engineering team has already identified the root cause working to mitigate the issue."
+ },
+ {
+  "org": "Miro",
+  "date": "2025-09-10",
+  "url": "https://status.miro.com/incidents/01K4S5A309MDBN7BZ55C5Q2EFD",
+  "name": "Issue with creating support requests for customers with language set to Japanese",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "|| We identified the cause of the issue which is affecting users using Miro in the Japanese and Portuguese languages. The issue is related to a software update that we are now fixing. While we are investigating - it is still possible to contact support by using the following link: Our engineering team is working to identify the root cause and will provide updates as we learn more."
+ },
+ {
+  "org": "Miro",
+  "date": "2025-06-23",
+  "url": "https://status.miro.com/incidents/01JYDP8DKD64VJRJG9SVNB966D",
+  "name": "Potential issue with Sign up and Magic Link emails not being sent",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": false,
+  "text": "|| We have implemented a fix. We advise users to try again if they did not receive a sign in email || We identified the cause of the sign-in issue. We are actively working on a fix to restore normal performance. Our engineering team is working to identify the root cause and will provide updates as we learn more."
+ },
+ {
+  "org": "Miro",
+  "date": "2025-06-26",
+  "url": "https://status.miro.com/incidents/01JYNWVMN7KTV2TDWEP2SGWR09",
+  "name": "Icons supplied via the Images and Icons tool may not appear in search results or load",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "The issue affecting icons in the Images and Icons tool has now been fully resolved. We apologize for the inconvenience caused and appreciate your understanding. If you continue to experience any issues, please reach out to our support team. || We\u2019ve identified the root cause of the issue affecting icons in the Images and Icons tool and are working closely with our partner to restore full functionality. Icons may still be missing from search results or fail to save during this time. We apologize for the inconvenience and will continue to share updates as progress is made. || We are investigating a degraded performance of the Images and Icons tool. Icons supplied via this tool may not appear in search results, attempts to save these icons may fail. We\u2019re working with the provider to resolve the issue and will provide updates as they become available."
+ }
+]

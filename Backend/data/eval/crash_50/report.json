@@ -1,0 +1,218 @@
+{
+ "n": 50,
+ "selection": "held-out test split; Critical or High; clear published cause; outage or crash wording; not in the earlier 100",
+ "severity_mix": {
+  "Critical": 17,
+  "High": 33
+ },
+ "category_mix": {
+  "configuration_deployment": 20,
+  "networking_dns": 10,
+  "database_issue": 8,
+  "hardware_infra": 4,
+  "api_latency": 3,
+  "other": 3,
+  "authentication": 2
+ },
+ "organisations": 43,
+ "root_cause": {
+  "rag": {
+   "top1_exact_pct": 34.0,
+   "top1_partial_or_better_pct": 68.0,
+   "top1_wrong_pct": 32.0,
+   "any_of_3_exact_pct": 52.0,
+   "any_of_3_partial_or_better_pct": 90.0,
+   "mean_top1_score_of_2": 1.02
+  },
+  "llm_only": {
+   "top1_exact_pct": 30.0,
+   "top1_partial_or_better_pct": 80.0,
+   "top1_wrong_pct": 20.0,
+   "any_of_3_exact_pct": 44.0,
+   "any_of_3_partial_or_better_pct": 98.0,
+   "mean_top1_score_of_2": 1.1
+  },
+  "paired_top1": {
+   "rag_better": 10,
+   "same": 26,
+   "llm_only_better": 14,
+   "sign_test_p": 0.541
+  },
+  "paired_any_of_3": {
+   "rag_better": 10,
+   "same": 30,
+   "llm_only_better": 10,
+   "sign_test_p": 1.0
+  }
+ },
+ "classification": {
+  "rag": {
+   "category_accuracy_pct": 36.0,
+   "severity_accuracy_pct": 60.0,
+   "severity_within_one_pct": 92.0
+  },
+  "llm_only": {
+   "category_accuracy_pct": 28.0,
+   "severity_accuracy_pct": 44.0,
+   "severity_within_one_pct": 92.0
+  },
+  "knn_vote": {
+   "category_accuracy_pct": 32.0,
+   "severity_accuracy_pct": 38.0,
+   "severity_within_one_pct": 78.0
+  }
+ },
+ "retrieval": {
+  "mode_counts": {
+   "RAG": 50
+  },
+  "top_relevance_distribution": {
+   "6": 2,
+   "7": 3,
+   "8": 15,
+   "9": 18,
+   "10": 12
+  },
+  "median_top_relevance": 9.0,
+  "true_category_among_5_pct": 74.0,
+  "same_org_among_5_pct": 40.0,
+  "same_org_is_top_match_pct": 34.0
+ },
+ "by_top_relevance": {
+  "4-6": {
+   "n": 2,
+   "rag_top1_exact_pct": 0.0,
+   "llm_only_top1_exact_pct": 0.0,
+   "rag_top1_partial_or_better_pct": 100.0,
+   "llm_only_top1_partial_or_better_pct": 100.0
+  },
+  "7-8": {
+   "n": 18,
+   "rag_top1_exact_pct": 50.0,
+   "llm_only_top1_exact_pct": 50.0,
+   "rag_top1_partial_or_better_pct": 72.2,
+   "llm_only_top1_partial_or_better_pct": 77.8
+  },
+  "9-10": {
+   "n": 30,
+   "rag_top1_exact_pct": 26.7,
+   "llm_only_top1_exact_pct": 20.0,
+   "rag_top1_partial_or_better_pct": 63.3,
+   "llm_only_top1_partial_or_better_pct": 80.0
+  }
+ },
+ "by_same_org_precedent_retrieved": {
+  "yes": {
+   "n": 20,
+   "rag_top1_exact_pct": 25.0,
+   "llm_only_top1_exact_pct": 15.0,
+   "rag_top1_partial_or_better_pct": 70.0,
+   "llm_only_top1_partial_or_better_pct": 65.0
+  },
+  "no": {
+   "n": 30,
+   "rag_top1_exact_pct": 40.0,
+   "llm_only_top1_exact_pct": 40.0,
+   "rag_top1_partial_or_better_pct": 66.7,
+   "llm_only_top1_partial_or_better_pct": 90.0
+  }
+ },
+ "by_true_category_retrieved": {
+  "yes": {
+   "n": 37,
+   "rag_top1_exact_pct": 40.5,
+   "llm_only_top1_exact_pct": 32.4,
+   "rag_top1_partial_or_better_pct": 73.0,
+   "llm_only_top1_partial_or_better_pct": 81.1
+  },
+  "no": {
+   "n": 13,
+   "rag_top1_exact_pct": 15.4,
+   "llm_only_top1_exact_pct": 23.1,
+   "rag_top1_partial_or_better_pct": 53.8,
+   "llm_only_top1_partial_or_better_pct": 76.9
+  }
+ },
+ "confidence_calibration_top_hypothesis": {
+  "rag": {
+   "0.5-0.7": {
+    "n": 25,
+    "top1_exact_pct": 24.0,
+    "top1_partial_or_better_pct": 56.0
+   },
+   "0.7-1.0": {
+    "n": 25,
+    "top1_exact_pct": 44.0,
+    "top1_partial_or_better_pct": 80.0
+   }
+  },
+  "llm_only": {
+   "0.5-0.7": {
+    "n": 24,
+    "top1_exact_pct": 12.5,
+    "top1_partial_or_better_pct": 70.8
+   },
+   "0.7-1.0": {
+    "n": 26,
+    "top1_exact_pct": 46.2,
+    "top1_partial_or_better_pct": 88.5
+   }
+  }
+ },
+ "grounding": {
+  "hypotheses": 143,
+  "hypotheses_citing_an_incident_pct": 97.9,
+  "top_hypothesis_cites_an_incident_pct": 100.0,
+  "invalid_citations_dropped": 0,
+  "top1_exact_pct_when_top_cited": 34.0
+ },
+ "latency_s": {
+  "rag": {
+   "median": 6.2,
+   "p90": 6.8,
+   "max": 7.48
+  },
+  "rag_retrieval_share_median": 0.53,
+  "llm_only": {
+   "median": 2.6,
+   "p90": 3.1,
+   "max": 4.32
+  }
+ },
+ "examples": {
+  "rag_better": [
+   "GOLD-0102",
+   "GOLD-0190",
+   "GOLD-0492",
+   "GOLD-0557",
+   "GOLD-0463",
+   "GOLD-0985",
+   "GOLD-1179",
+   "GOLD-1325",
+   "GOLD-1547",
+   "GOLD-1701"
+  ],
+  "llm_only_better": [
+   "GOLD-0206",
+   "GOLD-0275",
+   "GOLD-0192",
+   "GOLD-0433",
+   "GOLD-0759",
+   "GOLD-0803",
+   "GOLD-0902",
+   "GOLD-1357",
+   "GOLD-1749",
+   "GOLD-1936",
+   "GOLD-2002",
+   "GOLD-2025",
+   "GOLD-2061",
+   "GOLD-2759"
+  ],
+  "both_wrong": [
+   "GOLD-0108",
+   "GOLD-1055",
+   "GOLD-1826",
+   "GOLD-2711"
+  ]
+ }
+}

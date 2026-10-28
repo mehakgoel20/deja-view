@@ -1,0 +1,402 @@
+[
+ {
+  "org": "Elastic",
+  "date": "2026-09-09",
+  "url": "https://status.elastic.co/incidents/mb67r384yh3t",
+  "name": "Elastic Agent enrollment/check-in failures on 9.5.3 (and 9.4.6) with Fleet remote Elasticsearch output",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "Corrected Fleet Server releases (9.5.4 / 9.4.6) have been available on Elastic Cloud Hosted and Elastic Cloud Enterprise stack packs since September 10, 2026, and all known affected deployments have confirmed recovery. If you upgraded to an affected release before that time and have not yet applied the mitigation, guidance is available here: https://support.elastic.co/knowledge/bee1c75c. || We have patched Fleet Server versions 9.5.3 and 9.4.6 with corrected releases deployed as of September 10, 2026 at 21:20 UTC. - Upgrading to the current 9.4.6 or 9.5.3 releases will not be affected by this bug as the updated release contains the fix. - If you upgraded to 9.4.6 or 9.5.3 before 21:20 UTC on 10 September 2026, perform the following mitigation: 1. Force restart the Integration Server component of you affected deployment 2. Run cleanup procedures on affected Elastic Agents (see https://support.elastic.co/knowledge/bee1c75c) \u2014 required if agents failed to check in or remained offline after the Integration Server restart IMPORTANT: The patched Fleet Server is not available outside Elastic Cloud Enterprise (ECE) Stack Packs and Elastic Cloud Hosted (ECH). || We have patched Fleet Server versions 9.5.3 and 9.4.6 with corrected releases deployed as of September 10, 2026 at 21:20 UTC. - Upgrading to the current 9.4.6 or 9.5.3 releases will not be affected by this bug as the updated release contains the fix. - If you upgraded to 9.4.6 or 9.5.3 before 21:20 UTC on 10 September 2026, pe"
+ },
+ {
+  "org": "Elastic",
+  "date": "2026-08-05",
+  "url": "https://status.elastic.co/incidents/2w8qm3hz2z5z",
+  "name": "Elasticsearch 9.5.0 contains a query-correctness defect",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "Elasticsearch 9.5.1 has been released and contains the fix for this issue. || A patch release containing the fix is in progress and it is expected to be available within the next week. We have identified the root cause, a fix is in progress, and we are preparing a patch release. Time series (TSDB) data streams are the most likely to be affected, because indexing is disabled by default for these fields. This affects Elasticsearch 9.5.0 on Elastic Cloud Hosted, Elastic Cloud Enterprise, and self-managed deployments, as well as Elasticsearch Serverless projects. What you can do: - If you have not yet upgraded to 9.5.0, we recommend deferring the upgrade until a fixed version is available. We have identified the root cause, a fix is in progress, and we are preparing a patch release."
+ },
+ {
+  "org": "Elastic",
+  "date": "2026-09-01",
+  "url": "https://status.elastic.co/incidents/l6zgdnvvg41j",
+  "name": "Replication bug causing slow recoveries",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "|| The fix has been identified and backported to the Elasticsearch 9.5 patch branch. || We have identified the root cause and the team is working on a fix scheduled to be released in Elasticsearch version 9.5.3 What you can do: - If you have not yet upgraded to 9.5.*, you are not affected as upgrades to 9.5 have been disabled until 9.5.3 is released - If you are already running 9.5 and experience the symptoms of this issue, please contact Elastic Support. More information can be found on https://www.elastic.co/docs/release-notes/elasticsearch/known-issues#elasticsearch-9.5.2-known-issues || We are aware of a bug affecting customers on Elasticsearch versions 9.5.0, 9.5.1 and 9.5.2 where bulk index operations processed on the primary shard can result in divergence on the replicas resulting in high disk usage and long-running recoveries. The team is working on a fix."
+ },
+ {
+  "org": "Elastic",
+  "date": "2026-08-14",
+  "url": "https://status.elastic.co/incidents/qcs4jty0rc8d",
+  "name": "Elasticsearch 9.5.1: false-positive matches in certain boolean queries",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "Elasticsearch 9.5.2 has been released and contains the fix for this issue. While the patch in 9.5.1 (https://github.com/elastic/elasticsearch/pull/155936) resolved the bulk-scorer defect for term and range query paths; multi-value terms queries utilize a different Lucene query type that was not covered by that fix. We have identified the root cause, a fix is in progress, and we are preparing a patch release. We will provide a further update when the fix is ready."
+ },
+ {
+  "org": "Elastic",
+  "date": "2026-05-20",
+  "url": "https://status.elastic.co/incidents/69zj4jbpv8ft",
+  "name": "AutoOps Login Issues for New Customers",
+  "sev": "Low",
+  "cat": "authentication",
+  "pm": false,
+  "text": "|| We continue to actively monitor the implemented mitigation actions. || We have mitigated the issue preventing new Elastic Cloud customers and trial users from accessing AutoOps by restarting a backend service. We are actively monitoring to confirm the fix remains stable and that all new user logins are functioning as expected. AutoOps continues to function normally for all existing deployments. Our team is actively working to identify the root cause."
+ },
+ {
+  "org": "Elastic",
+  "date": "2026-04-28",
+  "url": "https://status.elastic.co/incidents/035yxcwm16ng",
+  "name": "Missing Metrics in Cloud Console \u2014 US East (us-east-1)",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "The system has recovered and functionality has returned to normal. || We are continuing to see signs of stabilization and monitoring as the system recovers, but metrics visualizations in the Cloud console remains impacted until recovery is complete. We will provide a further update in 1 hour, or when there is a change in status. || Our investigation is ongoing. We continue to see early signs of stabilization, but metrics visualizations in the Cloud console remain impacted. We will provide a further update in 1 hour, or when there is a change in status. || Our investigation is ongoing. Some early signs of stabilisation have been observed, but metrics visualizations in the Cloud console remain impacted. We will provide a further update within 30 minutes. || Some users are seeing missing metrics visualizations in the Cloud console due to a disruption in metric data ingestion affecting deployments in the us-east-1 (US East) region. Some recent metric data may not appear in charts or monitoring views. We are actively investigating and will provide another update within 30 minutes."
+ },
+ {
+  "org": "Elastic",
+  "date": "2026-07-01",
+  "url": "https://status.elastic.co/incidents/m00rqvz4d74q",
+  "name": "Internal Monitoring Data Delay",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "|| We have identified the issue and implemented a fix. What you may notice: Deployment metrics and instance utilization data may not appear in the Elastic Cloud UI for Hosted Deployments and Serverless Projects in affected regions. What's not affected: Your deployments and projects are running normally. We're actively investigating the root cause and will provide an update within the next 2 hours."
+ },
+ {
+  "org": "Elastic",
+  "date": "2026-08-20",
+  "url": "https://status.elastic.co/incidents/4sz1hh4t3trt",
+  "name": "Issue when creating Serverless projects in Azure eastus region",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "Azure's storage component issues in the eastus region have been resolved. Consequently, Serverless project creation times have returned to normal and are functioning as expected. || We have determined that the issue stems from an upstream problem with Azure's storage component. Upon examination, the impact is limited strictly to new project initialization times, resulting in longer creation times for Serverless projects in the Azure eastus region. We will provide a further update once the issue has been resolved. || An issue affecting the creation of new Serverless projects in Azure's eastus region has been identified. Our team is actively investigating to determine the root cause. We will provide a follow-up status update within the next hour or as soon as the root cause is established, whichever occurs first."
+ },
+ {
+  "org": "Elastic",
+  "date": "2026-08-20",
+  "url": "https://status.elastic.co/incidents/6dqm0bmznbf0",
+  "name": "Elevated Error Rates Affecting Managed OTLP",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "The root cause has been identified and addressed. || We have identified the root cause of the elevated error rates affecting serverless managed OTLP. A mitigation has been applied and we are monitoring to confirm error rates return to baseline. Our team is actively investigating the root cause."
+ },
+ {
+  "org": "Elastic",
+  "date": "2026-06-02",
+  "url": "https://status.elastic.co/incidents/5rgks9fvfcd1",
+  "name": "Missing Metrics in Cloud Console - Azure North Europe",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "|| We are seeing some signs of recovery, and have taken action to mitigate the impact and speed up recovery. Some users will still see seeing missing metrics visualizations in the Cloud console, for deployments in the Azure North Europe region. We are actively investigating and will provide another update within 1 hour || Some users are seeing missing metrics visualizations in the Cloud console due to a disruption in metric data ingestion affecting deployments in the Azure North Europe region."
+ },
+ {
+  "org": "Elastic",
+  "date": "2026-06-16",
+  "url": "https://status.elastic.co/incidents/tqhprzllw8yj",
+  "name": "Issue with Kibana authentication flow",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": false,
+  "text": "We have identified the root cause and mitigated the issue. Users should now be able to log in to Kibana via the \"Log in with Elastic Cloud\" button. || We are continuing to investigate this issue. || We have detected an issue with the Kibana authentication flow for both Deployments and Projects. Authenticating to Kibana using the \"Log in with Elastic Cloud\" button results in an authentication failure. A workaround is to access Kibana using the link inside the Elastic Cloud console. We are currently working on a resolution. Our team is currently identifying the root cause to resolve the issue. We will share another update in the next hour."
+ },
+ {
+  "org": "Elastic",
+  "date": "2026-05-23",
+  "url": "https://status.elastic.co/incidents/815sxv4670by",
+  "name": "Missing Metrics in Cloud Console - Azure North Europe",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "The system has recovered and functionality has returned to normal. || The problem has been identified and is being stabilized, but metrics visualizations in the Cloud console remains impacted until recovery is complete. We will provide a further update in 1 hour, or when there is a change in status. || Some users are seeing missing metrics visualizations in the Cloud console due to a disruption in metric data ingestion affecting deployments in the Azure North Europe region. Some recent metric data may not appear in charts or monitoring views. We are actively investigating and will provide another update within 1 hour."
+ },
+ {
+  "org": "Elastic",
+  "date": "2026-09-10",
+  "url": "https://status.elastic.co/incidents/8x024h1cdvpw",
+  "name": "Kibana access restored for UI-assigned Organization Owners on Hosted deployments",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "|| Update: The fix has been deployed to production and we have applied a data correction to affected accounts, restoring Kibana access for impacted users. || We have identified and are in the process of fixing+mitigating a bug in our permissions management UI that is prevents users with the Organisation Owner role and Cloud Console, Elasticsearch, and Kibana access from accessing Kibana in Hosted Deployments."
+ },
+ {
+  "org": "Elastic",
+  "date": "2026-05-11",
+  "url": "https://status.elastic.co/incidents/ck9d36whxplq",
+  "name": "Temporarily unavailability of Serverless Projects Functionality",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "We have confirmed no further impact from this incident, and are now considering this issue resolved. Thank you for your patience. || We are aware of issues resulting in temporary unavailability across multiple Serverless projects. From 08:00 UTC to 09:40 UTC on May 11, Search, Ingest and EIS functionality may have been unavailable. The root cause of this issue has been identified and resolved - we are currently monitoring, and expect no further impact."
+ },
+ {
+  "org": "ElevenLabs",
+  "date": "2026-07-31",
+  "url": "https://status.elevenlabs.io/incidents/01KYV2B0QVNEGQTSG5B0RES4B7",
+  "name": "SIP call failures",
+  "sev": "High",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "After our recent mitigation steps, our engineers have traced SIP call failure rate as it has returned to baseline. We will publish a complete root cause analysis shortly. || Our engineers are putting together a targeted fix to resolve the remaining SIP failures in the US region. || We have identified the root cause of the failed SIP calls and prepared a fix. || Our team has identified a potential cause of the call outages and is currently validating a fix. || Following the earlier fix, we're seeing renewed inbound call routing failures for a portion of phone numbers. Call routing is now fully restored, and we're assessing follow-ups to improve proactive alerting and prevent recurrence. We're currently validating a fix. We are currently working to isolate the root cause and restore full functionality."
+ },
+ {
+  "org": "ElevenLabs",
+  "date": "2026-08-24",
+  "url": "https://status.elevenlabs.io/incidents/01M0SFC3WQ2ZXS4TBFJ4J6J404",
+  "name": "Media not loading across several products",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "|| Work is still underway to release a fix to resolve media loading within Studio, Audiobooks, Image & Video, Music and Dubbing. Until the fix is fully rolled out, common symptoms may include failures when exporting media in Studio, Dubbing, and other products. We'll continue to pass further updates as we track the deployment of this fix. || We are currently working to deploy a targeted fix to resolve the existing issues of media loading within Studio, Audiobooks, Image & Video, Music and Dubbing. We will pass further updates as we track the deployment of this fix. || We have located the cause of the elevated errors, and we are working on a fix."
+ },
+ {
+  "org": "ElevenLabs",
+  "date": "2026-09-29",
+  "url": "https://status.elevenlabs.io/incidents/01M3Q8059VPFGJ7QM1C41NN462",
+  "name": "Agents, STT, and Creative Platform: Increased Latency, Conversation Failures, and STT Failures",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "We have not seen any further errors after the fix was applied. All services are fully operational and stable. We will post an RCA on our status page after further investigation. || Our engineers have applied a fix for the likely root cause. We are seeing signs of recovery but we will continue to monitor until recovery is fully confirmed. || We have isolated the cause of the increased latency and errors, and are working to resolve it. Current evidence suggests that the Sound Effects product and other Creative Platform products may also be affected, but scope and severity of impact to these products remains unclear. || We are currently investigating increased latency, conversation failures, and API request failures currently known to affect Agents and STT. These failures may manifest as delays in agent conversations, 429s to STT requests, or conversation failures with the error: \"START node generated a response after progressing\"."
+ },
+ {
+  "org": "ElevenLabs",
+  "date": "2026-09-04",
+  "url": "https://status.elevenlabs.io/incidents/01M1PB7V9WNBNFFACKWX3B57GC",
+  "name": "Increase in latency in the Global Residency for Speech-to-Text and Dubbing requests",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "After completing the monitoring stage, we have confirmed that STT latency has returned to baseline stability. || The issue has been fixed, the error rate should be zero. We are currently monitoring the situation. || We've identified the root cause and are rolling out a fix. Error rates should be improving, and we're continuing to monitor. || We're investigating a latency increase on the Global Residency server for Speech-to-Text and Dubbing models, affecting a small subset of requests."
+ },
+ {
+  "org": "Figma",
+  "date": "2026-01-29",
+  "url": "https://status.figma.com/incidents/hvzk9m2f6y9d",
+  "name": "Figma Make Publishing Disruption",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "|| A fix has been implemented for publishing Figma Makes or Sites with code components. This is due to an intermittent issue with the service used for accessing code package dependencies used in Figma Make and Figma Sites: https://github.com/esm-dev/esm.sh/issues/1294#issue-3866491297. We are actively working to mitigate the issue."
+ },
+ {
+  "org": "Figma",
+  "date": "2025-11-18",
+  "url": "https://status.figma.com/incidents/292fckk253km",
+  "name": "Service Disruption with Sites and Make",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "|| We have implemented mitigations for the earlier disruption caused by the Cloudflare outage. || The issue has been identified and a fix is being implemented. || We are investigating a service disruption when publishing and previewing Figma Sites and Make files, and accessing published Sites and Makes due to a Cloudflare outage."
+ },
+ {
+  "org": "Fly.io",
+  "date": "2026-09-02",
+  "url": "https://status.fly.io/incidents/01M1HAXKJ5FHMWHCWS6GPMNRYW",
+  "name": "Upstream network issues",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "|| A fix has been implemented and we are monitoring the results. || We have put in some temporary mitigations along with our providers. However since the root cause of this issue lies within a bigger upstream transit provider, you may continue to see some elevated latency and connection issues in/around affected regions. We're still working closely with them to resolve the root cause."
+ },
+ {
+  "org": "Fly.io",
+  "date": "2026-10-03",
+  "url": "https://status.fly.io/incidents/01M40CG1KSPDP1D4YQ8Y1Q2PNV",
+  "name": "Partial outage in AMS",
+  "sev": "Critical",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "All impacted services are operational now. || All MPG clusters have recovered. We are monitoring for additional impact. || All hosts are back online. MPGv2 control plane is fully operational now. Some MPGv1 clusters in AMS might be degraded while MPGv1's control plane recovers. || Those hosts are coming back online after a brief interruption. We are assessing the impact on MPG. || Some of our hosts are offline in AMS. Control plane for Managed Postgres v1 and v2 in AMS is unavailable as a result of this. MPG clusters should remain online but any control plane ops will fail. Some machines in AMS are also unavailable."
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-08-17",
+  "url": "https://www.githubstatus.com/incidents/zkxwbgr0cnmx",
+  "name": "Incident with GitHub.com",
+  "sev": "Critical",
+  "cat": "authentication",
+  "pm": false,
+  "text": "Some of the failing traffic was moved from Central US to Northern Virginia where it was served successfully until the network failure in Central US was debugged and resolved. Delayed replies to a single internal endpoint triggered a latent retry bug in VS Code that amplified traffic by approximately 10x and caused delayed recovery for the Copilot Token Service. The immediate cause of the failure was network saturation on load balancers in Central US due to a new peak in traffic. Originally this was caused by an Istio sidecar pod reaching its concurrency limits and failing to auto scale correctly because of a misconfigured policy that watched host service but not sidecar limits. The retry storm in Northern VA was fixed by 1) temporarily reducing gateway retry logic with a PR and 2) blocking inbound Copilot Token Service token requests at the load balancers with a 403, and then gradually ramping back up traffic per-site to allow callers to succeed. Residual Copilot authentication failures continued because client retry behavior amplified load: a failed token operation could generate many extra requests and enter a retry loop. || We are continuing to apply mitigations to address sporadic Copilot authentication failures in some applications. We have partially disabled authentication token retries and have seen improvement, and we are monitoring impact before fully applying this mitigation. || The degradation affecting Git Operations has been mitigated. || We identified the proble"
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-08-06",
+  "url": "https://www.githubstatus.com/incidents/qcvjkzcs7j74",
+  "name": "Incident with Actions",
+  "sev": "Critical",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "The incident was triggered by a routine deployment to an internal Actions service responsible for processing events and generating Actions jobs. The deployment exposed an existing capacity and concurrency weakness. As pods were replaced during the deployment, remaining capacity became saturated, causing services to crash and triggering a cascading impact across multiple clusters and downstream services. These services recovered at 17:00 after expanding capacity, throttling incoming webhook-triggered work to allow the system to recover, and increasing processing capacity for the backlog of affected events. Due to a latent bug in one of the services responsible for job assignment, runners were getting assigned jobs that were no longer valid and then getting stuck retrying those jobs, preventing them from picking up valid work. This second stage of impact was mitigated by deploying changes to prevent runners from repeatedly attempting to acquire invalid jobs. These mitigations allowed the accumulated queues to drain and Actions to recover to normal operation. A mitigation deployed during the incident inadvertently affected these runners, causing some to remain offline until they were manually recovered. We subsequently rolled back the change and are adding automatic recovery in upcoming Runner and ARC releases. To prevent recurrence, we are making improvements to deployment and capacity safeguards for the affected services, strengthening monitoring for the conditions that preced"
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-08-26",
+  "url": "https://www.githubstatus.com/incidents/y1t7p9fzrlj2",
+  "name": "Incident with Actions",
+  "sev": "Critical",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "This impact was triggered by saturation of writes to the database primary used by the service processing triggers for Actions workflows. The saturation was caused by growing daily peak load combined with an upstream issue in GitHub\u2019s event processing infrastructure, https://www.githubstatus.com/incidents/hcbtzksccj2f, which caused burst amplification of already-high load. We deployed a change to force-revoke jobs in this state, and they transitioned to failed at 18:40 UTC, about 50 minutes after incident mitigation. Customers using concurrency groups saw longer impact due to a separate issue where runners assigned to a subset of jobs disconnected before the force-revoke mitigation was deployed, which prevented runner acquisition from progressing and left jobs in a waiting-for-runner state. Some runs triggered during the 15:02-15:45 UTC incident window encountered a bug that left them showing as queued even after service recovery. As follow-up, we are fixing the root cause of this queued state and improving our ability to bulk-cancel affected runs. Several changes to improve the general scalability of this part of Actions were already complete and deploying to production. || The degradation affecting Actions has been mitigated. || primary failover briefly improved performance but did not fully mitigate, we've throttled inbound traffic and are investigating upstream Vitess issues || We've identified an issue with a database primary and are failing over to a replica immediately "
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-09-23",
+  "url": "https://www.githubstatus.com/incidents/8zc63m64hy36",
+  "name": "Incident across several services",
+  "sev": "Medium",
+  "cat": "database_issue",
+  "pm": false,
+  "text": "The API errors were mitigated by 10:58 UTC on September 23. Projects' processing continued to recover while an accumulated backlog was drained, and full service was restored at 04:55 UTC on September 24. The incident was caused by a failed planned maintenance operation on a primary database. We have mitigated the immediate failure mode. || The degradation has been mitigated. || We've deployed a change intended to accelerate processing of the backlog of issue label updates in Projects. We are continuing to deploy a change that will accelerate processing of the backlog of label updates. || We are preparing to deploy a change that will mitigate the impact. || The degradation affecting API Requests has been mitigated. || Database replicas have been restored."
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-08-20",
+  "url": "https://www.githubstatus.com/incidents/bhbcjn4n3jzp",
+  "name": "Intermittent failures creating agent tasks",
+  "sev": "Critical",
+  "cat": "database_issue",
+  "pm": false,
+  "text": "We failed over the affected database to a healthy region, added processing capacity to work through the backlog, and restored normal operation once the underlying service recovered. || We are seeing gradual recovery in Copilot Cloud Agent task status visibility as we deploy a fix for the root cause. We are pursuing additional mitigating measures to accelerate recovery. We have identified the cause of the issue and are putting mitigations in place to return service to normal levels. Further updates will be provided as we perform mitigations."
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-09-15",
+  "url": "https://www.githubstatus.com/incidents/qwdwmtqghpk5",
+  "name": "Disruption with some GitHub services",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "On September 15, 2026, between 05:45 and 09:50 UTC, the Claude Fable 5.1 model in GitHub Copilot experienced intermittently degraded availability, with an average error rate of 2.8%. During brief recurring 15 minute periods that recurred every ~45 minutes, availability for Claude Fable 5.1 dropped to a maximum of ~40% before recovering completely. Other Copilot models were not affected. Users could continue to work with a different model or with 'Auto'. The cause was an issue with an upstream model provider that intermittently rejected requests while overloaded. GitHub worked with the provider, who acknowledged and then resolved the underlying issue at 9:50 UTC, after which the model returned to constant normal availability. Once recovery was guaranteed, we resolved the incident at 11:17 UTC. To reduce the chance of recurrence and customer impact, GitHub is reviewing per-model availability alerting and automatic in-product fallback so that requests to a degraded model can shift to a healthy alternative more quickly. || The issues with our upstream model provider have been resolved, and Claude Fable 5.1 is once again available in Copilot products and IDE surfaces. We will continue monitoring to ensure stability, but mitigation is complete. || We continue to monitor intermittent errors affecting Claude Fable 5.1 in some Copilot products and integrated development environments. Customer-facing metrics have recovered, and we are awaiting confirmation from our upstream provider th"
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-08-26",
+  "url": "https://www.githubstatus.com/incidents/5bn0vk444m1w",
+  "name": "Disruption with GitHub Billing",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "We confirmed this impact for a small number of customers ( This was caused by a concentrated workload that created processing delays in our data storage layer. We mitigated the incident by rebalancing traffic within our infrastructure. We are improving workload isolation, retry behavior, and detection of concentrated load to reduce the likelihood of recurrence and shorten our time to detect and mitigate similar incidents. Service conditions remain stable following the mitigation, and we have not observed any further customer impact. We are actively monitoring the service while implementing targeted fixes to address the underlying root cause. || Our mitigation continues to hold, and service conditions remain stable. || Our mitigation is still holding as we continue to investigate to find the root cause. || We are continuing to monitor the mitigation that we have applied for the billing page disruption. || We've applied a mitigation to unblock Copilot usage and have observed recovery for this particular impact. We're continuing to investigate and apply mitigations for the billing page disruption while monitoring to ensure Copilot remains recovered."
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-08-26",
+  "url": "https://www.githubstatus.com/incidents/kfspvrz14xr0",
+  "name": "Incident with Actions and Pull Requests",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "On August 26, 2026, from 21:55 UTC to 23:58 UTC, 2.6% of workflow runs triggered by pull request events were delayed, with the impact rising as high as 25% at its peak. This resulted in a backlog in pull request merge-commit processing, delaying pull request-triggered GitHub Actions workflows and some mergeability information. We reduced workload, shifted traffic away from affected infrastructure, and restored the affected service component to a healthy state. || The degradation affecting Actions and Pull Requests has been mitigated. || We've applied mitigations and are seeing recovery in Actions workflow runs and blocked pull request merges. || We are investigating elevated delays and timeouts affecting Actions workflow runs triggered by pull request events. We are actively working on mitigation and will provide updates as we learn more."
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-08-10",
+  "url": "https://www.githubstatus.com/incidents/s19bth7wzkf7",
+  "name": "Disruption with creation of fine grained personal access tokens",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "Because the page still loaded and the server returned a normal response, the failure produced no error message. GitHub mitigated the incident by disabling the change at 18:21 UTC, at which point token creation recovered immediately, and the incident was resolved at 18:46 UTC. || We identified the source of the issue affecting creation of fine-grained personal access tokens and have applied a mitigation. || The degradation has been mitigated."
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-10-05",
+  "url": "https://www.githubstatus.com/incidents/3q1yb5m7ltvb",
+  "name": "Incident with Actions",
+  "sev": "Critical",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "A detailed root cause analysis will be shared as soon as it is available. || We have applied mitigations to address GitHub Actions failures. We continue to monitor for full recovery and are working to mitigate ongoing issues affecting other services, including access to repository lists, licensing, and billing pages. We continue to investigate and are working on mitigation. Our teams are actively working to mitigate the impact and will provide another update as we learn more. Our teams are working to mitigate the impact; we\u2019ll share another update as we learn more. Our teams are working to mitigate the issue, and we\u2019ll provide an update as we learn more."
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-08-03",
+  "url": "https://www.githubstatus.com/incidents/7s119p1yxttr",
+  "name": "Incident with Copilot",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "Requests to list the available models failed, and because every chat or agent interaction begins by retrieving the list of models, affected users saw their requests fail. The incident was caused by an increase in how often clients requested the model list, which pushed an internal user-authorization lookup past a rate limit; the rate-limited responses were surfaced to users as errors. We mitigated the impact by increasing how long Copilot caches that authorization lookup, which reduced load on the internal service, and we have additional capacity and rate-limit changes in progress. || The degradation affecting Copilot has been mitigated. || We are still seeing intermittent errors with Copilot, and are continuing to investigate and consider mitigations."
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-08-10",
+  "url": "https://www.githubstatus.com/incidents/1t7x65n7kvt1",
+  "name": "Disruption with Copilot for access to some models",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "The issue was caused by a change to how model data was published, which our systems could not read back correctly and fell back to a limited default list. We mitigated the incident by 20:49 UTC and deployed a fix to prevent immediate recurrence by 21:50 UTC. || We have deployed and validated the fix to prevent immediate reoccurrence. || The issue has been mitigated across all affected environments. We are currently deploying on a fix to prevent reoccurrence. We will provide another update once the fix has been deployed. || The degradation has been mitigated. We are actively working on a fix and will provide updates as we have more information."
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-07-29",
+  "url": "https://www.githubstatus.com/incidents/75g5xmzptjqb",
+  "name": "Incident with Actions",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "This was caused by an under-provisioned internal Actions service in that site: under increased load its instances ran out of memory and became unresponsive, and because Actions API requests wait synchronously on that service, requests routed through the affected site stalled and timed out. The issue was mitigated by scaling out the runner-administration service in the affected site and increasing the replica count, which restored API availability and returned workflow run starts to normal. || The degradation affecting Actions has been mitigated. Our team is actively working to mitigate the impact by scaling capacity across additional infrastructure."
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-08-12",
+  "url": "https://www.githubstatus.com/incidents/76t89hbfb09h",
+  "name": "Incident with Pull Requests and Issues",
+  "sev": "Medium",
+  "cat": "database_issue",
+  "pm": false,
+  "text": "We restored service by disabling both settings. || We identified the source of errors affecting Pull Requests, Issues, and Search on GitHub.com and have applied a mitigation. || The degradation affecting Issues and Pull Requests has been mitigated. Our engineering teams are actively investigating the root cause, which appears to be related to a database infrastructure issue."
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-08-12",
+  "url": "https://www.githubstatus.com/incidents/lsvy8xsf0gxv",
+  "name": "Disruption with Login and Release Asset downloads",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": false,
+  "text": "On August 12 and 13, 2026, some anonymous (logged-out) requests to github.com experienced HTTP 5xx errors when loading pages like the sign-in page, and when downloading release assets, due to an unusual traffic pattern that repeatedly overloaded a part of our infrastructure that serves these types of requests. We mitigated the incidents by applying traffic controls at our network edge that limited any requests matching the pattern identified previously, thereby preventing overload on our systems. We are also working to further strengthen our edge protections and reduce the time to detect and mitigate similar incidents. || We have identified the root cause and are working on mitigation. Errors on the login page and downloading release assets have decreased, but we are not fully mitigated. We will continue to keep users updated on progress towards mitigation."
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-10-01",
+  "url": "https://www.githubstatus.com/incidents/2dpbcq5j165n",
+  "name": "Actions Job Delays",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "A detailed root cause analysis will be shared as soon as it is available. || GitHub Actions experienced degraded performance for some hosted runners due to throttling within an upstream Azure dependency. || We are currently applying a mitigation and anticipate recovery within thirty minutes. We have escalated to the owning team and are investigating how to mitigate the 429s. || The degradation affecting Actions has been mitigated. || We have identified the cause of increased Actions run start delays on Ubuntu runners and are actively deploying a fix. Customers may continue to experience intermittent delays while the mitigation rolls out and service metrics return to normal."
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-09-01",
+  "url": "https://www.githubstatus.com/incidents/jk2dy5h9yp3m",
+  "name": "Delays in commit processing",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "On September 1, 2026, between approximately 14:01 and 16:01 UTC, updates in response to pushes were delayed, temporarily showing stale diffs. The median time to refresh a diff after a push rose from the normal level of about 3 seconds to over 2 minutes at the peak, and more than 140,000 customer accounts had at least one delayed refresh during the most affected 75 minutes. Pushing commits and opening pull requests continued to work normally. The incident was caused by a sharp, concentrated surge in push volume that saturated worker pools and job queueing infrastructure. Autoscaling did not increase capacity as intended, so the backlog did not clear on its own. The incident was mitigated by manually scaling the affected worker pools and increasing push-processing capacity. This allowed the system to process the backlog, after which refresh times returned to normal. To reduce the likelihood and impact of similar incidents, we are adding quotas and throttling earlier in the push path so a single concentrated source of load cannot saturate shared capacity, improving worker-pool autoscaling so capacity is added automatically, and improving monitors for background job processing so on-call is paged before customers experience delayed pull request updates. || Time to update pull request diffs have improved to normal thresholds. || Diffs in the PR view may be stale for several minutes. We are investigating and scaling up resources. || We are investigating reports of degraded performa"
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-08-31",
+  "url": "https://www.githubstatus.com/incidents/7fxts6gmq5gr",
+  "name": "Elevated rate of errors for OpenAI models provided by Copilot",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "The degradation was caused by an issue with an upstream model provider. Service returned to normal after the provider implemented a mitigation. We will continue monitoring to ensure stability, but mitigation is complete. || The degradation affecting Copilot AI Model Providers has been mitigated."
+ }
+]

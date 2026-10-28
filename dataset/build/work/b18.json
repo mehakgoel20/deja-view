@@ -1,0 +1,402 @@
+[
+ {
+  "org": "New Relic",
+  "date": "2026-04-13",
+  "url": "https://status.newrelic.com/incidents/mgly7jkjkmkr",
+  "name": "Issue when querying live edge data in the US region",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "Between 10:30 AM and 2:40 PM UTC on April 13th, some customers may have experienced an issue to query live edge data and some customers may have noticed stopped synthetic monitors in the US region. The issue is now resolved and impacted services have returned to normal operations. || We are still investigating an issue where some customers may be unable to query live edge data and some customers may notice stopped synthetic monitors in the US region. We continue to work on the issue and understand root cause. We will continue to provide updates as we have more information to share, or by 3:30 PM UTC. || We are continuing to investigate an issue where some customers may be unable to query live edge data and some customers may notice stopped synthetic monitors in the US region. Technical teams are actively engaged and are exploring mitigation steps to address the issue. Data ingest and alert notifications are not impacted by this interruption. || We are investigating an issue where some customers may be unable to query live edge data in the US region. Data ingest and alert notifications are not impacted by this interruption. || We are investigating an issue where some customers may be unable to query live edge data in the US region. Data ingest and alert notifications are not impacted by this interruption. || We are investigating an issue where some customers may be unable to query live edge data in the US region. Data ingest and alert notifications are not impacted by this int"
+ },
+ {
+  "org": "New Relic",
+  "date": "2026-07-17",
+  "url": "https://status.newrelic.com/incidents/c1zg3xk8wcc6",
+  "name": "E2M (Events-2-Metrics) authorization issues",
+  "sev": "Low",
+  "cat": "authentication",
+  "pm": false,
+  "text": "Between 15:00 UTC on July 14th and 10:00 UTC on July 17th, we experienced an issue where some customers experienced authorization issues when attempting to create, read or update E2M (Events-2-Metrics) rules in the US, EU and JP regions. This was due to a recent change we have made to our authorization endpoints. These endpoints now require S2S authentication which has caused requests to our E2M (Events-2-Metrics) to fail. Our teams have rolled back these changes until a permanent fix can be put in place. The issue is now resolved, and the impacted services have returned to normal service."
+ },
+ {
+  "org": "OpenAI",
+  "date": "2026-09-29",
+  "url": "https://status.openai.com/incidents/01M3Q4RK1SM4EMK445GGPG7C0N",
+  "name": "Elevated errors across ChatGPT, Codex, and the API including the Agents API",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": false,
+  "text": "The detailed Root Cause Analysis (RCA) will be published in the next 5 business days. || We have applied the mitigation and are monitoring the recovery. || We have applied the mitigation and are monitoring the recovery. || We have applied the mitigation and are monitoring the recovery. || We have applied the mitigation and are monitoring the recovery."
+ },
+ {
+  "org": "OpenAI",
+  "date": "2026-09-25",
+  "url": "https://status.openai.com/incidents/01M3DCNWMW57HYK8FJ5FBFPA39",
+  "name": "Issues with Codex ",
+  "sev": "Critical",
+  "cat": "authentication",
+  "pm": false,
+  "text": "All impacted services have now fully recovered. || We have applied the mitigation and are monitoring the recovery. || We have identified root cause and are moving towards mitigation. || Login via API key will unblock access at this time. || We have identified that users are experiencing elevated errors for the impacted services. We are working on implementing a mitigation. || We have identified that users are experiencing a codex outage. We have identified the internal issue and are heading towards a mitigation."
+ },
+ {
+  "org": "Optimizely",
+  "date": "2026-09-02",
+  "url": "https://status.optimizely.com/incidents/7mrkb49zgy70",
+  "name": "SSL trust issue causing login failures across multiple DXP environments",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": false,
+  "text": "|| A fix has been implemented and we are monitoring the results. || We are continuing to work on fix for this issue. Our investigation has identified a probable root cause, and our team is currently working to resolve it. || We are currently investigating an SSL trust issue causing login failures across multiple DXP environments and working on mitigating actions."
+ },
+ {
+  "org": "Optimizely",
+  "date": "2026-06-17",
+  "url": "https://status.optimizely.com/incidents/wxmncnqk5ph6",
+  "name": "Email Campaign Delivery Drops \u2014 NA Region",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "This incident has been resolved. || We are continuing to monitor for any further issues. || We have deployed a fix to unblock affected customers and are actively monitoring the system to confirm stability. We are also working with our email vendor (SendGrid) to put a more complete solution in place on their side. Please note: during the period when emails were partially dropped, we do not have a record of which individual recipients successfully received messages. As a result, if you choose to re-run an affected campaign (e.g., by sending it to a new campaign), some recipients may receive duplicate emails. We will provide a further update as monitoring continues. || We have likely identified the root cause as a recent SendGrid change that introduced an incompatibility in header processing. We are sharing our findings with SendGrid and implementing a workaround to restore compatibility. || We are still looking into this issue and will provide updates as they become available. || We are continuing to investigate this issue. We also have a support thread open with Sendgrid. || We are investigating an issue causing some email campaign messages to be dropped in the North America region. Some emails are still being delivered. Accounts using email campaigns in the region may be affected. We will update as we learn more."
+ },
+ {
+  "org": "Optimizely",
+  "date": "2026-06-08",
+  "url": "https://status.optimizely.com/incidents/dpdflxnc0njq",
+  "name": "DAM Asset Renditions Unavailable (GCP)",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "|| A fix has been implemented for the issue affecting DAM asset renditions on the GCP stack. Affected: Optimizely Content Marketing Platform (CMP) \u2013 DAM / Asset Renditions Infrastructure: GCP-hosted customers only Impact: Image renditions unavailable; 'GET /v3/assets/{asset_id}/renditions' returning 500 We are actively investigating the root cause and will provide an update soon."
+ },
+ {
+  "org": "Optimizely",
+  "date": "2026-03-24",
+  "url": "https://status.optimizely.com/incidents/zhxxkb1062k9",
+  "name": "CMP and DAM: Image loading and uploads not working due to Cloudflare outage",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "This incident has been resolved. || A fix has been implemented and the reported issue, along with all associated symptoms, should now be resolved. Images should load and upload as expected, and public links should function normally. We will continue to monitor the situation following the release of this solution to ensure stability is maintained. We apologise for any disruption caused and thank you for your patience throughout this incident. || We are currently aware of an issue affecting image loading and uploading across the CMP and DAM. This is caused by an ongoing Cloudflare outage that has impacted our image server. In addition, inconsistent behaviour has been reported with public links. We are monitoring this as part of the same incident. Our Product Development Engineering team is actively working on a temporary solution. We will share further details, including a release timeline, as soon as they are available. We apologise for the disruption this may cause and appreciate your patience while we work to resolve this."
+ },
+ {
+  "org": "Optimizely",
+  "date": "2026-09-02",
+  "url": "https://status.optimizely.com/incidents/79yvvvt18wjh",
+  "name": "CMP and DAM are inaccessible",
+  "sev": "Critical",
+  "cat": "other",
+  "pm": false,
+  "text": "|| A fix has been implemented and we're currently monitoring the results. || Our Engineering teams have identified the root cause of the disruption affecting CMP and DAM. A fix is being actively implemented, and restoring full service remains our highest priority. We will provide a further update as soon as service has been restored."
+ },
+ {
+  "org": "Optimizely",
+  "date": "2026-02-06",
+  "url": "https://status.optimizely.com/incidents/m5264996rhgp",
+  "name": "Asset Visibility Issues in CMP DAM",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "The incident has been resolved. || A targeted fix has been deployed, and the affected functionality is now operating as expected. Our teams are closely monitoring the system to ensure continued stability. Additional updates will be shared if needed. || We are currently investigating an issue affecting the visibility of assets within CMP DAM for a subset of customers. This includes assets uploaded directly as well as those added through task completion. Our Engineering team is actively working to identify the root cause and restore normal functionality as quickly and safely as possible. We will continue to provide updates here as more information becomes available. Thank you for your patience while we work to resolve this matter."
+ },
+ {
+  "org": "Optimizely",
+  "date": "2026-09-20",
+  "url": "https://status.optimizely.com/incidents/mqg71ycp1ww1",
+  "name": "CMP: Data Not Loading in Plan, Resources, Library, and Other Modules (GCP Stack)",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "|| A fix has been implemented and we're now monitoring the results. || The issue has been identified and a fix is being implemented || We are currently investigating an issue affecting the Optimizely Content Marketing Platform (CMP), where data is failing to load across multiple modules \u2014 including Plan, Resources, and Library \u2014 for a subset of customers on the GCP stack. Our Engineering team has been engaged and is actively investigating the root cause."
+ },
+ {
+  "org": "Optimizely",
+  "date": "2026-04-07",
+  "url": "https://status.optimizely.com/incidents/ghqk59bpt47s",
+  "name": "Experiment Publishing Delay",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved. || We identified and resolved an issue that caused delays when publishing Web Experimentation changes. Some customers may have experienced experiments remaining in a processing state during this window. The publishing queue is now actively processing and clearing a backlog of pending changes. Experiments that were affected should complete automatically. We are continuing to monitor to confirm full resolution. || We are investigating an issue where changes to Web Experimentation projects may experience delays when publishing. Our team is actively working on a resolution."
+ },
+ {
+  "org": "Optimizely",
+  "date": "2026-06-02",
+  "url": "https://status.optimizely.com/incidents/ftpnbmwgsqvn",
+  "name": "Investigating \u2013 Content Recommendation Service Degradation in EMEA region",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "The incident is resolved. || We continue to monitor the service. || A fix has been implemented and we are closely monitoring the results. || We are currently investigating an issue affecting the Content Recommendation service in EMEA region. Due to an API disruption, we are unable to serve recommendations at this time. Users may notice missing or unavailable recommendations across the platform. Our team is actively investigating the issue and working to restore full functionality as quickly as possible. We will provide updates as more information becomes available. Thank you for your patience!"
+ },
+ {
+  "org": "Optimizely",
+  "date": "2026-08-12",
+  "url": "https://status.optimizely.com/incidents/1wdqds3f5srx",
+  "name": "CMP: PDF File Preview Generation Unavailable",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved. || A fix has been implemented and we are monitoring the results. || We have identified a platform-wide issue affecting PDF file preview generation within the Content Marketing Platform (CMP). Users attempting to preview PDF assets in the Library may encounter an error and be unable to view document previews. Our Engineering team has identified the root cause and is actively working on a resolution. Your files are safe and no data loss has occurred. We will continue to provide updates as we make progress toward a fix. Thank you for your patience."
+ },
+ {
+  "org": "Optimizely",
+  "date": "2026-03-27",
+  "url": "https://status.optimizely.com/incidents/8byknfz408sw",
+  "name": "Events Export API",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved. || The issue affecting the Events Export API has been resolved and we will continue to monitor the improvement. || We are aware of an issue affecting the Events Export API, which is causing some requests to this endpoint to return errors. Our team has identified the root cause and is actively working on a resolution. No event data collection is impacted by this issue, only the ability to generate temporary export credentials is affected. We will provide updates as the fix progresses. We apologize for the inconvenience."
+ },
+ {
+  "org": "Optimizely",
+  "date": "2026-03-04",
+  "url": "https://status.optimizely.com/incidents/9sb1dhbjyn1s",
+  "name": "Search and Navigation US West - Unstable service performance",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "Resolved. No further impacts have been observed, and all systems remain nominal. || The issue have been fixed. We identified it was a minor subset of customers impacted. We continue to monitor the service. || We are currently investigating an event that is impacting the availability on the Search & Navigation (FIND) service in the US West region. A subset of clients will be experiencing high latency or 5xx-errors and failed requests. We will post additional updates hourly or when we have information available. Thank you for your patience."
+ },
+ {
+  "org": "Optimizely",
+  "date": "2026-07-23",
+  "url": "https://status.optimizely.com/incidents/h57yx58h86ff",
+  "name": "Login results in 429 error",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "The disruption with our identify provider has been resolved. Thank you for your patience with this issue. || We have identified an issue stemming from a disruption with our identity provider. We are seeing some improvement as we work to mitigate the problem and we continue to work with them on a full resolution. || We're aware of an issue affecting access to some products, caused by a disruption with our identity provider (Okta). We're engaged with Okta support and working to restore service. Updates to follow as soon as possible."
+ },
+ {
+  "org": "Optimizely",
+  "date": "2026-06-04",
+  "url": "https://status.optimizely.com/incidents/flk1tw4vlxhw",
+  "name": "OCP Job Scheduler Failure due to Internal Certificate Expiry",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "A partial outage affected OCP Job Scheduler, where scheduled jobs across multiple apps failed to execute due to an expired certificate in the env\u2011injector mutating webhook, in the US region only. This prevented required environment variables from being injected into workloads, causing job failures. Non-job features (e.g., configuration, webhooks) remained functional. No data loss occurred, and all affected jobs caught up after the issue was resolved, though customers may have experienced delays (e.g., stale audience syncs)"
+ },
+ {
+  "org": "Plaid",
+  "date": "2026-07-22",
+  "url": "https://status.plaid.com/incidents/01KY55B2DWMRTG7QCC4Z5RZ1KX",
+  "name": "Transaction Updates Delayed",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "The underlying issue has been fully mitigated, and all delayed default update webhooks have now been delivered. || The third-party provider issue has been mitigated and recovery is progressing. || We are again experiencing delays in Transactions update webhooks due to a recurrence of the third-party service provider issue that caused the earlier degradation. We are working closely with the provider to mitigate the issue and restore normal processing as quickly as possible. We are actively investigating and working to mitigate this issue. We are actively investigating and working to mitigate this issue. We are actively investigating and working to mitigate this issue. We are actively investigating and working to mitigate this issue. We are actively investigating and working to mitigate this issue."
+ },
+ {
+  "org": "Plaid",
+  "date": "2026-07-27",
+  "url": "https://status.plaid.com/incidents/01KYJ6TD1C6KBAE2VSZ17Z9XEW",
+  "name": "Virtual Account perfomance degradation (UK and Europe)",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "This incident has been resolved. Our services have returned to normal operations. || We are observing improved performance and services are returning to normal operations. We are closely monitoring our systems as we recover. || The incident is ongoing and we are working with our partner to restore service. You may continue to see issues with Refunds and Payouts. Settlement webhooks for pay-ins are also impacted. || We have identified the root cause of the issue and are actively working to mitigate the impact. This is also impacting payments transitioning to SETTLED status. || We are currently experiencing elevated error rates for Payouts/Refunds API calls. We are actively investigating and working to mitigate this issue."
+ },
+ {
+  "org": "Plaid",
+  "date": "2026-08-05",
+  "url": "https://status.plaid.com/incidents/01KZ7Q0NVCNJTN06Z3SKSTH1VW",
+  "name": "Delayed Capital One Transactions Updates",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "All Delayed Transactions have now been fully processed. || We've addressed the underlying cause and are currently monitoring for the resolution. || We have identified the root cause of the issue and are actively working to mitigate the impact. || We have identified the root cause of the issue and are actively working to mitigate the impact. || We are investigating delayed transaction updates affecting a subset of Capital One Items. Affected Items remain healthy; the impact is limited to delayed refresh of transaction data."
+ },
+ {
+  "org": "Plaid",
+  "date": "2026-07-23",
+  "url": "https://status.plaid.com/incidents/01KY8B3W34RGZVA3ZYEBXWC9S3",
+  "name": "Transfer Status Upates Delays",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "All impacted ACH and Same-day ACH transfers's status have been updated to posted. They will be marked as settled later today. || Transfer is experiencing delays affecting status updates for some Standard ACH and Same-Day ACH transfers created yesterday. Impacted Transfers were successfully settled on ACH network. Transfer creation and new payment processing are operating normally. We've identified the root cause and are actively addressing it and will update this incident as it is resolved."
+ },
+ {
+  "org": "Pulumi",
+  "date": "2026-04-20",
+  "url": "https://status.pulumi.com/incidents/xt4d22bv4jdw",
+  "name": "Elevated errors when decrypting ESC environments",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "Overall, 3.32% of decrypt-attempt requests across Pulumi Cloud failed due to this issue. If this secret's ciphertext was copied from a different environment, copy and paste the plaintext instead.\u201d This change was intended as a security improvement, but the customer impact was higher than expected, so the change was rolled back."
+ },
+ {
+  "org": "Pulumi",
+  "date": "2025-09-08",
+  "url": "https://status.pulumi.com/incidents/n5dx76jjr2wx",
+  "name": "Issue displaying some previews in Pulumi Cloud",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "The issue affecting previews in Pulumi Cloud has been resolved. Previews are functioning normally again. Please note that affected previews during the incident window (between 11pm UTC Sept 7, 2025 and 7pm UTC Sept 8, 2025) were not recoverable and will not be available in your history. || We\u2019ve identified the root cause of the preview display issues in Pulumi Cloud and are actively rolling out a fix. Thanks for your patience \u2014 we\u2019ll share another update once the rollout is complete. || We are currently experiencing issues with displaying some previews in Pulumi Cloud. Our team is actively investigating the problem and working toward a resolution. We will provide updates as soon as more information is available."
+ },
+ {
+  "org": "Pusher",
+  "date": "2024-03-30",
+  "url": "https://status.pusher.com/incidents/vlzq9jb3518k",
+  "name": "Service Disruption Notice: Pusher US2 Cluster",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "The incident was triggered by a single, high volume customer sending requests that was causing an authentication error. Due to the exceptionally high number of errors, the logging system was overwhelmed, and caused all writing to the log system to backlog on our socket processes. We identified this issue and took steps to mitigate, attempting to switch off non-critical components of the system to alleviate stress on the system. Eventually it was clear that these steps were having little impact and we deployed a hotfix to disable the error logging system. During the deployment of this hotfix the system hit a limit on the amount of registered targets on our cloud provider\u2019s load balancer. This caused the rolling deployment to take much longer than expected, as it waited for old socket processes to be fully drained and terminated. After coordination with our cloud provider we were able to increase this limit, allowing the deployment to complete and the incident was resolved."
+ },
+ {
+  "org": "Pusher",
+  "date": "2025-04-09",
+  "url": "https://status.pusher.com/incidents/l560ltx8877f",
+  "name": "Interruption in Stats Collection and Degraded Datadog Integration",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "The backlog has fully cleared and Stats Collection and Datadog integration are now operating normally. This incident is now resolved. We apologise for any inconvenience caused and appreciate your patience throughout. || Systems are now catching up on the backlog, and Realtime Stats and Datadog integration should gradually return to normal. We are continuing to monitor the recovery closely and will provide another update once the catch-up is fully complete. || The issue affecting Stats Collection and the Datadog integration has been identified and addressed. Systems are now catching up on the backlog, and Realtime Stats and Datadog integration should gradually return to normal. We are continuing to monitor the recovery closely and will provide another update once the catch-up is fully complete. Thank you for your continued patience. || We are currently experiencing an issue affecting our stats collection systems. As a result, Realtime Stats are currently unavailable. Additionally, our Datadog integration is experiencing degraded performance. Our engineering team is actively investigating the root cause and working to restore normal service as quickly as possible. We will provide updates as we learn more. Thank you for your patience and understanding."
+ },
+ {
+  "org": "Pusher",
+  "date": "2025-10-27",
+  "url": "https://status.pusher.com/incidents/xjtjhxb5yyb3",
+  "name": "AP1 cluster - Socket connection failures",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved. || All services are now fully operational. We continue to monitor the cluster. || We observed unusual activity on the cluster, likely caused by at least one customer experiencing a cyber attack. Our team is mitigating the issue while simultaneously increasing cluster resources to minimize impact on other customers. The cluster availability is returning to normal. We continue to monitor closely. || A fix is implemented. We are seeing improvements and continue to actively monitor the situation to ensure full stability. During the incident, many clients successfully connected using fallback protocols. || We are currently experiencing disruptions with socket connections in AP1 cluster, which began at 10:00 UTC. Clients may experience reconnections. Our team is actively investigating the issue and working to restore full connectivity as quickly as possible."
+ },
+ {
+  "org": "Pusher",
+  "date": "2026-01-22",
+  "url": "https://status.pusher.com/incidents/bqvnllp910k9",
+  "name": "Incorrect subscription changes affecting some accounts",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "All affected accounts have been restored to their correct subscription levels. We sent an email yesterday to all impacted customers. If you notice any issues with your subscription, please contact us. || We\u2019ve been made aware of an issue caused by our billing provider, Maxio, where a limited number of our customer accounts were incorrectly downgraded due to an incident on their side. We are actively working with Maxio to restore all affected accounts to their correct subscription levels."
+ },
+ {
+  "org": "Render",
+  "date": "2026-04-08",
+  "url": "https://status.render.com/incidents/1sjd0k0fstjs",
+  "name": "Disruption affecting the provisioning of new instances in Singapore and partially in Oregon",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "We've confirmed that our fix has addressed the issue and workloads are now scheduling normally in all regions. || Paid services are continuing to see recovery across builds and deploys. || We are continuing to work on a fix for this issue. || We are seeing some recovery following our mitigation efforts, but we are still working to identify the root cause for a long-term resolution. We are continuing to investigate and work to mitigate the issue. You may experience build/deploy failures."
+ },
+ {
+  "org": "Render",
+  "date": "2026-07-24",
+  "url": "https://status.render.com/incidents/l91ynhtm6b64",
+  "name": "Service Disruption in Oregon",
+  "sev": "Critical",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "This incident has now been resolved. || We believe the issue was caused by an upstream provider. We're continuing to monitor the situation. || We've observed recovery across all services and are now monitoring the situation. || We are investigating an infrastructure issue affecting services hosted in our Oregon region. Some services may be unreachable or experience failed requests. Our engineering team is actively working to identify the cause and restore normal operation."
+ },
+ {
+  "org": "Render",
+  "date": "2026-02-03",
+  "url": "https://status.render.com/incidents/3t82mc75sd1n",
+  "name": "Degraded deploys in Ohio and Virginia",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "We implemented updates to builds and deploys to improve handling of slow updates. As a result of these changes, build and deploy performance has recovered. || We are observing improved deploy performance and continue to monitor for any further issues. || A fix has been implemented and we are monitoring the results. || Deploys are experiencing degraded performance and may take longer to complete."
+ },
+ {
+  "org": "Rollbar",
+  "date": "2025-10-20",
+  "url": "https://status.rollbar.com/incidents/01K81EHQAYVKBWN9B29BRKNJ4Z",
+  "name": "Increased occurrence processing pipeline latency",
+  "sev": "Critical",
+  "cat": "other",
+  "pm": false,
+  "text": "|| Due to ongoing issues with some of the services we have applied additional changes to our applications, our pipeline is processing as normal but there may still be some lingering effects with the WEB interface. || We are still experiencing the effects of the AWS outage through some of our 3rd party services, we are continuing to investigate and apply mitigations around this whilst also ensuring that we maintain consistent and secure processes. || We have identified that some people are experiencing issues with the WEB Frontend this is also connected to the AWS impacts we are looking at how to mitigate this. || We are continuing to apply some mitigations but with the current work we can now see that our API is stable , we are just processing a backlog of other messaging that will be delayed in completing due to the volume. || We are working on mitigations that will get around some of the externally degraded services. We believe this is due to the ongoing issues with AWS that impact some of the other external services we use across our applications. We apologize for any inconvenience caused by this and will endeavor to do what we can to resolve this."
+ },
+ {
+  "org": "Rollbar",
+  "date": "2025-08-06",
+  "url": "https://status.rollbar.com/incidents/01K1YN34ZQX0MYBB87CPX9PV8V",
+  "name": "Increased occurrence processing pipeline latency",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "This incident is resolved. All Rollbar systems have been functioning normally for the past hour, and the cloud provider incident has also been resolved. || All Rollbar systems are performing normally and all pipeline backlogs have cleared. Our cloud provider's incident is still marked as open, so we are continuing to monitor. || We've implemented mitigations for this incident. Most Rollbar systems have recovered. Some pipeline aspects are working through backlogs. We're continuing to monitor the system as it recovers. || The current pipeline delay is caused by an incident at our cloud provider which is resulting in higher rates of packet loss within the private network. The pipeline is processing, but behind. We'll provide another update by 21:15 PDT. || We are experiencing a processing delay in our occurrence pipeline. We are investigating actively and will post when we have identified the issue."
+ },
+ {
+  "org": "Rollbar",
+  "date": "2026-05-09",
+  "url": "https://status.rollbar.com/incidents/01KR73SRSEHFXK80AAWGSWDW78",
+  "name": "Item Processing impact for RUBY and PHY SDKs ",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "Earlier today we identified and resolved an issue impacting customers using our PHP and Ruby SDKs. A backend API change deployed on Friday 5/8/26 ~2:30PM PT inadvertently broke request parsing for certain payloads sent with the Ruby and PHP SDKs. We rolled back the change this morning (5/9 at 8:30 am PT) and occurrence ingestion is back to normal."
+ },
+ {
+  "org": "Rollbar",
+  "date": "2025-05-27",
+  "url": "https://status.rollbar.com/incidents/01JW8T5NABP5A9VQDA30ZFA8SD",
+  "name": "Web degraded performance",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "This incident has been resolved, we apologize for any inconvenience during this time. || The third-party provider has deployed a fix, and it is currently propagating. We are monitoring the rollout and will confirm once full recovery is observed. Impacted features may begin to recover during this time. || We are currently experiencing degraded performance due to an issue with a third-party service we rely on. This is affecting our web experience. Our team is monitoring the situation and will provide updates as we learn more. We\u2019ll post the next update in 60 minutes or sooner if we have new information.\" || We are experiencing web performance degradation. We are investigating actively and will post when we have identified the issue."
+ },
+ {
+  "org": "Rollbar",
+  "date": "2026-04-08",
+  "url": "https://status.rollbar.com/incidents/01KNNKWYHXQSX0DFJNRH94G4J8",
+  "name": "Increased processing pipeline latency",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "This incident was resolved. Rollbar processing pipeline latency (measured at p99) was elevated above our 30-second p99 SLO today during the following windows: 02:02AM - 02:35AM PDT: 30s - 7.0 minutes latency 06:02AM - 07:03AM PDT: 30s - 3.9 minutes latency 08:00AM - 09:02AM PDT: 30s - 37.2 minutes latency 09:02AM - 09:52AM PDT: 30s - 23.1 minutes latency p50 stayed at SLO (~5s) during the entire time period, and no data was lost. The initial cause analysis is a particular traffic pattern. We're investigating the root cause to ensure the system is resilient to this traffic pattern going forward. || Rollbar processing pipeline latency (measured at p99) was elevated above our 30-second p99 SLO today beginning at 02:02AM PDT."
+ },
+ {
+  "org": "Rollbar",
+  "date": "2026-09-01",
+  "url": "https://status.rollbar.com/incidents/01M1ET0PSPE90F6GCA0XQYH1C2",
+  "name": "Widespread incident impacting multiple parts of our platform caused by an incident within our cloud provider",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "We believe everything is now back to normal , sorry for the inconvenience caused. || It appears that work has been done by our cloud provider which has resolved many of the issues we were experiencing but we will give this some more time while we monitor before resolving this issue. || We are currently experiencing an incident that is impacting multiple parts of the platform , we believe this is caused by an incident within our cloud provider. We are currently processing data but we are seeing some of our services such as WEB/API are potentially impacted. We will provide an update as we learn more about this issue, and we apologize for any inconvenience this might be causing."
+ },
+ {
+  "org": "Rollbar",
+  "date": "2025-06-12",
+  "url": "https://status.rollbar.com/incidents/01JXJRMCMP80AZ1F55N9FAYRES",
+  "name": "Service provider incident",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "This has now been resolved. Apologies for any inconvenience caused by this outage. || Services appear to be recovering and we are processing through the backlog of items. || We have received notification from one of our service providers indicating an issue that is impacting multiple parts of the platform, at this time we do appear to be processing items we receive however some items that rely on affected parts of the system may see a delay in processing. || We are currently experiencing an issue with our service provider, we are awaiting an update from them about this situation and will provide an update as soon as more information is available."
+ },
+ {
+  "org": "Sanity",
+  "date": "2026-09-22",
+  "url": "https://status.sanity.io/incidents/kv8k7b1nr8w6",
+  "name": "Elevated listener latency impacting Studio performance",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "The incident has been resolved. Further optimization work is planned as part of a broader effort. || We have identified the core issue and planning to roll out a set of updates to mitigate the problem. Studio performance should not be affected anymore. We are monitoring the incident now. || We have had another occurrence of listener latency. We are continuing to investigate the issue. || The issue should not affect the performance of any Studios anymore. We are continuing to investigate the issue. || We are currently continuing to investigate the issue. || We are currently investigating an issue where elevated listener latency may result in slower performance and lag within Sanity Studio for a small subset of customers. Our team is actively working to identify the root cause and mitigate the impact. Issue starting around 7:40 UTC. We\u2019ll provide further updates as more information becomes available."
+ },
+ {
+  "org": "Sanity",
+  "date": "2026-01-20",
+  "url": "https://status.sanity.io/incidents/llv2lf4y6h6s",
+  "name": "Elevated API and API CDN errors and latency for some customers",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "This incident has been resolved. || We've identified and mitigated root cause of the issue. Performance has been stable since 8:36 UTC (start of degraded performance at 7:52 UTC) with no elevated error rates. || We are continuing to investigate this issue. And making adjustments in our internal systems. || We are continuing to investigate this issue. || We are currently investigating an increase in API and API CDN errors and latency impacting a subset of customers. We are actively mitigating impact while working to identify the issue."
+ }
+]

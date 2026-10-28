@@ -1,0 +1,372 @@
+[
+  {
+    "issue": "SSL certificate expired",
+    "root_causes": ["Certificate not renewed on time", "Auto-renewal misconfigured", "Incorrect domain in certificate"],
+    "solutions": ["Renew certificate immediately", "Fix auto-renewal cron job", "Reissue certificate with correct domain"]
+  },
+  {
+    "issue": "Kubernetes pod stuck in CrashLoopBackOff",
+    "root_causes": ["Application startup failure", "Missing config maps or secrets", "Insufficient resource limits"],
+    "solutions": ["Check pod logs for errors", "Attach missing config maps and secrets", "Increase CPU and memory limits"]
+  },
+  {
+    "issue": "Database replication lag increasing",
+    "root_causes": ["Heavy write load on primary", "Replica server under-resourced", "Network bandwidth saturation"],
+    "solutions": ["Throttle write operations", "Upgrade replica hardware", "Increase network bandwidth"]
+  },
+  {
+    "issue": "WebSocket connections dropping frequently",
+    "root_causes": ["Load balancer timeout too short", "Server-side ping/pong misconfigured", "Network instability"],
+    "solutions": ["Increase LB idle timeout", "Configure heartbeat mechanism", "Investigate network path"]
+  },
+  {
+    "issue": "Redis out of memory errors",
+    "root_causes": ["No TTL set on keys", "Large value storage", "Insufficient memory allocated"],
+    "solutions": ["Set TTL on all cache keys", "Store references instead of large objects", "Increase Redis memory limit"]
+  },
+  {
+    "issue": "CI/CD pipeline taking too long",
+    "root_causes": ["No caching of dependencies", "Sequential jobs that could run in parallel", "Slow test suite"],
+    "solutions": ["Enable dependency caching", "Parallelize pipeline jobs", "Optimize or split test suite"]
+  },
+  {
+    "issue": "Data pipeline producing duplicate records",
+    "root_causes": ["Idempotency not implemented", "Retry logic without deduplication", "At-least-once delivery semantics"],
+    "solutions": ["Add unique constraint checks", "Implement idempotent processing", "Use exactly-once delivery where possible"]
+  },
+  {
+    "issue": "DNS resolution failures",
+    "root_causes": ["DNS server unreachable", "Incorrect DNS records", "DNS cache poisoning"],
+    "solutions": ["Switch to backup DNS server", "Fix DNS records", "Flush DNS cache"]
+  },
+  {
+    "issue": "JWT token validation failing",
+    "root_causes": ["Token signed with wrong secret", "Clock skew between services", "Algorithm mismatch"],
+    "solutions": ["Rotate and sync secrets", "Sync clocks with NTP", "Enforce consistent JWT algorithm"]
+  },
+  {
+    "issue": "GraphQL queries timing out",
+    "root_causes": ["N+1 query problem", "No query depth limit", "Expensive resolver logic"],
+    "solutions": ["Implement DataLoader for batching", "Set query depth and complexity limits", "Optimize resolver performance"]
+  },
+  {
+    "issue": "Mobile app crashing on launch",
+    "root_causes": ["Missing permissions at runtime", "Incompatible native module version", "Null pointer dereference on init"],
+    "solutions": ["Request required permissions properly", "Update or downgrade native dependency", "Add null checks in initialization code"]
+  },
+  {
+    "issue": "Cloud storage bucket inaccessible",
+    "root_causes": ["IAM permissions revoked", "Bucket policy misconfigured", "Region mismatch in SDK config"],
+    "solutions": ["Restore IAM permissions", "Fix bucket policy", "Correct region in configuration"]
+  },
+  {
+    "issue": "Terraform apply failing",
+    "root_causes": ["State file locked by previous run", "Provider version conflict", "Resource limit exceeded in cloud account"],
+    "solutions": ["Force unlock the state file", "Pin compatible provider versions", "Request quota increase from cloud provider"]
+  },
+  {
+    "issue": "Load balancer not distributing traffic evenly",
+    "root_causes": ["Sticky sessions misconfigured", "Unhealthy instances not removed", "Incorrect balancing algorithm"],
+    "solutions": ["Review session affinity settings", "Fix health check configuration", "Switch to round-robin or least-connections"]
+  },
+  {
+    "issue": "Machine learning model returning poor predictions",
+    "root_causes": ["Training data drift", "Model not retrained after data changes", "Feature engineering bug in production"],
+    "solutions": ["Retrain model with fresh data", "Set up automated retraining pipeline", "Audit feature transformations in serving code"]
+  },
+  {
+    "issue": "Event streaming pipeline backpressure",
+    "root_causes": ["Consumer lag too high", "Topic partition count too low", "Consumer group rebalancing frequently"],
+    "solutions": ["Increase consumer count", "Add more partitions to topic", "Stabilize consumer group membership"]
+  },
+  {
+    "issue": "Microservice returning 503 Service Unavailable",
+    "root_causes": ["Downstream dependency unhealthy", "Circuit breaker tripped", "Service not registered in discovery"],
+    "solutions": ["Restore downstream service", "Reset or tune circuit breaker thresholds", "Re-register service in service registry"]
+  },
+  {
+    "issue": "Webhook deliveries failing silently",
+    "root_causes": ["Receiving endpoint returning non-2xx", "Payload signature mismatch", "Network firewall blocking outbound requests"],
+    "solutions": ["Fix endpoint to return 200 on receipt", "Verify webhook secret and signature logic", "Whitelist webhook IP ranges in firewall"]
+  },
+  {
+    "issue": "Object storage upload speed very slow",
+    "root_causes": ["Single-part upload for large files", "Client located far from storage region", "Egress bandwidth throttled"],
+    "solutions": ["Use multipart upload for large files", "Use region-local storage endpoint", "Request bandwidth limit increase"]
+  },
+  {
+    "issue": "Scheduled jobs not running",
+    "root_causes": ["Cron expression incorrect", "Job scheduler crashed", "Timezone misconfiguration"],
+    "solutions": ["Validate cron expression", "Restart job scheduler service", "Set explicit timezone in scheduler config"]
+  },
+  {
+    "issue": "Feature flag not applying correctly",
+    "root_causes": ["Flag targeting rules misconfigured", "SDK not initialized before use", "Cached flag state not refreshed"],
+    "solutions": ["Review and fix targeting rules", "Ensure SDK initializes before feature checks", "Force flag cache refresh"]
+  },
+  {
+    "issue": "API rate limit exceeded for external service",
+    "root_causes": ["No rate limit awareness in client code", "Multiple services sharing one API key", "Request volume spike"],
+    "solutions": ["Implement exponential backoff and retry", "Use separate API keys per service", "Cache responses to reduce request volume"]
+  },
+  {
+    "issue": "Authentication tokens not refreshing",
+    "root_causes": ["Refresh token expired", "Token refresh endpoint returning error", "Client not handling 401 properly"],
+    "solutions": ["Re-authenticate user", "Debug and fix refresh endpoint", "Add 401 interceptor with refresh logic"]
+  },
+  {
+    "issue": "CORS errors on API requests from browser",
+    "root_causes": ["Missing or incorrect CORS headers", "Preflight request rejected", "Credentials not allowed in CORS config"],
+    "solutions": ["Add correct Access-Control headers", "Allow OPTIONS method in server config", "Set credentials: true in CORS policy"]
+  },
+  {
+    "issue": "Memory usage growing after each request",
+    "root_causes": ["Event listeners not removed", "Global state accumulating data", "Database connection not closed after use"],
+    "solutions": ["Remove event listeners on cleanup", "Clear or scope global state properly", "Use connection pooling with proper lifecycle"]
+  },
+  {
+    "issue": "Elasticsearch index not searchable",
+    "root_causes": ["Indexing pipeline failure", "Shard allocation failure", "Index mapping conflict"],
+    "solutions": ["Rerun indexing pipeline", "Fix shard allocation settings", "Delete and recreate index with correct mapping"]
+  },
+  {
+    "issue": "CI test suite failing intermittently",
+    "root_causes": ["Flaky tests with timing dependencies", "Shared mutable state between tests", "External service dependency in unit tests"],
+    "solutions": ["Identify and fix or quarantine flaky tests", "Isolate test state with setup/teardown", "Mock external dependencies"]
+  },
+  {
+    "issue": "Unauthorized access to protected endpoints",
+    "root_causes": ["Missing authentication middleware", "Role-based access control misconfigured", "Insecure direct object reference vulnerability"],
+    "solutions": ["Add auth middleware to all protected routes", "Audit and fix RBAC rules", "Validate object ownership before returning data"]
+  },
+  {
+    "issue": "Docker build failing in CI",
+    "root_causes": ["Base image not available", "Network issues during package install", "Build context too large"],
+    "solutions": ["Pin base image version or use local registry mirror", "Add retry logic for package installation", "Add .dockerignore to reduce build context"]
+  },
+  {
+    "issue": "Notification service sending duplicate alerts",
+    "root_causes": ["Deduplication logic missing", "Multiple instances processing same event", "Alert condition evaluated multiple times"],
+    "solutions": ["Add alert deduplication key", "Use distributed lock for alert processing", "Add cooldown period per alert rule"]
+  },
+  {
+    "issue": "VPN connection dropping randomly",
+    "root_causes": ["MTU mismatch causing packet fragmentation", "ISP-level interference", "Keepalive not configured"],
+    "solutions": ["Lower MTU size on VPN interface", "Switch VPN protocol", "Enable keepalive packets"]
+  },
+  {
+    "issue": "Data export timing out",
+    "root_causes": ["Exporting too much data in one request", "No streaming or pagination", "Query lacks proper index"],
+    "solutions": ["Paginate export in smaller chunks", "Stream data instead of loading all at once", "Add index on export query fields"]
+  },
+  {
+    "issue": "Mobile push notifications not delivered",
+    "root_causes": ["Invalid device token", "APNs or FCM credentials expired", "App in background with notification permission denied"],
+    "solutions": ["Refresh and validate device tokens", "Rotate APNs/FCM credentials", "Prompt user to re-enable notifications"]
+  },
+  {
+    "issue": "Database table lock causing writes to block",
+    "root_causes": ["Long-running read transaction holding lock", "Bulk update without batching", "Missing index causing full table scan during update"],
+    "solutions": ["Kill long-running transactions", "Batch large updates into smaller chunks", "Add index to reduce scan scope"]
+  },
+  {
+    "issue": "Terraform state file corrupted",
+    "root_causes": ["Concurrent apply operations", "Manual edits to state file", "Storage backend write failure during apply"],
+    "solutions": ["Restore from last known good state backup", "Enable state locking via DynamoDB or equivalent", "Avoid manual edits to state file"]
+  },
+  {
+    "issue": "API documentation out of sync with implementation",
+    "root_causes": ["Docs updated manually and missed", "No automated doc generation", "Breaking changes shipped without doc update"],
+    "solutions": ["Adopt OpenAPI spec as source of truth", "Generate docs from code annotations", "Add doc update check to PR review checklist"]
+  },
+  {
+    "issue": "Microservice deployment causing cascading failures",
+    "root_causes": ["No canary or blue-green strategy", "Downstream services tightly coupled", "Incompatible API contract change"],
+    "solutions": ["Use canary deployment strategy", "Add circuit breakers and fallbacks", "Enforce backward-compatible API versioning"]
+  },
+  {
+    "issue": "Ingress controller returning 404 for valid routes",
+    "root_causes": ["Ingress rule path mismatch", "Service selector not matching pod labels", "Namespace mismatch in Ingress definition"],
+    "solutions": ["Fix path and rewrite rules in Ingress spec", "Align service selector with pod labels", "Ensure Ingress and Service are in same namespace"]
+  },
+  {
+    "issue": "Sensitive data exposed in application logs",
+    "root_causes": ["No log sanitization", "Request body logging enabled", "Debug mode left on in production"],
+    "solutions": ["Add log masking for sensitive fields", "Disable request body logging or redact PII", "Disable debug mode in production config"]
+  },
+  {
+    "issue": "High number of 5xx errors after code release",
+    "root_causes": ["Unhandled exception in new code path", "Misconfigured environment variables", "Database schema migration not applied"],
+    "solutions": ["Rollback release", "Verify environment variables against expected config", "Apply pending migrations before deployment"]
+  },
+  {
+    "issue": "Cost spike in cloud billing",
+    "root_causes": ["Unused resources not cleaned up", "Auto-scaling set too aggressively", "Data transfer charges from cross-region calls"],
+    "solutions": ["Audit and delete unused resources", "Tune auto-scaling thresholds", "Colocate services to reduce cross-region traffic"]
+  },
+  {
+    "issue": "User data not syncing across devices",
+    "root_causes": ["Sync conflict resolution logic broken", "Offline queue not flushing", "Backend rejecting out-of-order sync events"],
+    "solutions": ["Fix conflict resolution strategy", "Debug and clear offline sync queue", "Add sequence numbering to sync events"]
+  },
+  {
+    "issue": "gRPC calls failing with deadline exceeded",
+    "root_causes": ["Default timeout too short", "Downstream service slow", "Network packet loss causing retransmission delay"],
+    "solutions": ["Increase client deadline per call", "Profile and optimize downstream service", "Investigate network path for packet loss"]
+  },
+  {
+    "issue": "Secrets leaking via environment variables",
+    "root_causes": ["Secrets hardcoded in deployment manifests", "Env vars logged on startup", "Third-party library printing env on error"],
+    "solutions": ["Use secrets manager and mount at runtime", "Filter env vars from startup logs", "Audit third-party library logging behavior"]
+  },
+  {
+    "issue": "OAuth2 authorization code flow broken",
+    "root_causes": ["Redirect URI mismatch", "Authorization code already used", "State parameter not validated"],
+    "solutions": ["Register correct redirect URIs in OAuth provider", "Ensure auth code is single-use and not cached", "Validate state parameter against session"]
+  },
+  {
+    "issue": "Service mesh sidecar injection not working",
+    "root_causes": ["Namespace not labeled for injection", "Sidecar injector webhook failing", "Pod annotation to disable injection set incorrectly"],
+    "solutions": ["Label namespace with injection annotation", "Debug and fix mutating webhook", "Remove or correct sidecar disable annotation"]
+  },
+  {
+    "issue": "Batch job failing halfway through",
+    "root_causes": ["No checkpointing implemented", "Resource exhaustion mid-run", "Unhandled error on specific record"],
+    "solutions": ["Add checkpoint and resume logic", "Increase job resource allocation", "Add error handling and dead-letter queue for failed records"]
+  },
+  {
+    "issue": "Configuration drift between environments",
+    "root_causes": ["Manual config changes not tracked", "No config-as-code practice", "Different team members managing different environments"],
+    "solutions": ["Use IaC tools for all config changes", "Store config in version control", "Implement environment parity checks in CI"]
+  },
+  {
+    "issue": "Network latency between services in different AZs",
+    "root_causes": ["Services unnecessarily spread across AZs", "No topology-aware routing", "High chattiness between services"],
+    "solutions": ["Colocate dependent services in same AZ", "Enable topology-aware load balancing", "Reduce inter-service call frequency with batching or caching"]
+  },
+  {
+    "issue": "Search autocomplete returning stale suggestions",
+    "root_causes": ["Suggestion index not updated", "Cache TTL too long", "Index update job failing silently"],
+    "solutions": ["Rebuild suggestion index", "Reduce cache TTL for suggestions", "Add alerting on index update job failures"]
+  },
+  {
+    "issue": "SQS message processing out of order",
+    "root_causes": ["Standard queue used instead of FIFO", "Multiple consumers processing same queue", "Message visibility timeout too short causing re-delivery"],
+    "solutions": ["Switch to FIFO queue for ordering guarantees", "Use single consumer or partition by key", "Increase visibility timeout to processing time"]
+  },
+  {
+    "issue": "API gateway returning 429 Too Many Requests to own services",
+    "root_causes": ["Internal services miscounted as external traffic", "Rate limit thresholds set too low", "Shared rate limit across multiple clients"],
+    "solutions": ["Whitelist internal service IPs from rate limiting", "Raise thresholds based on traffic analysis", "Implement per-client rate limit keys"]
+  },
+  {
+    "issue": "Application startup time too slow",
+    "root_causes": ["Heavy initialization logic on startup", "Synchronous loading of all modules", "Connecting to external services before health check passes"],
+    "solutions": ["Defer non-critical initialization", "Use lazy module loading", "Make external connections asynchronous and non-blocking"]
+  },
+  {
+    "issue": "Health check endpoint reporting false positives",
+    "root_causes": ["Health check too shallow — only checks HTTP, not dependencies", "Readiness and liveness probes not differentiated", "Health check response cached"],
+    "solutions": ["Add dependency checks to health endpoint", "Separate readiness and liveness probes", "Disable caching on health endpoint"]
+  },
+  {
+    "issue": "Monitoring alerts firing too frequently with false alarms",
+    "root_causes": ["Alert thresholds set too low", "No alert suppression or grouping", "Transient spikes triggering sustained alerts"],
+    "solutions": ["Tune thresholds based on baseline data", "Implement alert grouping and silencing", "Add evaluation window before alerting"]
+  },
+  {
+    "issue": "New users unable to complete registration",
+    "root_causes": ["Email verification link broken", "Form validation blocking valid inputs", "Race condition in user creation flow"],
+    "solutions": ["Fix email verification link generation", "Review and fix validation regex", "Add transaction or lock to user creation"]
+  },
+  {
+    "issue": "Report generation failing for large date ranges",
+    "root_causes": ["Query not paginated", "Timeout before query completes", "Memory exhausted loading full result set"],
+    "solutions": ["Paginate report query", "Use background job for large reports", "Stream results to output instead of buffering"]
+  },
+  {
+    "issue": "Mobile app consuming excessive battery",
+    "root_causes": ["Background polling too frequent", "GPS location updates not throttled", "Wakelock held unnecessarily"],
+    "solutions": ["Switch to push notifications instead of polling", "Use lower accuracy location mode and throttle updates", "Release wakelock after task completes"]
+  },
+  {
+    "issue": "Multi-tenancy data isolation breach",
+    "root_causes": ["Missing tenant ID filter in queries", "Shared cache keys across tenants", "Row-level security not enforced"],
+    "solutions": ["Add tenant ID to all data access queries", "Namespace cache keys by tenant", "Enforce row-level security policies at DB level"]
+  },
+  {
+    "issue": "CDN serving outdated content after deployment",
+    "root_causes": ["Long cache TTL on static assets", "No cache-busting in asset filenames", "CDN invalidation not triggered post-deploy"],
+    "solutions": ["Reduce TTL or set immutable cache with versioned filenames", "Add content hash to asset filenames", "Automate CDN cache invalidation in deployment pipeline"]
+  },
+  {
+    "issue": "Deadlock in database transactions",
+    "root_causes": ["Two transactions locking resources in opposite order", "Long-held locks due to slow application logic", "Missing index causing full-table lock"],
+    "solutions": ["Enforce consistent lock ordering across transactions", "Reduce transaction scope and duration", "Add appropriate index to minimize lock scope"]
+  },
+  {
+    "issue": "Event sourcing replay producing incorrect state",
+    "root_causes": ["Event schema changed without versioning", "Events processed out of order during replay", "Snapshot state inconsistent with events"],
+    "solutions": ["Implement event schema versioning and upcasting", "Enforce ordering by event sequence number during replay", "Validate and rebuild snapshots from scratch"]
+  },
+  {
+    "issue": "Third-party OAuth provider tokens not accepted",
+    "root_causes": ["Provider changed token format", "Token audience claim mismatch", "Certificate used to verify token rotated"],
+    "solutions": ["Update token parsing logic to match new format", "Set correct audience in token validation", "Fetch latest provider JWKS from discovery endpoint"]
+  },
+  {
+    "issue": "Helm chart deployment failing",
+    "root_causes": ["Values file missing required fields", "Chart version incompatible with cluster version", "Previous release stuck in failed state"],
+    "solutions": ["Fill in all required values", "Update chart to compatible version", "Run helm rollback or delete failed release"]
+  },
+  {
+    "issue": "Microservice not recovering after dependency restarts",
+    "root_causes": ["No retry logic on connection failure", "Hard-coded connection object not refreshed", "Service not watching for dependency health changes"],
+    "solutions": ["Add retry with backoff on startup connections", "Use lazy connection initialization", "Implement dependency health polling and reconnection"]
+  },
+  {
+    "issue": "Analytics data showing incorrect metrics",
+    "root_causes": ["Event tracking firing multiple times per action", "Timezone handling inconsistency in aggregation", "Incorrect join logic in reporting query"],
+    "solutions": ["Deduplicate event tracking on client side", "Normalize all timestamps to UTC before aggregation", "Audit and fix join conditions in report query"]
+  },
+  {
+    "issue": "Slow cold start on serverless functions",
+    "root_causes": ["Large deployment package size", "Importing unused modules", "Database connection setup inside handler"],
+    "solutions": ["Reduce package size with tree shaking", "Remove unused imports and dependencies", "Initialize DB connection outside handler at module level"]
+  },
+  {
+    "issue": "SSH access to server locked out",
+    "root_causes": ["IP not in security group allowlist", "SSH key rotated without updating authorized_keys", "Too many failed login attempts triggering fail2ban"],
+    "solutions": ["Add correct IP to security group", "Update authorized_keys with new public key", "Unban IP in fail2ban and investigate cause"]
+  },
+  {
+    "issue": "Database migration stuck in pending state",
+    "root_causes": ["Previous migration failed and left lock", "Migration tool waiting on long-running query to finish", "Incompatible migration in multi-node deploy"],
+    "solutions": ["Clear migration lock table", "Kill blocking query and re-run migration", "Use online schema change tool for zero-downtime migrations"]
+  },
+  {
+    "issue": "Inconsistent API responses between service instances",
+    "root_causes": ["In-memory state not shared between instances", "Different versions of service running simultaneously", "Local config overrides differ per instance"],
+    "solutions": ["Move shared state to external store (Redis, DB)", "Ensure rolling deploy completes before routing traffic", "Centralize config and remove local overrides"]
+  },
+  {
+    "issue": "Audit logs missing for certain actions",
+    "root_causes": ["Audit logging not added to new code path", "Log sink failing silently", "Log filtering too aggressive"],
+    "solutions": ["Audit code paths and add missing log statements", "Monitor and alert on log sink health", "Review and loosen log filter rules"]
+  },
+  {
+    "issue": "Kubernetes persistent volume claim stuck in Pending",
+    "root_causes": ["No storage class defined", "Insufficient storage capacity in cluster", "Node selector not matching available nodes with storage"],
+    "solutions": ["Define default storage class", "Expand storage capacity or use dynamic provisioning", "Fix node selector or tolerations in pod spec"]
+  },
+  {
+    "issue": "Real-time dashboard not updating",
+    "root_causes": ["WebSocket connection not established", "Server-sent events stream timing out", "Client-side subscription dropped silently"],
+    "solutions": ["Debug and re-establish WebSocket connection", "Increase SSE timeout or add reconnection logic", "Add client-side subscription health monitoring"]
+  },
+  {
+    "issue": "A/B test results showing inconsistent user bucketing",
+    "root_causes": ["User ID not stable across sessions", "Bucketing algorithm non-deterministic", "Same user assigned to multiple experiment groups"],
+    "solutions": ["Use persistent user identifier for bucketing", "Use deterministic hashing for experiment assignment", "Add mutual exclusion logic between experiments"]
+  }
+]

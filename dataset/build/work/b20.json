@@ -1,0 +1,402 @@
+[
+ {
+  "org": "Trello",
+  "date": "2026-02-21",
+  "url": "https://status.trello.com/incidents/bjmg234ll6zs",
+  "name": "Trello Slow or down for users",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "Impact Trello users are experiencing issues with websocket connections, leading to difficulties in maintaining active sessions. Affected users may notice disruptions in service as connections are intermittently dropping. Current Status Efforts are underway to restore normal service. Teams are actively engaged in identifying the best path to full resolution. Next Steps The incident team is focusing on pinpointing the root cause and implementing necessary fixes. The next communication will be shared in 30 minutes. || Impact Trello users are experiencing issues with websocket connections, leading to difficulties in maintaining active sessions. Affected users may notice disruptions in service as connections are intermittently dropping. Current Status Efforts are underway to restore normal service. Teams are actively engaged in identifying the best path to full resolution. Next Steps The incident team is focusing on pinpointing the root cause and implementing necessary fixes. The next communication will be shared in 30 minutes."
+ },
+ {
+  "org": "Trello",
+  "date": "2025-03-05",
+  "url": "https://status.trello.com/incidents/vxzvm5tdhdwq",
+  "name": "Trello Realtime Updates are degraded",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "Between to , we experienced realtime update functionality degraded performance for Trello. We have mitigated the problem and are investigating the root cause. The issue has been resolved and the service is operating normally. || Between to , we experienced realtime update functionality degraded performance for Trello. We have mitigated the problem and are investigating the root cause. We are now monitoring closely. || We are continuing our investigation on realtime updates that is impacting all Trello Cloud customers. We will provide more details within the next hour. || We are still investigating realtime update errors that is impacting most Trello Cloud customers. We will provide more details within the next hour. || We are investigating cases of degraded performance for SOME Trello Cloud customers. We will provide more details within the next hour."
+ },
+ {
+  "org": "Trello",
+  "date": "2024-09-25",
+  "url": "https://status.trello.com/incidents/58r3l27hnb7g",
+  "name": "Email to Board feature isn't working as expected for some customers",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "On September 25th, we identified a temporary outage with the Email-to-Board feature. || On Sept 25 we identified that our email-to-board feature was failing for some users. We have taken action to mitigate this issue and we will continue to monitor for the next 30 minutes before marking the incident as resolved. || We've identified the issue that caused the issues with the Email-to-Board feature not working correctly, and we're now working on a fix for the problem and will provide a new update here soon."
+ },
+ {
+  "org": "Trello",
+  "date": "2025-06-25",
+  "url": "https://status.trello.com/incidents/37kjfdm8q5xb",
+  "name": "Issues affecting user syncing, Atlassian Administration",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "Between 07:40 UTC and 10:31 UTC, we experienced issues affecting user syncing in Atassian Administration. This affected Confluence, Jira Work Management, Jira Service Management, Jira, Trello, and Guard. The issue has been resolved and the service is operating normally. || We have identified the root cause of the issue and have mitigated the problem. We are now monitoring closely. || We continue to work on resolving the user syncing functionality for Confluence, Jira Work Management, Jira Service Management, Jira, Trello, and Guard. We have identified the root cause and expect recovery shortly. || We are investigating reports of errors loading Users and Groups pages in Atlassian Administration, and errors affecting user IDP syncing. We will provide more details once we identify the root cause."
+ },
+ {
+  "org": "Trello",
+  "date": "2024-07-09",
+  "url": "https://status.trello.com/incidents/k0x32kxc5ppx",
+  "name": "Some users may experience delays in receiving email notifications",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "Between 12:00am 9th July to 08:00am 10th July, we experienced email deliverability issues for some recipient domains for Confluence, Jira Work Management, Jira Service Management, Jira, Trello, Atlassian Bitbucket, and Jira Product Discovery. The issue has been resolved and future emails will flow normally. || We continue to work on resolving the Email Notifications for Confluence, Jira Work Management, Jira Service Management, Jira, Trello, Atlassian Bitbucket, and Jira Product Discovery. We have identified the root cause. || We are investigating reports of intermittent errors whilst sending Email Notifications for Confluence, Jira Work Management, Jira Service Management, Jira, Trello, and Jira Product Discovery Cloud customers. We will provide more details once we identify the root cause."
+ },
+ {
+  "org": "Trello",
+  "date": "2024-07-25",
+  "url": "https://status.trello.com/incidents/nz23zc08jkfx",
+  "name": "Issue with search and moving cards for some users",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "We\u2019re currently working on implementing a fix, and a new update will be shared soon. We will provide more details once we identify the root cause || We are investigating reports of intermittent errors for some Trello customers when moving cards between boards or searching for cards. We will provide more details once we identify the root cause."
+ },
+ {
+  "org": "Trello",
+  "date": "2024-07-03",
+  "url": "https://status.trello.com/incidents/3s5sgfn9qtfr",
+  "name": "Some products are hard down",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "Between 03-07-2024 20:08 UTC to 03-07-2024 20:31 UTC, we experienced downtime for Trello. The issue has been resolved and the service is operating normally. || We have mitigated the problem and continue looking into the root cause. The outage was between 8:08pm 03/07 UTC - 08:31pm 03/07 UTC We are now monitoring closely. || We are investigating an issue with that is impacting Atlassian, Atlassian Partners, Atlassian Support, Confluence, Jira Work Management, Jira Service Management, Jira, Opsgenie, Atlassian Developer, Atlassian (deprecated), Trello, Atlassian Bitbucket, Guard, Jira Align, Jira Product Discovery, Atlas, Atlassian Analytics, and Rovo Cloud customers. We will provide more details within the next hour."
+ },
+ {
+  "org": "Trello",
+  "date": "2023-11-10",
+  "url": "https://status.trello.com/incidents/m1pqvkhrnkbv",
+  "name": "Trello is down",
+  "sev": "Critical",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "We want to let you know that the changes we made on our side fixed all the connection issues our users were experiencing with Trello, and all services are functional right now. || The changes we released have fixed the connection issues our users were experiencing when connecting to Trello. || We've identified the root cause of the issue, and we made some adjustments, which should bring Trello's functionalities back soon. || We are continuing to work on a fix for this issue."
+ },
+ {
+  "org": "Trello",
+  "date": "2024-02-28",
+  "url": "https://status.trello.com/incidents/zf2v2vn3tq5s",
+  "name": "Investigating new product purchasing",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "Between 28th Feb 2024 23:15 UTC to 29th Feb 2024 00:05 UTC, we experienced issue with new product purchasing for all products. All new sign up products have been successfully provision and confirmed issue has been resolved and the service is operating normally. || We are investigating an issue with new product purchasing that is impacting for all products. Customers adding new cloud products may have experienced a long waiting page or an error page after attempting to add a product. We have mitigated the root cause and are working to resolve impact for customers who attempted to add a product during the impact period. We will provide more details within the next hour."
+ },
+ {
+  "org": "Trello",
+  "date": "2024-06-20",
+  "url": "https://status.trello.com/incidents/fdbxzjph0969",
+  "name": "Intermittent error accessing content",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "Between 2024-06-20 22:04 UTC to 2024-06-20 22:28 UTC, we experienced intermittent issue for users to access the services for some Atlassian Cloud customers. The issue has been resolved and the service is operating normally. || We have identified the root cause of the intermittent errors and have mitigated the problem. We are now monitoring closely. || We are investigating an intermittent issue with accessing Atlassian Cloud services that is impacting some Atlassian Cloud customers. We will provide more details once we identify the root cause."
+ },
+ {
+  "org": "Upstash",
+  "date": "2026-05-29",
+  "url": "https://status.upstash.com/incidents/m8gkgvvc6lgn",
+  "name": "Intermittent slowness in Vector US-EAST-1 region",
+  "sev": "Medium",
+  "cat": "memory_leak",
+  "pm": false,
+  "text": "We mitigated those conditions by reducing memory utilization on the impacted nodes, rebalancing affected workloads where needed, and increasing available headroom capacity across the region. All affected indexes should now be operating normally, and based on the mitigations applied, we do not expect this issue to recur. || A fix has been implemented and we are monitoring the results. Our team is actively investigating the root cause and working to restore normal performance."
+ },
+ {
+  "org": "Upstash",
+  "date": "2026-05-14",
+  "url": "https://status.upstash.com/incidents/cfrqjwdyrr4v",
+  "name": "Upstash Redis \u2013 intermittent connection issues in some regions",
+  "sev": "High",
+  "cat": "database_issue",
+  "pm": false,
+  "text": "Connection health has since been restored and we've been monitoring the regions to confirm everything is stable. || A fix has been implemented and we are monitoring. || The issue has been identified and a fix is being implemented. || We identified intermittent connection issues affecting some regions. Fix is being deployed."
+ },
+ {
+  "org": "Upstash",
+  "date": "2025-09-09",
+  "url": "https://status.upstash.com/incidents/hb3f9b5m8ph1",
+  "name": "Temporary Database Routing Issue",
+  "sev": "Medium",
+  "cat": "database_issue",
+  "pm": false,
+  "text": "Root Cause: During an ongoing migration to improve database routing reliability, a configuration step was applied inconsistently across regions. Resolution: Our monitoring alerted us within minutes, and the migration was promptly rolled back for the affected regions. Service definitions were restored, and normal database connectivity resumed by 15:08 UTC."
+ },
+ {
+  "org": "Vercel",
+  "date": "2026-05-18",
+  "url": "https://www.vercel-status.com/incidents/0pl74z9tcpmk",
+  "name": "Increased Function Invocation Errors - ERR_MODULE_NOT_FOUND",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "Some deployments created between May 18, 2026, 06:15 PM - 10:16 PM UTC may have experienced increased ERR_MODULE_NOT_FOUND function invocation errors due to a bad rollout. Deployments created outside of this window are unaffected. The fix is being rolled out to existing deployments retrospectively and is expected to finish in the next few hours. || A fix is rolled out for the function invocation errors affecting React Router 7 deployments. To recover, redeploy your application or use Instant Rollback to a previous deployment from the dashboard. || We're continuing to work on rolling out a fix. In the mean time, customers may use Instant Rollback to a previous deployment version as an immediate workaround in order to recover. || The issue has been identified and a fix is being implemented. || We're investigating an issue where customers are currently experiencing application failures due to function invocation errors when using React Router 7."
+ },
+ {
+  "org": "Vercel",
+  "date": "2026-07-10",
+  "url": "https://www.vercel-status.com/incidents/458cy54l4d6d",
+  "name": "Erroneous budget notifications",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "We have unpaused all impacted deployments. || We are still working to unpause affected teams that were erroneously paused due to the spend management budget miscalculation. || We've compiled a list of deployments that were paused due to this incident and are now unpausing them in batches. If your deployment was paused, you can also navigate to the Vercel dashboard and click the unpause button in the banner. || We've identified and fixed the underlying issue. Our team is now unpausing deployments that were inadvertently paused as a result. || We've identified an issue where some customers may receive erroneous spend management budget notifications due to a spend management budget miscalculation. Affected teams with spend management budgets configured to pause projects may also experience paused deployments."
+ },
+ {
+  "org": "Vercel",
+  "date": "2026-07-08",
+  "url": "https://www.vercel-status.com/incidents/lf0pm7scd74x",
+  "name": "Delays Processing Builds",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved. || The issue affecting build queue processing has been resolved, and build queues have returned to normal. Builds are now processing as expected. We are continuing our internal root cause analysis. || Build queues have returned to normal levels, and build processing should be restored. We are monitoring to ensure the service remains stable. We will provide additional updates as they become available. || We are seeing signs of recovery and the affected build queue has started to drain. Some customers may continue to experience delayed build starts or builds stuck in an initializing state while recovery continues. We will provide additional updates as they become available. || We've identified an issue where some customers may experience delays in builds starting and/or builds stuck in an initializing state. We are currently investigating this issue and will provide additional updates as they become available."
+ },
+ {
+  "org": "Vercel",
+  "date": "2026-05-23",
+  "url": "https://www.vercel-status.com/incidents/jmrsg4wcbtnn",
+  "name": "Elevated Build Failures (GitHub connected projects)",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "Please refer to GitHub's status page post for more details: https://www.githubstatus.com/incidents/k5z4d1v1tqmt || GitHub has implemented a fix, and we are monitoring the results. Failures are intermittent \u2014 if your deployment fails, redeploying should resolve it in the meantime. Some deployments triggered by GitHub commits might have seen git-related errors in failed build logs. CLI deployments are unaffected at this time."
+ },
+ {
+  "org": "Vercel",
+  "date": "2026-06-19",
+  "url": "https://www.vercel-status.com/incidents/3h7jsmmrljwt",
+  "name": "Resolved: Elevated ERR_STREAM_PREMATURE_CLOSE errors in Vercel Functions",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "Those versions contain an upstream regression that breaks response streaming for node-fetch@2, which caused the errors https://github.com/nodejs/node/issues/63989 We have resolved the issue by reverting to the previous Node.js version. We will re-land the Node.js upgrade once the upstream issue is fixed."
+ },
+ {
+  "org": "Vercel",
+  "date": "2026-07-16",
+  "url": "https://www.vercel-status.com/incidents/nw8xv7ypn7y0",
+  "name": "SAML Single Sign-On (SSO) errors",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": false,
+  "text": "This incident has been resolved. || The root cause of the SAML Single Sign-On (SSO) errors has been identified and a fix has been implemented. We are seeing error rates decrease. Users should be able to login with SAML/SSO or access their SSO-protected teams through the Vercel dashboard and CLI again. We are continuing to monitor. || We are investigating SAML Single Sign-On (SSO) errors, leading to inability to login using SAML/SSO or access SSO-protected teams through the Vercel dashboard and CLI."
+ },
+ {
+  "org": "Vimeo",
+  "date": "2025-10-20",
+  "url": "https://status.vimeo.com/incidents/s5z5h5741ct9",
+  "name": "AI and Create services unavailable",
+  "sev": "Critical",
+  "cat": "other",
+  "pm": false,
+  "text": "|| We are currently experiencing technical difficulties with our AI and Create services due to an issue with one of our third-party service providers. || We are currently experiencing technical difficulties with our AI services due to an issue with one of our third-party service providers. || The issue has been identified and a fix is being implemented."
+ },
+ {
+  "org": "Webflow",
+  "date": "2026-04-14",
+  "url": "https://status.webflow.com/incidents/kdtchw1lvsfv",
+  "name": "[RESOLVED] Reports of intermittent 5xx errors on some hosted sites and issues accessing Webflow services",
+  "sev": "High",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "By 16:21 UTC on April 14th, the issue was mitigated for the overwhelming majority of customers (~96%). For a full timeline, details on root cause and action items, you can refer to the following blog post prepared by our CTO, Allan Leinwand: webflow.com/blog/april-14-webflow-incident-report We know this incident caused serious disruption, and sincerely appreciate your patience while we worked to resolve it. || We\u2019re continuing to monitor the situation following the fix implemented in coordination with an upstream provider. || A fix has been implemented in coordination with an upstream provider, and we\u2019re no longer seeing customer impact related to this issue. || We have made further progress in mitigating this issue, and at this time only a small number of sites remain impacted."
+ },
+ {
+  "org": "Webflow",
+  "date": "2025-07-28",
+  "url": "https://status.webflow.com/incidents/0xg8xq3l0h0q",
+  "name": "Service disruption impacting the Dashboard, Webflow application and some form submissions",
+  "sev": "Critical",
+  "cat": "database_issue",
+  "pm": false,
+  "text": "Our CEO, Linda, has shared a document that provides an overview of the incident that is available for review via the following link: https://webflow.com/blog/july-2025-webflow-availability-incident Additionally, our CTO, Allan, has prepared a technical breakdown of root causes, which also includes a breakdown of service disruption timing: https://webflow.com/blog/july-28-webflow-incident-report || Performance across all of our services remains stable. At the same time, our team remains focused on: - Expanding internal observability to provide more actionable insights to support root cause analysis - Offloading specific backend workloads to alternative resources, easing system load and improving overall performance New signups continue to be temporarily paused, and access to the Marketplace is unavailable. In parallel, our team is continuing work to: - Expand internal observability to provide more actionable insights that support the ongoing root cause analysis for our provider - Offlo"
+ },
+ {
+  "org": "Webflow",
+  "date": "2025-10-20",
+  "url": "https://status.webflow.com/incidents/t0q4jjjdc5qk",
+  "name": "[RESOLVED] Reports of errors on hosted sites, publishing, and loading the Webflow Dashboard",
+  "sev": "High",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "Following a sustained period of stability across these systems, we\u2019ve confirmed that normal functionality has been fully restored. We understand the disruption this outage caused and sincerely appreciate your patience while we and our upstream provider implemented mitigations. || We\u2019re continuing our mitigation efforts to restore publishing functionality and resolve remaining 500 and 504 errors on hosted sites. These efforts are progressing alongside ongoing mitigations reported by our upstream provider. || We\u2019ve identified that the 500 and 504 errors on hosted sites were caused by an issue with an upstream provider that disrupted Webflow functionality. Our team is actively working on mitigations to restore stability across all affected services. To support these mitigation efforts and prevent additional errors, publishing remains temporarily disabled at this time. Our team is working urgently to identify the root cause and restore full functionality. || Note: This update was delayed because the incident affected our ability to post to the status page."
+ },
+ {
+  "org": "Webflow",
+  "date": "2026-02-10",
+  "url": "https://status.webflow.com/incidents/vcbsg6r5t0h7",
+  "name": "[RESOLVED] Reports of form notification emails not being delivered",
+  "sev": "Critical",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "Due to an issue with an upstream provider, Form submission notification emails were not processed as expected between 21:30 February 10th - 21:30 February 11th (UTC). || Form notification email functionality is now restored and our upstream provider are now processing these emails as expected. || We\u2019ve identified that this behaviour is arising due to an issue with an upstream provider."
+ },
+ {
+  "org": "Webflow",
+  "date": "2026-09-21",
+  "url": "https://status.webflow.com/incidents/q37mhqrkgtyq",
+  "name": "[RESOLVED] Reports of form submission notification emails not being delivered for some customers",
+  "sev": "Critical",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "This incident is now resolved. Form submission notification emails were impacted between 00:46 UTC on September 21 and 15:33 UTC on September 22. New form submissions are now triggering notification emails as expected. During this time, form submissions continued to be received and saved as expected, and webhook delivery was unaffected. Notification emails that were not delivered during the affected timeframe will not be delivered retroactively. Affected customers can review submissions from this timeframe via: - the Forms tab in Site settings - the data_forms MCP tool - the Form Submissions API endpoints We appreciate your patience while we worked with our upstream provider to resolve this issue. || There is no longer active customer impact, and form submission notification emails are now being delivered as expected. During this incident, notification email delivery was impacted for some customers. Form submissions continued to be received and saved in Site settings as expected, and webhook delivery was unaffected. Our team is continuing to monitor the situation closely. We appreciate your patience while we worked through this issue. || We\u2019ve identified that this behaviour is arising due to an issue with an upstream provider. We\u2019re actively working with them to resolve the issue and restore delivery of form notification emails as soon as possible. Form submissions themselves are not impacted. In the meantime, Form submissions can still be reviewed via the Forms tab in Site s"
+ },
+ {
+  "org": "Webflow",
+  "date": "2025-08-25",
+  "url": "https://status.webflow.com/incidents/zdq7jx84c6z7",
+  "name": "[RESOLVED] Reports of issues accessing the Dashboard and webflow.com",
+  "sev": "Critical",
+  "cat": "authentication",
+  "pm": false,
+  "text": "Access to the Dashboard and Webflow.com has been fully restored, and this incident is now resolved. The issue was caused by a third-party tracker on webflow.com. || Access to the Dashboard and Webflow.com has been restored, and customers should now be able to log in normally. Our engineering team is actively working on a fix to restore full access."
+ },
+ {
+  "org": "Webflow",
+  "date": "2026-03-31",
+  "url": "https://status.webflow.com/incidents/3y96dzlhxpz8",
+  "name": "[RESOLVED] Reports of issues viewing custom domains in the publishing modal for some customers",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "A fix has been implemented, and we\u2019re no longer seeing customer impact related to this issue. || A fix has been implemented for the issue where custom domains were not appearing as expected in the publishing modal for a small number of customers. || We\u2019ve identified the root cause of this issue and are making progress toward a fix. || We\u2019ve identified the root cause of the issue impacting a small number of customers where custom domains may not appear as expected in the publishing modal. Our team is actively working on implementing a fix."
+ },
+ {
+  "org": "Webflow",
+  "date": "2025-10-21",
+  "url": "https://status.webflow.com/incidents/bqz1n3jhcv6t",
+  "name": "[Resolved] Publishing, webhook delivery failures, and delays in form actions",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "|| A fix has been implemented for the issue affecting publishing, webhook delivery (API), and related form Actions. Our team is implementing a fix to restore normal functionality, and we\u2019ll provide another update once recovery is confirmed. Our team is actively investigating the root cause and working to restore normal functionality across all affected services as quickly as possible."
+ },
+ {
+  "org": "Webflow",
+  "date": "2025-08-08",
+  "url": "https://status.webflow.com/incidents/hhf4hcj7fjmd",
+  "name": "CDN assets not loading as expected in the Designer and hosted sites for customers in Singapore",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "We\u2019ve verified the fix implemented by the third-party provider, and asset requests are now functioning as expected. || The root cause of the issue has been addressed by the required third-party. || We have identified the root cause of the issue and are currently working with the required third-party stakeholders to resolve the issue as soon as possible."
+ },
+ {
+  "org": "Webflow",
+  "date": "2025-09-30",
+  "url": "https://status.webflow.com/incidents/0q0tkm39wxg5",
+  "name": "Reports of form notification emails not being received",
+  "sev": "High",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "This incident has been resolved following a fix from our upstream provider. || A fix has been implemented by our upstream provider, and we are actively monitoring to ensure that form notification emails are being delivered as expected. || Our upstream provider is continuing to work on a fix for this issue, and we are sharing updates as new information becomes available. || We have identified that some form notification emails are not being delivered due to an issue with an upstream provider. This correlates with an ongoing with an Incident that our upstream mail provider is facing, but we are working diligently to validate the root cause and will share another update as soon as possible."
+ },
+ {
+  "org": "Webflow",
+  "date": "2026-03-02",
+  "url": "https://status.webflow.com/incidents/t84031v054np",
+  "name": "[RESOLVED] Reports of issues purchasing or upgrading plans",
+  "sev": "Medium",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "Between 07:20 UTC and 12:40 UTC, some customers were unable to complete purchases for new plans due to an issue with one of our upstream providers. They have since identified the root cause and implemented a fix. || Our upstream provider has implemented a fix and we are now seeing recovery. || Our upstream provider is continuing to work on a fix for this issue. || We\u2019ve identified that the root cause of these errors is due to issues with an upstream provider, and they are working urgently to restore their services as soon as possible. Our team is actively working to identify the root cause and restore this functionality as quickly as possible."
+ },
+ {
+  "org": "Webflow",
+  "date": "2026-07-02",
+  "url": "https://status.webflow.com/incidents/c9n7tdd322v5",
+  "name": "[RESOLVED] Reports of latency loading some hosted sites and issues provisioning SSL certificates",
+  "sev": "Medium",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "Between approximately 00:00 UTC and 04:05 UTC, some hosted sites experienced slower loading times and SSL certificates took longer than expected to provision due to an issue with an upstream provider. || Our upstream provider has implemented a fix, and we\u2019re seeing hosted site loading times and SSL certificate provisioning return to expected performance levels."
+ },
+ {
+  "org": "Webflow",
+  "date": "2026-05-18",
+  "url": "https://status.webflow.com/incidents/nrxlqd7d0tsy",
+  "name": "[RESOLVED] Reports of issues publishing for some customers",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "Publishing functionality has remained stable following the mitigation work completed earlier, and we\u2019re no longer seeing customer impact related to this issue. || We implemented a fix for the publishing issues impacting some customers and are now seeing publishing functionality operating as expected. We\u2019re beginning to see recovery in the publishing functionality while mitigation work continues. Our engineering team is actively working to identify the root cause and evaluate mitigation steps to restore normal publishing functionality."
+ },
+ {
+  "org": "Webflow",
+  "date": "2026-02-20",
+  "url": "https://status.webflow.com/incidents/1x9kmymwnyzy",
+  "name": "[RESOLVED] Reports of form notification emails not being delivered for some customers",
+  "sev": "Medium",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "Form notification emails were not delivered as expected between 14:15 and 16:41 UTC due to an issue with an upstream provider. || Form notification email functionality is now restored and our upstream provider are now processing these emails as expected. || We\u2019ve identified that form notification emails are not being delivered as expected for some customers, due to an issue with an upstream provider."
+ },
+ {
+  "org": "Webflow",
+  "date": "2025-10-02",
+  "url": "https://status.webflow.com/incidents/mtnnb69vq0f2",
+  "name": "[RESOLVED] Reports of downtime on some hosted sites",
+  "sev": "Medium",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "A small number of hosted sites were briefly affected due to an upstream provider issue, but services have remained stable following remediation. || The issue affecting a small number of hosted sites has been mitigated, and impacted services are now stable. || We have identified that a very small number of sites are currently returning 504 errors due to an issue with an upstream provider."
+ },
+ {
+  "org": "Webflow",
+  "date": "2026-07-19",
+  "url": "https://status.webflow.com/incidents/2pp0vjr1p5f1",
+  "name": "[RESOLVED] Reports of intermittent errors for hosted sites",
+  "sev": "High",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "After a period of monitoring, we can confirm our mitigation was successful and site performance has returned to expected levels. Our team has implemented mitigations and is continuing to monitor the situation closely. Our engineering team is working with urgency to identify the root cause and restore expected performance."
+ },
+ {
+  "org": "Webflow",
+  "date": "2026-07-28",
+  "url": "https://status.webflow.com/incidents/sr0yg8l5dhvf",
+  "name": "[RESOLVED] Reports of issues with outgoing Webhooks",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "Between 3:00 PM PT and 6:35 PM PT, customer-configured outbound webhooks were not being delivered as expected. This issue has now been resolved, and outbound webhook delivery is operating normally. Any form submissions received during this time were still successfully processed and remain available in the Forms tab within Site settings. || We have identified the issue affecting outgoing Webhooks. Customer-configured Webhooks are currently failing and are not being delivered as expected. Our engineering team is actively working to restore Webhook delivery. Forms and form notification emails are operating normally and are not impacted by this issue. We appreciate your patience and will share another update as soon as more information is available. || We're investigating reports that outbound webhooks are not being delivered as expected. Our team is actively investigating the issue and working to identify the root cause. Please note that Form submissions and Form email notifications continue to be received and can be reviewed in the Forms tab within Site settings. We'll share another update as soon as we have more information."
+ },
+ {
+  "org": "Webflow",
+  "date": "2026-02-18",
+  "url": "https://status.webflow.com/incidents/rf6jf7hl9l6w",
+  "name": "[RESOLVED] Reports of issues completing payments on some new plan purchases",
+  "sev": "Medium",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "Between 12:30 UTC and 13:45 UTC, some customers were unable to complete plan purchases due to an issue with an upstream provider. Our upstream provider has identified the root cause and confirmed recovery. Our team is actively investigating the issue and working to identify the root cause and will share another update as soon as we have more information."
+ },
+ {
+  "org": "Webflow",
+  "date": "2026-04-08",
+  "url": "https://status.webflow.com/incidents/ph5zl7qlgbc3",
+  "name": "[RESOLVED] Reports of CSS not loading for a very small number of hosted sites",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "A small number of hosted sites experienced an issue that affected how styles were published, which may have caused pages to appear without styling. We've identified and fixed this issue and all affected sites should be working as previously expected. We are further investigating to see if any additional action is needed. || We\u2019re investigating reports that CSS is not loading as expected for a very small number of sites. This may cause some pages to appear without styling for affected customers. Users with Per Page CSS enabled who published their site between 23:00\u201323:30 UTC may be affected. Some users have reported that disabling Per Page CSS and republishing their site temporarily restores expected behavior. Our team is actively investigating and working to identify the root cause. We\u2019ll share another update as soon as we have more information."
+ },
+ {
+  "org": "Webflow",
+  "date": "2025-08-20",
+  "url": "https://status.webflow.com/incidents/qj9npv2vwhtq",
+  "name": "Reports of issues loading some Hosted Sites",
+  "sev": "Medium",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "Webflow\u2019s third-party provider has resolved issues on their end, and Webflow is fully operational. No user action is required at this time. || Between 16:25 \u2013 16:50 UTC, fewer than 5% of Webflow-hosted sites experienced intermittent loading issues due to an upstream provider. The underlying issue has since been mitigated, and impacted sites are now loading normally. Our team is actively monitoring the situation to ensure stability. We\u2019ll provide another update if new information becomes available. || We\u2019ve identified the cause of intermittent issues affecting a subset of Webflow-hosted sites. The issue stems from a third-party provider, and we\u2019re working with them on a resolution. || Webflow is investigating reports of intermittent issues loading a small number of hosted sites, stemming from a third-party provider."
+ }
+]

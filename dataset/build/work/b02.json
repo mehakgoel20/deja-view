@@ -1,0 +1,402 @@
+[
+ {
+  "org": "Bitbucket",
+  "date": "2026-05-08",
+  "url": "https://status.bitbucket.org/incidents/hpkdy4vmq470",
+  "name": "Multiple Atlassian services are experiencing issues",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "* Between 00:22 and 06:08, an infrastructure incident in our hosting provider triggered an ingestion failure in our event processing pipeline. * By 18:48, Automation had processed their backlog of events that were created while processing **Automation** Between 00:22 and 02:50, customers with automation rules triggered by events originating from the prod-east region experienced a significant reduction in rule executions. During this window, event-triggered automation rules were not firing because the events that trigger them were not being delivered. Rule authoring, saving, and rules triggered manually, by schedules, or by webhooks were not affected. At 02:50, the event processing infrastructure failed over to an unaffected availability zone, restoring delivery of live events to Automation and allowing new event-triggered rules to begin executing normally. During the replay window, customers may have experienced automation rules executing later than expected, a small number of rules reaching daily processing limits due to compressed replay, and time-sensitive rules not completing as expected if internal timeout thresholds were exceeded. This affected automation rules triggered by Jira events, AI agent orchestration in Jira, notifications for issue updates and transitions, search indexing for newly created or modified issues, and event-driven integrations between Jira and other Atlassian products."
+ },
+ {
+  "org": "Bitbucket",
+  "date": "2025-10-20",
+  "url": "https://status.bitbucket.org/incidents/p20f40pt1rgv",
+  "name": "Atlassian Cloud Services impacted",
+  "sev": "Low",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "The service disruptions were triggered due to an [AWS DynamoDB outage](https://aws.amazon.com/message/101925/#:~:text=1%3A50%20PM.-,DynamoDB,-Between%2011%3A48) and further affected by subsequent failures in [AWS EC2](https://aws.amazon.com/message/101925/#:~:text=service%20disruption%20event.-,Amazon%20EC2,-Between%2011%3A48) and [AWS Network Load Balancer](https://aws.amazon.com/message/101925/#:~:text=service%20disruption%20event.-,Amazon%20EC2,-Between%2011%3A48) within the us-east-1 region. Products such as Jira and Confluence are deployed across multiple AWS regions. This disruption was caused by AWS's inability to allocate AWS EC2 instances and elevated errors in AWS Network Load Balancer \\(NLB\\). This disruption was caused by the regional frontend service entering an unhealthy state during this specific time interval. Unfortunately, a latent bug existed in the local fallback path."
+ },
+ {
+  "org": "Bitbucket",
+  "date": "2025-11-11",
+  "url": "https://status.bitbucket.org/incidents/xwqvgfv2wfqw",
+  "name": "Bitbucket availability degraded",
+  "sev": "Critical",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "The event was triggered by a code change that unintentionally impacted how we evaluate feature flags, impacting all customers. The incident was detected within 5 minutes by automated monitoring systems and mitigated by scaling multiple services and deploying a fix which put Atlassian systems into a known good state. ### **ROOT CAUSE** During a routine deployment, a code change had a negative impact on a component used for feature flag evaluation. To mitigate this issue the Bitbucket engineering team manually scaled up Git services. ### **ACTIONS TAKEN** Our team immediately began investigating the issue and testing various mitigations, including scaling the impacted services, in an effort to reduce the effects of the change. However, these efforts were unsuccessful due to an unexpected scaling limit imposed by our underlying hosting platform. To address this, the team scaled down certain services to reduce load on the platform, which allowed for the successful deployment of a fix and restoration of service. Once the fix was in place, healthy services were scaled back up to meet customer demand. * Implemented additional safeguards to detect and handle platform-imposed limits proactively during deployment and rollback scenarios."
+ },
+ {
+  "org": "Bitbucket",
+  "date": "2026-04-13",
+  "url": "https://status.bitbucket.org/incidents/fxr44q252yzj",
+  "name": "Users experiencing issues with login across Atlassian products",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": true,
+  "text": "The incident was mitigated within 40 minutes through manual intervention, and full service was restored by 06:29 UTC. ### **ROOT CAUSE** This incident had several contributing factors that combined to produce a failure that the system could not recover from without manual intervention. The incident was mitigated by manually scaling up the downstream identity service to provide sufficient capacity to absorb the amplified load."
+ },
+ {
+  "org": "Bitbucket",
+  "date": "2026-05-14",
+  "url": "https://status.bitbucket.org/incidents/j41b2v131b6y",
+  "name": "Users experiencing issues accessing multiple Atlassian products",
+  "sev": "Critical",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "The issue was caused by a race condition in our internal deployment orchestration platform during a routine rollback operation of a core identity service in the us-east region. The incident was detected within a minute by automated monitoring systems and mitigated in 56 minutes. This was caused by a core identity service in the us-east region becoming unavailable. ### **ROOT CAUSE** The incident was caused by a race condition in our internal deployment orchestration platform during a routine rollback operation of a core identity service in the us-east region. Atlassian is prioritizing the following actions to help prevent similar incidents in future: * **Refine deployment orchestration safeguards** * Harden our deployment platform to prevent similar race conditions or resulting capacity loss during a rollback operation. * Streamline mitigation steps when a service becomes unavailable in a region."
+ },
+ {
+  "org": "Bitbucket",
+  "date": "2026-03-06",
+  "url": "https://status.bitbucket.org/incidents/kp6zgtgk83mc",
+  "name": "Disrupted Bitbucket availability",
+  "sev": "Critical",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "This was caused by the Bitbucket application hitting a regional provisioning API rate limit with our hosting provider, preventing application workers from handling website traffic. The incident was detected within 1 minute by automated monitoring and mitigated by scaling systems down and then back up to full capacity which put Atlassian systems into a known good state. ### **ROOT CAUSE** The issue stemmed from a change to an internal deployment system that increased use of a platform credential service, hitting a quota with our hosting provider. This blocked Bitbucket services from deploying additional capacity because new application nodes request the credential service on startup and were rate limited. * Deploy Bitbucket services across multiple regions to reduce single-region failure risk."
+ },
+ {
+  "org": "Bitbucket",
+  "date": "2025-12-27",
+  "url": "https://status.bitbucket.org/incidents/466dz5g4jk3s",
+  "name": "Outbound Email, Mobile Push Notifications, and Support Ticket Delivery Impacting All Cloud Products",
+  "sev": "Critical",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "The issue was triggered when **TLS certificates used by Atlassian\u2019s monitoring infrastructure expired**, causing parts of our metrics pipeline to stop accepting traffic. All impacted services were fully restored by **05:20 UTC**, around **2.5 hours** after customer impact began. ### ROOT CAUSE The incident was caused by: 1. **Expired TLS certificates** on domains used by our monitoring and metrics infrastructure caused by **misconfigured DNS authorization record** which prevented automatic renewal."
+ },
+ {
+  "org": "Bitbucket",
+  "date": "2025-06-13",
+  "url": "https://status.bitbucket.org/incidents/52znkw8lmxsf",
+  "name": "Intermittent issues affecting Bitbucket cloud",
+  "sev": "Critical",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "This was caused by high resource usage on a core Bitbucket service\u2019s database, leading to an increase in query response times. The incident was detected within 6 minutes by monitoring and was fully mitigated by running scaling database capacity, running database maintenance operations, and removing a faulty read replica, which put Atlassian systems into a known good state. ### **ROOT CAUSE** The issue originated from a problem with query plan execution time on read replica instances."
+ },
+ {
+  "org": "Bitbucket",
+  "date": "2025-05-08",
+  "url": "https://status.bitbucket.org/incidents/z1lk6hmkp9gt",
+  "name": "Bitbucket has degraded performance",
+  "sev": "High",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "### Summary On May 8, 2025, at 3:26pm UTC, Bitbucket Cloud experienced website and API latency due to an overloaded primary database. The event was caused by a backfill job running from an internal Atlassian service, which triggered an excessive call volume of expensive queries and pressure on database resources. ### **Root cause** The issue was caused by an internal high-scale backfill job that triggered excessive load on certain API endpoints, which eventually impacted the database through resource-intensive queries and operations."
+ },
+ {
+  "org": "Bitbucket",
+  "date": "2025-01-21",
+  "url": "https://status.bitbucket.org/incidents/t5bcmddn4z26",
+  "name": "Bitbucket Cloud web, api, and Pipelines service outage",
+  "sev": "Low",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "The event was triggered by write contention in a high traffic database table. ### **ROOT CAUSE** The issue was caused by an increase in API traffic triggering write contention on a high-traffic table, resulting in increased CPU usage and degraded database performance. While we have several testing and preventative processes in place, this specific issue wasn\u2019t identified because the code path being triggered does not commonly experience this type of traffic."
+ },
+ {
+  "org": "Bitbucket",
+  "date": "2026-01-07",
+  "url": "https://status.bitbucket.org/incidents/bvc0xy1vlfgy",
+  "name": "Unable to reach bitbucket site",
+  "sev": "Critical",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "The event was caused by an unexpected load on a public API, causing long-running queries on a database which resulted in failed web and api requests. The incident was detected within three minutes by automated monitoring systems and mitigated by introducing stricter limits on the API for certain traffic, while taking manual actions on the impacted database, restoring Bitbucket to a healthy state. ### **ROOT CAUSE** The event was caused by an unexpected load on a public API. Although we have several testing and prevention processes, this issue went undetected because a specific request pattern on a public API was not tested against the traffic volume seen during the incident."
+ },
+ {
+  "org": "Bitbucket",
+  "date": "2025-02-11",
+  "url": "https://status.bitbucket.org/incidents/mb73p3vm5y5r",
+  "name": "Bitbucket has degraded performance",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "The event was triggered by a failure in our feature flagging service, which inadvertently blocked some users from core services. The incident was detected within eight minutes by automated monitoring and was resolved 45 minutes later once a change to a feature flag configuration had been fully deployed. ### **ROOT CAUSE** An upstream failure in a feature flagging service resulted in Bitbucket\u2019s application logic not working correctly. We are prioritizing the following improvement actions designed to avoid repeating this type of incident: * Fixing the root cause of the bug in our feature flag service * Improving Bitbucket\u2019s fallback mechanisms and handling of errors in feature flags * Improving test coverage and war gaming failures with core dependencies."
+ },
+ {
+  "org": "Bitbucket",
+  "date": "2024-09-09",
+  "url": "https://status.bitbucket.org/incidents/jfhrnk0m1jc9",
+  "name": "Unable to connect to Bitbucket Cloud via SSH",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "The incident was promptly identified through our monitoring systems, and our teams initiated response protocols to mitigate the issue. These customers experienced difficulties connecting via SSH due to the unintended blocking caused by a change in the IP allow list computation. ### **ROOT CAUSE** A change to IP allow list evaluation was incompatible with a new Bitbucket Cloud networking configuration. ### **REMEDIAL ACTIONS PLAN & NEXT STEPS** To restore the SSH service, the team quickly rolled back the release responsible for the IP allow list issue. We are prioritizing the following improvement actions to avoid repeating this type of incident: * Improve monitoring coverage of IP allowlisting; * Add additional tests and deployment validation checks for changes to IP allowlist configurations."
+ },
+ {
+  "org": "Bitbucket",
+  "date": "2025-07-01",
+  "url": "https://status.bitbucket.org/incidents/4mcg46242wz4",
+  "name": "Users experiencing errors attempting to load Bitbucket",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "This network misconfiguration caused a service outage until the rule was corrected at 04:35 UTC, restoring normal service operations. **Root Cause** The root cause of the incident was traced to a network ACL misconfiguration during a routine update. A race condition in the deployment software led to an inconsistent state. **Mitigators** To restore service, the team repaired the inconsistent network ACL configuration, recreated the missing network ACL rule, re-establishing connections to the affected file systems. **Actions** In response to the incident, we have implemented additional mechanisms to help prevent the inconsistent network configuration and better ensure the expected network ACL rules remain intact, including during deployment."
+ },
+ {
+  "org": "Box",
+  "date": "2026-05-06",
+  "url": "https://status.box.com/incidents/6wq3xnxtnflt",
+  "name": "[Critical] Issues with Multiple Box Services",
+  "sev": "Critical",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "The issue was caused by runtime saturation in a backend API service that had been gradually approaching its capacity limits over several weeks. We mitigated the issue by stopping the restart cycle, routing traffic to alternate paths, and increasing service capacity. It also reinforced the need for stronger end-to-end observability, clearer health-check visibility, and validated mitigation paths for service instability. * Runtime performance improvements \u2014 we identified and are implementing changes to the service framework that significantly reduce per-request overhead, providing more headroom against future saturation."
+ },
+ {
+  "org": "Box",
+  "date": "2025-12-16",
+  "url": "https://status.box.com/incidents/48t1p9xtd4tz",
+  "name": "[Critical] Issues with multiple Box services",
+  "sev": "Critical",
+  "cat": "concurrency_race_condition",
+  "pm": true,
+  "text": "It also introduced a distributed deadlock condition that prolonged our incident response and mitigation efforts. **Analysis** Between 11:11 AM PST and 1:38 PM PST, there was a production deployment of code that was aimed at gathering diagnostic information from our middleware service, in our ongoing efforts to improve system performance and resilience. Due to failure in the rollback procedure, we observed a significantly reduced capacity in our middleware service that eventually led to a distributed deadlock condition between critical databases. Box has made significant investments in reliability and mitigation measures. We restored middleware service capacity by 5:21 PM PST, but the deadlock condition persisted. After several lower-impact attempts to dislodge the deadlock were unsuccessful, we took a broader mitigation step and throttled all traffic at 6:54 PM PST. **Corrective Actions** Box has initiated the following corrective actions: * Complete the planned capacity increase to reduce the chance of similar deadlocks and shorten recovery time if they occur * Strengthen rollback safeguards so changes can be safely and reliably reverted, preventing a repeat of the rollback failure that triggered this incident Thank you again for being a valued Box customer."
+ },
+ {
+  "org": "Box",
+  "date": "2026-07-07",
+  "url": "https://status.box.com/incidents/40zm4w1j4fyc",
+  "name": "[Medium] Issues with Search service, Box Sign Templates and Metadata queries",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "We recently addressed an issue that affected Box Search and related Query functionality, including the Public APIs and Box Apps features that rely on them. We would like to take the opportunity to explain what happened and the steps we have taken to prevent it from happening again. On July 7, 2026 between 06:22 AM and 08:53 AM PT, some customers may have experienced elevated latencies and intermittent errors when using the Box Search and Query functionality. Public APIs for these features, Box Apps, Web App Search, and other functionalities that depends on Search and Query APIs were also impacted. This incident was caused by a sudden surge in indexing traffic that overwhelmed services in one of our subsystems, before they could be scaled up or rate limiting could kick in. We were able to remediate the issue by isolating the offending traffic and allowing the surge of indexing work to finish processing and drain. Regular traffic routing was restored once the affected infrastructure was healthy again. # **Analysis** This incident revealed an opportunity to improve how we protect our search indexing subsystem from sudden~~,~~ and concentrated surges of load. While our stateless services can quickly autoscale horizontally, our stateful systems cannot be scaled as quickly to handle sudden surges in load. We\u2019ve historically focused on query traffic driven load and over-provisioned to handle any increases in internally generated indexing load. This incident revealed that sudden and "
+ },
+ {
+  "org": "Box",
+  "date": "2026-07-23",
+  "url": "https://status.box.com/incidents/p8jg1sgbmk4n",
+  "name": "[Medium] Issues with Box Hubs",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "We were able to resolve the issue by rolling back the frontend application to the previous stable version, which fully restored access to Box Hubs. The regression was not caught before reaching production because pre-release automated tests were scoped to core application features and did not cover dependent page modules. * Improving staging environment alerting to surface potential regressions earlier in the release process, before changes are promoted to production."
+ },
+ {
+  "org": "Box",
+  "date": "2026-01-07",
+  "url": "https://status.box.com/incidents/nk46jrrlqdsr",
+  "name": "[Critical] Issues with Multiple Box Services",
+  "sev": "Critical",
+  "cat": "payment_processing",
+  "pm": true,
+  "text": "These issues were caused by a series of changes that triggered a request storm that overloaded our caching fleet. \u200c **Analysis** On January 6th, a new feature was deployed that increased the utilization of one of our cache backends. \u200c To resume normal operations, we deprioritized some background traffic to increase the capacity of our cache system, and rolled back the changes that were causing the elevated traffic."
+ },
+ {
+  "org": "Box",
+  "date": "2026-02-27",
+  "url": "https://status.box.com/incidents/hbkyb6npjb8w",
+  "name": "[Medium] Increased FTP 530 Captcha errors",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "The issue occurred due to a change in internal traffic routing which affected the Box FTP and SFTP services. The second routing change was identified as the root cause and reverted on February 27th at 12:49 PM PST. \u200c Our analysis determined that the root cause of this issue was a service that was added to the call stack in the new route. \u200c **Corrective Actions** Box has initiated the following corrective actions: * The service in question has been fixed to properly forward required rate limiting information."
+ },
+ {
+  "org": "Box",
+  "date": "2026-08-19",
+  "url": "https://status.box.com/incidents/nnsrr0wr5qpv",
+  "name": "[Medium] Issue with Microsoft Office Integration and Box Edit",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "\u200c The issue occurred after a deployment of a backend service that provides integration and platform functionality. The deployment introduced a regression that caused the service\u2019s performance to degrade under peak load, which led to client timeouts and errors. We restored functionality by reverting the deployment to a previous version. We are taking steps to reduce recurrence by improving our pre-release validation and deployment safeguards, including validating the performance of the service under load, improving observability, and making defensive changes to the affected service."
+ },
+ {
+  "org": "Box",
+  "date": "2026-05-22",
+  "url": "https://status.box.com/incidents/flg9088vj5bh",
+  "name": "[Medium] Issues with Box Drive",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": true,
+  "text": "We recently addressed issues affecting Box Drive login and Single Sign-On \\(SSO\\) configuration. We would like to take the opportunity to further explain these issues and the steps we have taken to keep them from happening in the future. Between 10:56 PM PDT on May 21, 2026 and 2:07 AM PDT on May 22, 2026, some users may have experienced difficulties while working in Box. During this time, enterprise customers with Intune Mobile Application Management \\(MAM\\) enabled experienced SSO login failures when attempting to access Box Drive, and administrators were unable to view, update, or manage SSO configurations in the Admin Console. The issue occurred as a result of an unintended configuration change where our primary, active identity provider administration console region was inadvertently flipped to passive mode. We were able to resolve the issue by restoring the primary administration console region back to active status, which immediately restored normal API and login flows. In addition, we are making updates to improve monitoring and alerting for related operational workflows to prevent similar issues from occurring in the future. **Analysis** The active and standby regions were unintentionally reversed, causing the live production region to be switched into standby mode. As a result, the administrative API, which was used in for Intune MAM login flow, began rejecting requests for customers using Intune MAM-protected accounts and temporarily blocked certain SSO management "
+ },
+ {
+  "org": "Box",
+  "date": "2026-07-14",
+  "url": "https://status.box.com/incidents/sqlxzk5v13d0",
+  "name": "[Medium] Issues with Box Relay",
+  "sev": "High",
+  "cat": "payment_processing",
+  "pm": true,
+  "text": "In addition, we are improving our automated testing, monitoring, and deployment safeguards to prevent similar issues from occurring in the future. \u200c **Corrective Actions** Box has initiated the following corrective actions: * Adding automated test coverage for this scenario to prevent similar regressions."
+ },
+ {
+  "org": "Box",
+  "date": "2026-07-16",
+  "url": "https://status.box.com/incidents/tq711b9h023x",
+  "name": "[Medium] Issues with Box Edit and Microsoft Office Online",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "We recently addressed issues affecting Open With integrations within Box. We would like to take this opportunity to further explain these issues and the steps we have taken to prevent them from reoccurring. Between 1:00 PM PDT and 2:40 PM PDT on July 16, 2026, some customers may have been unable to open or edit files using any Open With integration in the Box web application. During this period, affected files may have appeared unavailable or grayed out, and users may have encountered permission-related errors when launching an integration. Microsoft Office workflows, including Office Online in the browser and desktop editing through Box Edit, were among those impacted. The issue occurred after a recent service update unintentionally changed how integration workflows were handled, causing the product to return an empty set of available integration actions for affected files. We resolved the issue by reverting the service to the previously deployed version, after which service metrics and customer confirmations recovered. In addition, we are taking steps to reduce reoccurrence by improving testing, monitoring, and release practices for integration paths. # Analysis This incident highlighted opportunities to improve end-to-end testing for integration workflows and our automated detection process. The failure mode returned an empty action list rather than hard errors, which kept broad service-level signals near baseline and made the impact visible primarily through customer repo"
+ },
+ {
+  "org": "Box",
+  "date": "2025-12-17",
+  "url": "https://status.box.com/incidents/2vpq71t668t4",
+  "name": "[Major] Issues with Box Sign",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "The issue was caused by a missing schema, which was itself caused by a corrupted schema deployment. As we deliver new products, these schemas may occasionally need to be updated, and we have a standard process and pipeline to deploy these schema. As part of a project to upgrade our pipeline infrastructure, the schema deployment pipeline migrated to a new infrastructure. Once identified, the incompatible library was reverted to the previous version and the system resumed to normal. \u200c **Corrective Actions** Box has initiated the following corrective actions: * Introduce a schema validation step in the deployment pipeline so that incompatible schemas cannot be deployed * Enforce the environment promotion process as part of the schema deployment pipeline * Uplift the observability of the pipeline to enable more visibility around the different phases of the deployment process \u200c We are continuously working to improve Box and want to make sure we are delivering the best product and user experience we can."
+ },
+ {
+  "org": "Box",
+  "date": "2026-02-20",
+  "url": "https://status.box.com/incidents/7ws4ydyyxgrc",
+  "name": "[Minor] User May Encounter Issues Accessing Marketing Page box.com",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "We were able to restore service after the third-party re-advertised the affected network prefixes, at which point we safely re-enabled the dependent routing configuration, restoring normal service behavior. # Analysis This incident highlighted a dependency risk on third-party network prefix advertisement and revealed opportunities to improve early detection and customer-facing communication."
+ },
+ {
+  "org": "Box",
+  "date": "2026-03-19",
+  "url": "https://status.box.com/incidents/z5kwthjc2c7h",
+  "name": "[Medium] Issues with Logins, Folder and File Preview, and Shared Links",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "In addition, we are strengthening safeguards in our deployment and rollback processes to prevent similar issues from occurring in the future. **Corrective Actions** Box has initiated the following corrective actions: * **Strengthen deployment validation and gating mechanisms**: We are implementing stricter automated checks to verify artifact integrity, version correctness, and configuration alignment at each stage of the pipeline, ensuring only validated and approved builds can be promoted to production. * **Standardize and reinforce rollout and rollback procedures**: We are establishing consistent, well-documented deployment and rollback workflows with automated safeguards and audit trails to ensure reliable reversibility and prevent incorrect artifact promotion during release operations."
+ },
+ {
+  "org": "Box",
+  "date": "2026-06-10",
+  "url": "https://status.box.com/incidents/51dltrh13zzn",
+  "name": "[Medium] Issue with Multiple Box Services",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": true,
+  "text": "**Corrective Actions** Box has initiated the following corrective actions: * Rebalancing the resource allocations of the authentication service to accommodate higher traffic volumes * Tuning server timeouts across Public API components to ensure consistent, predictable API response times * Establishing processes and automation to reduce time to mitigation We are continuously working to improve Box and want to make sure we are delivering the best product and user experience we can."
+ },
+ {
+  "org": "Box",
+  "date": "2025-10-29",
+  "url": "https://status.box.com/incidents/b86lj6nth68s",
+  "name": "[Major] Issues with Downloads, Preview, Box Notes and Box Sign",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "The issue was caused by a disruption with one of our third-party cloud partners. \u200c **Analysis** This issue was triggered by a maintenance operation at one of our third-party cloud providers. Because impact during this issue was limited to US cloud regions, Box Zones customers were not impacted."
+ },
+ {
+  "org": "Box",
+  "date": "2026-06-03",
+  "url": "https://status.box.com/incidents/hmldgmrlw7vw",
+  "name": "[Critical] Issues with Multiple Box Services",
+  "sev": "Critical",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "The issue was caused by a temporary fluctuation in a database shard due to elevated disk activity, which led to connection saturation and service errors for a subset of users. # Analysis As part of our routine system maintenance, we deployed standard software updates to our infrastructure. While Box utilizes redundant database replicas to ensure high availability, our automated monitoring and failover systems did not immediately redirect traffic because the database remained partially responsive."
+ },
+ {
+  "org": "Box",
+  "date": "2026-08-24",
+  "url": "https://status.box.com/incidents/3thgpsg9qpd6",
+  "name": "[Critical] Issue with Downloads",
+  "sev": "Critical",
+  "cat": "other",
+  "pm": true,
+  "text": "We recently addressed issues affecting Downloads \\(including ZIP downloads\\) in Box. We would like to take the opportunity to further explain these issues and the steps we have taken to keep them from happening in the future. Between August 24, 2026 at 11:25 PM PDT and August 25, 2026 at 12:05 AM PDT, some Box Zones Japan users may have had a degraded download experience. The disruption was caused by an unusual traffic pattern that placed unexpected strain on capacity in the region. Once the impact was identified we restored service by directing download traffic to another region and adding capacity. Downloads returned to normal by 12:05 AM PDT. Once confirming that the issue had been addressed, we returned traffic to the original region. Of note, even during the period of temporary traffic redirection, all Box Zones customer content was stored in the correct Box Zones region. # Analysis This incident highlighted opportunities to make our systems more resilient to unusual traffic patterns, to strengthen regional capacity safeguards, and to further improve monitoring so that conditions like these are detected and addressed before affecting customers. # Corrective Actions Box has initiated the following corrective actions: * Improving safeguards so that unusual activity in one part of the system cannot affect unrelated services. * Strengthening regional capacity protections and automated recovery. * Enhancing monitoring and alerting so we detect and resolve similar conditions f"
+ },
+ {
+  "org": "Box",
+  "date": "2026-02-24",
+  "url": "https://status.box.com/incidents/yb6gsksvbkzf",
+  "name": "[Critical] Issue with Box API",
+  "sev": "Critical",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "_Notice and disclaimer: Box is providing this preliminary information subject to further review and analysis. To the best of our knowledge, this is the current state and we may update as more information is confirmed._ On February 24, 2026 between 1:15 PM PST and 3:59 PM PST, some users may have experienced difficulties while working in Box. The most significant impact occurred from 1:42 PM PST to 1:59 PM PST, when Uploads, Downloads, Logins, APIs, and Notes saw elevated latency and errors. A small subset of functionality continued to experience some degradation through 3:59 PM PST. The issue occurred due to our cache cluster becoming temporarily overloaded due to a traffic spike concentrated on a single hot key. We were able to resolve the majority of the impact by rate limiting peripheral workloads and fully resolve the issue by stopping the offending traffic source. We are now implementing automated hot key detection and introducing dynamic rate limiting at the caching layer to prevent similar issues from occurring in the future. \u200c We are conducting a full engineering postmortem and our overview is subject to change with further analysis and findings. In the event our continuing investigation yields further substantive findings, we may publish additional analysis after the conclusion of the full engineering postmortem. We are continuously working to improve Box and want to make sure we are delivering the best product and user experience we can. We hope we have provided som"
+ },
+ {
+  "org": "Box",
+  "date": "2026-07-31",
+  "url": "https://status.box.com/incidents/4swwrrjj1y7s",
+  "name": "[Medium] Issues with Box Shuttle Standalone",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": true,
+  "text": "We recently addressed issues affecting Shuttle standalone jobs. We would like to take the opportunity to further explain these issues and the steps we have taken to keep them from happening in the future. Between 3:41 AM and 3:57 AM PDT on July 31, 2026, some customers using Shuttle Standalone could sign in to their Shuttle Standalone accounts and view their dashboards, but could not view job details, change job settings, or create new standalone jobs. The Shuttle native experience was not affected. After we restored service, we confirmed that customers could access existing jobs and create new ones. # Analysis A misconfiguration in Shuttle resulted in depleted resources that accessed job history. This caused Shuttle pages that load job history to time out. We restored access by restarting the affected services at 3:57 AM PDT. Job management returned to normal, with no recurrence. This briefly blocked the standalone experience for affected customers, even though sign-in and the Shuttle native experience continued to work. # Corrective Actions Box has initiated the following corrective actions: * Updating the capacity allocation to avoid the recurrence of this issue * Adding monitoring to better preempt the issue from occurring We are continuously working to improve Box and want to make sure we are delivering the best product and user experience we can. We hope we have provided some clarity here and we would be happy to answer any questions you may still have regarding this ma"
+ },
+ {
+  "org": "Box",
+  "date": "2026-05-31",
+  "url": "https://status.box.com/incidents/yyz4tkky4fwr",
+  "name": "[Medium] Issues with Box AI",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "_Notice and disclaimer: Box is providing this preliminary information subject to further review and analysis. To the best of our knowledge, this is the current state and we may update as more information is confirmed._ On May 31, 2026 between 5:00pm PDT and 6:41pm PDT, some customers may have experienced errors or degraded performance when using Box AI features, including failures to generate AI responses or slower-than-expected behavior. The issue affected only AI-related capabilities and did not impact general file access. The disruption was caused by an outage with a third-party AI provider that led to failed AI requests. Service was restored once the provider issue was resolved and normal AI request processing resumed. We are reviewing our third-party dependencies and operational practices to reduce the risk of similar interruptions in the future. We are conducting a full engineering postmortem and our overview is subject to change with further analysis and findings. In the event our continuing investigation yields further substantive findings, we may publish additional analysis after the conclusion of the full engineering postmortem. We are continuously working to improve Box and want to make sure we are delivering the best product and user experience we can. We hope we have provided some clarity here and we would be happy to answer any questions you may still have regarding this matter. Sincerely, The Box Team"
+ },
+ {
+  "org": "Box",
+  "date": "2026-02-25",
+  "url": "https://status.box.com/incidents/8fz6wqqt5csw",
+  "name": "[Medium] Customers may experience issues with Uploads and Downloads for the UK zone",
+  "sev": "High",
+  "cat": "memory_leak",
+  "pm": true,
+  "text": "_Notice and disclaimer: Box is providing this preliminary information subject to further review and analysis. To the best of our knowledge, this is the current state and we may update as more information is confirmed._ On February 25, 2026 between 4:45 am PST and 5:40 am PST, some users may have experienced difficulties while working in Box. During this time, customers of Box Zones UK may have had issues with uploading, downloading, and previewing files. \u200c The issue occurred when some instances of a backend service in the impacted region ran into memory pressure. We resolved the issue by temporarily redirecting certain compute processes from the impacted region to the US region. Of note, even during the period of temporary traffic redirection, all Box Zones customer content continued to be stored in the correct Box Zones region. \u200c We are conducting a full engineering postmortem and our overview is subject to change with further analysis. In the event our continuing investigation yields further substantive findings, we may publish additional analysis after the conclusion of the full engineering postmortem. We are continuously working to improve Box and want to make sure we are delivering the best product and user experience we can. We hope we have provided some clarity here and we would be happy to answer any questions you may still have regarding this matter. Sincerely, The Box Team"
+ },
+ {
+  "org": "Box",
+  "date": "2026-08-28",
+  "url": "https://status.box.com/incidents/1yxxnk5jp1h9",
+  "name": "[Medium] Issues with Box Hubs Shared Links",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "_Notice and disclaimer: Box is providing this preliminary information subject to further review and analysis. To the best of our knowledge, this is the current state and we may update as more information is confirmed._ Between August 27, 2026 at 11:18 PM PDT and August 28, 2026 at 2:48 AM PDT some customers may have been unable to access Box Hubs using shared links. Other Box functionality, such as file and folder access, was not broadly affected. The issue occurred as a result of a recent code change in our ongoing effort to improve performance. We were able to resolve the issue by rolling back the change so traffic returned to the previous behavior. We are conducting a full engineering postmortem, including a review of our deployment and configuration practices, to reduce the chance of similar issues in the future. Our overview is subject to change with further analysis and findings. In the event our continuing investigation yields further substantive findings, we may publish additional analysis after the conclusion of the full engineering postmortem. We are continuously working to improve Box and want to make sure we are delivering the best product and user experience we can. We hope we have provided some clarity here and we would be happy to answer any questions you may still have regarding this matter. Sincerely, The Box Team"
+ },
+ {
+  "org": "Box",
+  "date": "2025-11-10",
+  "url": "https://status.box.com/incidents/lnmh6xl25wg4",
+  "name": "[Critical] Issues with Multiple Box Services",
+  "sev": "Critical",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "Notice and disclaimer: Box is providing this preliminary information subject to further review and analysis. To the best of our knowledge, this is the current state and we may update as more information is confirmed. On November 10, 2025 between 5:00 pm PST and 5:26 pm PST, some users may have experienced slowness or temporary unavailability while working in Box. The issue occurred due to a sudden, large traffic spike on one database, which caused connection saturation on other databases, making them temporarily inaccessible. The issue was automatically resolved as our middleware service detected the problem and backed off. We are working on ways to prevent sudden traffic spikes from cascading to other systems and accelerating our middleware service\u2019s auto-remediation process to prevent similar issues from occurring in the future. We are conducting a full engineering postmortem and our overview is subject to change with further analysis and findings. In the event our continuing investigation yields further substantive findings, we may publish additional analysis after the conclusion of the full engineering postmortem. We are continuously working to improve Box and want to make sure we are delivering the best product and user experience we can. We hope we have provided some clarity here and we would be happy to answer any questions you may still have regarding this matter. Sincerely, The Box Team"
+ },
+ {
+  "org": "Box",
+  "date": "2026-09-03",
+  "url": "https://status.box.com/incidents/sy0782slzd2t",
+  "name": "[Minor] Issue with Admin Reporting",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": true,
+  "text": "_Notice and disclaimer: Box is providing this preliminary information subject to further review and analysis. To the best of our knowledge, this is the current state and we may update as more information is confirmed._ On September 3, 2026 between 3:30 PM PDT and 7:12 PM PDT, some customers may have experienced missing, delayed, or inaccurate results within admin reporting features, including AI usage reports, in Box. Reports may have shown empty fields or data that did not reflect recent activity. The issue was caused by an outage in a third\u2011party data service that interrupted our data ingestion pipelines. Service availability was restored after the provider mitigated the problem. We are conducting a full engineering postmortem and our overview is subject to change with further analysis and findings. In the event our continuing investigation yields further substantive findings, we may publish additional analysis after the conclusion of the full engineering postmortem. We are continuously working to improve Box and want to make sure we are delivering the best product and user experience we can. We hope we have provided some clarity here and we would be happy to answer any questions you may still have regarding this matter. Sincerely, The Box Team"
+ },
+ {
+  "org": "Box",
+  "date": "2026-02-24",
+  "url": "https://status.box.com/incidents/wf5c7yk7rnss",
+  "name": "[Critical] Issues with Multiple Box Services",
+  "sev": "Critical",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "_Notice and disclaimer: Box is providing this preliminary information subject to further review and analysis. To the best of our knowledge, this is the current state and we may update as more information is confirmed._ \u200c On February 24th, 2026 between 6:11 AM PST and 6:40 AM PST, some users may have experienced difficulties while while attempting to log into Box. Users already logged into Box were not impacted by this issue. The issue occurred due to a recent configuration change related to device security that prevented users from logging in to Box. We were able to resolve the issue by quickly reverting the change. We are also working to improve our release strategy and testing processes to prevent similar issues from occurring in the future. \u200c We are conducting a full engineering postmortem and our overview is subject to change with further analysis and findings. In the event our continuing investigation yields further substantive findings, we may publish additional analysis after the conclusion of the full engineering postmortem. We are continuously working to improve Box and want to make sure we are delivering the best product and user experience we can. We hope we have provided some clarity here and we would be happy to answer any questions you may still have regarding this matter. Sincerely, The Box Team"
+ },
+ {
+  "org": "Box",
+  "date": "2026-04-02",
+  "url": "https://status.box.com/incidents/bblsr3byykkt",
+  "name": "[Critical] Issues with Box Sign",
+  "sev": "Critical",
+  "cat": "other",
+  "pm": true,
+  "text": "On April 2, 2026 between 8:19 PM PDT and 11:56 PM PDT, some users may have experienced difficulties while working in Box. During this time, Box Sign users might have experienced errors while creating new signature requests, accessing existing signature requests, or attempting ~~been unable~~ to access the service. The issue occurred as a result of an erroneous change made by a third-party infrastructure provider. We were able to resolve the issue by escalating it to the provider. In addition, we are working to improve the reliability of the Box Sign service by enhancing our disaster recovery processes to prevent similar issues from occurring in the future. \u200c We are conducting a full engineering postmortem and our overview is subject to change with further analysis and findings. In the event our continuing investigation yields further substantive findings, we may publish additional analysis after the conclusion of the full engineering postmortem. We are continuously working to improve Box and want to make sure we are delivering the best product and user experience we can. We hope we have provided some clarity here and we would be happy to answer any questions you may still have regarding this matter. Sincerely, The Box Team"
+ }
+]

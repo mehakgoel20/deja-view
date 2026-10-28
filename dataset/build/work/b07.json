@@ -1,0 +1,402 @@
+[
+ {
+  "org": "1Password",
+  "date": "2025-07-21",
+  "url": "https://status.1password.com/incidents/k0vzsycxsbxx",
+  "name": "Events API and Reporting Delays",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "|| The original issue remains mitigated. Our engineering team is continuing to address the root cause. || Our engineering team has mitigated the issue, and all events should now be returned properly. || We are continuing to work on a fix for this issue. || Our engineering team has identified the root cause and is actively working on a resolution."
+ },
+ {
+  "org": "1Password",
+  "date": "2025-11-06",
+  "url": "https://status.1password.com/incidents/7ln201tdzrnc",
+  "name": "Elevated Errors and Latency Affecting Authentication",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "This incident has been resolved. || We are continuing to closely monitor performance to ensure the issue is fully resolved. || We identified an issue and implemented mitigations. Latency and error rates have returned to normal levels. We will continue to closely monitor performance to ensure the issue is fully resolved. || We are investigating an issue causing elevated errors and increased latency on some backend endpoints. As a result, some users may experience slow loading times or error messages when attempting to sign in or authenticate. Retrying may allow access in some cases."
+ },
+ {
+  "org": "1Password",
+  "date": "2026-01-30",
+  "url": "https://status.1password.com/incidents/fcgmtbc1ty4l",
+  "name": "Intermittent Performance Issues",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved. || The service has remained stable following the actions we took to mitigate the issue. We\u2019re continuing to monitor closely. || We identified the cause of the intermittent performance issues and took action to mitigate it by restarting affected application servers. The service is currently stable, and we\u2019re continuing to monitor closely. || Some users are experiencing slow performance or time outs when trying to use 1Password.com or through our developer tools."
+ },
+ {
+  "org": "Ably",
+  "date": "2024-09-24",
+  "url": "https://status.ably.com/incidents/sb8nlv33znjr",
+  "name": "Inaccurate day and month stats aggregates since 8th September",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "The remediation is complete; app and account day and month aggregates should now be correct again. Apologies again for the inconvenience. (For nearly all customers at least; for customers on enterprise dedicated clusters it might take a few more hours before the month aggregrate for the current month shows correctly). || We have been alerted to an issue with stats aggregation (app stats through our stats api and account stats through the website dashboard) since 8th September that can lead to messages being double-counted in day and month aggregates. We have identified the problem and are in the process of remediating it. The issue only affects day and month aggregates; minute and hour aggregates are correct. We will be remediating day and month aggregates for all accounts and apps from the known-good data (the hour aggregates). We hope to have this done by the end of the 25th. Since billing is done at the end of the month, we do not expect any customers to be billed incorrectly as a result of this. In the meantime, we advise anyone using the stats api to query for hourly stats instead of daily or monthly. We realise this is inconvenient, and deeply apologise, especially for how long it took us to notice the issue. If you have any further questions or concerns, please contact our support team at https://ably.com/support ."
+ },
+ {
+  "org": "Ably",
+  "date": "2024-08-12",
+  "url": "https://status.ably.com/incidents/lfbb2yvvtghx",
+  "name": "Transient netsplit in us-east-2 leading to protracted netsplit for a few channels",
+  "sev": "Low",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "However, a very small proportion of channels did not self-heal, and remained partitioned between us-east-2 and at least one other site in the cluster (mostly either eu-central-1 or eu-west-1) until we took manual corrective action to fix them, which was completed in the production cluster at 12:22 UTC. Our existing quality-of-service alerting infrastructure should have lead to us being paged at the time, however, due to a bug in the definition for this particular alert, this did not happen. Reliable delivery of messages is the thing we prioritise above all else at Ably, and so even though the number of affected channels was small, we are taking this extremely seriously, and (other than fixing the bug in the self-healing function) we will be prioritising improvements to our alerting framework to ensure that no future similar issue can be allowed to last this long."
+ },
+ {
+  "org": "Ably",
+  "date": "2023-07-10",
+  "url": "https://status.ably.com/incidents/8845q4ykmm03",
+  "name": "EU Only Endpoint Issues",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "We are having issues with EU only endpoints and are currently investigating 10th Jul 12:07 PM We have identified the root cause and the issue is fully resolved. The root cause of the issue related to DNS records for our eu-central region and temporary disablement of our eu-west region."
+ },
+ {
+  "org": "Ably",
+  "date": "2023-02-15",
+  "url": "https://status.ably.com/incidents/3sznfpml6sw8",
+  "name": "Ably.com website and control API disruption",
+  "sev": "Medium",
+  "cat": "database_issue",
+  "pm": false,
+  "text": "The ably.com website, dashboard and control API are experiencing disruption, intermittently since 0749 UTC on 15 February. We are investigating and will post here with further updates. 15th Feb 09:03 AM We are still working to understand the root cause of this problem. We don't have an ETA for resolution yet. 15th Feb 09:39 AM We are contacting our upstream service providers to assist in investigation of this issue. We don't have an ETA for resolution yet. 15th Feb 10:15 AM We are migrating to a replacement database instance. We should be able to confirm shortly whether or not this will resolve the issue. 15th Feb 10:29 AM All services appear to be up and running again, but we will continue to monitor."
+ },
+ {
+  "org": "Ably",
+  "date": "2024-06-18",
+  "url": "https://status.ably.com/incidents/j5bjt64087vf",
+  "name": "Elevated 5xx error rate for connection creation in us-east-1",
+  "sev": "Medium",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "There was an elevated 5xx error rate for connection creation from the us-east-1 datacenter from 13:24-14:20 UTC, due to a broken router process, which was then removed from service. The error rate in that region peaked at 4%. No other regions were affected. Any customers using an Ably SDK will not have noticed anything other than potentially increased latencies, since Ably SDKs automatically retry to a fallback region on 5xx. However, customers in east coast or central US who are using SSE, or other protocols using our protocol translation functionality (such as mqtt, pusher, or pubnub), may have noticed some connection attempts fail with 5xx."
+ },
+ {
+  "org": "Ably",
+  "date": "2023-02-15",
+  "url": "https://status.ably.com/incidents/rpzlbc5zqg24",
+  "name": "Ably.com website and control API disruption",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "We have a recurrence of the issues earlier this morning and are investigating. Currently ably.com and the control API are slow to respond with increased error rates. 15th Feb 12:00 PM The ably.com site and control API are continuing to experience some disruption with elevated latencies and error rates. We are still trying to establish the root cause of the problem. 15th Feb 01:02 PM The service has been stable for ~30 minutes. We will continue to monitor and work to understand the root cause."
+ },
+ {
+  "org": "Ably",
+  "date": "2023-03-21",
+  "url": "https://status.ably.com/incidents/0f22c8zsg2by",
+  "name": "Elevated 502 error rate 15:40 and 17:40 UTC",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "Our SDKs automatically retry 5xx responses to fallback endpoints, so customers using SDKs should not have noticed anything except increased latency due to the retries. The proximate cause was a faulty router deploy, we are actively investigating the root cause, and will be improving our alerting system, which should have caught this sooner."
+ },
+ {
+  "org": "Ably",
+  "date": "2023-05-03",
+  "url": "https://status.ably.com/incidents/6dfypfjllpyc",
+  "name": "Issues with unbatched webhook and other service integration creation and delivery",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "We have received reports of issues with webhook creation and deliveries and are currently investigating. A rollback is currently in progress. We will provide a further update when we have further information. 3rd May 05:47 PM All delivery and creation issues are resolved. We are investigating the root cause. 5th May 10:38 AM We have identified the root cause and the issue is fully resolved. All webhook deliveries and rule creation operations are working as expected."
+ },
+ {
+  "org": "Airtable",
+  "date": "2025-07-31",
+  "url": "https://status.airtable.com/incidents/qpv80dhw3zfk",
+  "name": "Jira cloud rate limiting impacting larger syncs",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "Atlassian\u2019s engineering team has implemented a temporary fix that has successfully addressed the API rate limiting behavior impacting Airtable\u2013Jira syncs. These mitigation efforts have led to a noticeable reduction in rate limiting errors across impacted Airtable\u2013Jira syncs. Our team remains actively engaged and is implementing mitigation strategies while collaborating with Atlassian to clarify rate limit behavior and ensure a stable experience going forward. In parallel, Airtable engineers are implementing short-term mitigations to reduce API usage from our Jira connector. If you're experiencing failed syncs due to rate limiting, please reach out to your Airtable support representative so we can apply mitigation steps specific to your case. Our team has identified that the root cause is related to newly enabled Jira Cloud API rate limiting by Atlassian, which was activated ahead of their previously communicated timeline. We are actively working on mitigation strategies to minimize disruption for affected users and will provide further updates as we implement improvements."
+ },
+ {
+  "org": "Airtable",
+  "date": "2025-10-20",
+  "url": "https://status.airtable.com/incidents/5fjdt23kq98k",
+  "name": "Airtable is partially unavailable",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "Airtable's systems are back to normal, and this incident is resolved. || Airtable is operational and functioning within normal boundaries. Our engineering team will continue to monitor our systems, and we will share an update tomorrow morning PDT. || Airtable's availability and latency have returned to normal. We are no longer observing networking issues with our infrastructure provider. We will continue to monitor for further disruptions as our provider rolls out further mitigations. || Airtable is experiencing a further degradation in performance and increased error rates. We suspect that our infrastructure provider is experiencing a networking issue. || Airtable is operational but certain features may experience degraded performance. We are working with our infrastructure provider to address capacity constraints. || The underlying issue has been resolved and we are actively monitoring the service recovery. || We have identified the issue with our infrastructure provider and are working with the provider to restore full functionality. || We are continuing to investigate this issue. || Airtable is partially unavailable due to an underlying service outage. Our engineering team is investigating and working to bring the service back to a healthy state."
+ },
+ {
+  "org": "Airtable",
+  "date": "2025-04-30",
+  "url": "https://status.airtable.com/incidents/5yg3ydtr5s0h",
+  "name": "Interface Button Issue",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "|| We\u2019ve identified the root cause of the issue causing interface-only users to see \u201cNot connected to an automation\u201d when clicking Interface buttons that trigger automations. Our engineering team is deploying a patch and expects full resolution by 10:00 AM Pacific Time. We\u2019ll confirm once the fix is fully implemented and monitored. Our engineering team is working to identify the root cause and restore full functionality."
+ },
+ {
+  "org": "Airtable",
+  "date": "2025-04-23",
+  "url": "https://status.airtable.com/incidents/zz9h6ykrmqjn",
+  "name": "Issue with Box and Hootsuite syncs",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "Our recent hotfix has been successfully deployed overnight, and both syncs should now be functioning as expected. || We have identified the root cause of the issue affecting the Box and Hootsuite syncs to Airtable. Our engineering team has developed a hotfix and is currently in the process of deploying it. We are closely monitoring the situation and will confirm once the fix has been fully implemented."
+ },
+ {
+  "org": "Airtable",
+  "date": "2026-07-08",
+  "url": "https://status.airtable.com/incidents/t85ps5czkjds",
+  "name": "Airtable service unavailability",
+  "sev": "High",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "|| The Airtable site has fully recovered, however we are continuing to leave this incident while we investigate root cause. || A fix has been implemented and we are monitoring the results. || We have implemented a fix and are now seeing substantial recovery. || We have implemented some mitigations and are seeing some improvement, but availability continues to be limited."
+ },
+ {
+  "org": "Airtable",
+  "date": "2025-03-11",
+  "url": "https://status.airtable.com/incidents/qj0pnp56bg7s",
+  "name": "Some jira sync are only pulling in 100 rows of data",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "Jira sync functionality has been restored. Thank you for your patience. || We explored a workaround to the bug and will be working to deploy and restore the functionality before end of day. Please stay tuned for more updates. Our team will continue working with Jira's support team to find a long term resolution in the mean time. Thank you for your patience. || We are currently investigating an issue affecting some Jira Syncs in Airtable. Due to a bug in Jira\u2019s APIs, certain syncs are only fetching 100 rows of data instead of the full dataset. This issue began at 2:00 AM PST. We have reached out to Jira\u2019s support team for assistance and are also proactively exploring potential workarounds. We will provide further updates as soon as we have more information. Thank you for your patience while we work to resolve this issue."
+ },
+ {
+  "org": "Airtable",
+  "date": "2026-02-13",
+  "url": "https://status.airtable.com/incidents/3b5b6xxwpcb5",
+  "name": "Partial unavailability of Airtable 2026-02-12",
+  "sev": "High",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "We have mitigated the issue as of 10:22 PM PST and all site functionality except billing management should now be working. We are separately working on restoring billing functionality. || We have found the root cause and applied a mitigation that restores most base functionality such as read/writes as of 9:45PM PST. However, certain functionality like adding collaborators/shares or creating/deleting applications are still unavailable. We're actively working on restoring that functionality. || We are currently investigating partial unavailability of Airtable"
+ },
+ {
+  "org": "Airtable",
+  "date": "2026-06-08",
+  "url": "https://status.airtable.com/incidents/qhrcwbb25mqj",
+  "name": "Increased latency for requests to Airtable",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved, and the Airtable service is again operating normally. We apologize for any disruption this issue caused. || A fix has been implemented and we are seeing signs of recovery. We will continue to monitor this issue to ensure it does not recur. || We are aware of an issue which is causing some requests to Airtable to have elevated latencies. Our engineers were automatically alerted to this issue and are actively working to address the root cause."
+ },
+ {
+  "org": "Airtable",
+  "date": "2026-06-29",
+  "url": "https://status.airtable.com/incidents/smm5pkv1bdfg",
+  "name": "Increased latency for requests to Airtable",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "This incident has been resolved. We apologize for any inconvenience this may have caused you. Please reach out to the Airtable Support team if you have any questions about this incident. || A fix has been implemented and we are monitoring the results. || We are aware of an issue which is causing some requests to Airtable to have elevated latencies. Our engineers were automatically alerted to this issue and are actively working to address the root cause."
+ },
+ {
+  "org": "Airtable",
+  "date": "2024-09-10",
+  "url": "https://status.airtable.com/incidents/0wxkkcknq9y6",
+  "name": "Investigating reports of difficulty accessing airtable.com for small number of customers",
+  "sev": "Low",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "This issue has been resolved. || The issue appears to be caused by network connectivity between internet providers in APAC region. Customers affected can use a VPN to connect to airtable.com. || The issue appears to be caused by network connectivity between internet providers in APAC. Customer affected can use a VPN to connect to airtable.com. || We are investigating reports that some customers in asia-pacific have difficulty accessing airtable.com."
+ },
+ {
+  "org": "Asana",
+  "date": "2024-07-26",
+  "url": "https://status.asana.com/incidents/wnj2mcp35pdf",
+  "name": "Automations and Background Actions Delayed",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "On 2024-07-26, a deployment of new code introduced a bug which caused delays for automations and background actions for a subset of our customers. We reverted this deployment, which allowed our system to catch up. Moving forward: We have identified the root cause of this particular bug and will improve our systems and processes to prevent it from happening in the future."
+ },
+ {
+  "org": "Asana",
+  "date": "2026-08-04",
+  "url": "https://status.asana.com/incidents/319x04gv0gvm",
+  "name": "Webhooks and event streams partial data loss",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "From 2026-08-04 15:25 UTC until 2026-08-06 03:51 UTC, Asana failed to send some events to registered webhooks and to return them in the event streams API. Apps which rely on this should refetch the underlying data from the Asana API. Existing webhooks and event streams will continue to function, but events from the incident window will not be sent. Most events with type `task` and action `changed` were dropped during this period. Other events are not affected. The root cause of the incident was traced to a code change which unintentionally dropped change events for most fields on the task type, and the change was reverted."
+ },
+ {
+  "org": "Asana",
+  "date": "2025-03-25",
+  "url": "https://status.asana.com/incidents/vwn6p24yjq7q",
+  "name": "App and API errors",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved. We are doing root cause analysis and will post an update within 72 hours. || We have scaled up affected infrastructure are continuing to monitor application health and metrics. || We are continuing to monitor for any further issues. || A fix has been implemented and we are monitoring the results. || We saw a high rate of errors due to overload of internal infrastructure. We see partial recovery, and are continuing to investigate."
+ },
+ {
+  "org": "AssemblyAI",
+  "date": "2025-08-05",
+  "url": "https://status.assemblyai.com/incidents/rz51jtsbvhcq",
+  "name": "Slam-1 requests not completing successfully",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "|| We are still seeing good performance with the Slam model and requests completing as expected, but we are still working to fully resolve the root cause to prevent issues in the future. || We are seeing Slam-1 requests complete successfully once again, but we are still working to fully resolve the root cause of this issue."
+ },
+ {
+  "org": "AssemblyAI",
+  "date": "2026-02-25",
+  "url": "https://status.assemblyai.com/incidents/g5s9r4bz7rs2",
+  "name": "Negative Balance Error",
+  "sev": "High",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "The negative balance error affecting a small number of accounts has been resolved. This issue was an unintentional error that occurred as a result of our ongoing billing system migration. Our team is continuing to monitor the situation to ensure full stability. We apologize for any disruption this caused and thank you for your patience. || Our team has identified the root cause of the negative balance error currently affecting a small number of accounts. A fix is actively being rolled out and we will continue to monitor the situation closely until full resolution is confirmed. || We are currently investigating a billing issue affecting a small number of customer accounts. Impacted accounts are receiving a negative balance via the API, which is preventing transcription requests from completing and returning errors instead. Our team is actively working to identify and correct all affected accounts. We apologize for the disruption this has caused to your workflows and will provide updates as the investigation progresses."
+ },
+ {
+  "org": "AssemblyAI",
+  "date": "2025-09-29",
+  "url": "https://status.assemblyai.com/incidents/jbvhck97qkw2",
+  "name": "Some Streaming Sessions are Failing to be Established",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "We have continued to see good performance since rolling back the update that was identified to be the cause of this issue, so we are marking this issue as resolved. || We have continued to see stable performance throughout the day. The Streaming API is operating normally and we are monitoring the effects of recent changes to ensure continued service stability. Our team continues working to determine the root cause of the earlier connection failures. || Our team is still investigating the cause of the elevated errors, but the Streaming API is still continuing to function normally. || The Streaming API has now returned to full functionality. Our team is still investigating the root cause of this issue. || Between 1:30p and 1:40p GMT there were an increased number of new streaming sessions that were failing to be established. Customers would have received the error message \"received 3005 (registered) Session Cancelled: An error occurred; \"."
+ },
+ {
+  "org": "AssemblyAI",
+  "date": "2025-09-30",
+  "url": "https://status.assemblyai.com/incidents/ytmgp9nbx4rw",
+  "name": "Increased error rates for pre-recorded Speech-to-Text",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "We have continued to see good performance for pre-recorded audio so we are now marking this issue as resolved. || We have released a fix to address the small increase in errors we were seeing and are monitoring to ensure continued good performance. || Our team has identified where the errors are occurring in our pipeline and is currently working to identify and resolve the root cause. This issue is currently only affecting an extremely small percentage of total pre-recorded audio traffic. 99%+ of requests are still completing successfully. || Our team is currently investigating an issue that is causing an increase in server errors for our pre-recorded audio speech-to-text feature. This issue is only affecting a small number of requests, but it is affecting requests to both Universal and Slam-1 models. If you experience a server error we suggest retrying the request as those will likely be successful."
+ },
+ {
+  "org": "AssemblyAI",
+  "date": "2026-01-28",
+  "url": "https://status.assemblyai.com/incidents/h0ntm8sj3cdn",
+  "name": "Higher latency when using the EU endpoint",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "We have continued to see good performance, and traffic is once again working normally so we are marking this issue as resolved. || We are seeing significant signs of recovery and processing of queued transcripts. Our team will continue to monitor the situation. || The team has identified the issue and it is caused by an AWS Operational Issue on their Amazon Elastic Compute Cloud (Ireland). Our team is in touch with AWS and monitoring the situation: https://health.aws.amazon.com/health/status || This issue is also affecting the EU DELETE endpoint. Some DELETE requests for transcriptions are resulting in an error. || Our team is actively investigating an issue that is causing increased latency for transcriptions using the EU endpoint for pre-recorded transcriptions. Customers may experience transcripts being queued. This is not affecting streaming usage on the EU endpoint."
+ },
+ {
+  "org": "AssemblyAI",
+  "date": "2026-07-09",
+  "url": "https://status.assemblyai.com/incidents/1g0dg9f2kwc1",
+  "name": "Increased processing times for US async transcription",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved. Async transcription processing times on the US endpoint have returned to normal ranges and webhook deliveries are operating normally. || We have been monitoring the queue drain and transcription pickup delays caused by the backlog. Processing times are returning to normal ranges on the US endpoint and the backlog has cleared. We are continuing to monitor. || We have identified the issue causing elevated processing times for async transcriptions on the US endpoint and have addressed the root cause. The system is recovering, but processing times remain elevated while the backlog clears. Webhook deliveries may also continue to be delayed. || We are seeing increased processing times for pre-recorded (async) transcriptions on the US endpoint. Webhook deliveries may also be delayed. We are currently investigating."
+ },
+ {
+  "org": "AssemblyAI",
+  "date": "2026-04-16",
+  "url": "https://status.assemblyai.com/incidents/xfrb149ddltv",
+  "name": "Increased processing times and errors for Universal-2",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "We have continued to see processing times remain in the normal range and are now marking this issue as resolved. || The root cause of the slowdown has been addressed and turnaround times have once again returned to the normal range. We will continue to monitor traffic going forward to ensure continued good performance. || We have identified an issue that is causing elevated processing times for requests that are using Universal-2 for pre-recorded audio. Most requests are still completing successfully, but we are also seeing a small increase in errors as a result of some requests timing out. Our team has identified the root cause of this issue and is working to resolve it as quickly as possible. Request using Universal-3 Pro are unaffected by this issue."
+ },
+ {
+  "org": "AssemblyAI",
+  "date": "2026-05-27",
+  "url": "https://status.assemblyai.com/incidents/rzy82xkht7h6",
+  "name": "Degraded New Account Signup and Account Provisioning",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "Processes are continuing to work normally, and all affected accounts have been fixed, so we are not moving this issue to resolved. || Account signups and upgrades have recovered and we are seeing successful new account creation. Our team is continuing to monitor and clean up a small number of affected accounts. We will provide a final update once fully resolved. || We are currently experiencing degraded performance with new account signups and provisioning due to an upstream issue with our billing provider. Existing accounts and API usage are unaffected. New users may experience errors or delays when creating an account. Our team is actively working with our provider to resolve the issue and will provide updates as more information becomes available."
+ },
+ {
+  "org": "AssemblyAI",
+  "date": "2026-05-07",
+  "url": "https://status.assemblyai.com/incidents/lmz6d399jjv6",
+  "name": "Billing Balance & Notification Delays",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "|| A fix has been implemented and we are monitoring the results. || The issue has been identified and a fix is being implemented. Additionally, the following notifications may not be delivered as expected: - Low balance and $0 balance alerts - Autopay confirmation emails - Custom email alerts for usage spend and threshold notifications Our team is actively working to identify the root cause and restore normal functionality."
+ },
+ {
+  "org": "AssemblyAI",
+  "date": "2025-11-24",
+  "url": "https://status.assemblyai.com/incidents/bz121x4ypvnk",
+  "name": "Expected responses from LLM Gateway using Claude models",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "We have continued to see good performance since releasing the earlier fix and are now marking this issue as resolved. || We have released a fix that has resolved the unexpected responses we were seeing when Claude models were used. || We have identified the root cause of this issue and are working to release a fix. We are working to identify and resolve the root cause of these issues."
+ },
+ {
+  "org": "AssemblyAI",
+  "date": "2026-02-28",
+  "url": "https://status.assemblyai.com/incidents/cjtxw0wtdxtg",
+  "name": "Billing Issue Affecting Some Universal-3-Pro Users",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "The billing issue that caused unexpected multiple auto-refill charges for a subset of Universal-3-Pro customers on February 28, 2025, has been resolved. Refunds have been issued to the affected customers. || We are aware of an issue that caused unexpected multiple auto-refill charges for a subset of customers using Universal-3-Pro today, February 28, 2025. Our team is actively investigating the root cause and working to resolve it as quickly as possible. We apologize for the inconvenience and will provide further updates as they become available."
+ },
+ {
+  "org": "AssemblyAI",
+  "date": "2026-01-05",
+  "url": "https://status.assemblyai.com/incidents/b88v05bgk79y",
+  "name": "Elevated connection errors when starting new Streaming sessions",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "This increase in errors was inadvertantly caused by a change that was made around 8:30am PT, which was immediately reverted when our team noticed the increase in errors. We have continued to see good performance since that rollback and are now marking this issue as resolved. || We experienced a spike in connection issues for new streaming sessions between 8:30 and 8:35am PT. These errors affected requests for both NA and EU regions. These connection issues have subsided, but our team is working to ensure continued good performance."
+ },
+ {
+  "org": "AssemblyAI",
+  "date": "2025-11-15",
+  "url": "https://status.assemblyai.com/incidents/ww30cy91z0cy",
+  "name": "SSL certificate validation errors connecting to Streaming API",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "From 8p GMT on November 14, 2025 - 2:20p GMT on November 15, 2025, users connecting to our Streaming API using our US endpoint `wss://streaming.assemblyai.com/v3/ws` from Europe, Africa, and eastern Asia were experiencing SSL certificate validation errors. While the underlying SSL misconfiguration was resolved shortly after engineering engagement, some customers experienced extended connection failures during this window. Additional safeguards have since been implemented to prevent similar issues.."
+ },
+ {
+  "org": "AssemblyAI",
+  "date": "2025-07-30",
+  "url": "https://status.assemblyai.com/incidents/cpgzhqtj0fpb",
+  "name": "Delay in New Transcriptions Appearing Under Transcription History on Dashboard",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved. || A fix has been implemented and all customer dashboards should now be up to date. We are continuing to monitor the situation. || The issue has been identified and a fix is being implemented. || Our team is still currently investigating the root cause of this delay. || We are currently investigating an issue where there is a delay in new transcriptions showing up under the Transcription History tab of the dashboard."
+ },
+ {
+  "org": "Atlassian",
+  "date": "2023-10-24",
+  "url": "https://status.atlassian.com/incidents/3sf6vg9v8nqm",
+  "name": "Email domain unverified",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "|| We have identified the issue and a fix is currently being implemented. || We identified that the mitigation method doesn't fix the issue in some affected Cloud instances. || We have mitigated the problem. We have identified the root cause and expect recovery shortly. We are working on a mitigation."
+ },
+ {
+  "org": "Atlassian",
+  "date": "2019-10-22",
+  "url": "https://status.atlassian.com/incidents/kw28xr3wyxmq",
+  "name": "Intermittent DNS Resolution Errors",
+  "sev": "Low",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "The root cause was an increased DNS error rate from our infrastructure supplier. The supplier fixed the upstream issue and we have verified that the services have recovered. The conditions that caused the issue have been addressed and we are actively working on a permanent fix. || We have identified the root cause of the intermittent failure connecting to Atlassian Cloud for some cloud customers and have mitigated the problem. || We have identified the root cause of the intermittent failure connecting to Atlassian Cloud for some cloud customers and have mitigated the problem."
+ }
+]

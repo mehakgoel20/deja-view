@@ -1,0 +1,36 @@
+{
+ "n": 2284,
+ "by_alpha": {
+  "0.0": {
+   "category_accuracy": 0.319,
+   "category_macro_f1": 0.3,
+   "severity_accuracy": 0.38,
+   "severity_within_one": 0.803
+  },
+  "0.25": {
+   "category_accuracy": 0.305,
+   "category_macro_f1": 0.276,
+   "severity_accuracy": 0.38,
+   "severity_within_one": 0.803
+  },
+  "0.5": {
+   "category_accuracy": 0.282,
+   "category_macro_f1": 0.251,
+   "severity_accuracy": 0.38,
+   "severity_within_one": 0.803
+  },
+  "0.75": {
+   "category_accuracy": 0.264,
+   "category_macro_f1": 0.235,
+   "severity_accuracy": 0.38,
+   "severity_within_one": 0.803
+  },
+  "1.0": {
+   "category_accuracy": 0.243,
+   "category_macro_f1": 0.22,
+   "severity_accuracy": 0.38,
+   "severity_within_one": 0.803
+  }
+ },
+ "best_alpha": 0.0
+}

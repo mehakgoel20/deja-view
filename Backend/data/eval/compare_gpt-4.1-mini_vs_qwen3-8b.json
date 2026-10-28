@@ -1,0 +1,41 @@
+{
+ "n_common": 4,
+ "ids": [
+  "GOLD-0021",
+  "GOLD-0066",
+  "GOLD-0103",
+  "GOLD-0111"
+ ],
+ "rows": {
+  "gpt-4.1-mini rag": {
+   "category_acc": 0.25,
+   "severity_acc": 0.75,
+   "rc_top1_exact": 0.5,
+   "rc_top1_partial_or_better": 1.0,
+   "rc_best3_exact": 0.5,
+   "median_latency_s": 7.4
+  },
+  "gpt-4.1-mini llm_only": {
+   "category_acc": 0.5,
+   "severity_acc": 0.5,
+   "rc_top1_exact": 0.75,
+   "rc_top1_partial_or_better": 0.75,
+   "rc_best3_exact": 1.0
+  },
+  "qwen3-8b rag": {
+   "category_acc": 0.5,
+   "severity_acc": 0.5,
+   "rc_top1_exact": 0.25,
+   "rc_top1_partial_or_better": 0.75,
+   "rc_best3_exact": 0.75,
+   "median_latency_s": 37.2
+  },
+  "qwen3-8b llm_only": {
+   "category_acc": 0.5,
+   "severity_acc": 0.5,
+   "rc_top1_exact": 0.25,
+   "rc_top1_partial_or_better": 0.75,
+   "rc_best3_exact": 0.5
+  }
+ }
+}

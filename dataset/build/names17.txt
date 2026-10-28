@@ -1,0 +1,53 @@
+deno bun oven vite rollup esbuild swc turbopack
+biome oxc rspack parcel snowpack
+nuxt sveltekit remix astro solidjs qwik
+redwoodjs blitzjs nestjs adonisjs fastify hono
+elysia encore wasp
+prisma drizzle kysely typeorm sequelize knex
+trpc graphqlhive apollographql hasura stepzen
+grafbase wundergraph stellate
+clerkdev workos stytch kinde logto propelauth
+neondb xata turso planetscaledb cockroachdb
+supabasedb firebasedb appwrite pocketbase
+nhost directus payloadcms keystonejs
+tinacms decapcms netlifycms
+vercelapp railwayapp renderapp flyapp koyeb
+porter northflank qovery zeabur sliplane
+dokku caprover coolify cloudron easypanel
+sevalla kinstahosting pressable
+cloudflarepages workersdev pagesdev
+deployhq buddyworks codeship wercker
+nevercode bitrise appcircle codemagic
+expodev eas fastlanetools
+sentryio bugsnagio rollbarcom
+highlightio openreplay posthogcom
+logtail papertrailapp loggingio
+axiomco baselimedev dashdev
+grafanacom prometheusio thanosio
+victoriametrics timescaledb questdb influxdb
+clickhousedb singlestoredb starrocks doris
+pinotapache druidapache
+trinodb prestodb drilldb
+icebergapache deltalake hudiapache
+dbtcloudcom sqlmesh sdflabs
+dagsterio prefectio airflowapache mageai
+flytedev metaflowdev zenmldev kedro
+wandbai cometml neptuneai clearmlai
+mlflow bentoml rayio anyscalecom
+modallabs replicatedev banandev
+togetherai fireworksai groqcloud cerebrasai
+sambanovaai graphcoreai tenstorrentai
+lambdalabsai coreweavecom crusoeai
+nebiusai nscalecom vastaiai runpodio
+paperspacecom gradientai saturncloudio
+lightningai determinedai
+huggingfaceco modelscopecn
+openrouterai portkeyai litellmai heliconeai
+langsmithai langfusecom braintrustdata
+humanloopcom galileoai arizeai fiddlerai
+whylabsai evidentlyai deepchecksai
+pineconedb weaviateio qdrantio milvusio
+chromadb zillizcloud lancedb marqoai
+vespaai valdio vearch
+neo4jcom memgraphcom kuzudb tigergraphcom
+arangodbcom dgraphio stardogcom

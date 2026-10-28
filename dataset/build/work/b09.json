@@ -1,0 +1,402 @@
+[
+ {
+  "org": "ClickUp",
+  "date": "2026-09-01",
+  "url": "https://status.clickup.com/incidents/01M1EAXDX8F4DR0YD3KNAGNM87",
+  "name": "Degraded Search Performance",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "We are conducting an internal review to identify the root cause and will have an analysis that we can share in the coming days. || The issue affecting Search for some users in our US regions has been mitigated, and Search should now be working normally. We\u2019ve identified the issue and mitigation is currently in progress."
+ },
+ {
+  "org": "CloudAMQP",
+  "date": "2026-05-23",
+  "url": "https://status.cloudamqp.com/incidents/mjvhtjmk3bnl",
+  "name": "Connectivity issues in Azure West Europe",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "Resolved \u2014 Microsoft has confirmed that the Azure West Europe Virtual Machines incident is resolved. The impact window was 14:09\u201314:13 UTC on 23 May 2026, during which a limited number of customers may have experienced connection failures or unexpected Virtual Machine restarts. The Azure environment self-healed and the service has been confirmed restored. Affected CloudAMQP instances should now be operating normally. || We are investigating connectivity issues affecting some CloudAMQP instances in Azure West Europe. Affected instances may see connection failures or unexpected restarts. The root cause is an ongoing Microsoft Azure platform incident in the West Europe region (started 14:31 UTC, 23 May 2026). Microsoft is investigating."
+ },
+ {
+  "org": "CloudAMQP",
+  "date": "2026-05-30",
+  "url": "https://status.cloudamqp.com/incidents/g86bxjr8x4qs",
+  "name": "Monitoring Systems  \u2014 False Alarms",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "This incident has been resolved. || Between 17:30 and 20:00 UTC on 2026-05-30, our server monitoring system generated a large number of false \"server_unreachable\" alerts. Clusters were operational and healthy throughout this period \u2014 no customer data or message delivery was affected. The alerts were caused by a rolling restart of our monitoring service, during which individual monitoring workers went offline mid-cycle and lost state. This caused the workers to report connection timeouts for servers they could no longer reach \u2014 even though those servers were fully healthy. We apologize for any concern this may have caused."
+ },
+ {
+  "org": "Cloudflare",
+  "date": "2026-09-23",
+  "url": "https://www.cloudflarestatus.com/incidents/8wmvkv5jkf15",
+  "name": "Network Performance Degradation \u2014 Asia-Pacific",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "This incident has been resolved. || Cloudflare continues to mitigate intermittent connectivity degradation for a small subset of customers caused by significant degradation of capacity in the region. || The issue has been identified and a fix is being implemented. || Since September 21, 2026 at 02:20 UTC, multiple subsea cable outages have caused congestion between Tokyo and Singapore datacenters. We have rerouted traffic to reduce impact and are working with third-party vendors to restore capacity."
+ },
+ {
+  "org": "Cloudinary",
+  "date": "2025-11-21",
+  "url": "https://status.cloudinary.com/incidents/y05vxm53x9q4",
+  "name": "Delivery hostname res.cloudinary.com is blocked in Indonesia",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "|| Asset delivery via res.cloudinary.com has been restored in Indonesia. Cloudinary SDKs can be updated to create URLs in that format by adding \"private_cdn: true\" to the configuration: https://cloudinary.com/documentation/advanced_url_delivery_options#sdk_configuration_for_private_cdns_and_custom_delivery_hostnames_cnames || We are continuing to investigate this issue which is caused by requests from many Indonesian users to res.cloudinary.com being blocked."
+ },
+ {
+  "org": "Cloudinary",
+  "date": "2025-10-20",
+  "url": "https://status.cloudinary.com/incidents/zg6fxyxzpxlp",
+  "name": "Degraded Performance in US Datacenter",
+  "sev": "Medium",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "This incident has been resolved. || We identified an issue with the auto-gravity transformation. The issue has been resolved, and we are currently monitoring to ensure full stability. || We have identified that Amazon's Rekognition service is currently down. || We\u2019ve identified the issue and are mitigating. The following remain partially degraded: Visual Search, Generative transformations (e_gen), Preview generation (e_preview), Upscale (e_upscale), Background removal (e_background_removal), Video auto-gravity (g_auto), AI Vision, Content Analysis add-on, Email delivery (notifications), Async jobs (delays), Billing. || Previously impacted services are operational, but we continue to observe intermittent errors. Our team is actively investigating the underlying cause. || We\u2019re again observing degraded performance in the US datacenter. This appears to be a recurrence of the incident first noted at 06:50 UTC. We\u2019ve moved the incident back to Investigating and are working to isolate the cause. || The services are recovering and are being closely monitored. || We are continuing to investigate this issue. || The Webhook/HTTP Notification in the US Datacenter is currently not operational. Our team is actively investigating the issue. || We want to inform you that starting 06:50UTC, we are experiencing degraded performance in the US Datacenter. Our team is actively investigating the issue to identify and address the root cause."
+ },
+ {
+  "org": "Cloudinary",
+  "date": "2025-07-03",
+  "url": "https://status.cloudinary.com/incidents/kr64cbb2gxxm",
+  "name": "Webhook Notification Delivery Delays",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "After several hours of further monitoring, we've confirmed that webhooks notification queues have remained stable and new notifications are being processed as expected. || A fix has been implemented and we are monitoring the results. || We are aware that webhook notifications aren't being received and are investigating it. || A fix has been implemented and we are monitoring the results. || We are continuing to investigate this issue. || We are currently experiencing delays in our webhook notification delivery system. Customers may observe that webhook events are delivered later than expected. Our engineering team is actively investigating the root cause and working to restore normal delivery speeds. We will provide updates as more information becomes available."
+ },
+ {
+  "org": "Cloudinary",
+  "date": "2026-08-13",
+  "url": "https://status.cloudinary.com/incidents/5v5k9k5mx2rk",
+  "name": "Media Library / asset visibility",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved. || A fix has been implemented and we are monitoring the results. || We have identified the root cause of the issue affecting asset visibility in the Media Library. Our engineering team is actively working on a resolution. Asset delivery is not impacted. We will provide another update as soon as more information is available. || Since approximately 12:30 UTC, some users may experience issues where assets not appearing when browsing folders in the Media Library. Affected assets remain available and may still be accessible through search. Our team is investigating the issue and working to restore normal folder visibility. We will provide another update as soon as more information is available."
+ },
+ {
+  "org": "Cloudinary",
+  "date": "2026-03-24",
+  "url": "https://status.cloudinary.com/incidents/670hzyz3gvnp",
+  "name": "Management of API credentials is currently experiencing issues",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "We confirm that the update rolled out today has fixed the issue. || We have rolled out a fix on recent issue on displaying/creating API secrets in the Management Console and currently monitoring our system. Our team is actively investigating the issue to identify the root cause and implement a resolution."
+ },
+ {
+  "org": "Cloudinary",
+  "date": "2026-03-11",
+  "url": "https://status.cloudinary.com/incidents/h1clcnd4t09z",
+  "name": "Issues with MediaFlows Event Triggers",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "The recent issue impacting MediaFlows, where some event-based triggers did not execute as expected, has been resolved. All services are now operating normally. || We have resolved the issues and are monitoring. || We want to inform you that we have identified an issue affecting MediaFlows where some event-based triggers may not execute as expected. As a result, certain MediaFlows may not run when triggered by events such as metadata updates. Our engineering team is working to restore normal operation, and we will provide further updates shortly."
+ },
+ {
+  "org": "Cloudinary",
+  "date": "2025-06-29",
+  "url": "https://status.cloudinary.com/incidents/blp806k2z4z9",
+  "name": "Media Processing and transformations related to AI is currently down.",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved. || A fix has been implemented and we are monitoring the results. || We want to inform you that starting 9:30 UTC, we've been investigating Media Processing and transformations related to AI that is affecting our customers. Our team is actively investigating the issue to identify the root cause and implement a resolution. This may result in processing errors and delays when applying eager, \"on-the-fly\", or explicit transformations related to media processing and AI."
+ },
+ {
+  "org": "Cloudways",
+  "date": "2026-08-11",
+  "url": "https://status.cloudways.com/incidents/rr4pnfhkyjzs",
+  "name": "Service Disruption - Google Cloud Servers",
+  "sev": "Critical",
+  "cat": "other",
+  "pm": false,
+  "text": "The issue has been fully resolved and all services are now back to normal operation. We apologize for any inconvenience caused and thank you for your patience. || The services are being restored, and our team is closely monitoring progress. We anticipate things returning to normal within a few hours and will update you as soon as we have more information. || We are still working on the outages affecting Google Cloud servers across multiple regions. Our engineering team is actively coordinating with the relevant infrastructure teams to identify the root cause and is working toward resolution. We will share the next update as soon as new information becomes available. Thank you for your patience and kind understanding. || We are currently experiencing an outage with the Google Cloud servers in multiple regions. We are closely coordinating with the team & actively working to resolve this issue. We will share additional updates as we have more information."
+ },
+ {
+  "org": "Cloudways",
+  "date": "2026-07-01",
+  "url": "https://status.cloudways.com/incidents/b3krv61ct69c",
+  "name": "Cloudways Platform UI issues",
+  "sev": "Low",
+  "cat": "authentication",
+  "pm": false,
+  "text": "This incident has been resolved. || We have identified the root cause affecting the Platform Console UI and have deployed a fix. Users should now be able to log in and navigate the dashboard normally without experiencing unexpected logouts. We are closely monitoring the platform's stability to ensure performance remains optimal. Thank you for your patience while we resolved this. || We are currently investigating an issue with the Cloudways Platform Console. Some users may experience intermittent performance issues, loading errors, or frequent, unexpected logouts while navigating the dashboard. Our engineering team is actively diagnosing the root cause to restore full stability as quickly as possible. Please note that this does not affect your hosted applications or live websites, which remain fully online and operational. We sincerely apologize for the disruption and will provide another update as soon as more information becomes available."
+ },
+ {
+  "org": "Cloudways",
+  "date": "2026-06-30",
+  "url": "https://status.cloudways.com/incidents/0wnqtw649f8g",
+  "name": "Autonomous: Storage Issue in US South Carolina Region",
+  "sev": "Low",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "The issue has been resolved. Please contact our support if you continue to experience any related issues. || We are seeing positive signs of recovery following the storage malfunction in the USSC Region. The majority of applications have resumed normal operation and services are largely restored. Our team continues to closely monitor the situation to ensure full stability. We will provide a further update once we have confirmed complete resolution. We appreciate your patience throughout this incident. || We are currently experiencing an infrastructure issue caused by a storage malfunction in USSC Region. This may result in degraded performance or service disruptions for some users. Our team is actively investigating and working to resolve the issue as quickly as possible. We will provide further updates as more information becomes available. We apologize for the inconvenience."
+ },
+ {
+  "org": "Cloudways",
+  "date": "2026-02-12",
+  "url": "https://status.cloudways.com/incidents/6jzrbjpp0v3g",
+  "name": "Cloudways Autonomous: Partial Service Degradation",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "The issue has been resolved. Please contact our support if you continue to experience any related issues. || Storage service is stable and fully restored. Our team continues to monitor system performance. || We are continuing to investigate this issue. || Some Cloudways Autonomous applications hosted in the London region may experience temporary connectivity issues due to a partial disruption in the underlying storage service. Our team is actively working with the infrastructure provider to restore full stability as quickly as possible."
+ },
+ {
+  "org": "Cloudways",
+  "date": "2026-07-14",
+  "url": "https://status.cloudways.com/incidents/8rgn6dx6p9n4",
+  "name": "Cloudways Autonomous: Partial Service Degradation in London",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "The issue has been resolved. Please contact our support if you continue to experience any related issues. || The majority of applications have resumed normal operation and services are largely restored. Our team continues to closely monitor the situation to ensure full stability. || Some Cloudways Autonomous applications hosted in the London region may experience temporary connectivity issues due to a partial disruption. Our team is actively working with the infrastructure provider to restore full stability as quickly as possible."
+ },
+ {
+  "org": "Cloudways",
+  "date": "2026-03-16",
+  "url": "https://status.cloudways.com/incidents/lksh179rd1sm",
+  "name": "Cloudways Autonomous: Partial Service Degradation in US (South Carolina)",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "The issue has been resolved. Please contact our support if you continue to experience any related issues. || Storage service is stable and fully restored. Our team continues to monitor system performance. || Some Cloudways Autonomous applications hosted in the US region may experience temporary connectivity issues due to a partial disruption in the underlying storage service. Our team is actively working with the infrastructure provider to restore full stability as quickly as possible."
+ },
+ {
+  "org": "Cloudways",
+  "date": "2026-01-19",
+  "url": "https://status.cloudways.com/incidents/4v8cz4f7gnw0",
+  "name": "Email Delivery Latency Affecting Login Verification",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": false,
+  "text": "This incident has been resolved. || We are currently investigating an issue where users are experiencing significant delays in receiving two-factor authentication (2FA) codes via email. This issue has been traced to a service degradation with one of our upstream email delivery providers. We are in contact with their support team to monitor their progress on a fix. We apologize for the delay and will provide an update as soon as the provider shares more information."
+ },
+ {
+  "org": "CockroachDB",
+  "date": "2026-03-01",
+  "url": "https://status.cockroachlabs.cloud/incidents/fhx8k1nh1kz7",
+  "name": "Cluster unavailability and degraded cluster operations in AWS me-central...",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "Beginning March 1, 2026, a power outage caused by physical damage to AWS infrastructure affected multiple Availability Zones in the AWS me-central-1 (UAE) region, resulting in the unavailability of CockroachDB Cloud clusters in that region. While AWS has not yet fully restored power to all affected Availability Zones, Cockroach Labs has directly engaged all customers impacted by this incident, providing resolution guidance and hands-on remediation assistance, including cross-region data restoration where applicable. While no impact has been observed on GCP or Azure in those regions, customers with single-region deployments are advised to have their disaster recovery plans ready should the need to restore from a backup to another region be required. Impacted customers can track AWS status here https://health.aws.amazon.com/health/status || AWS continues to work on mitigation efforts, including stabilizing impacted APIs and implementing interim workarounds. Our teams are actively reviewing and validating these mitigations; however, this effort will continue into tomorrow. || AWS is reporting significant signs of recovery for specific APIs and requests, but several still remain to be mitigated and will likely take several hours more to complete, if not into tomorrow. || AWS is reporting positive signs of recovery at this time, but are still working on multiple mitigation paths to fully restore services. AWS is working on multiple mitigation paths to restore services as quickly a"
+ },
+ {
+  "org": "CockroachDB",
+  "date": "2025-06-04",
+  "url": "https://status.cockroachlabs.cloud/incidents/drvly27t0w52",
+  "name": "Metrics Pages Unavailable in Cockroach Cloud Console for Basic and Standard Clusters",
+  "sev": "High",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "The issue that was preventing metrics pages from loading in the Cockroach Cloud console for Basic and Standard tier clusters has been fully resolved. Metrics are now loading as expected, and we\u2019ve received confirmation from our service provider that the underlying issue has been addressed. We will continue to monitor for any signs of recurrence, but no further impact is expected at this time. Thank you for your patience. || Metrics visualizations are now loading as expected. We are continuing to monitor system behavior to ensure stability and will mark this incident as resolved once we confirm full recovery. || We\u2019ve identified the source of the issue that was preventing metrics pages from loading in the Cockroach Cloud console for Basic and Standard tier clusters. The underlying service has recovered, and metrics visualizations are now loading as expected. We are continuing to monitor the situation to ensure full stability. || We are currently investigating an issue that is preventing some metrics pages from loading in the Cockroach Cloud console for Basic and Standard tier clusters. Metrics data collection remains unaffected; however, we are seeing unexpected errors when retrieving metrics for display in the console. We are actively working to identify the root cause and restore full functionality. Further updates will be provided as our investigation continues."
+ },
+ {
+  "org": "CockroachDB",
+  "date": "2026-08-04",
+  "url": "https://status.cockroachlabs.cloud/incidents/2vhw363pjysp",
+  "name": "Cluster connectivity and execution issues",
+  "sev": "High",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "|| Teams have mitigated the immediate active impact, but work continues to ensure the problem does not recur and to fully understand the root cause. Teams have been notified and are actively working on mitigation. Teams have been notified and are actively working on mitigation. Teams have been notified and are actively working on mitigation."
+ },
+ {
+  "org": "CockroachDB",
+  "date": "2024-06-18",
+  "url": "https://status.cockroachlabs.cloud/incidents/5xq16cmdt5sk",
+  "name": "Azure cluster creation and modification impaired",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "|| Due to capacity issues in the Azure East US region, some cluster operations such as cluster creation and modification may fail if East US is the target region. Some existing clusters will be updated during their pre-scheduled maintenance windows to fix cluster modification on those clusters. || Due to a change made by our cloud provider, cluster creation and cluster modification operations on Azure (only) are currently impaired while we prepare a fix."
+ },
+ {
+  "org": "CockroachDB",
+  "date": "2023-12-22",
+  "url": "https://status.cockroachlabs.cloud/incidents/7jdp3zd08knb",
+  "name": "Failures on cluster operations",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "All cluster operations should now succeed. We are monitoring for any additional failures. || Vertical scaling of clusters on AWS may take longer than expected. || We've identified a root cause and are working on a solution. Current impact is limited to vertical scaling of AWS clusters only. || We are currently seeing some operations on AWS clusters failing, including cluster creation and modification. We've investigated and found a root cause and are working on a mitigation."
+ },
+ {
+  "org": "Cohere",
+  "date": "2026-09-01",
+  "url": "https://status.cohere.com/incidents/01M1ET335FBT8KKCYN3NAEVR04",
+  "name": "Multiple Endpoint Disruptions",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "\ud83c\udf89 The issue has been resolved and we are back to normal. || \ud83d\udc40 We are monitoring to make sure the incident has been fully resolved. || \ud83d\udee0\ufe0f We have identified the root cause as an ongoing Google Cloud Platform (GCP) outage. Our team is actively monitoring the situation while we wait for GCP to resolve the underlying issue. ([reference](https://status.cloud.google.com/incidents/J5ia5t9p3g9Q5Wi7r8Ev \"reference\")) || \ud83d\udd0e We are currently investigating this live incident."
+ },
+ {
+  "org": "Cohere",
+  "date": "2026-06-01",
+  "url": "https://status.cohere.com/incidents/01KT1Q9429CJT35B330BY5GGTF",
+  "name": "/audio/transcriptions endpoint returns error for audio files with unexpected sampling rate",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "|| /audio/transcriptions endpoints availability is affected now due to the Cohere ASR model backing the endpoint throws error for any audio inputs that are in the expected sampling rate. Previously these sampling rate audio files were accepted and processed, marking this as a regression type incident. :hammer_and_wrench: We have identified the root cause of the incident, and are working diligently to fix."
+ },
+ {
+  "org": "Confluent",
+  "date": "2026-09-08",
+  "url": "https://status.confluent.cloud/incidents/4qs2w3mq2241",
+  "name": "Service Disruption affecting Authentication, Schema Registry, ksqlDB, and Flink in AWS us-east-1",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": false,
+  "text": "|| We have applied a mitigation for the issue affecting Schema Registry, Authentication, ksqlDB, Flink, and Kafka operations in AWS us-east-1. This issue is isolated to the AWS us-east-1 region; other regions are unaffected || The issue has been identified and a fix is being implemented. || The issue has been identified and a fix is being implemented. We are actively investigating the root cause and working toward mitigation."
+ },
+ {
+  "org": "Confluent",
+  "date": "2026-02-03",
+  "url": "https://status.confluent.cloud/incidents/68qx82dggmlj",
+  "name": "Confluent Cloud Service Outage",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "The root cause was a networking configuration change in the us-west-2 region that caused client connection issues starting at approximately 21:33 UTC, resulting in intermittent service disruption across several Confluent Cloud services, including Kafka, Flink, Metrics API, Logging, Provisioning, and Authentication. The change was reverted, and as of 00:20 UTC, services have been fully restored. || Confluent has identified the cause of the issue and reverted the related configuration change. The issue has been mitigated, services are stable, and we continue to monitor. We\u2019ll continue monitoring and provide an update once all services are confirmed restored."
+ },
+ {
+  "org": "Confluent",
+  "date": "2025-11-17",
+  "url": "https://status.confluent.cloud/incidents/tz2nsvpr514z",
+  "name": "Confluent Cloud Connector event logs - Unavailable - All clusters - All regions",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "|| A fix has been implemented, ensuring no further log loss. || We have identified the cause of the issue and have begun mitigation steps. The mitigation currently in progress will prevent further log loss, but we will be unable to recover the events that were previously lost. The full mitigation is expected to take up to 8 hours to complete for all clusters."
+ },
+ {
+  "org": "Confluent",
+  "date": "2025-12-02",
+  "url": "https://status.confluent.cloud/incidents/nj5l2dbxq36y",
+  "name": "Flink job submission and job scale operations are affected in GCP asia-northeast1, europe-west8, europe-north1, southamerica-east1",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "|| A fix has been applied to all regions and we've seen recovery in all affected regions. || The team has successfully applied a fix to asia-northeast1 and we're seeing recovery there. Meanwhile the team is applying mitigations in the other affected regions. || The root cause for the issue has been identified and the team is working on applying a mitigation. We are currently investigating the issue and attempting to mitigate or provide a work-around."
+ },
+ {
+  "org": "Confluent",
+  "date": "2026-02-23",
+  "url": "https://status.confluent.cloud/incidents/9k0fm6qflbbq",
+  "name": "Elevated Kafka Latency in GCP asia-southeast1",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "The issue was resolved successfully. All systems working as expected. || GCP has identified the root cause and has fixed the same. Currently monitoring. || We are continuing to investigate this issue with GCP. GCP is actively working on applying mitigation. || We are continuing to investigate this issue. || Starting 2/21/2026, 21:00 UTC We are observing Elevated Kafka Latency in GCP asia-southeast1 region for less than 0.1% of produce and fetch requests for some customers. Median latencies for both produce and fetch requests are not impacted. We are actively working with GCP to identify the root cause of the issue. We will provide next update in 2 hours or earlier. || We are currently investigating this issue."
+ },
+ {
+  "org": "Confluent",
+  "date": "2026-09-26",
+  "url": "https://status.confluent.cloud/incidents/k2qn7x0b9176",
+  "name": "Elevated error rates in Azure East US",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "This incident has been resolved. All affected services have fully recovered, and no further customer impact is expected. No action is required from customers. || We are continuing to work on a fix for this issue. || Systems are continuing to recover and are being monitored || Microsoft Azure has confirmed an outage impacting their Azure East US region, which is the root cause of the elevated error rates affecting Confluent services. Confluent will provide another update as soon as we receive further details. || We are currently investigating an issue related to elevated error rates in Azure East US"
+ },
+ {
+  "org": "Confluent",
+  "date": "2026-06-16",
+  "url": "https://status.confluent.cloud/incidents/cyr0zh4ks0gy",
+  "name": "Intermittent Produce/Consume Unavailability in Azure Dedicated clusters",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "No further issues have been observed. The incident is now resolved as of 2026-06-16 17:58 UTC. || No further issues have been observed. The incident is now resolved as of 2026-06-16 17:58 UTC. || We have found the root cause and have mitigated the problem as of 2026-06-16 16:09 UTC. We will monitor for any residual issues before resolving this incident in 1 hour. || We are currently experiencing Intermittent Produce/Consume Unavailability in Azure Dedicated clusters. The problem started at 2026-06-16 13:20 UTC. We are currently investigating and will update as we know more."
+ },
+ {
+  "org": "Confluent",
+  "date": "2025-12-08",
+  "url": "https://status.confluent.cloud/incidents/8lck7nh11khm",
+  "name": "Missing metrics in some Confluent Cloud Kafka clusters",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "|| Normal metrics operations have been restored for all originally affected clusters. || The mitigation is nearing completion and we have seen recovery on most clusters. The root cause has been identified. || We are mitigating the impacted clusters and continuing to investigate the root cause."
+ },
+ {
+  "org": "Contentful",
+  "date": "2025-12-02",
+  "url": "https://status.contentful.com/incidents/50lllm2vr96n",
+  "name": "CMA Usage reporting and Audit Logs missing fields",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "Audit Logs have returned to their normal state and are fully operational again. || We've fixed the missing fields for Audit Logs and are now monitoring to ensure normal functionality is restored. || The root cause has been identified, and a fix is in progress. At this stage, it appears that usage reporting is unaffected. || We've identified an issue affecting CMA API call usage reporting and Audit Logs since Nov 14, where certain fields are missing and data may be incomplete. As a result, some Audit Log events may be absent, and the CMA usage reports displayed in the web app may not accurately reflect actual usage. We are currently investigating and will provide updates as soon as we understand the full impact."
+ },
+ {
+  "org": "Daily",
+  "date": "2026-04-17",
+  "url": "https://status.daily.co/incidents/vx38ps4m3qb5",
+  "name": "API and call connection issues",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "|| Cloudflare has posted that they've implemented a fix, and they are monitoring the results. We're still not certain that Cloudflare is the actual root cause of 100% of our affected users, but we'll be monitoring error rates. Obviously, this solution doesn't scale; we're working with AWS to identify the root cause of the DNS resolution issue for c.daily.co."
+ },
+ {
+  "org": "Daily",
+  "date": "2026-06-08",
+  "url": "https://status.daily.co/incidents/72xpvgcc1qv8",
+  "name": "Issues with joining calls from certain ISPs/regions",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "We'll post updates to our Networking Guide when we do: https://docs.daily.co/guides/privacy-and-security/corporate-firewalls-nats-allowed-ip-list We'll also provide a root cause analysis for this incident in the next few days. || We are working on implementing a fallback to a .com domain so that users on ISPs that are not fixing this will not see any issues starting calls. This is being caused by failures from the DNS servers that serve the .co TLD itself."
+ },
+ {
+  "org": "Daily",
+  "date": "2026-02-18",
+  "url": "https://status.daily.co/incidents/8h2trlgnm39h",
+  "name": "SIP / PSTN Disruption",
+  "sev": "Critical",
+  "cat": "other",
+  "pm": false,
+  "text": "|| The fix from our upstream carrier partner has been applied, and service has been restored for SIP/PSTN dial-in (inbound) calling. || Our upstream carrier partner has identified the root cause of the issue impacting SIP/PSTN dial-in (inbound) calling and has implemented a fix. Service is beginning to recover, though some degradation may still be present while the fix fully propagates. Our engineering team is actively working to identify the root cause and restore service."
+ },
+ {
+  "org": "Daily",
+  "date": "2021-12-15",
+  "url": "https://status.daily.co/incidents/s2zf2nmxfdwx",
+  "name": "Connectivity issues",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "Error rates and network metrics have returned to normal levels, so we're considering this issue resolved. || We've seen overall error rates decrease as AWS has been working to resolve the networking issue. Things are improving, but you may still experience delays and errors until this issue is fully resolved. || We're continuing to see issues across our platform as a result of the ongoing AWS outage. You'll likely experience problems joining calls, accessing the Dashboard, or using the REST API. We'll continue to post more information here as we have it. || We're experiencing network delays and timeouts throughout our infrastructure as a result of a larger-scale AWS incident. You may experience problems connecting to calls, viewing your Dashboard, or making REST API requests. We'll update this incident as we know more. || We're investigating reports of problems connecting to calls."
+ },
+ {
+  "org": "Daily",
+  "date": "2026-03-23",
+  "url": "https://status.daily.co/incidents/tg3wx05c6krw",
+  "name": "Issues with inbound phone calls",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "This incident has been resolved. We're still collecting more information on the root cause here; we'll update this status post when we have more info. || It seems that SignalWire has resolved their issue. We're monitoring for any other problems. || SignalWire has identified an issue causing problems with incoming and outgoing PSTN/SIP calls for Daily customers. If you're making dialout calls, you may see an error that says \"DialOut stopped: Remote busy or Remote did not answer or Remote ended the call\". If you're using dialin, you may hear a message that says \"the number you have dialed is not configured correctly and cannot receive calls\" or something similar. || We're investigating elevated error rates for incoming PSTN/SIP calls."
+ },
+ {
+  "org": "Daily",
+  "date": "2026-02-04",
+  "url": "https://status.daily.co/incidents/7fdnlfgr8wmr",
+  "name": "Increase in \"Failed to load call object bundle\" errors",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "The issue has been resolved. We\u2019ve seen the number of \u201cFailed to load call object bundle\u201d errors return to normal levels, and call joins are operating as expected. || The initial increase in error rates has subsided. Based on reports from a few customers, it seems like the impact was primarily in the Texas area. We're continuing to work with AWS to determine the root cause. || We've seen an increase in \"Failed to load call object bundle\" errors within the past hour. This happens when the browser is unable to download our JavaScript bundle from the CDN. If this happens to you or your users, you should be able to refresh the page and join your call successfully. We're working with our CDN provider to identify the issue."
+ }
+]

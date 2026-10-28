@@ -1,0 +1,402 @@
+[
+ {
+  "org": "Lambda Labs",
+  "date": "2026-09-23",
+  "url": "https://status.lambdalabs.com/incidents/01M383F6H4SVRBDYWEEJJ9M8W6",
+  "name": "US-SOUTH-3 Region Resources Not Visible on Dashboard, Impacting Launches and Terminations",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "**Severity Level:** High The incident has been resolved. us-south-3 services are now working as expected. ----------------------------------------------------------------------------- Again, in the event you\u2019re unsure as to whether your service is still impacted by this, please open a support ticket and we\u2019ll get back to you as soon as possible. \u2022 [https://support.lambdalabs.com/hc/en-us/requests/new](https://support.lambdalabs.com/hc/en-us/requests/new \"https://support.lambdalabs.com/hc/en-us/requests/new\") To be automatically notified when the status of this incident changes, please click on the \u201cSubscribe to updates\u201d button. || **Severity Level:** High We've identified that this issue is affecting the status of instances and filesystems in the us-south-3 region within the API and Console. Some users may see these resources as unhealthy when checking their dashboard and API. For clarity, the alert/unhealthy status is a display issue, not a reflection of actual instance health. The underlying infrastructure is healthy. If you already have connection details for an instance in us-south-3, you can continue to access it normally. We're continuing to work on a resolution and will provide another update as soon as we have one. Thank you for your patience. ----------------------------------------------------------------------------- In the event you\u2019re unsure as to whether your service is impacted by this incident, please open a support ticket. We\u2019ll get back to you as soon as pos"
+ },
+ {
+  "org": "Lambda Labs",
+  "date": "2026-07-27",
+  "url": "https://status.lambdalabs.com/incidents/01KYHC2Q7VY59H7N9C6A80SWNQ",
+  "name": "Multiple Regions | Launch and Termination Issues",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "**Severity Level:** High The incident has been resolved. Launches and terminations are now working as expected. ----------------------------------------------------------------------------- Again, in the event you\u2019re unsure as to whether your service is still impacted by this, please open a support ticket and we\u2019ll get back to you as soon as possible. \u2022 [https://support.lambdalabs.com/hc/en-us/requests/new](https://support.lambdalabs.com/hc/en-us/requests/new \"https://support.lambdalabs.com/hc/en-us/requests/new\") To be automatically notified when the status of this incident changes, please click on the \u201cSubscribe to updates\u201d button. || **Severity Level:** High We\u2019re currently investigating a potential issue with our launches and termination from multiple regions. Users may experience their machines being stalled while booting up or terminating. Services have been restarted and the launches are enabled again. We will continue to monitor the situation. Thank you for your patience and understanding during this time. ----------------------------------------------------------------------------- In the event you\u2019re unsure as to whether your service is impacted by this incident, please open a support ticket. We\u2019ll get back to you as soon as possible. \u2022 [https://support.lambdalabs.com/hc/en-us/requests/new](https://support.lambdalabs.com/hc/en-us/requests/new \"https://support.lambdalabs.com/hc/en-us/requests/new\") To be automatically notified when the status of this incident changes"
+ },
+ {
+  "org": "Lambda Labs",
+  "date": "2026-06-04",
+  "url": "https://status.lambdalabs.com/incidents/01KT8D90X9XNJ9GWPZ674TVGZS",
+  "name": "US-SOUTH-3 Instance Launch / Termination Issues",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "**Severity Level:** [Medium] The incident has been resolved. US-SOUTH-3 launches and terminations are now working as expected. ----------------------------------------------------------------------------- Again, in the event you\u2019re unsure as to whether your service is still impacted by this, please open a support ticket and we\u2019ll get back to you as soon as possible. \u2022 [https://support.lambdalabs.com/hc/en-us/requests/new](https://support.lambdalabs.com/hc/en-us/requests/new \"https://support.lambdalabs.com/hc/en-us/requests/new\") To be automatically notified when the status of this incident changes, please click on the \u201cSubscribe to updates\u201d button. || **Severity Level:** [Medium] We\u2019re currently investigating a potential issue in the US-SOUTH-3 region. Users may experience failures when launching and terminating instances. We have rolled out a fix and are currently monitoring the progress. Thank you for your patience and understanding during this time. ----------------------------------------------------------------------------- In the event you\u2019re unsure as to whether your service is impacted by this incident, please open a support ticket. We\u2019ll get back to you as soon as possible. \u2022 [https://support.lambdalabs.com/hc/en-us/requests/new](https://support.lambdalabs.com/hc/en-us/requests/new \"https://support.lambdalabs.com/hc/en-us/requests/new\") To be automatically notified when the status of this incident changes, please click on the \u201cSubscribe to updates\u201d button. || **Sever"
+ },
+ {
+  "org": "Lambda Labs",
+  "date": "2026-08-02",
+  "url": "https://status.lambdalabs.com/incidents/01KZ1PGG9FTZH5T7586CVKH3KP",
+  "name": "Network Issues in us-midwest-2",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "Networking in the us-midwest-2 region is confirmed restored after monitoring. || **Severity Level:** Medium Our team has applied a fix to mitigate the network issue affecting us-midwest-2. Our teams are actively working to identify the root cause and mitigate or resolve the issue."
+ },
+ {
+  "org": "Lambda Labs",
+  "date": "2026-07-29",
+  "url": "https://status.lambdalabs.com/incidents/01KYQQ38T4M12RDWN15ZMTTVV2",
+  "name": "Network issues in us-east-2",
+  "sev": "High",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "|| **Severity Level:** [High] Our engineers have implemented a fix to address the issue with our Networking services. Impact to customers should be fixed, but if still experiencing issues please reach out to us. Our teams are actively working to identify the root cause and mitigate or resolve the issue."
+ },
+ {
+  "org": "Lambda Labs",
+  "date": "2026-02-26",
+  "url": "https://status.lambdalabs.com/incidents/01KJC4SSKCJD234PSQKP18VHGE",
+  "name": "Launches Disabled in Multiple Regions",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "**Severity Level:** High Our engineers have identified the root cause and have resolved the issue. Launches are enabled on the affected regions. In the event you\u2019re unsure as to whether your service is impacted by this incident, please open a support ticket. We\u2019ll get back to you as soon as possible. \u2022 [https://support.lambdalabs.com/hc/en-us/requests/new](https://support.lambdalabs.com/hc/en-us/requests/new \"https://support.lambdalabs.com/hc/en-us/requests/new\") To be automatically notified when the status of this incident changes, please click on the \u201cSubscribe to updates\u201d button. Thank you for your patience and understanding during this time. || > Severity Level: High > > We\u2019re currently investigating a potential issue with launching /terminating instances these regions: > > us-east-1 > us-midwest-1 > us-west-1 > us-west-2 > europe-central-1 > asia-northeast-1 > asia-northeast-2 > australia-east-1 > > Users may experience launch/termination failures. Our engineers are actively working to resolve the issue. > > In the event you\u2019re unsure as to whether your service is impacted by this incident, please open a support ticket. We\u2019ll get back to you as soon as possible. > > \u2022 https://support.lambdalabs.com/hc/en-us/requests/new > > To be automatically notified when the status of this incident changes, please click on the \u201cSubscribe to updates\u201d button. > > Thank you for your patience and understanding during this time. || **Severity Level:** High We\u2019re currently investigating a p"
+ },
+ {
+  "org": "Lambda Labs",
+  "date": "2026-02-20",
+  "url": "https://status.lambdalabs.com/incidents/01KHXCAG48FJZ3X9R1RZKVEGWS",
+  "name": "Partial Outage in AUS01 (us-south-3) region",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "**Severity Level:** [High] The incident has been resolved. Services in AUS01 (us-south-3) region is now working as expected. || **Severity Level:** [High] We\u2019re currently monitoring a mitigated issue with our service in AUS01 (us-south-3). Users previously experience seeing their instance in Alert status but access to ssh and Jupyter are not impacted seems to have been resolved. In the event you\u2019re unsure as to whether your service is impacted by this incident, please open a support ticket. We\u2019ll get back to you as soon as possible. \u2022 [https://support.lambdalabs.com/hc/en-us/requests/new](https://support.lambdalabs.com/hc/en-us/requests/new \"https://support.lambdalabs.com/hc/en-us/requests/new\") To be automatically notified when the status of this incident changes, please click on the \u201cSubscribe to updates\u201d button. Thank you for your patience and understanding during this time. || **Severity Level:** [High] We\u2019re currently investigating a potential issue with our service in AUS01 (us-south-3) region. Users may experience seeing their instance in alert status on their cloud dashboard but access to existing instances via SSH, and Jupyter are not impacted. Our engineers are actively working to identify the root cause of the issue. In the event you\u2019re unsure as to whether your service is impacted by this incident, please open a support ticket. We\u2019ll get back to you as soon as possible. \u2022 [https://support.lambdalabs.com/hc/en-us/requests/new](https://support.lambdalabs.com/hc/en-u"
+ },
+ {
+  "org": "Lambda Labs",
+  "date": "2026-06-04",
+  "url": "https://status.lambdalabs.com/incidents/01KTA1WZNQ5B7EZ0HDCZ7SXE59",
+  "name": "Slow Instance Launches in Certain Regions",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "Users may experience slower than normal instance launches in the following regions: \u2022 us-east-1 \u2022 us-midwest-1 \u2022 us-west-1 \u2022 us-west-2 \u2022 me-west-1 \u2022 europe-cental-1 \u2022 ap-southeaast-2 \u2022 asia-northeast-2 \u2022 asia-south-1 \u2022 asia-northeast-1 Our teams are actively working to identify the root cause and mitigate or resolve the issue."
+ },
+ {
+  "org": "Lambda Labs",
+  "date": "2026-04-03",
+  "url": "https://status.lambdalabs.com/incidents/01KN9JF2JASD6Y7YXS754KC45B",
+  "name": "Non-admin users are unable to launch instances.",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "**Severity Level:** [High] The incident has been resolved. Launches for team members should now work as expected. ----------------------------------------------------------------------------- In the event you\u2019re unsure as to whether your service is impacted by this incident, please open a support ticket. We\u2019ll get back to you as soon as possible. \u2022 [https://support.lambdalabs.com/hc/en-us/requests/new](https://support.lambdalabs.com/hc/en-us/requests/new \"https://support.lambdalabs.com/hc/en-us/requests/new\") To be automatically notified when the status of this incident changes, please click on the \u201cSubscribe to updates\u201d button. || **Severity Level:** [High] We're currently investigating a potential issue with our cloud portal. Non-admin users may experience the Launch Instance page failing to load. As a workaround, please ask an admin user to launch the instance on your behalf. Our teams are actively working to identify the root cause and resolve the issue. Thank you for your patience and understanding during this time. ----------------------------------------------------------------------------- In the event you\u2019re unsure as to whether your service is impacted by this incident, please open a support ticket. We\u2019ll get back to you as soon as possible. \u2022 [https://support.lambdalabs.com/hc/en-us/requests/new](https://support.lambdalabs.com/hc/en-us/requests/new \"https://support.lambdalabs.com/hc/en-us/requests/new\") To be automatically notified when the status of this incident "
+ },
+ {
+  "org": "Lambda Labs",
+  "date": "2026-07-02",
+  "url": "https://status.lambdalabs.com/incidents/01KWGJ00W6TW7HM4YJD2TJD13Y",
+  "name": "US-SOUTH-2 - Instance Launch Issues",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "**Severity Level:** Medium The US-SOUTH-2 launch/termination issue has been resolved. Thank you for your patience and understanding during this time. ----------------------------------------------------------------------------- In the event you\u2019re unsure as to whether your service is impacted by this incident, please open a support ticket. We\u2019ll get back to you as soon as possible. \u2022 [https://support.lambdalabs.com/hc/en-us/requests/new](https://support.lambdalabs.com/hc/en-us/requests/new \"https://support.lambdalabs.com/hc/en-us/requests/new\") To be automatically notified when the status of this incident changes, please click on the \u201cSubscribe to updates\u201d button. || **Severity Level:** Medium We\u2019re currently investigating a potential issue with instance launching in the US-SOUTH-2 region. Users may experience boot/termination failures. Our teams are actively working to identify the root cause and mitigate or resolve the issue. Thank you for your patience and understanding during this time. ----------------------------------------------------------------------------- In the event you\u2019re unsure as to whether your service is impacted by this incident, please open a support ticket. We\u2019ll get back to you as soon as possible. \u2022 [https://support.lambdalabs.com/hc/en-us/requests/new](https://support.lambdalabs.com/hc/en-us/requests/new \"https://support.lambdalabs.com/hc/en-us/requests/new\") To be automatically notified when the status of this incident changes, please click on the \u201cS"
+ },
+ {
+  "org": "Lambda Labs",
+  "date": "2026-06-17",
+  "url": "https://status.lambdalabs.com/incidents/01KVAB6GYM2E4RD1GAJC6SVS1F",
+  "name": "Failed Launches in US-EAST-3",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "**Severity Level:** Medium The launch issues in US-EAST-3 has been resolved. Thank you for your patience and understanding during this time. ----------------------------------------------------------------------------- In the event you\u2019re unsure as to whether your service is impacted by this incident, please open a support ticket. We\u2019ll get back to you as soon as possible. \u2022 [https://support.lambdalabs.com/hc/en-us/requests/new](https://support.lambdalabs.com/hc/en-us/requests/new \"https://support.lambdalabs.com/hc/en-us/requests/new\") To be automatically notified when the status of this incident changes, please click on the \u201cSubscribe to updates\u201d button. || **Severity Level:** Medium We\u2019re currently investigating a potential issue with the instance launches. Users may experience their US-EAST-3 instances going into Alert at launch. Our teams are actively working to identify the root cause and mitigate or resolve the issue. Thank you for your patience and understanding during this time. ----------------------------------------------------------------------------- In the event you\u2019re unsure as to whether your service is impacted by this incident, please open a support ticket. We\u2019ll get back to you as soon as possible. \u2022 [https://support.lambdalabs.com/hc/en-us/requests/new](https://support.lambdalabs.com/hc/en-us/requests/new \"https://support.lambdalabs.com/hc/en-us/requests/new\") To be automatically notified when the status of this incident changes, please click on the \u201cSubsc"
+ },
+ {
+  "org": "Lambda Labs",
+  "date": "2026-02-22",
+  "url": "https://status.lambdalabs.com/incidents/01KJ2XW8F37QA1T1NQ47MBKBD1",
+  "name": "Launch failures in Utah (us-west-3) region",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "**Severity Level:** [Medium] The incident has been resolved. Launches in Utah (us-west-3) should now work as expected. || **Severity Level:** [Medium] We\u2019re currently investigating a potential issue with VM launches in our On-Demand Cloud services at Utah (us-west-3) region. Users may experience newly launched instances going into \"Alert\" status. Our engineers are actively working to identify the root cause of the issue. In the event you\u2019re unsure as to whether your service is impacted by this incident, please open a support ticket. We\u2019ll get back to you as soon as possible. \u2022 [https://support.lambdalabs.com/hc/en-us/requests/new](https://support.lambdalabs.com/hc/en-us/requests/new \"https://support.lambdalabs.com/hc/en-us/requests/new\") To be automatically notified when the status of this incident changes, please click on the \u201cSubscribe to updates\u201d button. Thank you for your patience and understanding during this time."
+ },
+ {
+  "org": "LaunchDarkly",
+  "date": "2026-07-10",
+  "url": "https://status.launchdarkly.com/incidents/44vx9yyr4vgw",
+  "name": "LaunchDarkly is operational but customer action may be required",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": false,
+  "text": "This incident has been resolved. || All LaunchDarkly services are operational, though some customers need to take action to restore their connections to our Flag Delivery Network. Customers continue to successfully reestablish connections by completing the action guidance below and we continue to support customers working through the residual impact. SDKs and Relay Proxy instances which attempted to establish a connection to LaunchDarkly on July 10 between 09:11 and 11:42 AM PT were intermittently affected. This includes situations where the host application was restarted or redeployed during this time. SDKs and Relay Proxy instances which did not attempt to establish a connection during this time were unaffected. We recommend reviewing your application logs for the incident window. Affected SDKs emit messages\u2014varying by language\u2014that contain any of the following: \"giving up permanently,\" \"Invalid SDK key,\" \"unauthorized,\" \"not authorized,\" or \"401.\" Any service that logged these messages may be unable to receive flag updates or send event data until it is restarted. Here are the recommended actions for each affected application: - If you use the Relay Proxy, please restart the Relay Proxy to re-establish connections. It should not be necessary to restart the applications behind it, but we recommend reviewing your application logs to confirm if restarting your applications is necessary. - If you use server-side SDKs without the Relay Proxy, please restart the application to r"
+ },
+ {
+  "org": "LaunchDarkly",
+  "date": "2026-06-08",
+  "url": "https://status.launchdarkly.com/incidents/52yhcr551t6w",
+  "name": "Delays in event ingestion",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "We identified that a small percentage of event data was lost during two windows: June 9, 11:41 - 11:59 UTC and June 10, 23:55 UTC - June 11, 00:21 UTC. We identified that a small percentage of event data was lost during two windows: June 9, 11:41 - 11:59 UTC and June 10, 23:55 UTC - June 11, 00:21 UTC. We identified that a small percentage of event data was lost during two windows: June 9, 11:41 - 11:59 UTC and June 10, 23:55 UTC - June 11, 00:21 UTC. || A fix has been implemented and we are monitoring the results. We have identified the issue and are working on a fix."
+ },
+ {
+  "org": "LaunchDarkly",
+  "date": "2026-07-10",
+  "url": "https://status.launchdarkly.com/incidents/chywwz01ptb0",
+  "name": "Web application unavailable and flag delivery evaluations have elevated failure rate",
+  "sev": "Critical",
+  "cat": "authentication",
+  "pm": false,
+  "text": "All service availability has been fully restored. Customers using server-side SDKs might need to restart their applications to re-enable the SDKs' connection to LaunchDarkly. Customers using the Relay Proxy may also need to restart their Relay Proxy; in this case, the Relay Proxy should be restarted before restarting their applications that connect to it. To determine if an application needs to be restarted, customers can look at their application logs. Affected SDKs will emit (depending on language) logs containing one of \"giving up permanently\", \"Invalid SDK key\", \"unauthorized\", or \"not authorized\", or \"401\". Services which emitted logs such as these before 9:13AM PT may be unable to receive flag updates and will be unable to send events to LaunchDarkly until they are restarted. || Production service impact has been restored. However, customers might need to restart their applications to fully reconnect to LaunchDarkly's services. Our engineering team is working on guidance that can be provided to customers. || The web application availability has recovered. Flag delivery and event ingestion continue to be impacted and are actively recovering. Our engineering team continues to work on remediation. || We have identified the root cause and are implementing a fix. || The LaunchDarkly web application (app.launchdarkly.com) was unavailable and is actively recovering at the moment. The Flag Delivery network was also impacted, causing an elevated failure rate with retrieving flag"
+ },
+ {
+  "org": "LaunchDarkly",
+  "date": "2026-08-24",
+  "url": "https://status.launchdarkly.com/incidents/csyq34v7ryx9",
+  "name": "Email delivery failure affecting sign-up verification and notification emails",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": false,
+  "text": "Email delivery has been restored as of 2:32 PM UTC. || Emails sent by LaunchDarkly \u2014 including sign-up verification, password reset, teammate invitation, and workflow notification emails \u2014 are currently failing to deliver due to an authentication issue with an upstream email delivery provider. Once delivery is restored, we will re-send affected verification and password reset emails."
+ },
+ {
+  "org": "LaunchDarkly",
+  "date": "2026-04-06",
+  "url": "https://status.launchdarkly.com/incidents/kmg6243wf7z2",
+  "name": "Delayed processing of Session Replay and Error data",
+  "sev": "Medium",
+  "cat": "database_issue",
+  "pm": false,
+  "text": "The delayed processing of Session Replay and Error event data has been resolved. All queued events have been processed and data ingestion is operating normally. No data was lost during this incident. Thank you for your patience. || The delayed processing of Session Replay and Error event data has been resolved. All queued events have been processed and data ingestion is operating normally. No data was lost during this incident. Thank you for your patience. || We have identified the cause of the delayed Session Replay and Error event processing and a fix is in progress. The backlog is actively decreasing. No data has been lost \u2014 all queued events will be processed. || We are currently experiencing a delay in processing Session Replay and Error event data. Incoming data is being queued and will be processed \u2014 no data has been lost. Customers may observe a temporary lag in session and error data appearing in the LaunchDarkly UI. We have identified the root cause as elevated database utilization and are actively working to resolve the backlog. We will provide updates as processing returns to normal."
+ },
+ {
+  "org": "LaunchDarkly",
+  "date": "2026-08-26",
+  "url": "https://status.launchdarkly.com/incidents/b7bvzg7pp7dy",
+  "name": "Flag delivery errors in Streaming API",
+  "sev": "Medium",
+  "cat": "security_incident",
+  "pm": false,
+  "text": "This incident has been resolved. Between 12:00 and 12:12 PM PDT on August 26, server-side SDKs establishing new streaming connections experienced elevated error rates. Existing streaming connections were not affected, and polling requests continued to be served with error rates below 1%. Some requests to the LaunchDarkly web application also experienced elevated errors between approximately 11:29 AM and 12:03 PM PDT. The issue was caused by an internal configuration change, which has been reverted. All systems have recovered and are operating normally. No customer data was lost or compromised. || Server-side streaming requests experienced elevated error rates between approximately 12:00 p.m. and 12:12 p.m. PDT, and some SDKs establishing new streaming connections may have been unable to connect. Polling request error rates remained below 1% throughout the incident. No customer data was lost or compromised. We apologize for the disruption."
+ },
+ {
+  "org": "LaunchDarkly",
+  "date": "2026-05-04",
+  "url": "https://status.launchdarkly.com/incidents/956d9bdtw9jt",
+  "name": "Elevated Streaming Errors in Europe",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "This incident has been resolved. || We've implemented a fix and have mitigated impact as of 8:35am PT. Streaming SDKs should be able to connect successfully at this time. || We're continuing to address the root cause of the elevated error rate. Server SDKs may require additional time to initialize while requests are retried. || We're identified an infrastructure issue causing elevated error rates and are working on a fix. || We are investigating elevated error rates for streaming initialization in the Europe region. Some customers using streaming server-side SDKs may have experienced longer than normal initialization times or timeouts when connecting to LaunchDarkly."
+ },
+ {
+  "org": "LaunchDarkly",
+  "date": "2026-02-12",
+  "url": "https://status.launchdarkly.com/incidents/hfbvlcjhn2cr",
+  "name": "Data attribution issues with Experimentation",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "We have fixed the data attribution issues where running experiment iterations were receiving incorrectly attributed data. || We have fixed the data attribution issues where certain experiment iterations are receiving incorrectly attributed data for any new experiments that are created. We are fixing the data attribution error for active experiments. || The team has identified the root cause and is working on a fix."
+ },
+ {
+  "org": "LaunchDarkly",
+  "date": "2026-05-19",
+  "url": "https://status.launchdarkly.com/incidents/zc6jyl2qmgnc",
+  "name": "Event Ingestion Delays",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "Event ingestion is operating normally and all Experimentation results and Guarded Rollouts are fully restored. No data has been lost \u2014 all results and events are intact and will be fully accessible once a fix has been deployed. We have identified the root cause and a fix is being released now."
+ },
+ {
+  "org": "LaunchDarkly",
+  "date": "2026-05-02",
+  "url": "https://status.launchdarkly.com/incidents/d5ql095p0f39",
+  "name": "Delay in Experimentation Results and Experimentation Warehouse Data Export",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "Experimentation results processing and data warehouse export was caught up as of 12:28 pm PT. || We have implemented a fix and are catching up on backlogged experimentation results and data export. We estimate that we will be fully caught up in about 8 hours. || We've identified the root cause of the experimentation results processing and data export delays and are working on implementing a fix. || We are investigating an issue causing delayed experimentation results processing and delayed experimentation data warehouse export."
+ },
+ {
+  "org": "Linode",
+  "date": "2026-07-16",
+  "url": "https://status.linode.com/incidents/hvk9d7fqd5d5",
+  "name": "Connectivity Issue - US-MIA (Miami",
+  "sev": "Low",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "During this window, users may have experienced degraded networking performance and packet loss for Compute services deployed in this region. The issue was resolved after we implemented a fix. We are continuing to work with our third-party service provider to confirm the root cause, as initial evidence points to a campus cross-connect (dark fiber) outage on their infrastructure."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-09-15",
+  "url": "https://status.livekit.io/incidents/f8q2gmj9vfpq",
+  "name": "Cloud Dashboard, Analytics Services, and Billing API failures",
+  "sev": "High",
+  "cat": "memory_leak",
+  "pm": false,
+  "text": "This incident has been resolved. Between 12:08 and 14:23 UTC, customers were unable to access the Cloud Dashboard and the Analytics Services APIs. The cause was a control plane failure in our last remaining legacy Kubernetes cluster, which took out a dependency of those services. Our user-facing services (RTC, SIP, and others) were unaffected, as they run redundantly across our modern clusters and have no dependency on the legacy cluster. We have no indication of data loss. Recovery took longer than we would like, as mitigation required working within the legacy cluster. Work was already underway to make the affected dependency redundant across our modern clusters, and that cluster is scheduled for decommissioning, which removes this class of failure. We will follow up with a postmortem. || A fix has been deployed as of 14:23 UTC, and access to the Cloud Dashboard and Analytics Services APIs is returning to normal. We are continuing to monitor before marking this resolved. Recovery may take a few additional minutes for some clients as the change fully propagates; retrying or reconnecting will restore access. || We have identified the cause of the issue affecting the Cloud Dashboard and Analytics Services APIs, and recovery work is underway. Customers may continue to see errors accessing the Cloud Dashboard and Analytics Services APIs during this time. Room APIs, RTC APIs, and all other services remain healthy and unaffected. We have no indication of data loss from this incide"
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-06-03",
+  "url": "https://status.livekit.io/incidents/616ks8lp2mm2",
+  "name": "Degraded SIP Connectivity in India",
+  "sev": "Low",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "We mitigated this by re-enabling SIP in the India region and restoring normal capacity. Timeline (UTC) 12:00 \u2014 Both India SIP regions disabled during maintenance; start of measurable customer impact 12:40 \u2014 India SIP regions re-enabled; customer impact ends Root cause The incident was caused by an operational error during planned maintenance. Because the third data center does not serve SIP, this removed all SIP capacity in the India region and forced traffic to our Dubai region, where it could not complete region-pinned calls. Resolution Once we identified that India SIP capacity had been removed, we re-enabled SIP in the affected regions, which restored normal inbound and outbound calling in the region."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-06-11",
+  "url": "https://status.livekit.io/incidents/99504b27pb1c",
+  "name": "Intermittent errors for Google Gemini models via Inference",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "The errors were caused by an upstream issue at our model provider (Google) that incorrectly triggered an account-level usage cap on our Gemini API access, returning rate-limit errors for a subset of Gemini requests routed through LiveKit Inference. Google identified the cause, rolled back the change on their side, and raised our account limits to prevent recurrence. Automatic failover to an alternate Gemini deployment is in place and has reduced the impact, but a subset of requests to Google Gemini models may still intermittently return errors when failover capacity is exceeded."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-08-07",
+  "url": "https://status.livekit.io/incidents/vj7j0f6bjp7j",
+  "name": "A percentage of cross-region calls between US West and US Central not completing",
+  "sev": "Medium",
+  "cat": "memory_leak",
+  "pm": false,
+  "text": "|| We have applied a mitigation to the affected regions and are now monitoring to ensure that performance signals return to baseline. || We are currently investigating automated alerting which triggered for degraded Room service performance in the US West and US Central regions beginning around 19:45 UTC."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-04-22",
+  "url": "https://status.livekit.io/incidents/km27wmh6qf0r",
+  "name": "Rejected INVITEs in US East",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "Between 13:15 and 14:25 UTC on April 22, inbound SIP calls routed through our US East region where the toUser field was left empty (approximately 5% of total inbound calls in this region) were rejected by our system due to a failing internal trunk lookup. The regression was deployed to one US region as part of a staged rollout. Once the offending change was rolled back, inbound call rejections returned to baseline within minutes and full service was restored."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-08-19",
+  "url": "https://status.livekit.io/incidents/55hd9vskk5n7",
+  "name": "Investigating delayed session data ingestion on Cloud Dashboard",
+  "sev": "Medium",
+  "cat": "database_issue",
+  "pm": false,
+  "text": "The root cause has been addressed and data ingestion returned to normal by 00:10 UTC. || Mitigations have been deployed and we are now catching up to realtime. We are pursuing a few mitigations right now including moving to a larger database instance to relieve the processing bottleneck. || We are continuing to work on a fix for this issue. We've identified the source of the slow ingest and are working on a mitigation."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-08-24",
+  "url": "https://status.livekit.io/incidents/b8d8b5305snv",
+  "name": "Agent session analytics displaying incorrect values in EU Central and India regions",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "|| We are continuing to monitor while the historical data backfill completes, and will resolve this incident once all analytics for the affected window are fully restored. || We identified an issue where agent session analytics in the Cloud dashboard displayed zero concurrent sessions, beginning late on August 21 (UTC). Ingestion has been restored and we are backfilling historical analytics for the affected window; some charts may show incomplete history until this completes."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-04-24",
+  "url": "https://status.livekit.io/incidents/hp4jcdglmk2m",
+  "name": "Investigating SIP participant timeouts and signalling connection errors",
+  "sev": "Low",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "We are closing this incident as we have not received further reports and the signalling error rate has dropped back to baseline. We made some fine-tuning adjustments to our stack to improve performance and will continue to seek out opportunities to keep latency low. || A fix is being implemented. We still have not received any further reports and believe the impact to be minor, but we're continuing to monitor for further issues. || We received a single report of CreateSIPParticipant timeouts in Singapore. While investigating this, we discovered an increased rate of signalling connection errors on a very small minority of requests, mainly in India. We haven\u2019t received any other reports, but are proactively creating this incident in case users encounter increased connection latency or failed inbound SIP calls. We are continuing to investigate and will update here once we know more."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-08-03",
+  "url": "https://status.livekit.io/incidents/8b7mz0616q6d",
+  "name": "Sessions view not populating in the Cloud Dashboard",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": false,
+  "text": "We have fixed the data pipeline delay and all sessions should be loading now in the Cloud Dashboard. || We have traced the underlying issue to a backlog in our data pipeline, and we are continuing to investigate the root cause while working to clear the backlog. This data ingest delay results in the Sessions view returning no results for any time range ending at the current time, including all Quick Ranges options in the dashboard. As a temporary workaround, select \"Custom range\" and set the end time at least 30 minutes in the past to load your sessions. Real-time connectivity is not affected and no data has been lost. || We are currently investigating an issue where the sessions view does not populate in the Cloud Dashboard. This issue is specific to the dashboard display; all LiveKit services are operating normally and no sessions or sessions data are affected."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-07-06",
+  "url": "https://status.livekit.io/incidents/d8wc8rfngn83",
+  "name": "Elevated connection failures in Japan",
+  "sev": "Medium",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "Users connecting to our Japan region experienced elevated connection failures between approximately 18:18 and 18:43 UTC, caused by a network disruption affecting connectivity between our Tokyo data centres. Connectivity was restored by 18:43 UTC. Update (July 7): After the initial recovery, one replacement media server in Tokyo came online serving only IPv6. From approximately 22:00 UTC on July 6, connections routed to this server failed for clients on networks without IPv6 connectivity. The server was removed from service at 10:30 UTC on July 7, and connection success rates in Japan have returned to normal. || We are currently investigating increased connection failures affecting our Japan region beginning at 18:18 UTC."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-06-11",
+  "url": "https://status.livekit.io/incidents/fwft1ksbv5pq",
+  "name": "Elevated errors for Google Gemini models via Inference",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "Between 13:00 and 15:05 UTC, a subset of requests to certain Google Gemini preview models (gemini-3.1-flash-lite and gemini-3-flash-preview) routed through LiveKit Inference returned errors due to a project-level misconfiguration. This was resolved by routing the traffic via an alternate provider and fixing the misconfiguration."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-06-05",
+  "url": "https://status.livekit.io/incidents/pq3hh34bmmzx",
+  "name": "Elevated latency in Hyderabad region",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "We identified a connectivity problem in the Hyderabad cluster. As mitigation, we've drained the cluster to route traffic away from it. Mumbai traffic is unaffected and serving normally. We'll undrain Hyderabad once we're confident it's functioning normally. || As of 09:21 UTC, we've applied a mitigation by routing traffic away from the Hyderabad region. Latency rates are returning to normal levels. We're continuing to monitor the issue. || We're investigating elevated latency affecting Ingress and SIP services in our Hyderabad region."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-05-07",
+  "url": "https://status.livekit.io/incidents/gfqrsz7wvhjy",
+  "name": "Brief cross-region connectivity disruption in US East",
+  "sev": "Low",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "Between ~17:16 and 17:21 UTC on May 7, 2026, inter-region connectivity between our US East region and other regions was briefly degraded due to a network connectivity issue in our underlying cloud provider's data center. Our system recovered automatically once the cloud provider's data center network connectivity was restored."
+ },
+ {
+  "org": "LiveKit",
+  "date": "2026-04-08",
+  "url": "https://status.livekit.io/incidents/kqvqwjvcqyfk",
+  "name": "LiveKit Cloud Dashboard Missing Observability Sessions",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "We have identified a bug where LiveKit Cloud projects created after April 1 at 20:41 UTC which enabled Agent Insights encountered a bug where their observability data (recordings, traces, and agent logs) was not saved correctly. We have resolved the issue on April 8 at 03:19 UTC and Agent Insights should be fully operational for all new and existing projects. No action is required from impacted users. We will follow up with a postmortem as soon as possible."
+ },
+ {
+  "org": "Loggly",
+  "date": "2026-08-07",
+  "url": "https://status.loggly.com/incidents/5lbsr99pvg5x",
+  "name": "Alerting Delay",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "Due to resource exhaustion on the host, the scheduler was unable to operate normally, preventing alert jobs from being process downstream. The team restored service by increasing the capacity of the affected host, returning resource utilization to healthy levels and allowing the scheduler to resume normal operation."
+ },
+ {
+  "org": "Mailgun",
+  "date": "2025-10-08",
+  "url": "https://status.mailgun.com/incidents/lk05vdk90nb3",
+  "name": "US Email Ingest Errors",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "A deployment of new code caused our sending pipeline to temporarily reject some email submissions with HTTP 500 or SMTP 451 errors (~ 2.5% of requests). Our team quickly identified the issue, rolled back the deployment, and restored normal service. Traffic was immediately shifted from the affected US region to the non impacted region to further mitigate customer impact while the rollback took place."
+ },
+ {
+  "org": "Marqeta",
+  "date": "2026-09-03",
+  "url": "https://status.marqeta.com/incidents/smr619348s08",
+  "name": "Integration Service Degradation on Master Card",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "MasterCard has identified the root cause of the issue and stabilized their systems. Performance across all impacted endpoints\u2014including Token Lifecycle Management, Click to Pay enrolment, API-based dispute submissions, and Card Activations\u2014has fully recovered, and Marqeta customers should no longer be experiencing any impact. || Marqeta engineers are observing consistent improvements across all impacted Mastercard integration services, with error rates and latency returning toward normal levels. Our engineering team continues to closely monitor system health and performance metrics in coordination with Mastercard to ensure sustained stability before fully resolving the incident. Additional updates will be provided as soon as new information is available. || We continue to work in close collaboration with Mastercard\u2019s incident response teams, who have confirmed that dedicated technical teams are actively working to address the platform-wide infrastructure issues on their side affecting Token Lifecycle Management, Click to Pay enrolment, API-based dispute submissions, and new Card Activations. We are closely tracking all system health metrics and will provide further updates as soon as additional information becomes available from our partner. || Our Monitoring into the service disruption impacting MasterCard integration services continues. We are working in close collaboration with MasterCard\u2019s incident response teams, who have confirmed that an active war room is ongoing to a"
+ }
+]

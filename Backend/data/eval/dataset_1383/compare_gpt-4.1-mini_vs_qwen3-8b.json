@@ -1,0 +1,47 @@
+{
+ "n_common": 10,
+ "ids": [
+  "GOLD-0051",
+  "GOLD-0075",
+  "GOLD-0199",
+  "GOLD-0246",
+  "GOLD-0270",
+  "GOLD-0348",
+  "GOLD-0547",
+  "GOLD-0622",
+  "GOLD-0726",
+  "GOLD-1128"
+ ],
+ "rows": {
+  "gpt-4.1-mini rag": {
+   "category_acc": 0.4,
+   "severity_acc": 0.4,
+   "rc_top1_exact": 0.2,
+   "rc_top1_partial_or_better": 0.7,
+   "rc_best3_exact": 0.2,
+   "median_latency_s": 6.3
+  },
+  "gpt-4.1-mini llm_only": {
+   "category_acc": 0.7,
+   "severity_acc": 0.4,
+   "rc_top1_exact": 0.2,
+   "rc_top1_partial_or_better": 0.7,
+   "rc_best3_exact": 0.3
+  },
+  "qwen3-8b rag": {
+   "category_acc": 0.6,
+   "severity_acc": 0.6,
+   "rc_top1_exact": 0.1,
+   "rc_top1_partial_or_better": 0.5,
+   "rc_best3_exact": 0.4,
+   "median_latency_s": 38.2
+  },
+  "qwen3-8b llm_only": {
+   "category_acc": 0.3,
+   "severity_acc": 0.5,
+   "rc_top1_exact": 0.2,
+   "rc_top1_partial_or_better": 0.4,
+   "rc_best3_exact": 0.3
+  }
+ }
+}

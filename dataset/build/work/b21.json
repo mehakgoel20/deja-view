@@ -1,0 +1,292 @@
+[
+ {
+  "org": "Webflow",
+  "date": "2026-07-15",
+  "url": "https://status.webflow.com/incidents/s406qp04wgkt",
+  "name": "[RESOLVED] Reports of issues logging in to Webflow",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": false,
+  "text": "This incident is now resolved. Some customers experienced issues logging in to Webflow between 23:30 UTC on July 14 and 00:30 UTC on July 15. We\u2019re no longer seeing customer impact related to this issue. Thank you for your patience while we worked to resolve this. || We\u2019ve implemented a mitigation and are no longer seeing customer impact related to this issue. We\u2019re continuing to monitor the situation closely and will provide another update as soon as we have more information. Thank you for your patience. || We are continuing to investigate this issue. || We\u2019re investigating reports that some customers are unable to log in to Webflow. Our team is actively investigating the issue and working to identify the root cause. We\u2019ll share another update as soon as we have more information. Thank you for your patience."
+ },
+ {
+  "org": "Webflow",
+  "date": "2026-06-11",
+  "url": "https://status.webflow.com/incidents/ybq8stcjsjrw",
+  "name": "[RESOLVED] Reports of intermittent 500 errors for some hosted sites",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "A small number of hosted sites experienced intermittent 500 errors between 20:04 UTC and 20:27 UTC. We identified the cause of the issue and implemented mitigation measures. We\u2019re no longer seeing customer impact related to this issue, and affected sites have returned to normal operation. This incident is now resolved. Thank you for your patience while we worked to address this issue. || Earlier today, a small number of hosted sites experienced intermittent 500 errors. We identified the cause of the issue and implemented mitigation measures. We\u2019re no longer seeing active customer impact related to this issue, and affected sites have returned to normal operation. Our team is continuing to monitor the situation closely and will provide further updates as needed. Thank you for your patience."
+ },
+ {
+  "org": "Webflow",
+  "date": "2025-12-05",
+  "url": "https://status.webflow.com/incidents/9j0v5nj4x9w7",
+  "name": "[RESOLVED] Reports Of Issues Accessing Hosted Sites, Webflow.com, SSL Certificate Provisioning, and Form Submissions",
+  "sev": "Medium",
+  "cat": "hardware_infra",
+  "pm": false,
+  "text": "Following continued monitoring and confirmation from our upstream provider, we\u2019ve verified that performance across all impacted services has returned to normal. This incident is now resolved. Services were affected between 08:48 and 09:11 UTC. We appreciate your patience and understanding while we worked with our upstream provider to resolve this issue. || Our upstream provider has implemented a fix. As a result, we are seeing a return to expected performance levels across our impacted services and are continuing to monitor the situation closely. || We are currently investigating reports of issues accessing hosted sites and webflow.com due to an issue with an upstream provider. We are continuing to investigate and will share additional details as soon as they become available."
+ },
+ {
+  "org": "Webflow",
+  "date": "2026-04-01",
+  "url": "https://status.webflow.com/incidents/26knm6lx1bf1",
+  "name": "[RESOLVED] Reports of issues accessing Webflow Canvas via Client Seats",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": false,
+  "text": "This incident has been resolved. || We are continuing to monitor for any further issues. || A fix has been implemented for the issue impacting some customers with a Client seat role who were unable to access Webflow Canvas. We are seeing recovery and are continuing to monitor the situation closely to ensure stability. || We have identified the root cause of this behavior and are actively working to implement a fix as soon as possible. || We\u2019re investigating reports of authorization errors when accessing the Webflow Canvas using Client seats. Our team is actively investigating and will share another update as soon as we have another update to share."
+ },
+ {
+  "org": "Wise",
+  "date": "2026-08-24",
+  "url": "https://status.wise.com/incidents/10dy3hydcfdt",
+  "name": "Delayed AED payments",
+  "sev": "Critical",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "This incident has been resolved. || We have identified the issue and deployed a fix. We will continue monitoring and provide a further update on Friday. || We are continuing to work on a solution. Customers will continue to see some delays impacting AED transfers. We will update you next at 17:00 CET on September 18 the latest. || We are continuing to work on a solution. Customers will continue to see some delays impacting AED transfers. We will update you next at 17:00 CET on September 8 the latest. || We are continuing to work on a solution. Customers will continue to see some delays impacting AED transfers. We will update you next at 17:00 CET on September 7 the latest. || We are continuing to work on a solution. Customers will continue to see some delays impacting AED transfers. We will update you next at 16:00 CET on September 4 the latest. || We are continuing to work on a solution. Customers will continue to see some delays impacting AED transfers. We will update you next at 16:00 CET on September 3 the latest. || We have identified the root cause and are working on a solution. Customers will continue to see delays impacting pending transfers. We will update you next at 16:00 CET on September 2 the latest. || We're aware of an issue that's affecting customers sending AED. As a result, some payments may be delayed. This also affects Wise Platform partners. Our team is already working on a solution. We apologise for any inconvenience."
+ },
+ {
+  "org": "Wise",
+  "date": "2025-11-18",
+  "url": "https://status.wise.com/incidents/gwqyrqf77pxq",
+  "name": "Issues with login and transfers",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "This incident has been resolved, all services are operational. || A fix has been implemented and we are monitoring the results. We will continue to report updates as they become available. || We are aware that some customers are experiencing issues using our mobile apps. Our team continues to monitor the third party service provider outage and will report updates as they become available. || We are currently experiencing issues on our platform due to a third party provider reporting an outage. As a result, some customers might experience issues when using our website or making payments. Our team is already working on a solution. This issue might impact Wise Platform API customers too."
+ },
+ {
+  "org": "Zoom",
+  "date": "2026-09-25",
+  "url": "https://status.zoom.us/incidents/pxxs3nsvn2rx",
+  "name": "Service Degradation Affecting Customer Using Polycom Devices Going Offline",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "|| A significant number of Polycom devices are back online, and service has been restored for the majority of affected users. || The root cause affecting service degradation with a subset of users with Polycom devices going offline has been identified. Our team is actively working to identify the impact and root cause."
+ },
+ {
+  "org": "Zoom",
+  "date": "2026-09-25",
+  "url": "https://status.zoom.us/incidents/w6yw2bsy2sv5",
+  "name": "An unintended pop-up message appear for users in US and Europe regions during initial invocation of Zoom AI\u2019s Catch Me Up feature",
+  "sev": "Low",
+  "cat": "memory_leak",
+  "pm": false,
+  "text": "This incident has been resolved and the affected services have been restored. Our team is actively working to identify the impact and root cause. Our team is actively working to identify the impact and root cause. Our team is actively working to identify the impact and root cause. Our team is actively working to identify the impact and root cause. Our team is actively working to identify the impact and root cause. Our team is actively working to identify the impact and root cause. Our team is actively working to identify the impact and root cause."
+ },
+ {
+  "org": "Zoom",
+  "date": "2026-07-31",
+  "url": "https://status.zoom.us/incidents/my4rs36dn5tf",
+  "name": "Service Degradation Affecting Zoom Whiteboard and Task Services in US Region.",
+  "sev": "Medium",
+  "cat": "memory_leak",
+  "pm": false,
+  "text": "This incident has been resolved and the affected services have been restored. || We have successfully identified the root cause preventing users ability to list Zoom Whiteboards and create Zoom Tasks in US Region. || We have successfully identified the root cause preventing users ability to list Zoom Whiteboards and create Zoom Tasks in US Region. Our team is actively working to identify the impact and root cause. Our team is actively working to identify the impact and root cause."
+ },
+ {
+  "org": "Zoom",
+  "date": "2026-08-31",
+  "url": "https://status.zoom.us/incidents/95y38y5w8b3g",
+  "name": "Service Degradation Affecting Zoom Node.",
+  "sev": "Medium",
+  "cat": "memory_leak",
+  "pm": false,
+  "text": "This incident has been resolved and the affected services have been restored. || We continue to work on a fix for this issue and will provide updates as soon as there is more information to share. || We continue to work on a fix for this issue and will provide updates as soon as there is more information to share. || We continue to work on a fix for this issue and will provide updates as soon as there is more information to share. || The issue has been identified and a fix is being implemented. Our team is actively working to identify the impact and root cause."
+ },
+ {
+  "org": "Zoom",
+  "date": "2026-08-21",
+  "url": "https://status.zoom.us/incidents/3fqk6345gq7b",
+  "name": "Service Degradation Affecting Meta integration for Zoom.",
+  "sev": "Medium",
+  "cat": "memory_leak",
+  "pm": false,
+  "text": "This incident has been resolved and the affected services have been restored. || The service degradation with Meta integration for Zoom has been successfully resolved. Our team will continue to monitor the situation closely and keep you informed of any further developments. || We continue to work on a resolution, and we will keep you informed with timely updates as progress is made. We appreciate your patience as we work to resolve this issue. || We continue to work on a resolution, and we will keep you informed with timely updates as progress is made. We appreciate your patience as we work to resolve this issue. || We have successfully identified the root cause affecting Meta integration for Zoom. Our team is actively working on a resolution, and we will keep you informed with timely updates as progress is made. Thank you for your patience. || We are currently investigating a service degradation affecting Meta integration for Zoom. Our team is actively working to identify the impact and root cause. We will provide an update as soon as more information becomes available. We appreciate your patience as we work to resolve this issue."
+ },
+ {
+  "org": "Zoom",
+  "date": "2026-09-24",
+  "url": "https://status.zoom.us/incidents/7141vhn0mb9s",
+  "name": "Service Degradation Affecting Zoom Phone and Zoom Contact Center Inbound calls in India",
+  "sev": "Medium",
+  "cat": "memory_leak",
+  "pm": false,
+  "text": "This incident has been resolved and the affected services have been restored. || The service degradation affecting Zoom Phone and Zoom Contact Center Inbound calls in India has been successfully resolved. Our team will continue to monitor the situation closely and keep you informed of any further developments. || We have identified the issue with our underlying carrier affecting a subset of Airtel subscribers, which is impacting inbound call connectivity to Zoom India phone numbers for Zoom Phone and Zoom Contact Center. Outbound calls continue to function normally. We are actively working with our carrier partner to resolve the issue. We will share updates as soon as they become available. || We are currently investigating a service degradation affecting a subset of Airtel subscribers for inbound call connectivity to Zoom India phone numbers for Zoom Phone and Zoom Contact Center. Outbound calls continue to function normally. Our team is actively working to identify the impact and root cause. We will provide an update as soon as more information becomes available. We appreciate your patience as we work to resolve this issue."
+ },
+ {
+  "org": "Zoom",
+  "date": "2026-10-01",
+  "url": "https://status.zoom.us/incidents/m97ll3p8294p",
+  "name": "Service Degradation Affecting Zoom for Google Workspace Add-On",
+  "sev": "Medium",
+  "cat": "memory_leak",
+  "pm": false,
+  "text": "This incident has been resolved and the affected services have been restored. || The issue preventing users ability to add Zoom app in Google Calendar Services has been successfully resolved. Our team will continue to monitor the situation closely and keep you informed of any further developments. || Our team continue to work on a resolution with our partner, and we will keep you informed with timely updates as progress is made. Thank you for your patience. || We have successfully identified the root cause affecting users ability to add Zoom app in 3P Calendar Services. Our team is actively working on a resolution with our partner, and we will keep you informed with timely updates as progress is made. Thank you for your patience. || We are currently investigating a service degradation affecting users ability to add Zoom app in 3P Calendar Services. Our team is actively working to identify the impact and root cause. We will provide an update as soon as more information becomes available. We appreciate your patience as we work to resolve this issue."
+ },
+ {
+  "org": "Zoom",
+  "date": "2026-09-15",
+  "url": "https://status.zoom.us/incidents/ytbj8471t5mg",
+  "name": "Service Degradation Affecting Zoom Phone Outbound Calls in China Region",
+  "sev": "Medium",
+  "cat": "memory_leak",
+  "pm": false,
+  "text": "This incident has been resolved and the affected services have been restored. || We have successfully identified the root cause affecting Zoom Phone outbound calls for users with phone numbers that have the +8621 prefix in China. || We are currently investigating a service degradation affecting Zoom Phone outbound calls for users with phone numbers that have the +8621 prefix in China. Our team is actively working to identify the impact and root cause."
+ },
+ {
+  "org": "Zoom",
+  "date": "2026-09-05",
+  "url": "https://status.zoom.us/incidents/c9jxqdxh9g8q",
+  "name": "Service Degradation Affecting Zoom AI Companion in US Region",
+  "sev": "Medium",
+  "cat": "memory_leak",
+  "pm": false,
+  "text": "This incident has been resolved and the affected services have been restored. || The service degradation affecting Zoom AI Companion in US Region has been successfully resolved. Our team will continue to monitor the situation closely and keep you informed of any further developments. || We have successfully identified the root cause affecting Zoom AI Companion in US Region. Our team is actively working on a resolution, and we will keep you informed with timely updates as progress is made. Thank you for your patience. || We are continuing to investigate this issue and will provide updates as soon as there is more information to share. Thank you for your patience. || We are currently investigating a service degradation affecting Zoom AI Companion in US Region. Our team is actively working to identify the impact and root cause. We will provide an update as soon as more information becomes available. We appreciate your patience as we work to resolve this issue."
+ },
+ {
+  "org": "Zoom",
+  "date": "2026-09-24",
+  "url": "https://status.zoom.us/incidents/xp0ql5vdl4s3",
+  "name": "Service Degradation Affecting Live Transcription Services.",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved and the affected services have been restored. || The service degradation affecting Live Transcription services has been successfully resolved. Our team will continue to monitor the situation closely and keep you informed of any further developments. || We have identified the service degradation affecting Live Transcription Services. Our team is actively working on a resolution, and we will keep you informed with timely updates as progress is made. || We are continuing to investigate this issue and will provide updates as soon as there is more information to share. Thank you for your patience. || We are currently investigating a service degradation affecting Live Transcription Services. Our team is actively working to identify the impact and root cause. We will provide an update as soon as more information becomes available. We appreciate your patience as we work to resolve this issue."
+ },
+ {
+  "org": "Zoom",
+  "date": "2026-08-30",
+  "url": "https://status.zoom.us/incidents/t72d605rsz6r",
+  "name": "Service Degradation Affecting Zoom Contact Center Billing and Reporting Service in EU",
+  "sev": "Medium",
+  "cat": "memory_leak",
+  "pm": false,
+  "text": "This incident has been resolved and the affected services have been restored. || We have successfully identified the root cause of issue affecting users using Zoom Contact Center Billing and Reporting Service in EU. Our team is actively working to identify the impact and root cause."
+ },
+ {
+  "org": "Zoom",
+  "date": "2026-10-03",
+  "url": "https://status.zoom.us/incidents/q8n9qzvl5p5x",
+  "name": "Service degradation affecting Developer Documentation Website",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved and the affected services have been restored. || We have successfully identified the root cause affecting users ability to access documentation from the Developer Documentation Website. Our team is actively working to identify the impact and root cause."
+ },
+ {
+  "org": "Zoom",
+  "date": "2026-08-05",
+  "url": "https://status.zoom.us/incidents/gdbcf101njpy",
+  "name": "Service degradation affecting Contact Center Analytics Dashboard for Voice Engagements in US Region.",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved and the affected services have been restored. || The issue affecting Contact Center Analytics Dashboard for Voice Engagements in US Region has been successfully resolved. Our team will continue to monitor the situation closely and keep you informed of any further developments. || We have successfully identified the root cause affecting Contact Center Analytics Dashboard for Voice Engagements in US Region. Our team is actively working on a resolution, and we will keep you informed with timely updates as progress is made. Thank you for your patience. || We are currently investigating a service degradation affecting Contact Center Analytics Dashboard for Voice Engagements in US Region. Our team is actively working on the resolution and we will keep you informed with timely updates as progress is made. Thank you for your patience."
+ },
+ {
+  "org": "Zoom",
+  "date": "2026-09-21",
+  "url": "https://status.zoom.us/incidents/b9qd1hcw1zqk",
+  "name": "Service Degradation Affecting Apple Login for Zoom Sign-in.",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": false,
+  "text": "This incident has been resolved and the affected services have been restored. || The issue affecting a subset of users with Apple Login for Zoom Sign-in has been successfully resolved. Our team will continue to monitor the situation closely and keep you informed of any further developments. || We have identified the service degradation affecting a subset of users with Apple Login for Zoom Sign-in. Our team is actively working on a resolution, and we will keep you informed with timely updates as progress is made. Thank you for your patience. || We are currently investigating a service degradation affecting a subset of users with Apple Login for Zoom Sign-in. Our team is actively working to identify the impact and root cause. We will provide an update as soon as more information becomes available. We appreciate your patience as we work to resolve this issue."
+ },
+ {
+  "org": "Zoom",
+  "date": "2026-10-04",
+  "url": "https://status.zoom.us/incidents/jyxf96kz3q42",
+  "name": "Service Degradation Affecting Zoom Rooms Management and Workspaces Management in SA01.",
+  "sev": "Medium",
+  "cat": "memory_leak",
+  "pm": false,
+  "text": "This incident has been resolved and the affected services have been restored. || The issue affecting Zoom Rooms Management and Workspaces Management has been successfully resolved. Our team will continue to monitor the situation closely and keep you informed of any further developments. || We have identified the service degradation with Zoom Rooms Management and Workspaces Management. Our team is actively working on a resolution, and we will keep you informed with timely updates as progress is made. Thank you for your patience. || We are currently investigating a service degradation affecting Zoom Rooms Management and Workspaces Management in SA01 region. Our team is actively working to identify the impact and root cause. We will provide an update as soon as more information becomes available. We appreciate your patience as we work to resolve this issue."
+ },
+ {
+  "org": "Zoom",
+  "date": "2026-08-22",
+  "url": "https://status.zoom.us/incidents/dqk9m17ljn7x",
+  "name": "Service Degradation Affecting File Search in Zoom Hub",
+  "sev": "Medium",
+  "cat": "memory_leak",
+  "pm": false,
+  "text": "This incident has been resolved and the affected services have been restored. || The issue affecting users ability to search file in Zoom Hub has been successfully resolved. Our team will continue to monitor the situation closely and keep you informed of any further developments. || We have successfully identified the root cause affecting users ability to search file in Zoom Hub. Our team is actively working on a resolution, and we will keep you informed with timely updates as progress is made. Thank you for your patience. || We are currently investigating a service degradation affecting users ability to search file in Zoom Hub. Our team is actively working to identify the impact and root cause. We will provide an update as soon as more information becomes available. We appreciate your patience as we work to resolve this issue."
+ },
+ {
+  "org": "Zoom",
+  "date": "2026-08-24",
+  "url": "https://status.zoom.us/incidents/wv4mtgg4khst",
+  "name": "Service Degradation Affecting Meeting Chat Services",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved and the affected services have been restored. || The issue affecting users' ability to use meeting chat has been successfully resolved. Our team will continue to monitor the situation closely and keep you informed of any further developments. || We have successfully identified the root cause affecting users ability to use meeting chat. Our team is actively working on a resolution, and we will keep you informed with timely updates as progress is made. Thank you for your patience. || We are currently investigating a service degradation affecting users ability to use meeting chat. Our team is actively working to identify the impact and root cause. We will provide an update as soon as more information becomes available. We appreciate your patience as we work to resolve this issue."
+ },
+ {
+  "org": "Zoom",
+  "date": "2026-08-27",
+  "url": "https://status.zoom.us/incidents/3xf213dg1plw",
+  "name": "Service Degradation Affecting Zoom Services in Hong Kong",
+  "sev": "Medium",
+  "cat": "memory_leak",
+  "pm": false,
+  "text": "This incident has been resolved and the affected services have been restored. || We have successfully identified the root cause affecting Zoom Services in Hong Kong Our team is actively working on a resolution, and we will keep you informed with timely updates as progress is made. || We are currently investigating a service degradation affecting Zoom Services in Hong Kong Our team is actively working to identify the impact and root cause."
+ },
+ {
+  "org": "Zoom",
+  "date": "2026-08-11",
+  "url": "https://status.zoom.us/incidents/hp2nx7zbtcgl",
+  "name": "Service Degradation Affecting CX Analytics",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved and the affected services have been restored. || The service degradation with CX Analytics that occurred from 15:05 UTC to 17:27 UTC has been successfully resolved. Our team will continue to monitor the situation closely and keep you informed of any further developments. || We have successfully identified the root cause affecting CX Analytics. Our team is actively working on a resolution, and we will keep you informed with timely updates as progress is made. Thank you for your patience. || We are currently investigating a service degradation with CX Analytics. Our team is actively working to identify the impact and root cause. We will provide an update as soon as more information becomes available. We appreciate your patience as we work to resolve this issue."
+ },
+ {
+  "org": "Zoom",
+  "date": "2026-09-01",
+  "url": "https://status.zoom.us/incidents/ptq9slypf8wy",
+  "name": "Service Degradation Affecting Zoom for Google Workspace add-on",
+  "sev": "Medium",
+  "cat": "memory_leak",
+  "pm": false,
+  "text": "This incident has been resolved and the affected services have been restored. || The issue affecting a subset of users using Zoom for Google Workspace add-on has been resolved. Our team will continue to monitor the situation closely and keep you informed of any further developments. || We continue to investigate the service degradation for a subset of users using Zoom for Google Workspace add-on. We will provide an update as soon as more information becomes available. || We are currently investigating a service degradation for a subset of users using Zoom for Google Workspace add-on Our team is actively working to identify the impact and root cause. We will provide an update as soon as more information becomes available. We appreciate your patience as we work to resolve this issue."
+ },
+ {
+  "org": "Zoom",
+  "date": "2026-09-23",
+  "url": "https://status.zoom.us/incidents/0w2z4s8wp36n",
+  "name": "Service Degradation Affecting Live Transcription Services.",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved and the affected services have been restored. || The service degradation affecting Live Transcription services has been successfully resolved. Our team will continue to monitor the situation closely and keep you informed of any further developments. || We have identified the service degradation affecting Live Transcription Services. Our team is actively working on a resolution, and we will keep you informed with timely updates as progress is made. || We are currently investigating a service degradation with Live Transcription Services. Our team is actively working to identify the impact and root cause. We will provide an update as soon as more information becomes available. We appreciate your patience as we work to resolve this issue."
+ },
+ {
+  "org": "Zoom",
+  "date": "2026-10-05",
+  "url": "https://status.zoom.us/incidents/61pdlhyvzb1j",
+  "name": "Service Degradation Affecting ZoomMate",
+  "sev": "Medium",
+  "cat": "memory_leak",
+  "pm": false,
+  "text": "This incident has been resolved. || The service degradation with ZoomMate has been successfully resolved. Our team will continue to monitor the situation closely and keep you informed of any further developments. || We have successfully identified the root cause affecting ZoomMate services. Our team is actively working on a resolution, and we will keep you informed with timely updates as progress is made. Thank you for your patience. || We are currently investigating a service degradation with ZoomMate services. Our team is actively working to identify the impact and root cause. We will provide an update as soon as more information becomes available. We appreciate your patience as we work to resolve this issue."
+ },
+ {
+  "org": "Zoom",
+  "date": "2026-09-28",
+  "url": "https://status.zoom.us/incidents/8jrvd62hmxl2",
+  "name": "Service Degradation Affecting Zoom Canvas, My Notes, Sheets, In App Purchases, Billing Hub, and Clips.",
+  "sev": "Medium",
+  "cat": "memory_leak",
+  "pm": false,
+  "text": "This incident has been resolved and the affected services have been restored. || The service degradation affecting Zoom Canvas, My Notes, Sheets, In App Purchases, Billing Hub, and Clips has been successfully resolved. Our team will continue to monitor the situation closely and keep you informed of any further developments. || We are currently investigating a service degradation with Zoom Canvas, My Notes, Sheets, In App Purchases, Billing Hub, and Clips. Our team is actively working to identify the impact and root cause. We will provide an update as soon as more information becomes available. We appreciate your patience as we work to resolve this issue."
+ }
+]

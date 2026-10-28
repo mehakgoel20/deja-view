@@ -1,0 +1,6 @@
+{
+ "name": "train",
+ "count": 2284,
+ "dim": 1536,
+ "embed_model": "text-embedding-3-small"
+}

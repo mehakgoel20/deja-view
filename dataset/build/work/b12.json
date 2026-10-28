@@ -1,0 +1,402 @@
+[
+ {
+  "org": "GitHub",
+  "date": "2026-08-18",
+  "url": "https://www.githubstatus.com/incidents/bmpybhnrky3x",
+  "name": "Intermittent failures in runner group and runner-related permissions pages",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": false,
+  "text": "The issue was caused by failures in backend requests reading runner and runner group data. The failures were caused by an expired authentication certificate unique to this service. The certificate had been rotated in KeyVault, but a step to enable use at runtime had been paused to prevent recurrence of previous incidents triggered by this operation. The impact was mitigated by completing the enablement of the new certificate in the backend system. || We have applied a mitigation and are seeing recovery signals. || We have identified the source of a communication issue between Actions services and are working toward mitigation."
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-08-24",
+  "url": "https://www.githubstatus.com/incidents/lyppgxbq1nyk",
+  "name": "Actions delays in starting runs",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "On August 24, 2026, between 13:33 UTC and 14:04 UTC, 3.8% of Actions runs experienced start delays over 5 minutes with 1.25% of Actions runs failing outright. The incident was caused by a disk failure on a node hosting one of many service instances responsible for processing runner assignment events. Typically, pods on unhealthy nodes are removed and replaced automatically without impact. In this case, although the node was severely degraded and unable to perform disk operations, it continued sending healthy signals, preventing the system from immediately moving its work elsewhere. During this period, events assigned to the affected component accumulated until an automatic rebalance redirected processing to healthy components at 13:54 UTC. The queue backlog was cleared at 14:00 UTC, and processing returned to normal by 14:04 UTC. To prevent a recurrence, we are improving detection and automated remediation for unhealthy nodes that aren\u2019t fully offline. We are also strengthening application-level resiliency, so stalled consumers are automatically removed quickly and their work reassigned without waiting for the affected node to recover. || The degradation affecting Actions has been mitigated. We are monitoring to ensure stability. || Failures while queuing and running Actions jobs for a subset of customers are now resolving. We are monitoring for full recovery. || We are investigating reports of degraded performance for Actions"
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-08-13",
+  "url": "https://www.githubstatus.com/incidents/24t8gsgqx2qb",
+  "name": "Errors with the Fable 5 Model in Copilot",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "On August 13th, 2026, between approximately 14:06 and 15:47 UTC, the Copilot service experienced a degradation of the Claude Fable 5 model due to an issue with our upstream provider. The issue was resolved by a mitigation put in place by our provider. We will continue monitoring to ensure stability, but mitigation is complete. This is due to an issue with an upstream model provider. This is due to an issue with an upstream model provider."
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-09-20",
+  "url": "https://www.githubstatus.com/incidents/f6yrxnz5f7bs",
+  "name": "Incident with Pull Requests",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "Because some Actions workflow runs start only after a pull request's merge commit is created, a subset of workflow runs for pull request events were also delayed. This was due to a routine repository maintenance job for an unusually large repository consuming nearly all of the memory on a single Git storage server, which left that server unable to serve the Git operations used to create merge commits. We mitigated the incident by removing the affected server from service at 22:18 UTC, after which the queued merge commits were created within six minutes. We have capped the memory a single repository maintenance job may consume so that one repository cannot exhaust a server, and we have improved monitoring and alerting on storage server health to reduce our time to detection and mitigation of issues like this one in the future. || The degradation affecting Pull Requests has been mitigated."
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-08-01",
+  "url": "https://www.githubstatus.com/incidents/kk183dslzdzd",
+  "name": "Degraded availability GPT 5.6 Luna",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "On August 1st, 2026, the GPT-5.6 Luna model in GitHub Copilot experienced degraded availability in intermittent time intervals between ~08:05 UTC and ~16:30 UTC. Specifically the timeframes observed were 10:00-10:20 UTC, 10:45-11:50 UTC, 13:00-14:25 UTC, and 16:00-16:30 UTC. During this time, requests to GPT-5.6 Luna in Copilot chat and IDE surfaces frequently failed or timed out. This was caused by an issue with an upstream model provider. Other Copilot models were not affected, and users could continue working by selecting another model or 'Auto'. Availability for GPT-5.6 Luna fully recovered once the provider resolved their outage at 16:30 UTC. || The issues with our upstream model provider have been resolved, and GPT-5.6 Luna is once again available in Copilot products and IDE surfaces. We will continue monitoring to ensure stability, but mitigation is complete. || We keep working with our upstream model provider, and are observing recovery. We continue monitoring to ensure stability. || We are experiencing degraded availability for the GPT-5.6 Luna model in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve the issue, we recommend choosing another model or selecting 'Auto' to continue using Copilot || We are investigating reports of degraded performance for Copilot AI Model Providers"
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-08-01",
+  "url": "https://www.githubstatus.com/incidents/sj1tzyrx599x",
+  "name": "Incident with Copilot AI Model Providers",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "This was caused by degradation of an upstream model provider. We are working to add endpoint redundancy to mitigate similar provider issues in the future. We will continue monitoring to ensure stability, but mitigation is complete. || The degradation affecting Copilot AI Model Providers has been mitigated. This is due to an issue with an upstream model provider."
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-09-28",
+  "url": "https://www.githubstatus.com/incidents/169pg72gg9jr",
+  "name": "Copilot Code Review is unable to complete reviews",
+  "sev": "Critical",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "This was due to a change in a dependent service that stopped delivering data Copilot Code Review needs to complete a review. Review completion is an inherently delayed signal, because each review job takes time to start and finish, so it took longer to detect the impact. We mitigated the incident by reverting the change. We are working to add a faster signal for reviews that fail to complete, add deployment validation that confirms a Copilot Code Review completes end to end, improve how we track internal dependencies between services, and make our deployment pipeline more reliable to reduce our time to detection and mitigation of issues like this one in the future. || Revert of the impacted change is in flight, expect full recovery once the deployment is done."
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-07-27",
+  "url": "https://www.githubstatus.com/incidents/fmmsrcg5x638",
+  "name": "Incident with GraphQL API Requests",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "On July 26, 2026 at 21:34 UTC we began seeing intermittent errors on the GitHub GraphQL API. A subset of GraphQL API requests returned HTTP 502 errors in short bursts. During the impact window an average of 0.09% of GraphQL API requests in the affected region failed, with a peak of 0.50% of requests failing during the worst two-minute period at 03:02 UTC on July 27. Requests that failed generally succeeded when retried, and no data was lost or altered. Other GitHub services were not affected. The errors were traced to a single group of servers handling a share of GraphQL API traffic. Application processes on that group intermittently closed connections before completing responses. Impact ended at 03:52 UTC on July 27 when those processes were replaced, and we resolved the incident at 04:09 UTC on July 27 after confirming error rates had returned to normal. We are still investigating why those processes closed connections, and that work is being carried out by the team that owns the underlying compute platform. In the meantime we are adding detection and automated mitigation for when a single group of servers behaves differently from its peers. || The degradation affecting API Requests has been mitigated. We are monitoring to ensure stability. || We are investigating reports of degraded performance for API Requests"
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-07-29",
+  "url": "https://www.githubstatus.com/incidents/dsrfymph7my0",
+  "name": "Incident with Copilot AI Model Providers",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "On July 29, 2026, between 19:45 UTC and 21:51 UTC, users of the Fable 5 model in GitHub Copilot experienced increased request failures and latency. The average failure rate across all Copilot requests was 0.006%, while failures for Fable 5 peaked at 21%. Other models remained available. This was caused by degradation of an upstream model provider. The affected endpoint recovered, and we monitored the service until error rates and latency returned to normal levels. We are working to add endpoint redundancy to mitigate similar provider issues in the future. || The external ai model provider has resolved the issues, and we have verified Copilot's traffic is fully recovered. || The external AI model provider is continuing to investigate. || The external AI model provider has identified the issue and is working to resolve. || We are investigating increased error rates affecting GitHub Copilot requests to external AI model providers. Some users may experience failures or degraded performance when using Copilot features. || We are seeing increased error rates with requests to specific model providers. || We are investigating reports of degraded performance for Copilot AI Model Providers"
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-09-03",
+  "url": "https://www.githubstatus.com/incidents/ktdr5t0xwnhp",
+  "name": "Incident with Grok Copilot AI Model Provider",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "Between 13:22 and 17:11 UTC on September 03, 2026, GitHub Copilot experienced degradation affecting several Grok models, including Grok 4.5 and Grok 4.6. Users encountered elevated error rates, but other models were not affected. The degradation was caused by an issue with an upstream model provider. GitHub engineers detected the issue through automated monitoring, displayed in-product warnings for the affected models, and coordinated with the provider. Service returned to normal after the provider implemented a mitigation. || The issues with our upstream model provider have been resolved, and Grok models are once again available in Copilot products and IDE surfaces. We will continue monitoring to ensure stability, but mitigation is complete. || The Grok 4.5 model has degraded availability as well. We are working with the upstream provider to resolve the issue. || We are experiencing degraded availability for the Grok 4.6 model in Copilot Chat, VS Code and other Copilot products. This is due to an issue with an upstream model provider. We are working with them to resolve the issue. || We are investigating reports of degraded performance for Copilot AI Model Providers"
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-07-30",
+  "url": "https://www.githubstatus.com/incidents/9tpgqq1h4bs7",
+  "name": "Copilot model Claude Fable 5 experiencing elevated errors",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "On July 30, 2026, the Claude Fable 5 model in GitHub Copilot experienced degraded availability for approximately 73 minutes, from 08:33 to 09:46 UTC. During this time, requests to Claude Fable 5 in Copilot chat and IDE surfaces frequently failed or timed out. This was caused by an issue with an upstream model provider. Other Copilot models were not affected, and users could continue working by selecting another model or 'Auto'. Availability for Claude Fable 5 fully recovered once the provider resolved their outage at 09:46 UTC, and we confirmed resolution at 10:12 UTC. || The issues with our upstream model provider have been resolved, and Claude Fable 5 is once again available in Copilot products and IDE surfaces. We will continue monitoring to ensure stability, but mitigation is complete. || We are experiencing degraded availability for the Claude Fable 5 model in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve the issue, we recommend choosing another model or selecting 'Auto' to continue using Copilot. || We are investigating reports of degraded performance for Copilot AI Model Providers"
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-08-27",
+  "url": "https://www.githubstatus.com/incidents/tx9qn4khd664",
+  "name": "Incident with Copilot AI Model Providers",
+  "sev": "Critical",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "On August 27th, 2026, between approximately 09:20 and 12:14 UTC, the Copilot service experienced a degradation of the Kimi K3 model due to an issue with our upstream provider. The issue was resolved by a mitigation put in place by our provider. || The issues with our upstream model provider have been mitigated, and Kimi K3 is once again available in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider."
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-08-18",
+  "url": "https://www.githubstatus.com/incidents/gx7js8bd0jpz",
+  "name": "Incident with Actions",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": false,
+  "text": "These issues were caused by failures in backend requests resolving essential metadata for starting Larger Runner workflow runs and for reading runner and runner group data. The failures were caused by an expired authentication certificate unique to this service. The certificate had been rotated in KeyVault, but a step to enable use at runtime had been paused to prevent recurrence of previous incidents that had been triggered by this operation. We mitigated the issues by completing the enablement of the new certificate in the backend system."
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-09-16",
+  "url": "https://www.githubstatus.com/incidents/nlxnbqnkdzdl",
+  "name": "Degradation with Gemini 3.8 Flash",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "On September 16, 2026, between 04:40 and 11:45 UTC, the Gemini 3.8 Flash model in GitHub Copilot experienced degraded availability. Requests to this model failed at an average rate of 6.4%, and the impact was highest during peak traffic hours. Other Copilot models were not affected. Users could continue to work with a different model or with 'Auto'. The degradation was caused due to a capacity issue with an upstream model provider. Failure rates returned to normal as the daily traffic peak passed. We monitored the model until it was healthy and resolved the incident at 17:48 UTC. We are working to make our systems resilient to cover peak demand for all the Copilot models. || The degradation affecting Copilot AI Model Providers has been mitigated. We are monitoring to ensure stability. || Copilot AI Model Providers is experiencing degraded performance. We are continuing to investigate. || Copilot AI Model Providers is experiencing degraded performance. We are continuing to investigate. || We are investigating reports of degraded availability for Copilot AI Model Providers"
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-09-17",
+  "url": "https://www.githubstatus.com/incidents/nvy2q96mcmyg",
+  "name": "Elevated rate of errors for OpenAI models provided by Copilot",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "Between 20:26 and 21:17 UTC on September 17, 2026, GitHub Copilot experienced degradation affecting several GPT models, including GPT-5.6 Luna, GPT-5.6 Terra, GPT-5.6 Sol, GPT-5.3-Codex, and GPT-6 Astra. Users encountered elevated error rates when using these models. The degradation was caused by an issue with an upstream model provider. GitHub engineers detected the issue through automated monitoring and coordinated with the provider. Our automated model-warning system activated in-product warnings for affected models during the incident. Service returned to normal after the provider implemented a mitigation. || We are experiencing degraded availability for GPT-5.6 Luna, GPT-5.6 Terra, GPT-5.6 Sol, GPT-6 Astra, GPT-5.3-Codex in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. The provider is working to mitigate the problem and we are monitoring recovery. We recommend choosing another model or selecting 'Auto' to continue using Copilot. || We are investigating reports of degraded performance for Copilot AI Model Providers"
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-08-05",
+  "url": "https://www.githubstatus.com/incidents/9wzhl5jr80jt",
+  "name": "Some Copilot Cloud Agent jobs not starting",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "This was due to an internal rate limit used to protect service availability that was enabled more broadly than intended delaying more traffic than expected. We are working to improve the control's scoping and our monitoring and alerting to reduce our time to detection and mitigation of similar issues in the future. || The degradation has been mitigated."
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-08-21",
+  "url": "https://www.githubstatus.com/incidents/wms44hv62t3p",
+  "name": "Degraded Git Operations over SSH",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "The incident was caused by a software defect in our load-balancing infrastructure that was triggered by a configuration change. We mitigated the incident by rolling back the configuration change. We are adding regression coverage for multi-layer load-balancer configurations and improving monitoring and alerting for Git operations over SSH to reduce our time to detection and mitigation of similar issues in the future."
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-09-14",
+  "url": "https://www.githubstatus.com/incidents/kzh5j0mt7qwc",
+  "name": "Actions Larger Runner Jobs for some customers may be slow to start",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": false,
+  "text": "A routine expansion of our compute capacity exposed a bug in how our provisioning system handled capacity records when selecting where to create runner virtual machines. We restored normal provisioning by correcting the affected capacity records. We have fixed the underlying capacity-selection bug to prevent this failure from recurring. || The degradation has been mitigated."
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-08-24",
+  "url": "https://www.githubstatus.com/incidents/wt3hjqcrczfg",
+  "name": "Elevated errors on Fable 5 due to upstream provider",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "On August 24th, 2026, between approximately 06:35 and 07:25 UTC, the Copilot service experienced a degradation of the Claude Fable 5 model due to an issue with our upstream provider. The issue was resolved by a mitigation put in place by our provider. This is due to an issue with the upstream model provider."
+ },
+ {
+  "org": "GitHub",
+  "date": "2026-09-04",
+  "url": "https://www.githubstatus.com/incidents/zw1hbx2yyhvr",
+  "name": "Disruption with Copilot Code Review",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": false,
+  "text": "The incident was caused by a change to the service\u2019s authentication permissions that prevented it from submitting affected reviews to the GitHub API. We reverted the change and restored normal operation by 22:26 UTC. || The degradation has been mitigated. || We are applying the mitigation and expect recovery within approximately 30 minutes. We have identified the root cause and are working on a mitigation."
+ },
+ {
+  "org": "GoCardless",
+  "date": "2026-02-23",
+  "url": "https://status.gocardless.com/incidents/01KJ5GRVWHD9H73QRFFKD0YK4E",
+  "name": "Mandates cancelled for Soci\u00e9t\u00e9 G\u00e9n\u00e9rale and Boursorama/BoursoBank",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "|| Following our detailed impact analysis, we identified the affected mandates and assessed the feasibility of reinstating all impacted direct debit mandates. || We have identified the root cause, and the issue has now been resolved. We are working closely with our partner bank to identify the root cause and assess the full impact."
+ },
+ {
+  "org": "GoCardless",
+  "date": "2026-09-04",
+  "url": "https://status.gocardless.com/incidents/01M1PKNZVVZP9WWBSSX2TF1JQQ",
+  "name": "AUDDIS-I errors affecting transferred mandates",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "|| Following our investigation with our banking partner, we identified the root cause of the issue. The payer\u2019s bank has since implemented a fix, and the issue is now resolved. Our team is actively working with our banking partners to investigate the issue and identify the root cause."
+ },
+ {
+  "org": "GoCardless",
+  "date": "2026-05-19",
+  "url": "https://status.gocardless.com/incidents/01KS01E9Z9Y2FCJM76MKAFJ1J4",
+  "name": "SEPA Instant Payouts temporarily paused",
+  "sev": "High",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "All SEPA Instant payouts have been processing correctly. The issue is confirmed to be resolved. || The issue has been confirmed as resolved. We have resumed SEPA Instant payouts and all pending payouts should soon reach the recipient bank accounts. We will continue to monitor for errors until the end of day. || SEPA Instant Payouts remain paused due to a third party issue. Emergency maintenance has been scheduled by our banking partners over night, and we expect to resume payouts tomorrow. All affected parties have been contacted directly. We will provide further updates when the third party issue has been resolved. Apologies for any inconvenience. || Due to an issue with a 3rd party provider we have temporarily paused SEPA Instant Payouts at 9:14 BST today. Other payout types are not affected. We will resume SEPA Instant payouts as soon as we've received a confirmation that the issue has been resolved. If the issue persists we will contact affected customers with an update before 17:00 BST"
+ },
+ {
+  "org": "GoCardless",
+  "date": "2026-02-16",
+  "url": "https://status.gocardless.com/incidents/01KHK44R5MR0WZS3ZE3B18AJBK",
+  "name": "GoCardless Dashboard returing Blank screen.",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "We have confirmed that our fix has resolved the issue and that users can access the GoCardless Dashboard as normal. || We\u2019ve identified the root cause and implemented a fix. Access to the GoCardless dashboard should now be fully restored. Our team is actively working to identify the root cause."
+ },
+ {
+  "org": "GoCardless",
+  "date": "2026-03-04",
+  "url": "https://status.gocardless.com/incidents/01KJWAKNT9S4DJKQ44HSYPJ169",
+  "name": "Discrepancies in the amounts displayed on GoCardless homepage.",
+  "sev": "Low",
+  "cat": "other",
+  "pm": false,
+  "text": "We\u2019ve monitored for a while and can confirm that the issue with amounts displayed on the GoCardless dashboard homepage has been fully resolved and is now working as expected. || The issue affecting the amounts displayed on the GoCardless dashboard homepage has now been resolved. Our engineering team identified the root cause of the discrepancy and implemented a fix. All displayed amounts are now accurate, and the dashboard is functioning as expected. We will continue to monitor the system closely to ensure ongoing stability. || We are currently investigating reports of discrepancies in the amounts displayed on the GoCardless dashboard homepage. Our engineering team is actively working to identify the root cause and implement a fix. We understand the importance of accurate reporting and appreciate your patience while we resolve this issue. We will provide a further update shortly."
+ },
+ {
+  "org": "GoCardless",
+  "date": "2026-02-24",
+  "url": "https://status.gocardless.com/incidents/01KJ7YN58MXE8PKB2WRDB4HGYK",
+  "name": "GoCardless Dashboard returning blank screen",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "We have confirmed that our fix has resolved the issue and that users can access the GoCardless Dashboard as normal. || We\u2019ve identified the root cause and implemented a fix. Our team is actively working to identify the root cause and will provide a further update as soon as more information becomes available."
+ },
+ {
+  "org": "GoCardless",
+  "date": "2026-03-30",
+  "url": "https://status.gocardless.com/incidents/01KMYVQ9J9YHQ4AX331GV6ZS1Z",
+  "name": "Payment Export Function Issues",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "The issue affecting the export functionality on the Payments page has now been resolved. Our team has identified and fixed the root cause of the problem. Exports are working as expected, both with and without filters applied. We appreciate your patience while we worked on resolving this issue, and we apologize for any inconvenience caused. || We are currently experiencing an issue affecting the export functionality on the Payments page. Our team is actively investigating the root cause of this issue and working on a resolution. We will provide an update as soon as more information becomes available or the issue is resolved."
+ },
+ {
+  "org": "GoCardless",
+  "date": "2026-03-13",
+  "url": "https://status.gocardless.com/incidents/01KKKBZRHX613QYS9QD22AM23T",
+  "name": "Intermittent issues with GoCardless Dashboard.",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "The issue affecting access to the GoCardless dashboard for a small number of merchants has now been resolved. Our team has implemented a fix, and we can confirm that access to the dashboard has been restored. Thank you for your patience while we worked to resolve this issue. || We\u2019re currently experiencing an intermittent issue affecting access to the GoCardless dashboard for a few merchants. The root cause has been identified, and we are in the process of implementing a fix. We will provide a further update once the issue has been resolved."
+ },
+ {
+  "org": "GoCardless",
+  "date": "2026-04-14",
+  "url": "https://status.gocardless.com/incidents/01KP5VTDBHY8NT23PEN77TEVX8",
+  "name": "SEPA Instant Payouts \u2013 Slight Processing Delays",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": false,
+  "text": "We can now confirm that all SEPA Instant payouts for April 14th have been processed and received. We apologise for any inconvenience caused. || We recently experienced an issue with SEPA Instant Payouts due to a problem with our banking partner. The issue has been resolved, and we\u2019re working closely with them to restore normal service. Payouts scheduled for this afternoon may be slightly delayed and are expected to arrive at merchants 60\u201390 minutes later than usual."
+ },
+ {
+  "org": "Gradle",
+  "date": "2020-12-22",
+  "url": "https://status.gradle.com/incidents/fqpjgk8glrhj",
+  "name": "500 Internal Server Error for maven-metadata.xml resources & JCenter Components",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "This incident has been resolved. || JCenter requests seem to be working again. We are monitoring to see if the issue returns. || We've identified the root cause to be an outage of JCenter due to their scheduled maintenance. Many of the resource that the Gradle Plugin Portal relies upon are resolved and/or mirrored through to JCenter. || We are continuing to investigate this issue. || This may be partially related to the ongoing JCenter Scheduled Maintenance. We are actively investigating the root cause. https://status.bintray.com/incidents/286206vrzm1x"
+ },
+ {
+  "org": "Gradle",
+  "date": "2022-08-24",
+  "url": "https://status.gradle.com/incidents/58jq10pvvdlh",
+  "name": "plugins.gradle.org DNS resolution issues",
+  "sev": "Critical",
+  "cat": "networking_dns",
+  "pm": false,
+  "text": "This incident has been resolved. || A fix has been implemented and we are monitoring the results. || Temporary mitigation has been put in place to restore service. As the upstream Heroku outage evolves, further downtime may be experienced. || The plugins.gradle.org service depends on the Heroku hosting platform, which is currently suffering a widespread outage affecting DNS resolution. We are currently investigating options and tracking the root cause Heroku outage."
+ },
+ {
+  "org": "Gradle",
+  "date": "2022-06-21",
+  "url": "https://status.gradle.com/incidents/76pw6hp4n1tb",
+  "name": "Plugin portal issues",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "The root cause was the Cloudflare outage - see https://www.cloudflarestatus.com/incidents/xvs51y9qs9dj - which is now resolved. || We have identified that our communication with S3 in the backend was showing an increased error rate. This had an effect on response time for the plugin portal. Our logging shows that the error rate is back to normal. We will continue to monitor the service closely for a bit longer. || We are currently investigating this issue."
+ },
+ {
+  "org": "Grafana Cloud",
+  "date": "2026-07-28",
+  "url": "https://status.grafana.com/incidents/vp96psrp0tvn",
+  "name": "Partial OTLP Write Outage in prod-us-east-3",
+  "sev": "High",
+  "cat": "other",
+  "pm": false,
+  "text": "The issue affecting OTLP ingestion in the prod-us-east-3 region has been resolved. Between 13:30 UTC and 17:45 UTC, some customers experienced intermittent failures when writing telemetry to the OTLP endpoint. Logs were confirmed to be affected, and metrics and traces may also have experienced intermittent ingestion failures. Our investigation has concluded, and the affected services have recovered. || We are investigating an issue affecting OTLP ingestion in the prod-us-east-3 region. Customers may experience intermittent failures when writing telemetry to the OTLP endpoint. Based on current information, logs are confirmed to be affected, and metrics and traces may also be impacted. Our investigation indicates intermittent failures began around 08:00 UTC, with the primary period of impact occurring between 15:30 UTC and 17:45 UTC. We are continuing to investigate the scope and root cause of this issue and will provide additional updates as more information becomes available."
+ },
+ {
+  "org": "Grafana Cloud",
+  "date": "2026-10-02",
+  "url": "https://status.grafana.com/incidents/9kg64q3pygpx",
+  "name": "Elevated Write Latency and Errors for Grafana Cloud Logs in Azure Netherlands",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "Between 10:03 and 12:37 UTC, Grafana Cloud Logs in Azure Netherlands experienced elevated write latency and intermittent errors due to a cloud provider dependency issue. Service has fully recovered and is operating normally. Thank you for your patience. || We have identified the issue as related to a cloud provider dependency affecting the write path for Grafana Cloud Logs in Azure Netherlands. Latency has recovered to normal levels. We are continuing to monitor before fully closing this incident. || We are continuing to investigate this issue. Next update by 11:30 UTC. || We are investigating elevated write latency and intermittent errors affecting Grafana Cloud Logs in Azure Netherlands. Customers may see delayed log ingestion and some failed write requests. Next update by 11:30 UTC."
+ },
+ {
+  "org": "Grafana Cloud",
+  "date": "2026-10-03",
+  "url": "https://status.grafana.com/incidents/1hsrzg6rs2bb",
+  "name": "Elevated Write Latency and Errors for Grafana Cloud in GCP Saudi Arabia",
+  "sev": "Low",
+  "cat": "api_latency",
+  "pm": false,
+  "text": "We've identified the issue as related to an increase in latency and errors rates with our cloud provider's infrastructure. We are working with the provider on a root cause analysis. The service has recovered and is operating normally. || The issue is currently resolved but we are continuing to investigate and monitor things at this time. || A fix has been implemented and we are monitoring the results. || Between 12:44 and 13:15 UTC, Grafana Cloud experienced elevated write latency and errors across multiple products, including Logs, Metrics, and Traces. Services have recovered and the underlying issue is being investigated and actively monitored."
+ },
+ {
+  "org": "HashiCorp",
+  "date": "2026-07-21",
+  "url": "https://status.hashicorp.com/incidents/01KY23QHWJSW7BDJ353WBPTCPG",
+  "name": "Terraform Runs Failing to Fetch GitHub Sources Over SSH",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "GitHub has completed remediation of the SSH deploy key incident. || GitHub has completed remediation of the incident affecting SSH deploy keys. || GitHub has completed remediation of the incident affecting SSH deploy keys. || We are investigating failures cloning GitHub-hosted Terraform modules and sources over SSH, caused by an ongoing upstream GitHub incident affecting SSH deploy keys."
+ },
+ {
+  "org": "HashiCorp",
+  "date": "2026-08-05",
+  "url": "https://status.hashicorp.com/incidents/01KZ9N6MT7JM1Y4GGHJP14K0TG",
+  "name": "HCP Terraform is unable to communicate with VCS endpoints using certain IP addresses.",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "Our Engineering team has resolved the issue. These systems should now be operating normally. If you continue to experience any problems, please open a ticket with our support team. || Our Engineering team has implemented a fix to resolve the issue. We are monitoring the situation closely and will post an update as soon as the issue is fully resolved. || Many customers are seeing failed Terraform runs with SIC-001 errors or 403 forbidden responses. We have confirmed around 220 similar errors in VCS audit logs. We have found the root cause and are working on a fix. Once we have additional information, we will share another update. || Many customers are seeing failed Terraform runs with SIC-001 errors or 403 forbidden responses. We have confirmed around 220 similar errors in VCS audit logs, and at least two workspaces are affected. Our team is working to identify and resolve the issue. We will post updates with more information as it becomes available."
+ },
+ {
+  "org": "Honeybadger",
+  "date": "2026-07-08",
+  "url": "https://status.honeybadger.io/incidents/j0d19vc2tmgv",
+  "name": "Elevated error rates on the US error reporting API",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "Compounding the problem, PagerDuty alerts were not fired to wake up a human due to a misconfiguration. What we've done: We've fixed the underlying scaling weakness: API capacity now also scales directly on load-balancer error rates (previously we scaled only on request rates, and that scaling doesn't respond quickly enough), and we've doubled the maximum capacity of the ingestion tier. These changes are already deployed to both US and EU regions."
+ },
+ {
+  "org": "Honeybadger",
+  "date": "2020-05-30",
+  "url": "https://status.honeybadger.io/incidents/pbln19w1gg1b",
+  "name": "API and Web App May be Unavailable to Some Users",
+  "sev": "Medium",
+  "cat": "other",
+  "pm": false,
+  "text": "We have switched all affected systems to new certificates and everything is back to normal. || We are in the process of issuing new certificates from a different CA, to work around Comodo's issue. || The unavailability is being caused by an upstream SSL problem. Comodo (our CA) is being flagged as \"untrusted\" by clients. See this tweet for an example: https://twitter.com/aitorpazos/status/1266703889786691584 We are currently monitoring the situation, as well as investigating other solutions. || We have experienced a drop in external traffic which leads us to believe that some customers may not currently be able to access our service. At this time we suspect that the issue is caused by network problems outside of our own systems, and we are currently investigating to confirm this."
+ },
+ {
+  "org": "Honeybadger",
+  "date": "2023-03-24",
+  "url": "https://status.honeybadger.io/incidents/hylhcysd7xxg",
+  "name": "Issues processing backlog",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": false,
+  "text": "We identified that our workers had an issue deploying. We deployed a fix and upped our capacity to deal with the current backlog. Everything is back to normal now. Turns out this issue was related GitHub rotating their public RSA key: https://github.blog/2023-03-23-we-updated-our-rsa-ssh-host-key/ || We have identified the issue and are working towards clearing the backlog. || We currently are having issues processing our notice backlog. We are looking into the issue."
+ }
+]

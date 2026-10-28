@@ -1,0 +1,402 @@
+[
+ {
+  "org": "1Password",
+  "date": "2026-07-02",
+  "url": "https://status.1password.com/incidents/nxgrp52180y3",
+  "name": "Device Trust Outage",
+  "sev": "Critical",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "We have identified the root cause: an internal configuration change to our cloud load balancing infrastructure was applied more broadly than intended which temporarily made a required endpoint unreachable. The configuration has been corrected, service has been fully restored, and we have implemented additional safeguards to help prevent this type of issue from recurring. Reverting the change restored connectivity and service. * **Timeline of Events \\(UTC\\):** * 19:28: Network configuration change applied; Network Load Balancers responsible for routing traffic for Device Trust services became unreachable * 19:30: Automated monitoring detects the outage and triggers alerts * 19:33: Incident is declared at [status.1password.com](http://status.1password.com) * 20:03: Root cause is identified as a load balancer configuration issue * 20:24: Load balancer is recreated with correct configuration * 20:26 Recovery is confirmed for [app.kolide.com](http://app.kolide.com) * 20:28 Recovery is confirmed for [auth.kolide.com](http://auth.kolide.com) * **Contributing Factors \\(if any\\):** * **Shared component scope not visible during review or validation.** The network infrastructure class affected by the change was shared across multiple services, but this dependency was not documented or surfaced in the change review process. * **Concurrent diagnostic signals slowed root cause identification.** At the time the outage began, unrelated certificate renewal errors surfaced alongside the networ"
+ },
+ {
+  "org": "1Password",
+  "date": "2026-01-23",
+  "url": "https://status.1password.com/incidents/vkm6tvh2b568",
+  "name": "1Password Browser Extension Code Syntax Rendering Issue",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "# Incident Postmortem - 1Password Browser Extension Code Syntax Rendering Issue **Customer impact began \\(stable rollout start\\):** 2025-12-09 **Investigation Started:** 2025-12-17 **Incident Declared \\(UTC\\):** 2025-12-30 13:13 **Fixed Release First Available:** 2026-01-01 **Fixed Release Fully Available and Verified:** 2026-01-05 **Incident Marked Resolved \\(UTC\\):** 2026-01-05 02:15 **Service\\(s\\) Affected:** 1Password browser extension ## Summary The 1Password browser extension, which works by injecting code into web pages, inadvertently included code from PrismJS, a third party dependency, breaking syntax highlighting on some websites that display code blocks. This happened due to a small change that accidentally pulled in additional libraries caused by insufficient restrictions/guardrails on what dependencies could be imported into injected scripts. * 2025-12-09: Bug released to stable version 8.11.22. * 2025-12-22: Fix merged \\(script pruning applied broadly to remove PrismJS from injected scripts\\). * **Root Cause Analysis:** We did not have an enforced dependency boundary for injected content scripts, which allowed unexpected UI and runtime dependencies to be bundled into the page-injected context. * **Contributing Factors \\(if any\\):** * Mis-triage of beta report * Missing side-effect regression tests ## How Was It Resolved"
+ },
+ {
+  "org": "1Password",
+  "date": "2025-10-20",
+  "url": "https://status.1password.com/incidents/mncv42fq1s26",
+  "name": "Intermittent performance issues with 1Password.com",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "# Incident Postmortem - 1Password Cloud Services Degraded * **Date of Incident:** 2025-10-20 * **Time of Incident \\(UTC\\):** 07:26:00 - 20:55:00 * **Service\\(s\\) Affected:** [1Password.com](http://1password.com/) website, Sign in, Access to passwords and other items * **Impact Duration:** 13 hours, 29 minutes ## Summary On October 20, 2025 at 07:26:00 UTC, [1Password.com](http://1password.com/) faced intermittent latency, authentication failures, and degraded service availability due to a major outage at [AWS in the us-east-1 region](https://aws.amazon.com/message/101925/). Complete service restoration occurred in conjunction with AWS\u2019s final mitigations around 18:30 UTC. 1Password immediately deployed mitigations inside our infrastructure to ensure there was adequate compute capacity to serve our US-based users, which included pausing deployments and scaling down any services not critical to key functionality for our users. **Timeline of Events \\(UTC\\):** * 06:55:05 - 1Password monitoring triggers warning for unavailable Pods in Deployment \\(caused by inability to obtain AWS IAM credentials\\) * 07:03:06 - 1Password monitoring alerts for 5xx errors on auth start endpoint \\(caused by inability to obtain AWS IAM credentials\\) - pages authentication team, but alert recovers within minutes * 07:26:00 - 1Password monitoring alerts for inability to scale clusters, engineers begin investigating, Incident declared * 07:26:41- AWS confirms elevated error rates across multiple services"
+ },
+ {
+  "org": "1Password",
+  "date": "2025-09-26",
+  "url": "https://status.1password.com/incidents/z20sn66ynbfl",
+  "name": "Degraded performance when accessing 1Password",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "* **Timeline of Events \\(UTC\\):** * 2025-09-26 4:20pm: Spike in customer traffic began * 2025-09-26 4:29pm: Automated monitoring detects increased errors and latency * 2025-09-26 4:35pm: The team activates our incident protocol and begins investigation * 2025-09-26 4:58pm: The team decides to restart application servers * 2025-09-26 5:00pm: The servers have been restarted, service is still degraded, as a second traffic burst begins * 2025-09-26 5:18pm: Service starts to improve * 2025-09-26 5:25pm: The team detects increased load for the second time * 2025-09-26 5:33pm: The team restarts application servers again * 2025-09-26 5:39pm: Service is back to normal, team continues to investigate * 2025-09-26 7:26pm: Team has found the issue, and proceeds to upgrade cache instance size * 2025-09-26 7:49pm: Cache upgrade completed successfully * 2025-09-26 7:50pm: Team continues to monitor, performance has returned to nominal levels * 2025-09-26 8:24pm: Incident is marked as resolved * **Root Cause Analysis:** A code library installed in July introduced latency issues for cache connections. * **Contributing Factors:** * Latency increase due to cache library version upgrade * Inadequate rate limiting allowed traffic bursts to go unchecked * Cache instance size is under-provisioned ## How Was It Resolved? * **Mitigation Steps:** Restarting application servers temporarily mitigated the latency and errors, but the problems returned when traffic spiked again. * **Verification of Resolutio"
+ },
+ {
+  "org": "1Password",
+  "date": "2025-08-05",
+  "url": "https://status.1password.com/incidents/q3twhjkycxxb",
+  "name": "Cannot sign into 1Password accounts",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "The incident was triggered during a planned architectural improvement when a misconfigured rollback attempt caused an overload of traffic and a subsequent database connection bottleneck. The issue was resolved by correcting the misconfiguration and restarting the web application servers, fully restoring service. Engineers observing the deployment immediately observe service impact. * **20:21**: A corrective action is deployed to revert the system to its previous state before the misconfigured rollback. * **21:20**: Service is fully restored for all customers. **Root Cause Analysis:** The root cause was an error in the configuration of an attempted rollback. This misconfiguration incorrectly routed a high volume of sign-in traffic through a new, slower code path, which created a bottleneck of connections to our primary database and made the web application unresponsive. The rollback misconfiguration was identified and corrected, which stopped traffic from flowing to the problematic new code. * **Improve our deployment tooling**: We will add additional validation to our traffic management tools to prevent similar configuration errors."
+ },
+ {
+  "org": "1Password",
+  "date": "2025-11-18",
+  "url": "https://status.1password.com/incidents/hxqx48n0hpg6",
+  "name": "Service Degradation Affecting Sign In, SSO, MFA",
+  "sev": "High",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "The issue was caused by database resource exhaustion, causing operations to fail and connections to be rejected. * **Timeline of Events \\(UTC\\):** * 2025-11-18 4:59pm: Automated monitoring detects increased errors * 2025-11-18 5:03pm: Team began investigating * 2025-11-18 5:09pm: Servers restarted, service is still degraded * 2025-11-18 5:23pm: Public status page updated to Investigating and services Degraded * 2025-11-18 5:25pm: Servers scaled down to reduce database load * 2025-11-18 5:41pm: Database instance size upgrade started * 2025-11-18 5:44pm: Potentially problematic cron job disabled * 2025-11-18 5:56pm: Services slowly started to scale up * 2025-11-18 5:57pm: Services started to come back as the database instance resize completes * 2025-11-18 6:05pm: Incident marked as Identified * 2025-11-18 6:05pm: Team continues to monitor, performance has returned to normal levels * 2025-11-18 6:23pm: Incident marked as Monitoring and services Operational * 2025-11-18 7:16pm: Incident marked as resolved * **Root Cause Analysis:** The refactor of a feature increased the impact of a poorly performing query that had previously gone undetected. * **Mitigation Steps:** * Background services were halted to reduce load on the database."
+ },
+ {
+  "org": "1Password",
+  "date": "2025-09-23",
+  "url": "https://status.1password.com/incidents/pw03wwkz4prv",
+  "name": "Provisioning invite links are not working",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "Invites could not be accepted due to a web browser routing defect that was not caught during development, review, or release. The root cause was identified as a defect introduced by a web client modification, and a fix was created, tested, and released. By 00:46 UTC, the fix was deployed to all environments and service was fully restored. The change responsible for introducing the defect was able to be released because it was not captured under automatic change notification rules, was lacking automated test coverage, and was not included in the set of manual tests. * **Timeline of Events \\(UTC\\):** * 17:18: 1Password Release containing defect * 19:53 \\(2 hours, 35 minutes later\\) First customer report * 20:49 \\(56 minutes later\\) Escalation to developer teams * 21:01: \\(12 minutes later\\) Incident called * 22:02: \\(1 hour, 1 minute later\\) Root cause identified * 22:29: \\(27 minutes later\\) Fix created and testing initiated * 23:49: \\(1 hour, 30 minutes later\\) Fix merged * 00:46: \\(57 minutes later\\) Fix released and service fully restored * **Root Cause Analysis:** A change modified the order in which key provisioning web routes were rendered. An existing bug that can fail the resending of invites was an initial red herring during the investigation. * **Verification of Resolution:** 1Password engineering tested the changes and validated that the functionality was restored, as well as verifying that requests for the affected endpoints were successful after the fix was deploy"
+ },
+ {
+  "org": "1Password",
+  "date": "2025-09-23",
+  "url": "https://status.1password.com/incidents/p9qy3hv550zm",
+  "name": "Some users are unable to interact with the admin console",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "* Sep 25th 5:03pm: The change was deployed with scheduled application release, error rate dropped off shortly after. * **Root Cause Analysis:** The issue was caused by GET requests to the Users API exceeding the URL length limit due to a recent change to append a list of UUIDs to the request parameters to resolve customer reported performance issues. * **Mitigation Steps:** Customers were manually removed from the blocklist at multiple points in time as we evaluated the root cause and worked to patch the root issue. * **Resolution Steps:** The issue was mitigated by removing UUIDs at the API level if a GET request is used. Additional logging has been added to identify the root cause of the feature flag configuration issue. * **Remove the feature flag misconfiguration:** We\u2019re correcting the way the feature flag is configured to ensure consistent outcomes."
+ },
+ {
+  "org": "1Password",
+  "date": "2026-04-27",
+  "url": "https://status.1password.com/incidents/xjl9szb17mqh",
+  "name": "Login and Sync Issues",
+  "sev": "Critical",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "A defect deployed in application scaling logic caused a cascading failure during peak usage. We deployed a change to how our services signal their readiness to serve requests, which contained a latent defect. * **2026-04-27 15:41 UTC** - Issue identified and fix deployed. Once disabled, capacity was restored, and traffic recovered. ## What We Are Doing to Prevent Future Incidents * **Immediate fix:** We disabled the defective health check logic and locked the configuration to prevent it from being re-enabled in production."
+ },
+ {
+  "org": "1Password",
+  "date": "2026-04-14",
+  "url": "https://status.1password.com/incidents/sd38vryb6ng1",
+  "name": "1Password Hosted Service in the US experiencing high latency and errors",
+  "sev": "Critical",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "# 2026-04-14 SEV1 Incident Postmortem - Hosted Service in the US experiencing high latency and errors # Incident Postmortem - Elevated Application Error **Date of Incident:** 2026-04-14 **Time of Incident \\(UTC\\):** 17:25 - 18:00 **Service\\(s\\) Affected:** Sign in, Admin console **Impact Duration:** Approximately 35 minutes ## Summary On April 14, 2026, [1Password.com](http://1Password.com) experienced elevated error rates due to an increase in traffic to our USA/Global infrastructure. An unusually high volume of traffic exceeded the capacity of our controls, and triggered latency and errors in the underlying applications. * **2026-04-14 17:51** - Fix implemented. * **Root cause analysis:** An increase in traffic exceeded the capacity of our traffic management layer, causing degraded service for customers in the USA/Global region. * Established runbooks for load shedding and system upgrades mitigated the issue."
+ },
+ {
+  "org": "1Password",
+  "date": "2025-09-03",
+  "url": "https://status.1password.com/incidents/kgrz7t6tmql8",
+  "name": "Elevated API Errors",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "92% of the impact was mitigated within 13 minutes at 11:19 by automation scaling up infrastructure. By 12:06 a manual restart of the remaining infrastructure completed mitigation. A permanent fix was implemented and deployed to prevent the issue from reoccurring. * 12:07: All servers completed restarts, and error rates returned to normal levels * **Root Cause Analysis:** A poorly performing cache operation was triggered repeatedly in a short period of time across multiple servers, leading directly to greatly delayed responses. * **Mitigation Steps:** Automatic instance scaling restored over 98% of operational capacity after 13 minutes. Full capacity was restored through manual intervention * **Resolution Steps:** We refactored the poorly performing query. We deployed the fix and monitored it for 24 hours to assert the issue was resolved."
+ },
+ {
+  "org": "1Password",
+  "date": "2025-07-14",
+  "url": "https://status.1password.com/incidents/jncn9pjy74m5",
+  "name": "Intermittent SSO unavailability due to downstream outage",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": true,
+  "text": "This was due to an outage with an upstream provider which 1Password backend services rely on to verify DNS lookups for SSO authentication. \u200c * **Timeline of Events \\(UTC\\):** * 22:00 - Incident initially detected by 1Password * 22:13 - Upstream provider identifies issue * 22:59 - Upstream provider implements a fix * 23:30 - Incident resolved * **Root Cause Analysis:** The third party provider 1Password uses for DNS lookup and verification failed. ## **How Was It Resolved?** * **Resolution Steps:** Our third party provider mitigated the issue."
+ },
+ {
+  "org": "1Password",
+  "date": "2025-07-22",
+  "url": "https://status.1password.com/incidents/hwxswj1jgswk",
+  "name": "Activity Log fails to load or return errors for some users",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "* **Timeline of Events \\(UTC\\):** * 10:40 : Detected by 1Password personnel and root cause identified * 10:42: Issue Identified * 13:38 Fix created and testing initiated * 06:30: Fix released, Service fully restored * **Root Cause Analysis:** A User State was removed from the [1Password.com](http://1Password.com) server but not the client. * **Verification of Resolution:** 1Password engineering tested the changes and validated that full system functionality was restored. This would mitigate future occurrences that caused this issue."
+ },
+ {
+  "org": "Ably",
+  "date": "2025-10-29",
+  "url": "https://status.ably.com/incidents/jpnrqbt879rc",
+  "name": "Webhook delivery failures",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "The incident occurred as a result of the deployment of new webhook functionality that was incompatible with many already-configured webhook rules. ### Ably's service deployment process Ably adopts a staggered deployment approach whereby each change is deployed gradually, minimising the adverse impact of any regression that might exist in new software versions having escaped all prior test phases. Changes are typically deployed on a weekly basis; usually in the main \\(multi-tenanted\\) cluster this means that changes are deployed to the ap-southeast-2 \\(Sydney\\) region first, and error rates monitored, before deploying to the remaining regions starting the following day. However, if a deploy needs to be expedited for any reason, subsequent regions can be deployed after a change has been in ap-southeast-2 for only a few hours."
+ },
+ {
+  "org": "Ably",
+  "date": "2023-09-01",
+  "url": "https://status.ably.com/incidents/s2jtcfw07xmr",
+  "name": "Timeouts and High Latencies Across All Regions",
+  "sev": "High",
+  "cat": "payment_processing",
+  "pm": true,
+  "text": "At the present state of the investigation we have a thorough understanding of the nature of the attack, its impact on the service, and the effectiveness of our mitigations at the time. We are still in the process of planning and implementing a number of future mitigations to ensure that we can better handle a range of attack scenarios should they arise in the future. However, we are deliberately limiting the detail we disclose about the nature of this specific attack and our available mitigations."
+ },
+ {
+  "org": "Asana",
+  "date": "2024-08-01",
+  "url": "https://status.asana.com/incidents/83mrqvck8fcn",
+  "name": "Application and API errors",
+  "sev": "Low",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "At this point the application was fully operational, but asynchronous workloads such as automations and notifications were delayed due to the work enqueued while traffic was throttled. Access to the API was restored gradually between 15:15 UTC and 15:58 UTC. **Moving forward:** We have reverted the change that caused the increased connections."
+ },
+ {
+  "org": "Asana",
+  "date": "2025-10-20",
+  "url": "https://status.asana.com/incidents/zfdtyvckl5k2",
+  "name": "App Down",
+  "sev": "Low",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "**Incident:** AWS infrastructure had [an outage affecting core services](https://aws.amazon.com/message/101925/), which our application depends on, in the Virginia \\(us-east-1\\) region. After partial recovery within AWS, we made configuration changes and saw recovery for our traffic. We continued to observe while AWS worked through the incident on their side. The remaining impact on Asana's side is covered in [https://status.asana.com/incidents/lvtt14d4d80g](https://status.asana.com/incidents/lvtt14d4d80g) . **Impact:** We saw global downtime from 2025-10-20 06:52 UTC through 09:27 UTC, 2 hours and 35 minutes. This affected all regions because we store some global state and shared application configuration in the Virginia region. **Moving forward:** We are working on ways to reduce the impact of single region outages, including for this region, to limit the impact and improve options for recovery. Our metric considers a weighted average of uptime experienced by users at each data center. The number of minutes of downtime shown reflects this weighted average. || This incident has been resolved; error rates and latency have gone down and we've caught up on existing traffic. We will publish a postmortem here within 72 hours."
+ },
+ {
+  "org": "Asana",
+  "date": "2024-07-01",
+  "url": "https://status.asana.com/incidents/mpz02gpgpwpj",
+  "name": "Asana unreachable for some users",
+  "sev": "High",
+  "cat": "hardware_infra",
+  "pm": true,
+  "text": "Incident: On 2024-07-01 22:30 UTC, changes related to ongoing work towards smaller, independent deployment environments resulted in an invalid configuration affecting approximately 18% of our customers in our US datacenter. Resolution was delayed due to an unrelated issue with our infrastructure configuration management tools, but the impact was resolved for half of the affected users at 23:35 and for all affected users by 23:42. Moving forward: We have done a retrospective analysis using the [5 Whys process](https://wavelength.asana.com/workstyle-ask-5-whys-to-get-to-the-root-of-any-problem/), and have identified bugs, process improvements, and monitoring improvements to avoid future downtime while rolling out more fine-grained deployment environments. || Some users were unable to connect to Asana; we investigated and have fixed the issue."
+ },
+ {
+  "org": "Asana",
+  "date": "2026-07-07",
+  "url": "https://status.asana.com/incidents/nf6r56sm9cmv",
+  "name": "Errors loading the Asana web app for some users in US",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "**Incident**: A configuration change inadvertently removed a critical resource required by one of our services. While existing infrastructure continued to operate normally, newly scaled infrastructure could not become ready. As morning traffic increased, there was a growing gap between incoming requests and our system's capacity to handle them, resulting in service degradation. We resolved the issue by manually restoring the missing resource and correcting the configuration change that caused its removal. \u200c **Impact**: For approximately 1.5 hours, a subset of customers experienced a full outage of our web application and desktop applications. During this time, affected users were unable to access Asana. No customer data was lost. \u200c **Moving forward**: We are implementing additional safeguards in our configuration management process to prevent critical resources from being inadvertently removed. We are also enhancing our monitoring systems to detect degradation earlier, before it impacts customer access. \u200c Our metric considers a weighted average of uptime experienced by users at each data center. The number of minutes of downtime shown reflects this weighted average."
+ },
+ {
+  "org": "Asana",
+  "date": "2026-01-22",
+  "url": "https://status.asana.com/incidents/3z9g0xv4lvdv",
+  "name": "Asana webapp unavailable",
+  "sev": "Critical",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "Incident: On 2026-01-22 the Asana App and all associated services had a service disruption due to dependency on a shared database used for storing metadata. This was triggered by a code path which caused overload for that database, followed by request queuing, timeouts, and errors. There was a further 14 minutes of partial downtime from 18:45 - 18:59 UTC affecting 10-20% of users, also triggered by dependency on this shared database. Moving forward: We immediately rolled back our application code and added resources for this database."
+ },
+ {
+  "org": "Asana",
+  "date": "2025-08-18",
+  "url": "https://status.asana.com/incidents/2yp2xnzjbcv3",
+  "name": "Automation delay",
+  "sev": "High",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "**Incident**: Around 2025-08-17 23:35, a conflict occurred between two database management systems. For most Asana customers, database locks prevented execution of background actions, automations, and webhooks were delayed. **Impact**: Users experienced delays in asynchronous operations, including automations and webhooks. Core application functions remained available and operational throughout the incident. No customer data was lost. The incident lasted approximately 2 hours, after which delayed operations ran normally. **Moving forward**: Asana engineers completed an investigation into the root cause, and have implemented changes to prevent the conflict between these systems. We are also reviewing our upgrade and management processes to be resilient against similar issues in the future. Our metric considers a weighted average of uptime experienced by users at each data center. The number of minutes of downtime shown reflects this weighted average."
+ },
+ {
+  "org": "Asana",
+  "date": "2025-06-25",
+  "url": "https://status.asana.com/incidents/trn8dzjpj1rb",
+  "name": "Elevated application and API/Mobile errors",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "This change was identified as the cause of downtime and reverted. **Moving forward**: We have completed a redesign of our core application architecture to better protect our services from disruption by segmentation into independent sections, or \"cells.\" We are considering ways we can leverage this architecture to roll out configuration changes like the one which triggered this incident more gradually and carefully across our systems to ensure safety & stability."
+ },
+ {
+  "org": "Asana",
+  "date": "2026-08-31",
+  "url": "https://status.asana.com/incidents/7402jg0zwnnv",
+  "name": "Asana full outage for some users (2 hours, 25% outage)",
+  "sev": "High",
+  "cat": "payment_processing",
+  "pm": true,
+  "text": "We\u2019ve been working to add a caching layer to our update pipeline, tuning it carefully and rolling it out gradually. On Wednesday, August 26 we enabled it for most use cases, and it initially performed well. On Monday, August 31, a combination of unrelated infrastructure changes and peak traffic pushed the cache past its scaling limits. Once that threshold was crossed, the cache became unusable, and many pods serving read traffic for the Asana application could no longer serve it. We mitigated the incident by reverting the system to use the previous, non-cached code path. The revert was successful, but recovery took longer than we would expect for this class of issue. A fuller analysis is underway. We will follow up with root causes, action items, and improvements, including why recovery took as long as it did. We were fully down for about 25% of our users, for 2 hours, 15 minutes."
+ },
+ {
+  "org": "Asana",
+  "date": "2025-04-08",
+  "url": "https://status.asana.com/incidents/6zgwkjqf028l",
+  "name": "SAML Login Failures",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": true,
+  "text": "**Incident:** From April 4 to April 8, 2025, a subset of users were blocked from logging in with SAML, despite no changes to their identity provider setup. We believe the root cause to be a combination of recent code changes upgrading our infrastructure. These changes inadvertently affected how SAML responses were processed. **Impact:** Approximately 0.5% of users who authenticate through SAML were unable to log in to their Asana accounts during this period. No customer data was lost or compromised, and users who do not use SAML were unaffected. Our Customer Support team worked with affected domains to restore access while we resolved the issue. **Moving forward:** Our existing monitors did not trigger for this incident, which led to an extended period of downtime. We are improving existing monitoring and increasing monitor coverage to allow us to detect and respond to authentication issues more quickly in the future. Our metric considers a weighted average of uptime experienced by users at each data center. The number of minutes of downtime shown reflects this weighted average."
+ },
+ {
+  "org": "Asana",
+  "date": "2025-03-25",
+  "url": "https://status.asana.com/incidents/htd4cqn5423l",
+  "name": "App and API downtime",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "**Incident**: A configuration change triggered a bug affecting how internal systems process configuration data, leading to application downtime. The issue impacted internal server uptime, resulting in approximately 28 minutes of degraded service on March 25, 2025, from 22:32 UTC to 23:00 UTC \\(3:32 PM to 4:00 PM PDT\\). \u200c **Impact**: During the incident, customers experienced difficulties accessing Asana on web and mobile apps, including login failures and errors while using the application. Internal services gradually recovered after the problematic change was reverted. \u200c **Moving forward**: We are enhancing our configuration validation processes to prevent similar issues. Additional monitoring and safeguards are being introduced to ensure rapid identification and recovery from similar incidents. \u200c Our metric considers a weighted average of uptime experienced by users at each data center. The number of minutes of downtime shown reflects this weighted average."
+ },
+ {
+  "org": "Asana",
+  "date": "2024-12-03",
+  "url": "https://status.asana.com/incidents/67p3s5lwrzcx",
+  "name": "Asana unavailable",
+  "sev": "Critical",
+  "cat": "hardware_infra",
+  "pm": true,
+  "text": "Incident: During an automated deployment of new code, an error in an internal networking service caused several system components to retain stale network connections. This caused requests to fail across a portion of our European data center. Impact: Users in our European datacenter were unable to load the Asana web app between 2024-12-02 2340UTC and 2024-12-03 0050UTC. The mobile app, our developer API, and app integrations saw degraded performance and an inability to modify or add data to Asana. Existing sessions on the Asana web app were mostly unaffected by this incident. Moving forward: We are adjusting our configuration of the library responsible for incorrectly retaining connections to avoid similar issues in the future. Additionally, Asana is in the process of upgrading and simplifying our internal routing infrastructure. \u200c Our metric considers a weighted average of uptime experienced by users at each data center. The number of minutes of downtime shown reflects this weighted average."
+ },
+ {
+  "org": "Asana",
+  "date": "2024-09-16",
+  "url": "https://status.asana.com/incidents/ptm5vcr51glz",
+  "name": "Errors accessing Asana",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": true,
+  "text": "Incident: An experimental flag was enabled that changed initial page loading behavior. With the flag enabled, users were inadvertently directed to load a code version that was not servable by all groups of servers. Subsequent requests would fail when requesting this incompatible version, including requests to report the page load errors. \u200c Impact: From 16:52 to 18:59 UTC, 10% of users were unable to load the Asana application in the desktop app or web browser. Existing sessions, as well as mobile and API traffic, were not impacted. \u200c Moving forward: We reverted the configuration change and identified gaps in our monitoring. We are adding monitoring and alerting for version mismatches during page load in order to more quickly identify similar regressions in the future. Our metric considers a weighted average of uptime experienced by users at each data center. The number of minutes of downtime shown reflects this weighted average."
+ },
+ {
+  "org": "Asana",
+  "date": "2024-10-10",
+  "url": "https://status.asana.com/incidents/20h0v584gc1z",
+  "name": "Errors loading Asana",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": true,
+  "text": "**Incident:** On 2024-10-10, between 01:23 and 02:31 UTC a software change caused overload to a shared resource, leading to application errors. The change was rolled back, with recovery for most users around 02:31 and full recovery by 02:39 UTC. **Impact:** Users were unable to start new sessions on the web and desktop apps, though mobile and existing sessions were unaffected. No data was lost. **Next Steps:** We will conduct a retrospective using the 5 Whys method to improve monitoring, tooling, and playbooks. We will also update our software to manage load more efficiently and reduce reliance on globally shared resources to prevent similar issues in the future. Our metric considers a weighted average of uptime experienced by users at each data center. The number of minutes of downtime shown reflects this weighted average. || We have seen full resolution. We add a postmortem within 72 hours."
+ },
+ {
+  "org": "Asana",
+  "date": "2025-11-18",
+  "url": "https://status.asana.com/incidents/7fnc5yz6nly3",
+  "name": "Partial downtime for Asana's MCP server",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": true,
+  "text": "Incident: [Cloudflare experienced an outage](https://blog.cloudflare.com/18-november-2025-outage/) that impacted the Workers KV service, a storage infrastructure service our MCP server relies on. This resulted in increased error rates and failed requests for a portion of our MCP traffic over the span of 3 hours. \u200c Impact: Approximately 100 users making requests to the MCP server received error responses or were unable to reach the server from 2025-11-18 11:20 UTC through 14:20 UTC. \u200c Moving forward: We are investing in our MCP Server to improve its resilience to KV store outages, and are investigating ways to reduce the overall impact of Cloudflare outages. Our metric considers a weighted average of uptime experienced by users at each data center. The number of minutes of downtime shown reflects this weighted average."
+ },
+ {
+  "org": "Asana",
+  "date": "2026-04-21",
+  "url": "https://status.asana.com/incidents/1gqq6vz0195q",
+  "name": "Date Time Trigger Automation Failues",
+  "sev": "Low",
+  "cat": "other",
+  "pm": true,
+  "text": "Starting on **April 20th, 2026 at 10:00 AM PDT**, a combination of scaled-up background action jobs in the EU and a recent change to how date time trigger volume is managed overloaded the system that processes resource intensive background action jobs. This caused multi-hour delays in email and inbox notifications in the EU and prevented date time triggers from executing in all regions. Engineers were first alerted on **April 21st** by our monitoring systems, but did not recognize the full scope of the incident until **April 23rd**. On April 23rd, the change to manage date time trigger volume was reverted and the problematic background action jobs were isolated. All delayed notifications were sent by **April 24th, 11:30 AM PDT**, and all delayed date time triggers were executed by **April 27th, 4:00 AM PDT**."
+ },
+ {
+  "org": "Asana",
+  "date": "2024-06-28",
+  "url": "https://status.asana.com/incidents/vphp8ycqs76j",
+  "name": "Page load failures",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "Incident: An off-peak routine update of our service handling new page loads caused us to deploy code that depended on an artifact that wasn't yet available. The net effect was that all traffic attempting to do a fresh page load was broken for 48 minutes from June 28 5:52 pm PT to June 28 6:39 pm PT. Impact: Asana was unavailable to new page loads, but existing sessions continued to work as normal. Moving forward: This incident involved interaction across teams and systems. Our postmortem of this event identified operational and tooling changes to reduce the likelihood of incidents -- and decrease the time to resolution. We have an ongoing [5 Whys](https://wavelength.asana.com/workstyle-ask-5-whys-to-get-to-the-root-of-any-problem/) analysis for this incident."
+ },
+ {
+  "org": "Asana",
+  "date": "2025-06-05",
+  "url": "https://status.asana.com/incidents/5b9hhtgs3mxs",
+  "name": "MCP Maintenance",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": true,
+  "text": "**Incident:** From June 5th, 2025 through June 17th we disabled MCP \\(an opt-in API feature\\) for maintenance to address a vulnerability. **Impact:** If your organization was using the MCP server and was impacted by this issue, we have already reached out to you directly with important details and next steps. **Moving forward:** We've fixed the the bug which was identified. As part of our remediation efforts, we reset all connections to the MCP server. This means you'll need to manually reconnect your Asana instance to the MCP server."
+ },
+ {
+  "org": "Asana",
+  "date": "2025-11-07",
+  "url": "https://status.asana.com/incidents/1nw7dpczrg1c",
+  "name": "Asana downtime in all regions",
+  "sev": "Critical",
+  "cat": "security_incident",
+  "pm": true,
+  "text": "We had approximately 1 hour of full downtime, where the Asana application was unavailable for most of our users. There was no data loss or security vulnerability. \u200c A routine configuration change affected the Asana application globally. While refactoring the configuration consumption, we missed an unintended side effect, causing the app to fail loading in all regions. We reverted the change and restarted servers for full recovery."
+ },
+ {
+  "org": "AssemblyAI",
+  "date": "2026-09-16",
+  "url": "https://status.assemblyai.com/incidents/jfgvq10x906m",
+  "name": "Outage on US Async Endpoint",
+  "sev": "Critical",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "**Root cause** The failure originated in AWS SQS, the managed queuing service our transcription pipeline uses to distribute work. There was no deploy or infrastructure change on our side that triggered this; AWS confirmed it as a service-side issue and rolled back the change on their end later that evening. Because the affected queues sit in the path between our API and our transcription workers, requests that could not be queued failed outright, and a portion of the work that did get through was delayed behind reduced throughput. We mitigated by disabling Fair Queues across our services and reverting to standard SQS queues, which restored normal operation roughly an hour after the first error. We are moving this to a global feature flag system so mitigations like this one take seconds rather than minutes. * **Expedited emergency deploys.** We are adding a reviewed break-glass path so urgent fixes can bypass non-essential CI steps. * **Multi-region failover.** We are prioritizing work to fail the US pipeline over to a second region when a regional provider dependency degrades, rather than relying on feature-level mitigations alone."
+ },
+ {
+  "org": "AssemblyAI",
+  "date": "2026-01-29",
+  "url": "https://status.assemblyai.com/incidents/cshs4z0mkvr7",
+  "name": "Async + LLM gateway APIs returning 5xx",
+  "sev": "Critical",
+  "cat": "authentication",
+  "pm": true,
+  "text": "**Summary: January 29 Outage** On January 29, our Async Transcription and LLM Gateway went down for 25 minutes, followed by two hours of degraded performance. Here's what happened. Our traffic has been steadily increasing and we received an influx of batch transcription jobs that were higher than usual. Autoscaling did what it should\u2014spun up workers. We ran out of spot instances, fell back to on-demand, then hit AWS's Elastic Network Interface limit. Every ECS task needs an ENI. With no ENIs available, our authentication service couldn't rotate its tasks. It scaled to zero. Everything stopped. When we tried to recover, a Lambda function meant to help with failures was hammering the AWS API with describe calls, rate-limiting the very operations we needed to bring things back. A tool built for recovery was blocking recovery. **What actually went wrong:** We didn't monitor ENI utilization and our authentication service shared resources with batch workers. Traffic spike in one starved the other. **What we're doing:** Short-term: ENI alerts, isolate auth on dedicated capacity, fix the Lambda. Medium-term: Full multi-region for everything. This was preventable. We had the warning signs and didn't connect them. We're sorry, and we're fixing it."
+ },
+ {
+  "org": "AssemblyAI",
+  "date": "2026-06-25",
+  "url": "https://status.assemblyai.com/incidents/rr0rpzfpp5vx",
+  "name": "Timeout on transcriptions using speaker labels",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "**What happened** An issue related to our speaker diarization service caused certain requests to hang until they timed out. This lead to a backlog of requests to our async API creating a processing queue across our US transcription pipeline, which slowed and timed out transcription requests more broadly, including requests that were not using speaker diarization. --- **When** Impact ran from approximately 15:00 to 16:25 UTC on June 25, 2026 \\(about 1 hour 25 minutes\\). The most severe disruption was in the first 45 minutes \\(15:00\u201315:45 UTC\\); remaining delays and timeouts cleared shortly after. Full recovery was confirmed by \u224816:40 UTC. --- **What services were affected** On our US async API endpoint transcription requests during this window saw processing delays and timeouts. Our EU async API endpoint was not affected and operated normally throughout."
+ },
+ {
+  "org": "Atlassian",
+  "date": "2023-07-06",
+  "url": "https://status.atlassian.com/incidents/pzh5b8cvfk2g",
+  "name": "Performance issues and outages with Cloud products",
+  "sev": "Low",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "### **IMPACT** This incident affected multiple regions and products due to the diminished scaling capabilities of our internal hosting platform. ### **ROOT CAUSE** The root cause of the incident was the introduction of new functionality in a third-party tool that functions as our internal artifact management system. **Reducing interdependencies:** We are working to mitigate the risk of potential cascading failures by ensuring that significant system components are able to operate independently in the case of issues. We apologize for any inconvenience caused by this incident and appreciate your understanding."
+ },
+ {
+  "org": "Atlassian",
+  "date": "2023-12-18",
+  "url": "https://status.atlassian.com/incidents/lvq7pq0zbgvr",
+  "name": "Atlassian's cross product user search service is currently degraded.",
+  "sev": "Low",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "The incident originated from a computationally intensive operation that was triggered multiple times in rapid succession, resulting in degraded performance of Atlassian's user search service across several regions. Customers experienced delayed or failed user searches when using the following Atlassian cloud products: * Atlas * Bitbucket Cloud * Compass * Confluence Cloud * Jira Service Management * Jira Software * Jira Work Management * Jira Product Discovery ### **ROOT CAUSE** The incident stemmed from Atlassian's user search service receiving commands to process multiple computationally intensive operations in rapid succession. * Fine-tune our clustered database settings to mitigate the impact of resource exhaustion on the overall system."
+ },
+ {
+  "org": "Atlassian",
+  "date": "2024-02-14",
+  "url": "https://status.atlassian.com/incidents/gg9z8g8xsxc7",
+  "name": "Service Disruptions Affecting Atlassian Products",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "The issue was identified and resolved through the rollback of the faulty deployment to restore the domain names and Atlassian systems to a stable state. ### **ROOT CAUSE** As part of a security and compliance uplift, we had scheduled the deletion of unused and legacy domain names that were being used for internal service-to-service connections. The detection was delayed because existing testing & monitoring focused on service health rather than the entire system\u2019s availability."
+ },
+ {
+  "org": "Auth0",
+  "date": "2026-05-08",
+  "url": "https://auth0.statuspage.io/incidents/xfh30pqjrw5n",
+  "name": "Elevated Errors on US-3 Public Cloud",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "A root-cause analysis for this issue has been performed and is now available at: [https://cdn.auth0.com/blog/2026-05-08\\_-\\_Elevated\\_Errors\\_in\\_US-3\\_Public\\_Cloud\\_and\\_Private\\_Cloud\\_Environments.pdf](https://cdn.auth0.com/blog/2026-05-08_-_Elevated_Errors_in_US-3_Public_Cloud_and_Private_Cloud_Environments.pdf)"
+ }
+]

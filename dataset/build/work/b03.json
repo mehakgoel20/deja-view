@@ -1,0 +1,402 @@
+[
+ {
+  "org": "Box",
+  "date": "2026-08-04",
+  "url": "https://status.box.com/incidents/lgpl7g7n0t84",
+  "name": "[Medium] Issues with Uploads and Downloads",
+  "sev": "High",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "The problem was caused by a routing issue on our frontend load balancers. We restored service by rerouting upload traffic and provisioning additional capacity. Our engineering team mitigated the impact by redirecting traffic away from the affected region, which restored normal upload operations and resolved the errors. * Review and update operational runbooks for isolating problematic instances and for capacity management to shorten time to mitigation."
+ },
+ {
+  "org": "Box",
+  "date": "2026-08-19",
+  "url": "https://status.box.com/incidents/zccvq8lr58jr",
+  "name": "[Medium] Issues with Multiple Box Services",
+  "sev": "High",
+  "cat": "authentication",
+  "pm": true,
+  "text": "_Notice and disclaimer: Box is providing this preliminary information subject to further review and analysis. To the best of our knowledge, this is the current state and we may update as more information is confirmed._ On August 19, 2026 between 3:44pm PDT to 3:49pm PDT, some users may have experienced difficulties while working in Box. When attempting to access Box during this time, some users may have seen an error message. Preview, and Box Notes functionalities were impacted. This occurred because of an issue affecting Box\u2019s critical third party cloud ingress services. We are conducting a full engineering postmortem in conjunction with our cloud provider, and our overview is subject to change with further analysis and findings. In the event our continuing investigation yields further substantive findings, we may publish additional analysis after the conclusion of the full engineering postmortem. We are continuously working to improve Box and want to make sure we are delivering the best product and user experience we can. We hope we have provided some clarity here and we would be happy to answer any questions you may still have regarding this matter. Sincerely, The Box Team"
+ },
+ {
+  "org": "Buildkite",
+  "date": "2026-08-25",
+  "url": "https://buildkitestatus.com/incidents/tm6746k61p73",
+  "name": "Buildkite service disruption",
+  "sev": "High",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "**Trigger: A sudden increase in demand on CoreDNS** At 22:44 UTC, an application deploy created a surge in application Pod volume, which caused our EKS cluster to scale out. This surge consumed the available headroom on already-deployed Nodes, which limited applications\u2019 capacity to autoscale promptly. Since there had been no change in the metrics that triggered the services to scale up, those services requested even more Pods. The application deployment and runaway autoscaling combined to trigger an unusually high rate of change to applications, network endpoints, and cluster nodes. **Why CoreDNS failed** The cluster's CoreDNS service was running at a fixed size and did not automatically scale with the size or rate of change of the cluster. During post-incident analysis we discovered some bugs and gaps in our monitoring of CoreDNS, particularly around query volume and duration."
+ },
+ {
+  "org": "Buildkite",
+  "date": "2026-05-01",
+  "url": "https://buildkitestatus.com/incidents/8nd3cm8kqlnn",
+  "name": "Buildkite service disruption",
+  "sev": "High",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "Service was restored for all customers by 02:48 UTC, with a small number of follow-up support cases handled in the hours afterward. The migration ran before the new application code was deployed. Because database migrations run before application code is deployed, queries that loaded a user record began failing immediately across the product, and continued to fail until the column was manually restored. This made the schema change easier to overlook in review, and meant the test suite for the PR only ever exercised the new code against the new schema, never the previously-deployed code against the new schema. ### Changes we're making This incident was caused by a database migration that was not adequately prepared for safe deployment, and exposed gaps in both our review process and our use of code generation tooling."
+ },
+ {
+  "org": "Buildkite",
+  "date": "2026-08-03",
+  "url": "https://buildkitestatus.com/incidents/vtz6bhz26gj2",
+  "name": "Latency on Pipelines",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "During this window, scheduled builds did not start at their scheduled time, jobs waited longer than usual before being dispatched to an agent, in some cases by more than ten minutes, and pipeline uploads and inbound webhook processing were delayed. From 04:40 UTC, as the deploy rolled out, three internal Sidekiq threads inside every worker process failed on startup and stopped. The processes themselves stayed healthy and kept working jobs that were already queued, so nothing crashed and no deploy failed. Our monitoring alerted us at 04:48 UTC and we identified the change responsible at 04:59. Our first assessment was that there was no customer impact, because everything we could see was still moving. A fix pinning `connection_pool` back to 2.5.5 was merged at 05:10 and deployed ahead of the normal merge queue. Because recurring work is scheduled by a single elected process for the whole fleet, one failure removed it for every customer at once rather than for a single group of customers."
+ },
+ {
+  "org": "Buildkite",
+  "date": "2026-05-28",
+  "url": "https://buildkitestatus.com/incidents/8zy2b81jz4r9",
+  "name": "Delayed notifications",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "For some customers, delayed notifications also delayed downstream CI, merge, or deployment workflows. This happened because the Prometheus service used by our EKS autoscaling path ran out of storage, which meant some EKS-based workers could not autoscale correctly while queues were growing. We mitigated the incident by moving affected workloads back to our previous ECS-based infrastructure and manually increasing worker capacity. Recovery took longer than expected because the rollback path did not fully handle this scenario. This rollback took longer than expected because the ECS services we were rolling back to were not ready to immediately take the full load. For customers who use Buildkite notifications as an input to other CI or deployment systems, notification latency can delay those downstream workflows. * Fixed GitHub notification retry behaviour for a class of errors that could cause repeated retries and extend notification delays. * Improving customer-level monitoring for notification delivery latency, so we can detect customer-impacting regressions earlier."
+ },
+ {
+  "org": "Buildkite",
+  "date": "2026-05-20",
+  "url": "https://buildkitestatus.com/incidents/3vngjcnbkycl",
+  "name": "Delayed notifications",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "This was caused by autoscaling operations that increased the number of pods tracked by Prometheus, which in turn increased the Prometheus server's memory requirement. The unavailable metrics meant that the affected services were not being triggered to scale up, resulting in the observed delays. * Added more observability and monitors for EKS pod and node health to help us identify root causes quickly during future incidents."
+ },
+ {
+  "org": "Buildkite",
+  "date": "2026-05-08",
+  "url": "https://buildkitestatus.com/incidents/19bspyky0px4",
+  "name": "AWS us-east-1 single availability zone outage",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "## Service impact On 8th May 2026 UTC, between 00:00 and 07:30 UTC, some customers would have seen intermittent errors and latency spikes across many areas of the platform. ## Incident Summary The AWS availability zone incident in `use1-az4` triggered our automatic availability failover mechanisms on database and cache clusters, as per AZ-failure tolerant design. During the failover we saw some isolated request errors that were handled by client-side retries in the agent. Customer workloads were either entirely undisrupted or in the worst case saw elevated latency for a period of up to 5 minutes. Throughout the incident we monitored customer impact and prepared additional resources in a healthy availability zone to manually failover to if the automated systems proved insufficient. These were not necessary, and all our infrastructure self healed."
+ },
+ {
+  "org": "Bunny CDN",
+  "date": "2026-06-01",
+  "url": "https://status.bunny.net/incidents/y85jlsdtllc4",
+  "name": "Investigating Issues with Magic Containers and Databases",
+  "sev": "High",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "Processing Delays and Intermittent Timeouts for Magic Containers On June 1, Magic Containers experienced degraded service for approximately one hour due to a network connectivity issue in our hosting provider's environment. Customers running workloads may have seen increased processing delays, intermittent timeouts, temporary disruption, or reduced availability as some workloads were automatically rescheduled. The issue was resolved after the underlying network conditions stabilized, allowing scheduling activity to resume normally. We are improving the resilience of Magic Containers so degraded connectivity can be detected and handled more effectively, not only complete outages. We are also adding safeguards to reduce unnecessary or duplicate workload rescheduling during degraded conditions, helping limit customer impact if similar infrastructure issues occur again."
+ },
+ {
+  "org": "CircleCI",
+  "date": "2026-07-13",
+  "url": "https://status.circleci.com/incidents/7cnl777wp9qz",
+  "name": "Issues with network routing for Mac jobs",
+  "sev": "Medium",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "The issue was caused by a capacity and routing problem on the network path between our Mac infrastructure provider and GitHub, and the associated intermittent networking issues slowed down fetches from GitHub. That incident was also caused by a network routing problem in our Mac infrastructure provider."
+ },
+ {
+  "org": "CircleCI",
+  "date": "2026-07-14",
+  "url": "https://status.circleci.com/incidents/gsyjwybg477g",
+  "name": "Login issues for some Bitbucket users",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": true,
+  "text": "## Summary From 01:33 UTC to 05:18 UTC on July 14, 2026, customers with a Bitbucket-linked identity were unable to log in to CircleCI, and some customers experienced workflows that failed to start or update, due to a change in how Bitbucket's OAuth service reports account permissions. At 05:07 UTC, we deployed a fix that corrected how our systems read the updated permissions field. Some customers needed to log out and re-authenticate their Bitbucket integration after we deployed the fix. At 01:33 on July 14, 2026, our systems began failing to process permissions information returned for Bitbucket-linked accounts, because our systems still expected the old permissions structure. At 04:21, the team deployed an initial fix that resolved the underlying issue, restoring the login flow and returning our internal permissions system to normal operation. Some affected customers needed to log out and log back in to pick up the fix. By 05:07, the team deployed two additional fixes so our systems would begin accepting Bitbucket's new permissions field format going forward. ## Future Prevention and Process Improvement We are taking the following steps to prevent a recurrence and improve our response time: **We are hardening our authorization code against upstream API changes.** This incident happened because our system did not gracefully handle a renamed field in a response from a third-party "
+ },
+ {
+  "org": "CircleCI",
+  "date": "2026-06-23",
+  "url": "https://status.circleci.com/incidents/rp9y8kszn25j",
+  "name": "Delays starting Docker jobs",
+  "sev": "High",
+  "cat": "networking_dns",
+  "pm": true,
+  "text": "An automated alert fired within a minute of the change deploying, but was dismissed as expected behavior. When engineers attempted to accelerate recovery by restoring a prior known-good version, they encountered unexpected issues with the rollback process, adding further delay before the fix could be deployed. When a job is triggered, it is routed to one of several Nomad clusters, organized into routing groups each responsible for handling a specific segment of traffic. When the configuration change was fully deployed at 17:25, the affected jobs began to queue. Because throughput on that cluster was expected to drop as part of the cluster rotation procedure, the alert was interpreted as expected behavior and no action was taken."
+ },
+ {
+  "org": "CircleCI",
+  "date": "2026-07-02",
+  "url": "https://status.circleci.com/incidents/82j91239k876",
+  "name": "Outage impacting web experience and pipelines starting",
+  "sev": "Critical",
+  "cat": "authentication",
+  "pm": true,
+  "text": "We thank you for your patience while our team worked on implementing a fix. Because connections between the API layer and the workflows data service were not configured to time out slow responses under elevated load conditions, the API-handling components became overwhelmed, went unresponsive, and began failing their health checks. Following the incident, we discovered a small number of workflows continued to inaccurately report that they were in a running state."
+ },
+ {
+  "org": "CircleCI",
+  "date": "2026-07-20",
+  "url": "https://status.circleci.com/incidents/9lvbbbs9l87b",
+  "name": "Errors with GitHub APIs delaying workflows",
+  "sev": "Medium",
+  "cat": "payment_processing",
+  "pm": true,
+  "text": "During this incident, some pipelines triggered by users using GitHub failed to start or ran as error pipelines. This was caused by an [upstream API degradation at GitHub](https://www.githubstatus.com/incidents/ph5nns5y4gxj), which impacted many GitHub APIs that CircleCI uses to trigger and run pipelines. In addition, a small number of customer workflows experienced stuck jobs and required a re-run of the workflow to fix. Only pipelines triggered during the incident window were affected, and customers should re-run those pipelines."
+ },
+ {
+  "org": "CloudAMQP",
+  "date": "2026-04-23",
+  "url": "https://status.cloudamqp.com/incidents/0fn6hm720yxp",
+  "name": "Metrics integration issues",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": true,
+  "text": "Downstream effects: * Queue, Consumer, Connection, Channel, Connection flow, and Netsplit alarms: threshold breaches during the window may not have triggered, or triggered late. ## Timeline \\(UTC\\) * 03:25 \u2014 broker-metrics collection begins degrading * 03:35 \u2014 ~30% of broker-metric samples missing * 03:50 \u2014 ~50% plateau * 05:25 \u2014 collector workers cycled and re-initialised * 05:35 \u2014 full throughput restored ## Root cause Broker metrics are polled from each cluster's management HTTP API by a pool of collector workers and published to an internal message bus that both the Alarms service and Metrics Integrations consume from. On-call staff began investigating around 05:00 UTC; force-restarting the service restored metric flow."
+ },
+ {
+  "org": "CloudAMQP",
+  "date": "2026-06-25",
+  "url": "https://status.cloudamqp.com/incidents/tlb6j8j2yqxt",
+  "name": "False positive server down messages sent",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": true,
+  "text": "**Root cause** Before connecting to a server, our monitoring system performs a network authorization step. **Resolution** We identified the affected monitoring processes, confirmed the root cause in production, and deployed a fix that makes this authorization step resilient to such transient failures and able to recover automatically. After deploying, we monitored the system to confirm that notifications returned to normal."
+ },
+ {
+  "org": "CloudAMQP",
+  "date": "2026-05-22",
+  "url": "https://status.cloudamqp.com/incidents/6gpjw66hyc48",
+  "name": "System metrics not forwarded to legacy integration",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": true,
+  "text": "# Legacy host metrics integrations degraded Incident window: 2026-05-21 18:37 UTC \u2013 2026-05-22 04:05 UTC \\(9h 28m\\) Affected service: Legacy metric integrations \\(CloudWatch, Datadog, Librato, New Relic, Splunk, Stackdriver\\). Host metrics affected, not broker metrics, nor was internal monitoring or console graphs. ## Summary For ~9.5 hours, the service that collects host-level metrics \\(CPU, memory, disk, network\\) for legacy third-party integrations entered a crash loop and stopped shipping data. ## Root Cause An internal credential-signing service was migrated to a new container runtime the afternoon before. Due to a bug with environment variables the collector could not renew it's credentials. The collector's existing credential remained valid for several hours, so the failure only surfaced when it tried to renew. ## Resolution On-call staff detected the failure early morning, developers helped restore the service and collector recovered at 04:05 UTC. ## Prevention * All services, both signing and collector report failed authentication attempts earlier and with higher severity * Metrics pipeline alarm thresholds was tightened so a similar drop in data triggers alarms faster."
+ },
+ {
+  "org": "Daily",
+  "date": "2023-02-07",
+  "url": "https://status.daily.co/incidents/4r4b5hhz9w5v",
+  "name": "Issues connecting to calls",
+  "sev": "Medium",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "We were ultimately able to prove that the deadlocking behavior was caused by a low-level behavior change introduced in a point release of MySQL. At 11:01, we decided we could move into a monitoring state while continuing to investigate the root cause. We left the status incident in a \u201cmonitoring\u201d state until Friday, because we wanted to make sure we fully understood the initial cause of the deadlocks took any necessary action to avoid it in the future."
+ },
+ {
+  "org": "Daily",
+  "date": "2024-10-22",
+  "url": "https://status.daily.co/incidents/xb4ggyy8d8tw",
+  "name": "Delayed API calls",
+  "sev": "Medium",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "We\u2019re already working on fixing that bug. We contacted the customer and stopped the load tests, and then we were able to remove the \u2018zombie\u2019 sessions through our normal deploy process. We\u2019re already working on several remediations, including fixing the bug that caused the \u2018zombie\u2019 sessions, as well as adjusting platform rate limits to prevent this from happening again."
+ },
+ {
+  "org": "Daily",
+  "date": "2024-11-25",
+  "url": "https://status.daily.co/incidents/zj56vypyswk2",
+  "name": "Networking issues",
+  "sev": "High",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "We've deployed an update that increases the throughput of the database that was the bottleneck in today's incident. We'll have more info about additional remediations and a postmortem for today's incident within the next few days."
+ },
+ {
+  "org": "DigitalOcean",
+  "date": "2026-08-24",
+  "url": "https://status.digitalocean.com/incidents/4qwm6pzlx1z3",
+  "name": "Cloud Control Panel and API",
+  "sev": "Critical",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "To mitigate the initial degradation, engineering teams rerouted authorization traffic onto a single healthy processing path and temporarily disabled hedging for primary callers, successfully restoring service availability. Current state All impacted control plane services have been restored to nominal operational capacity. Automated Request Throttling and Circuit Breaking: Deployed automated circuit breakers across upstream services to detect downstream dependency degradation and automatically suppress hedged/retry amplification."
+ },
+ {
+  "org": "Duo Security",
+  "date": "2026-02-23",
+  "url": "https://status.duo.com/incidents/byd2vdlp1rff",
+  "name": "All Deployments - Entra 504 Gateway Timeouts",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "Finally, the root cause was identified to be increased CPU usage resulting from a code change that added additional validation for security operations. | | 10:02 am | First status page from Duo is put up regarding investigating the root cause. This status page is posted without notifications due to assumed scale of incident. | | 11:10 am | Duo scales resources for the Azureauth US deployment. | # Root Cause\\(s\\) The Duo team follows a regular and disciplined release process across all services. Changes are routinely deployed to improve functionality, security posture, and overall reliability. All releases undergo comprehensive validation, including: * Unit testing * Integration testing * Frontend testing * Performance testing This layered testing strategy is designed to identify functional defects, regressions, and performance impacts prior to production deployment. In the days leading up to the incident, a software update was deployed to the backend service that supports the Duo integration with Azure Identity management. The following points all contributed to the service interruption: * **Increased CPU Utilization Per Request** * The deployed change approximately doubled CPU consumption per request within this service. * Alerts were triggered only after peak load conditions were reached."
+ },
+ {
+  "org": "Duo Security",
+  "date": "2026-02-04",
+  "url": "https://status.duo.com/incidents/h03svrd8h1hq",
+  "name": "All Deployments: Duo Enrollment URL Session Expired Errors",
+  "sev": "Low",
+  "cat": "authentication",
+  "pm": true,
+  "text": "The fix was deployed on 2026-02-04, and enrollment is now functioning normally. ## Timeline of Events **Date/Time \\(in EST\\)** 02/04/2026 03:57AM - Duo receives reports that customers are unable to complete enrollments 02/04/2026 09:00 AM - Authentication team starts investigating 02/04/2026 10:42 AM - Authentication team identifies root cause 02/04/2026 3:40 PM - The fix begins rolling out to customers 02/04/2026 7:26 PM - The fix finishes rolling out to customers 02/04/2026 7:26 PM - Duo confirms that enrollments are working as intended"
+ },
+ {
+  "org": "Duo Security",
+  "date": "2025-10-07",
+  "url": "https://status.duo.com/incidents/hw98mjf7fkth",
+  "name": "[DUO34] Full Deployment Outage",
+  "sev": "Critical",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "# **DUO34 Deployment Outage** ## Incident Report \u2013 10/7/2025 ### Summary On October 7, 2025, between 2:40pm EDT and 3:40pm EDT, all services on Duo 34 were unavailable. This was due to a misconfiguration in our edge load balancer which stopped all traffic to that deployment. Duo engineering promptly fixed the misconfiguration and have fixed the underlying cause, to ensure our systems are more resilient. A service disruption occurred because of a misalignment between these two key systems. To restore service, a manual fix was put in place to connect these network servers with the right settings."
+ },
+ {
+  "org": "Duo Security",
+  "date": "2025-09-09",
+  "url": "https://status.duo.com/incidents/bszjdyzv9cw6",
+  "name": "[Multiple Deployments] Admin Panel Login Failures",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "### Summary On September 9, 2025, between approximately 12:10 pm ET and 12:40 pm ET, some multi-tenant administrators were unable to access the admin panel or use accounts API due to a configuration change that inadvertently disrupted traffic requests. Duo engineering promptly reverted the change to restore service and resolve the issue. Although the change was tested in lower environments, it was incompatible with the production region it targeted, causing issues when deployed in production. On the same day, the team implemented a fix to resolve the configuration incompatibilities."
+ },
+ {
+  "org": "Gradle",
+  "date": "2022-01-12",
+  "url": "https://status.gradle.com/incidents/nv93msj8q658",
+  "name": "Sporadic 502 Bad Gateway, 500 Internal Server Error for maven-metadata.xml resources",
+  "sev": "Medium",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "Postmortem can be found at [https://blog.gradle.org/plugins-jcenter](https://blog.gradle.org/plugins-jcenter)"
+ },
+ {
+  "org": "InfluxData",
+  "date": "2026-02-10",
+  "url": "https://status.influxdata.com/incidents/nw5fkj0r3gg1",
+  "name": "Restoration of historical data in AWS, US-East-1",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": true,
+  "text": "The change had a bug that, under certain circumstances, caused some data to be dropped during the compaction process. This made some data unavailable until it was restored from backup. \u200c Because the underlying data remained intact in backups, no permanent data loss occurred. After identifying the issue, we rolled back the software change and initiated a full data restoration from backups. \u200c In January, we identified that one of the partitions in prod101-us-east-1 \\(partition 47\\) was no longer compacting successfully. Each job targeted a subset of the data in the partition \\(based on the org id prefix\\), enabling heavily loaded partitions, such as partition 47, to be compacted more effectively. However, the optimization introduced a bug that, in certain circumstances, caused the compactor to fail when reading some of the source TSM data files. ## Recovery Once the issue was identified, we immediately rolled back the compaction change to prevent any further impact. \u200c Because the issue only impacted partitions that were compacted while the buggy code was running, not all data in the cluster was affected. Historical data is then restored from TSM snapshots. \u200c The cluster remained online throughout the recovery process because customers rely on it for real-time workloads. \u200c ## Timeline Feb 9 - Deployed compaction change to prod101-us-east-1. Root cause identified. Feb 10 - Compaction change rolled back."
+ },
+ {
+  "org": "InfluxData",
+  "date": "2025-11-11",
+  "url": "https://status.influxdata.com/incidents/blcshtzyxgp8",
+  "name": "Degraded read performance in Azure US-East 1",
+  "sev": "Critical",
+  "cat": "payment_processing",
+  "pm": true,
+  "text": "The root cause was insufficient capacity in the new Azure node pool. \u200c Clear communication was difficult during the incident because multiple mitigation paths were being explored in parallel, and we did not have confidence in any single fix until late in the recovery. As soon as the capacity issue became apparent, engineers began working through multiple mitigation paths in parallel, including alternative node-pool configurations and fallback options. This prevented in-place scaling and removed the most direct mitigation path. Although we issued updates on our status page \\([status.influxdata.com](http://status.influxdata.com)\\), they lacked clarity because the team was evaluating several mitigation paths concurrently and did not have confidence that a"
+ },
+ {
+  "org": "InfluxData",
+  "date": "2026-09-07",
+  "url": "https://status.influxdata.com/incidents/g937nc4t9z2k",
+  "name": "Query performance degradation in Azure West Europe",
+  "sev": "Medium",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "# **Root Cause Analysis: Query Latency on September 7, 2026** Region: Azure West Europe Cluster: prod01-eu-west-1 ## **Summary and impact** On September 7, 2026, some customers in Azure West Europe experienced increased query latency. 10:01 - Alerts triggered; incident opened. ## **Follow-up work and Mitigations** The retention scheduling change was applied during the incident response. The scheduling safeguards and rate limits remain under evaluation; they are not described as completed fixes; however, we continue to look for ways to provide a healthy and stable environment."
+ },
+ {
+  "org": "InfluxData",
+  "date": "2026-09-11",
+  "url": "https://status.influxdata.com/incidents/020h6gmr70rt",
+  "name": "Query performance degradation in Azure Westeurope",
+  "sev": "Medium",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "# **Root Cause Analysis: Query Latency on September 11, 2026** Region: Azure West Europe Cluster: prod01-eu-west-1 \u200c \u200c **Incident report: query latency in Azure West Europe, September 11, 2026** On the morning of September 11, some customers in Azure West Europe saw slower than usual query responses. This was not the root cause, but the overlap added to the impact on queries touching that partition. **Timeline** \\(UTC\\) Time Event Sep 10 - Sustained high delete volume from a single workload Sep 11, 07:55 - Storage partition restarted and entered extended recovery 08:14 - Query queue-depth alerts triggered; incident opened 08:25 - Companion replica restarted 08:47 - Impaired partition completed recovery 08:52 - Query queue returned to normal; alerts cleared **Changes we are making** There are four pieces of work under way."
+ },
+ {
+  "org": "InfluxData",
+  "date": "2026-01-15",
+  "url": "https://status.influxdata.com/incidents/phbxyj90yftr",
+  "name": "Intermittent Authentication Issues for AWS EU-CENTRAL (read/write token authentication is not affected)",
+  "sev": "Medium",
+  "cat": "authentication",
+  "pm": true,
+  "text": "**Cause of the Incident** The incident was caused by the clock on some of the nodes being slightly behind the master clock. If the gateway pod is one whose node clock is behind the signing node's clock, the JWT is rejected because from that node's perspective, the token's nbf time is in the future. **Recovery** We identified the nodes whose clock time had drifted, and drained the affected nodes. **Future mitigation** We are still researching why the clocks drifted on these nodes, as these nodes use the AWS-provided time synchronization service, which should have kept the clocks in sync."
+ },
+ {
+  "org": "InfluxData",
+  "date": "2026-08-25",
+  "url": "https://status.influxdata.com/incidents/mpp8x4qjqgft",
+  "name": "Query performance degradation in Azure Westeurope",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "# **Root Cause Analysis: Query Latency on August 25, 2026** Region: Azure West Europe Cluster: prod01-eu-west-1 ## **Summary and impact** On August 25, 2026, some customers in Azure West Europe experienced increased query latency and query timeouts. ## **Cause** A surge in query volume triggered scaling that quickly exhausted available resources. We discovered the stalled partition required manual intervention to complete initialization. Time Event 13:13 - Scaling alerts triggered; incident opened. ## **Future Mitigations** Improvements to the partition management workflow are in progress to strengthen resilience and automate recovery. These improvements are ongoing work, rather than completed preventive fixes."
+ },
+ {
+  "org": "InfluxData",
+  "date": "2025-11-10",
+  "url": "https://status.influxdata.com/incidents/mfzd92w773ss",
+  "name": "Degraded query performance in GCP us-central1",
+  "sev": "High",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "During normal deployments, whenever a primary pod is restarted, the secondary pod takes over, so that the service is not interrupted. # Timeline **Time \\(UTC\\) What happened** **8:45pm** The engineer-on-call was paged due to a high rate of query errors in the cluster. **8:50pm** Engineer-on-call identified that the problem was due to a misconfiguration that caused the primary and secondary pods to be restarted at the same time. # Future Mitigations **1."
+ },
+ {
+  "org": "InfluxData",
+  "date": "2025-06-12",
+  "url": "https://status.influxdata.com/incidents/rvb8tmz2zf14",
+  "name": "GCP Availability",
+  "sev": "Critical",
+  "cat": "other",
+  "pm": true,
+  "text": "\u200c While most services recovered automatically once Google services were restored, manual intervention was required to fully resume Flux task processing. Flux task processing was restored on June 12, at approximately 23:50 UTC. \u200c **Cause of the Incident** See [details](https://status.cloud.google.com/incidents/ow5i3PPK96RduMcb1SsW) on the GCP incident timeframe and root cause analysis. Flux task processing was impacted due to service recovery issues. For InfluxDB Cloud services, the majority of services were restored without manual intervention."
+ },
+ {
+  "org": "Linode",
+  "date": "2026-05-12",
+  "url": "https://status.linode.com/incidents/6zpngd7lrq4s",
+  "name": "Service Issue - ACLP Logs",
+  "sev": "Low",
+  "cat": "database_issue",
+  "pm": true,
+  "text": "The disruption was caused by a cascading failure initiated by a brief network routing issue. To mitigate the issue, our engineering teams, working alongside our telemetry infrastructure partner, intervened to scale up the processing pipeline's configuration to absorb and clear the accumulated retry backlog."
+ },
+ {
+  "org": "Linode",
+  "date": "2026-07-14",
+  "url": "https://status.linode.com/incidents/hrw033kskwbh",
+  "name": "Service Issue - Linode API/CLI",
+  "sev": "Medium",
+  "cat": "api_latency",
+  "pm": true,
+  "text": "Further analysis by relevant subject matter experts determined that the incident was triggered by a manual failback to the Cloud IAM primary load balancer from the secondary load balancer. Restarting the API servers cleared the stale connections and restored normal operations. Customer impact was mitigated by approximately 13:10 UTC on July 14, 2026. However, the immediate focus remains on understanding the root cause, with alerting and automation planned for later phases. Several customers have confirmed resolution across their deployments."
+ },
+ {
+  "org": "Linode",
+  "date": "2026-07-28",
+  "url": "https://status.linode.com/incidents/s9q96vkhd4y3",
+  "name": "Service Issue - Host Job Performance Degradation - Several Regions",
+  "sev": "Low",
+  "cat": "payment_processing",
+  "pm": true,
+  "text": "When the proxy sent TCP packets with a large MTU, the expected ICMP messages were dropped by Dallas gateway routers due to exceeding the configured allowable rate. The issue was triggered by the enablement of the new feature flag, which changed the routing path and removed MTU clamping before packets reached the gateways. To mitigate the issue, Akamai rolled back the recent network change across affected Compute sites, starting at 20:50 UTC."
+ },
+ {
+  "org": "Linode",
+  "date": "2026-06-24",
+  "url": "https://status.linode.com/incidents/1h0hwggm668b",
+  "name": "Emerging Service Issue - GPU Instances - All Regions",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "On June 23, 2026, following a global software deployment, we identified an issue causing intermittent boot failures specifically for GPU Linodes. In order to mitigate the issue, we successfully deployed a hotfix directly to all active GPU hosts across our fleet at 20:32 UTC on June 24th, 2026. In order to prevent this issue from happening in the future, we have developed and integrated a comprehensive fix into our upcoming software release scheduled to roll out globally over the next week."
+ },
+ {
+  "org": "Linode",
+  "date": "2026-08-13",
+  "url": "https://status.linode.com/incidents/1zbc64w8cq1w",
+  "name": "Service Issue - Linode Kubernetes Engine Enterprise (LKE-E) - Seattle (SEA1)",
+  "sev": "Low",
+  "cat": "configuration_deployment",
+  "pm": true,
+  "text": "On August 13, 2026, between approximately 14:30 and 16:30 UTC, Akamai experienced an issue affecting Linode Kubernetes Engine Enterprise \\(LKE-E\\) cluster provisioning and deployment in the Seattle \\(SEA1\\) region. In some cases, clusters were created but nodes were not fully provisioned, while in others, the control plane responsible for managing the cluster could not be deployed. By around 16:30 UTC on August 13, 2026, cluster provisioning and deployment in the Seattle region returned to normal, allowing new cluster creations to proceed without issue. Initial findings indicate a correlation between the issue and a recent network configuration update that occurred at approximately 14:30 UTC and was rolled back at approximately 14:45 UTC. Our current hypothesis suggests that a timing conflict during the cluster provisioning process may have triggered the failures. We are continuing to investigate the technical details to confirm the root cause."
+ },
+ {
+  "org": "Linode",
+  "date": "2026-04-28",
+  "url": "https://status.linode.com/incidents/dlkgl9zjql44",
+  "name": "Service Issue - Connectivity Issues - Chennai (IN-MAA)",
+  "sev": "Medium",
+  "cat": "hardware_infra",
+  "pm": true,
+  "text": "At approximately 3:30 UTC on April 28, 2026, we experienced a router failure in our Chennai data center, which, when paired with a separate network hardware component temporarily operating at a reduced capacity, resulted in intermittent delays or timeouts for Compute customers accessing Linodes and other resources in the Chennai \\(MAA\\) region during peak traffic hours \\(~09:00UTC - 18:00UTC\\) on April 28, 2026. At 11:40UTC on April 29, 2026, we unthrottled the constrained network component, resulting in enough regional capacity to effectively mitigate the risk for reoccurrence of customer impact during peak regional traffic hours going forward. At 12:11 UTC on May 2, 2026, we successfully replaced the degraded router and brought the new router online, restoring full capacity to the region. We will work with our hardware vendor partner to understand the failure mode of the router and ensure any potential preventative actions are noted and taken proactively. This summary provides an overview of our current understanding of the incident given the information available. Our investigation is ongoing and any information herein is subject to change."
+ }
+]
