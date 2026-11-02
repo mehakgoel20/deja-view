@@ -8,6 +8,26 @@ Describe a production issue in plain words and get likely root causes, recommend
 2. **Ground.** If the best match is relevant enough (4 out of 10 or more), those incidents are passed to the model as evidence. The response is tagged `RAG` and each hypothesis cites the incidents that support it.
 3. **Fall back.** Otherwise the model reasons without past incidents and the response is tagged `LLM_ONLY`.
 
+## Beyond single-shot analysis
+
+`POST /analyze` answers from the incident text alone. `POST /investigate` runs a
+full investigation instead: it pulls live metrics, logs, deploy markers and
+traces for the incident window, reconstructs the timeline, builds a causal graph
+that separates symptoms from root causes, consults the service dependency graph
+for a shared cause, and proposes approval-gated remediation.
+
+```bash
+curl -s localhost:8000/investigate -H 'content-type: application/json' -d '{
+  "issue": "Checkout 500s and the postgres pool is exhausted since the 13:00 deploy",
+  "use_llm": false, "collect_live": false
+}' | jq '.top_cause'
+```
+
+Every layer is optional and degrades honestly: with no monitoring backend and
+no topology file the investigation still returns, and lists the evidence it did
+not have rather than guessing. See **[Backend/FEATURES.md](Backend/FEATURES.md)**
+for all seven features, the API surface and configuration.
+
 ## Project layout
 
 | Path | What it is |
@@ -15,7 +35,15 @@ Describe a production issue in plain words and get likely root causes, recommend
 | `Backend/` | FastAPI service. `main.py` is the API; `rag/` holds retrieval, reranking and analysis. |
 | `Backend/index/` | The prebuilt search index. Rebuild it with `python -m rag.build_index`. |
 | `Backend/data/` | The cleaned incident set, embeddings and evaluation results. |
-| `Backend/tests/` | Offline unit tests: `python -m unittest tests.test_rag`. |
+| `Backend/tests/` | Offline unit tests: `python -m unittest tests.test_rag tests.test_features`. |
+| `Backend/observability/` | Live metrics, logs, deploy markers and traces (feature 1). |
+| `Backend/agents/` | Multi-agent investigation: specialists, investigator, orchestrator (feature 2). |
+| `Backend/graph/` | Service dependency graph, blast radius, shared-cause ranking (feature 3). |
+| `Backend/causal/` | Causal graph and hypothesis ranking with contradictions (feature 4). |
+| `Backend/timeline/` | Chronological reconstruction and ordering verdict (feature 5). |
+| `Backend/remediation/` | Remediation planning, approval-gated (feature 6). |
+| `Backend/benchmark/` | Retrieval/generation metrics and pipeline comparison (feature 7). |
+| `Backend/FEATURES.md` | How all seven work, how to configure and run them. |
 | `Frontend/` | React + Vite analysis app. |
 | `Landing/` | Public site (Next.js, Clerk sign-in): landing page, dashboard, privacy and terms. See its own README. |
 | `dataset/` | The incident datasets and the scripts that built them. |

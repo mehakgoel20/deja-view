@@ -1,0 +1,50 @@
+# Example service topology for the dependency graph (feature 3).
+# An edge means "from" depends on "to", so a failure in "to" propagates to "from".
+# Point RCA_TOPOLOGY_PATH elsewhere to use your own.
+services:
+  - name: api-gateway
+    kind: service
+    tier: critical
+  - name: auth-service
+    kind: service
+    tier: critical
+  - name: checkout
+    kind: service
+    tier: critical
+  - name: catalog
+    kind: service
+    tier: important
+  - name: payments
+    kind: service
+    tier: critical
+  - name: notifications
+    kind: service
+    tier: best_effort
+  - name: postgres
+    kind: datastore
+    tier: critical
+  - name: redis
+    kind: datastore
+    tier: important
+  - name: kafka
+    kind: queue
+    tier: important
+  - name: stripe-api
+    kind: external
+    tier: critical
+
+dependencies:
+  - {from: api-gateway,   to: auth-service, type: sync}
+  - {from: api-gateway,   to: catalog,      type: sync}
+  - {from: api-gateway,   to: checkout,     type: sync}
+  - {from: auth-service,  to: postgres,     type: storage}
+  - {from: auth-service,  to: redis,        type: cache}
+  - {from: catalog,       to: postgres,     type: storage}
+  - {from: catalog,       to: redis,        type: cache}
+  - {from: checkout,      to: auth-service, type: sync}
+  - {from: checkout,      to: payments,     type: sync}
+  - {from: checkout,      to: redis,        type: cache}
+  - {from: payments,      to: postgres,     type: storage}
+  - {from: payments,      to: stripe-api,   type: sync}
+  - {from: payments,      to: kafka,        type: async}
+  - {from: notifications, to: kafka,        type: async}

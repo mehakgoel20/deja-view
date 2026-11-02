@@ -4,6 +4,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 
+from api_extra import router as extra_router
 from rag.engine import Engine
 
 app = FastAPI(title="Root Cause Analysis API")
@@ -26,9 +27,30 @@ class Query(BaseModel):
     debug: bool = False
 
 
+# Features 1-7: observability, multi-agent investigation, dependency graph,
+# causal analysis, timeline, remediation and benchmarking.
+app.include_router(extra_router)
+
+
 @app.get("/")
 def home():
-    return {"message": "RCA API is running 🚀", "incidents_indexed": len(engine.kb.docs)}
+    from observability import default_providers
+    return {
+        "message": "RCA API is running 🚀",
+        "incidents_indexed": len(engine.kb.docs),
+        "capabilities": {
+            "analyze": "/analyze - single-shot RAG analysis (unchanged)",
+            "investigate": "/investigate - multi-agent investigation",
+            "causal": "/causal - causal graph and ranked hypotheses",
+            "timeline": "/timeline - chronological reconstruction",
+            "graph": "/graph, /graph/blast-radius, /graph/suspects",
+            "remediation": "/remediation, /remediation/approve",
+            "observability": "/observability/status, /observability/signals",
+            "benchmark": "/benchmark",
+        },
+        "observability_configured": sum(
+            1 for p in default_providers() if p.configured()),
+    }
 
 
 def add_legacy_fields(result):

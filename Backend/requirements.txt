@@ -4,3 +4,6 @@ openai
 faiss-cpu
 numpy
 python-dotenv
+networkx
+requests
+pyyaml
