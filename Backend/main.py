@@ -4,7 +4,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 
-from api_extra import router as extra_router
+from api_extra import router as extra_router, set_engine
 from rag.engine import Engine
 
 app = FastAPI(title="Root Cause Analysis API")
@@ -30,6 +30,8 @@ class Query(BaseModel):
 # Features 1-7: observability, multi-agent investigation, dependency graph,
 # causal analysis, timeline, remediation and benchmarking.
 app.include_router(extra_router)
+# Hand the built engine to the feature endpoints (avoids a circular import).
+set_engine(engine)
 
 
 @app.get("/")

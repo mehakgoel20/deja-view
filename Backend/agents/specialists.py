@@ -7,9 +7,10 @@ produce.
 """
 from __future__ import annotations
 
-from observability.base import (KIND_DEPLOY, KIND_LOG_BURST,
-                                KIND_METRIC_SPIKE, KIND_SERVICE_RESTART,
-                                KIND_TRACE_ERROR)
+import re
+
+from observability.base import (KIND_LOG_BURST, KIND_METRIC_SPIKE,
+                                KIND_SERVICE_RESTART, KIND_TRACE_ERROR)
 
 from .base import (FINDING_GAP, FINDING_HYPOTHESIS, FINDING_OBSERVATION,
                    Agent, Context, Finding)
@@ -192,11 +193,23 @@ class DependencyAgent(Agent):
                                  "No service dependency graph is configured "
                                  "(set RCA_TOPOLOGY_PATH).", 0.9)]
         failing = ctx.failing_services()
+        source = "telemetry"
+        if not failing:
+            # With no live signals, the reporter usually still names the
+            # services. Match the incident text against the known topology
+            # rather than giving up - this is the common case in practice.
+            failing = _services_in_text(ctx.text, ctx.service_graph)
+            source = "incident text"
         if not failing:
             return [self.finding(FINDING_GAP,
-                                 "No service names in the evidence, so the dependency "
-                                 "graph cannot be queried.", 0.8)]
+                                 "No service names in the evidence or the incident "
+                                 "text matched the dependency graph.", 0.8)]
         out: list[Finding] = []
+        if source == "incident text":
+            out.append(self.finding(
+                FINDING_OBSERVATION,
+                f"Services named in the report and present in the topology: "
+                f"{', '.join(failing)}.", 0.5, [], services=failing))
         suspects = ctx.service_graph.rank_suspects(failing)
         if suspects:
             top = suspects[0]
@@ -230,3 +243,21 @@ class DependencyAgent(Agent):
                     0.6, [], service=svc,
                     affected=len(br.get("affected", []))))
         return out
+
+
+def _services_in_text(text: str, service_graph) -> list[str]:
+    """Services from the topology whose name appears in the incident text.
+
+    Matches on word boundaries so "auth" does not match "author", and tries
+    the hyphen/underscore/space variants teams actually write.
+    """
+    if not text or service_graph is None:
+        return []
+    low = text.lower()
+    found = []
+    for name in service_graph.g.nodes:
+        variants = {name.lower(), name.lower().replace("-", " "),
+                    name.lower().replace("-", "_"), name.lower().replace("_", "-")}
+        if any(re.search(rf"(?<![\w-]){re.escape(v)}(?![\w-])", low) for v in variants):
+            found.append(name)
+    return sorted(found)

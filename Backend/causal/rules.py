@@ -19,7 +19,7 @@ from __future__ import annotations
 import re
 from datetime import timedelta
 
-from observability.base import KIND_DEPLOY, KIND_SERVICE_RESTART, Signal
+from observability.base import KIND_DEPLOY, Signal
 
 from .model import (BASIS_MECHANISM, BASIS_TEMPORAL, BASIS_TOPOLOGY,
                     NODE_CHANGE, NODE_CONDITION, NODE_MECHANISM, NODE_SYMPTOM,
@@ -30,21 +30,33 @@ MAX_CAUSAL_GAP = timedelta(minutes=45)
 
 
 class Mechanism:
-    """A recurring failure shape: trigger -> mechanism -> symptoms."""
+    """A recurring failure shape: trigger -> mechanism -> symptoms.
+
+    `group` makes mutually-exclusive mechanisms compete instead of both
+    firing. "A config change broke it" and "a bad deploy broke it" are the
+    same story told two ways, and emitting both produced two near-identical
+    hypotheses that split the available likelihood between them.
+    """
 
     def __init__(self, key: str, label: str, trigger: str, mechanism: str,
                  symptoms: list[str], patterns: list[str],
-                 conditions: list[str] | None = None):
+                 conditions: list[str] | None = None, group: str | None = None):
         self.key = key
         self.label = label
         self.trigger = trigger
         self.mechanism = mechanism
         self.symptoms = symptoms
         self.conditions = conditions or []
+        self.group = group or key
+        self.patterns = patterns
         self.regex = re.compile("|".join(patterns), re.I)
 
     def matches(self, text: str) -> bool:
         return bool(self.regex.search(text))
+
+    def match_strength(self, text: str) -> int:
+        """How many distinct patterns hit - used to pick a group's winner."""
+        return sum(1 for p in self.patterns if re.search(p, text, re.I))
 
 
 # Drawn from the dominant categories in the gold set: configuration_deployment,
@@ -58,6 +70,7 @@ MECHANISMS = [
         patterns=[r"config(uration)?\s+(change|error|push|rollout)", r"misconfigur",
                   r"feature flag", r"wrong (value|default|setting)", r"env(ironment)? var"],
         conditions=["The rollout had no staged health gate"],
+        group="change",
     ),
     Mechanism(
         "bad_deploy", "A deploy introduced a regression",
@@ -67,6 +80,7 @@ MECHANISMS = [
         patterns=[r"\bdeploy", r"\brelease\b", r"rollout", r"new version",
                   r"regression", r"rolled back", r"revert"],
         conditions=["The defective path was not covered pre-production"],
+        group="change",
     ),
     Mechanism(
         "connection_exhaustion", "Connection or pool exhaustion",
@@ -152,10 +166,18 @@ def apply_mechanism_rules(graph: CausalGraph, text: str,
 
     Returns the keys of the mechanisms that matched.
     """
-    matched = []
+    # Within a group, keep only the mechanism the text supports best; ties go
+    # to the earlier definition, which is the more specific one.
+    best_in_group: dict[str, Mechanism] = {}
     for m in MECHANISMS:
         if not m.matches(text):
             continue
+        current = best_in_group.get(m.group)
+        if current is None or m.match_strength(text) > current.match_strength(text):
+            best_in_group[m.group] = m
+
+    matched = []
+    for m in best_in_group.values():
         matched.append(m.key)
         trig = _node(graph, f"trigger::{m.key}", NODE_CHANGE, m.trigger,
                      evidence=list(evidence or []), confidence=0.5)
@@ -188,8 +210,8 @@ def apply_signal_rules(graph: CausalGraph, signals: list[Signal],
     after a symptom in service A, where B depends on A, is propagation.
     """
     for s in signals:
-        kind = (NODE_CHANGE if s.kind == KIND_DEPLOY else
-                NODE_SYMPTOM if s.kind != KIND_SERVICE_RESTART else NODE_SYMPTOM)
+        # A deploy marker is a change; everything else we observe is an effect.
+        kind = NODE_CHANGE if s.kind == KIND_DEPLOY else NODE_SYMPTOM
         _node(graph, f"sig::{s.id}", kind, s.summary, at=s.at,
               service=s.service, evidence=[s.id],
               confidence=0.8 if s.severity == "critical" else 0.6)

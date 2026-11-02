@@ -15,7 +15,7 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timedelta
 
-from observability.base import (KIND_ANNOTATION, KIND_DEPLOY, KIND_LOG_BURST,
+from observability.base import (KIND_DEPLOY, KIND_LOG_BURST,
                                 KIND_METRIC_SPIKE, KIND_RECOVERY,
                                 KIND_SERVICE_RESTART, KIND_TRACE_ERROR,
                                 Signal, TimeWindow)

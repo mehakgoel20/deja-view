@@ -11,8 +11,26 @@ ranked hypotheses. Two deliberate choices:
 """
 from __future__ import annotations
 
+import re
+
 from .base import (FINDING_GAP, FINDING_HYPOTHESIS, FINDING_OBSERVATION,
                    Agent, Context, Finding)
+
+
+def _key(text: str) -> set:
+    """Content words, for deciding whether two hypotheses say the same thing."""
+    stop = {"the", "a", "an", "of", "to", "in", "on", "for", "and", "or", "was",
+            "were", "is", "are", "its", "it", "that", "which", "had", "has",
+            "causal", "engine"}
+    return {w for w in re.findall(r"[a-z0-9]+", text.lower())
+            if w not in stop and len(w) > 2}
+
+
+def _same_claim(a: str, b: str, threshold: float = 0.6) -> bool:
+    ka, kb = _key(a), _key(b)
+    if not ka or not kb:
+        return False
+    return len(ka & kb) / len(ka | kb) >= threshold
 
 INVESTIGATION_SCHEMA = {
     "type": "object", "additionalProperties": False,
@@ -67,12 +85,12 @@ class RootCauseInvestigator(Agent):
         causal = ctx.causal or {}
         out: list[Finding] = []
 
-        # Deterministic fallback: the causal engine already ranked hypotheses,
-        # so the investigation is useful even with no LLM available.
-        for h in (causal.get("hypotheses") or [])[:3]:
+        # The causal engine's ranking stands on its own, so the investigation
+        # is useful with no LLM at all.
+        mechanical = (causal.get("hypotheses") or [])[:3]
+        for h in mechanical:
             out.append(self.finding(
-                FINDING_HYPOTHESIS,
-                f"{h['cause']} (causal engine, {h['likelihood']:.0%})",
+                FINDING_HYPOTHESIS, h["cause"],
                 h.get("likelihood", 0.0), h.get("evidence_ids", []),
                 source="causal_engine", is_root_cause=h.get("is_root_cause", True),
                 contradictions=[c["basis"] for c in h.get("contradictions", [])]))
@@ -100,6 +118,25 @@ class RootCauseInvestigator(Agent):
             like = max(0.0, min(1.0, h.get("likelihood", 0)))
             if total > 1:
                 like = round(like / total, 3)
+
+            # If the model reaches the same conclusion as the mechanical
+            # ranking, merge them rather than listing the claim twice. Two
+            # independent methods agreeing is itself evidence, so the merged
+            # entry is scored up and marked corroborated.
+            existing = next((f for f in out if f.kind == FINDING_HYPOTHESIS
+                             and _same_claim(f.statement, h["cause"])), None)
+            if existing is not None:
+                existing.confidence = round(
+                    min(1.0, max(existing.confidence, like) + 0.1), 3)
+                existing.evidence_ids = list(dict.fromkeys(
+                    existing.evidence_ids + cited))
+                existing.detail.update(
+                    source="causal_engine+llm", corroborated=True,
+                    supporting=h.get("supporting", [])[:4],
+                    contradicting=h.get("contradicting", [])[:4],
+                    reasoning=h.get("reasoning", ""))
+                continue
+
             out.append(self.finding(
                 FINDING_HYPOTHESIS, h["cause"], like, list(dict.fromkeys(cited)),
                 source="llm",

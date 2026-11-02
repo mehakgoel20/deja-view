@@ -205,5 +205,6 @@ class CausalGraph:
         roots = [n.label for n in self.root_candidates()]
         out = "CAUSAL GRAPH:\n" + "\n".join(lines)
         if roots:
-            out += "\nUNEXPLAINED (root candidates): " + "; ".join(r[:70] for r in roots)
+            out += ("\nNO UPSTREAM CAUSE IDENTIFIED (root candidates): "
+                    + "; ".join(r[:70] for r in roots))
         return out

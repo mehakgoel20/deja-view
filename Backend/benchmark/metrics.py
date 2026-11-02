@@ -25,19 +25,25 @@ import re
 
 # ---------------------------------------------------------------- retrieval
 
-def recall_at_k(relevant_flags: list[bool], k: int, total_relevant: int | None = None) -> float:
-    """Share of relevant items found in the top k.
+def recall_at_k(relevant_flags: list[bool], k: int,
+                total_relevant: int | None = None) -> float:
+    """Share of findable relevant items retrieved in the top k.
 
-    `total_relevant` is the number of relevant items that exist in the corpus.
-    When it is unknown, fall back to "did we find any", which is Recall@k in
-    the single-relevant-item sense.
+    The denominator is `min(total_relevant, k)`: a list of k items cannot
+    contain more than k relevant ones, so dividing by a corpus-wide count
+    would cap recall@5 far below 1.0 and read as a failure when it is an
+    artifact of the denominator.
+
+    With `total_relevant=None` the denominator is k, which for a corpus with
+    many relevant items is the same thing.
     """
     if k <= 0:
         return 0.0
     found = sum(1 for r in relevant_flags[:k] if r)
-    if total_relevant:
-        return min(1.0, found / total_relevant)
-    return 1.0 if found else 0.0
+    denom = min(total_relevant, k) if total_relevant else k
+    if denom <= 0:
+        return 0.0
+    return min(1.0, found / denom)
 
 
 def precision_at_k(relevant_flags: list[bool], k: int) -> float:

@@ -6,8 +6,10 @@ import unittest
 from datetime import datetime, timedelta, timezone
 
 from agents import Context, investigate
+from agents.investigator import _same_claim
 from agents.specialists import (DependencyAgent, HistoricalIncidentAgent,
-                                LogAnalysisAgent, MetricsAnalysisAgent)
+                                LogAnalysisAgent, MetricsAnalysisAgent,
+                                _services_in_text)
 from benchmark.metrics import (citation_metrics, graded_gain,
                                hallucination_rate, latency_report, ndcg_at_k,
                                precision_at_k, recall_at_k, reciprocal_rank,
@@ -198,6 +200,17 @@ class TimelineTests(unittest.TestCase):
                               sig("GRAF-DEP-001", KIND_DEPLOY, 10, "a")])
         self.assertIsNone(events["ordering"]["trigger"])
 
+    def test_what_happened_first_says_so_when_nothing_preceded(self):
+        from timeline import from_signals
+        ordering = what_happened_first(from_signals(
+            [sig("PROM-MET-001", KIND_METRIC_SPIKE, 0, "a")]))
+        self.assertIsNone(ordering["trigger"])
+        self.assertIn("not a deploy", ordering["verdict"])
+
+    def test_what_happened_first_handles_no_symptoms(self):
+        ordering = what_happened_first([])
+        self.assertIsNone(ordering["first_symptom"])
+
     def test_empty_signals_are_handled(self):
         tl = reconstruct([])
         self.assertEqual(tl["event_count"], 0)
@@ -253,6 +266,43 @@ class AgentTests(unittest.TestCase):
                             for f in report["findings"]))
 
 
+class AgentFixTests(unittest.TestCase):
+    """Regressions for defects found by running the pipeline end to end."""
+
+    def test_same_claim_merges_paraphrase_but_not_different_causes(self):
+        self.assertTrue(_same_claim(
+            "The connection pool reached its ceiling and refused new work",
+            "the connection pool reached its ceiling, refusing new work"))
+        self.assertFalse(_same_claim(
+            "The connection pool reached its ceiling",
+            "A certificate expired and peers rejected it"))
+
+    def test_hypotheses_are_not_duplicated_between_rankings(self):
+        report = investigate("postgres connection pool exhausted", use_llm=False,
+                             collect_live=False)
+        statements = [h["statement"] for h in report["hypotheses"]]
+        self.assertEqual(len(statements), len(set(statements)))
+
+    def test_services_are_read_from_the_report_when_telemetry_is_empty(self):
+        g = ServiceGraph.from_dict({"checkout": ["postgres"],
+                                    "auth-service": ["postgres"]})
+        found = _services_in_text(
+            "checkout and auth-service fail; postgres looks saturated", g)
+        self.assertEqual(found, ["auth-service", "checkout", "postgres"])
+
+    def test_service_matching_respects_word_boundaries(self):
+        g = ServiceGraph.from_dict({"auth": ["catalog"]})
+        self.assertEqual(_services_in_text("the author read a catalogue", g), [])
+
+    def test_dependency_agent_works_without_live_signals(self):
+        g = ServiceGraph.from_dict({"checkout": ["redis"], "catalog": ["redis"]})
+        ctx = Context(text="checkout and catalog are both failing",
+                      use_llm=False, service_graph=g)
+        findings = DependencyAgent().run(ctx)
+        self.assertFalse(any(f.kind == "gap" for f in findings))
+        self.assertIn("redis", " ".join(f.statement for f in findings))
+
+
 # ------------------------------------------------------------- feature 6
 
 class RemediationTests(unittest.TestCase):
@@ -283,6 +333,26 @@ class RemediationTests(unittest.TestCase):
         locs = [c["location"] for c in plan["code_locations"]]
         self.assertIn("services/auth/token.py", locs)
 
+    def test_actions_are_capped_so_the_plan_stays_actionable(self):
+        from remediation.engine import PER_HORIZON_CAP
+        plan = build_plan(
+            "deploy broke config, pool exhausted, memory leak, certificate expired, "
+            "dns broken, upstream provider down, capacity short, disk failed",
+            cause="everything at once", use_llm=False)
+        for horizon, cap in PER_HORIZON_CAP.items():
+            got = plan["by_horizon"].get(horizon, 0)
+            self.assertLessEqual(got, cap, f"{horizon} exceeded its cap")
+
+    def test_precedent_actions_survive_the_cap(self):
+        plan = build_plan("db slow", cause="missing index", use_llm=False,
+                          neighbours=[{"id": f"GOLD-{i}", "org": "Acme",
+                                       "category": "database_issue",
+                                       "solution": f"Distinct fix number {i} applied"}
+                                      for i in range(8)])
+        sources = [a["source"] for a in plan["actions"]
+                   if a["horizon"] == "corrective"]
+        self.assertIn("precedent", sources)
+
     def test_approval_is_recorded_not_executed(self):
         plan = build_plan("x", cause="memory leak", use_llm=False)
         approve(plan, 0, approver="mehak", decision="approved", note="ok")
@@ -292,6 +362,28 @@ class RemediationTests(unittest.TestCase):
             approve(plan, 9999, approver="x")
         with self.assertRaises(ValueError):
             approve(plan, 0, approver="x", decision="maybe")
+
+
+class MechanismGroupTests(unittest.TestCase):
+    def test_change_mechanisms_do_not_both_fire(self):
+        from causal.model import CausalGraph
+        from causal.rules import apply_mechanism_rules
+        g = CausalGraph()
+        matched = apply_mechanism_rules(
+            g, "after the release, a bad configuration change broke it")
+        change_group = {"config_rollout", "bad_deploy"}
+        self.assertEqual(len(set(matched) & change_group), 1)
+
+    def test_distinct_mechanisms_still_fire_together(self):
+        from causal.model import CausalGraph
+        from causal.rules import apply_mechanism_rules
+        g = CausalGraph()
+        matched = set(apply_mechanism_rules(
+            g, "memory grew until OOM, the connection pool was exhausted, "
+               "and the TLS certificate expired"))
+        self.assertIn("memory_leak", matched)
+        self.assertIn("connection_exhaustion", matched)
+        self.assertIn("cert_expiry", matched)
 
 
 # ------------------------------------------------------------- feature 7

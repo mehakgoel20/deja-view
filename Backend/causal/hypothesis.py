@@ -22,7 +22,8 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass, field
 
 from .model import (BASIS_COOCCURRENCE, BASIS_MECHANISM, BASIS_PRECEDENT,
-                    BASIS_TEMPORAL, BASIS_TOPOLOGY, NODE_SYMPTOM, CausalGraph)
+                    BASIS_TEMPORAL, BASIS_TOPOLOGY, NODE_MECHANISM,
+                    NODE_SYMPTOM, CausalGraph)
 
 # How much each supporting fact adds.
 W_COVERAGE = 0.40
@@ -158,7 +159,7 @@ def rank(graph: CausalGraph, limit: int = 5) -> list[Hypothesis]:
     # with a known trigger still is the root cause worth reporting).
     candidates = {n.id for n in graph.root_candidates()}
     candidates |= {n.id for n in graph.nodes.values()
-                   if n.kind == "mechanism"}
+                   if n.kind == NODE_MECHANISM}
 
     hypotheses: list[Hypothesis] = []
     for nid in candidates:

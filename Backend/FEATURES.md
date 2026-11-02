@@ -81,6 +81,17 @@ the tests run. An agent that fails or has no data returns a `gap` finding; the
 investigation continues and reports the gap instead of silently proceeding as
 if the evidence existed.
 
+Two behaviours worth knowing:
+
+- **Agreement is merged, not double-counted.** The causal engine and the LLM
+  rank independently. When they reach the same conclusion the entry is merged,
+  marked `corroborated: true` and scored up — two independent methods agreeing
+  is evidence. Listing it twice (which an earlier version did) just looked like
+  more hypotheses than there were.
+- **Service names are read from the report** when telemetry has none, matched
+  against the topology on word boundaries. Most incidents name their services
+  in prose, so the dependency agent is useful without any monitoring backend.
+
 ## 3. Service dependency graph
 
 ```python
@@ -119,6 +130,11 @@ strength: stated mechanism > known precedent > dependency path > temporal order
 > co-occurrence. The LLM is then handed a structure it did not invent and asked
 to judge it — asking a model to both produce and grade its own causal chain is
 how confident nonsense gets made.
+
+Mechanisms are grouped so mutually-exclusive ones compete rather than both
+firing: "a config change broke it" and "a bad deploy broke it" are the same
+story told twice, and emitting both split the likelihood between two
+near-identical hypotheses.
 
 Two things this gives that similarity search cannot:
 
@@ -161,6 +177,10 @@ Four horizons: `immediate` (stop the bleeding), `corrective` (fix the defect),
 `preventive` (stop the class recurring), `configuration` (a specific setting and
 value). Each action carries a `risk` rating and its `source`.
 
+Each horizon is capped (4/4/4/3) and sorted precedent-first, then by ascending
+risk. An incident matching several mechanisms otherwise produced ~27 actions,
+which is a list, not a plan.
+
 Fixes that actually resolved similar incidents come first, cited by incident id
 — stronger evidence than a model's suggestion. Code locations are only named
 when they appear in the evidence; model-suggested ones are labelled as such so a
@@ -193,6 +213,10 @@ Measurement choices worth knowing:
 - **Relevance** = the retrieved incident shares the held-out incident's
   category, the same proxy the project already used. Swap in a stricter
   definition via `relevance_fn` without touching the metrics.
+- **Recall@K uses a capped denominator**, `min(total_relevant, k)`: a top-5 list
+  cannot hold more than 5 relevant items, so dividing by a corpus-wide count
+  (hundreds, for the common categories) would cap recall@5 near zero and read
+  as a failure that is really an artifact of the denominator.
 - **Root-cause accuracy** is token-F1 ≥ 0.30 against the published cause, not
   exact match: "the pool hit its ceiling" and "connection pool exhaustion" are
   the same answer.

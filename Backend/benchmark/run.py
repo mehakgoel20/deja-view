@@ -87,10 +87,14 @@ def _score_retrieval(kb, entry, neighbours):
         gains.append(graded_gain(d["category"], truth_cat,
                                  d.get("root_cause", ""), truth_cause))
         ids.append(d["id"])
+    # The corpus holds hundreds of same-category incidents, so raw recall over
+    # all of them is meaningless for a top-k list. Use the standard capped
+    # denominator: min(total relevant, k) is the most any top-k list could find.
     total_relevant = sum(1 for d in kb.docs
                          if d["category"] == truth_cat and d["id"] != entry["id"])
     return {"relevant": flags, "gains": gains, "ids": ids,
-            "total_relevant": min(total_relevant, 10) or None}
+            "corpus_relevant": total_relevant,
+            "total_relevant": None}
 
 
 def run_one(engine, kb, entry, pipeline: str):
@@ -104,6 +108,7 @@ def run_one(engine, kb, entry, pipeline: str):
 
     if pipeline == "agentic":
         from agents import investigate
+        from rag.predict import vote
         described = [engine._describe(c) for c in neighbours]
         report = investigate(entry["issue"], neighbours=described,
                              collect_live=False, remediate=True)
@@ -112,9 +117,11 @@ def run_one(engine, kb, entry, pipeline: str):
         cited = [i for h in hyps for i in h.get("evidence_ids", [])]
         fixes = [a["action"] for a in
                  (report.get("remediation") or {}).get("actions", [])]
-        category = (report.get("causal", {}).get("top_cause") or "")
         uncited = sum(1 for h in hyps if not h.get("evidence_ids"))
-        pred_category = None
+        # The agents reason about mechanism, not taxonomy, so take the category
+        # from the same neighbour vote the other pipelines use. Without this the
+        # comparison could not report category accuracy for this pipeline.
+        pred_category = vote(kb, neighbours)["category"]
     else:
         from rag.predict import vote
         baseline = vote(kb, neighbours)

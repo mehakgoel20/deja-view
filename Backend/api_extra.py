@@ -15,6 +15,21 @@ from pydantic import BaseModel, Field
 
 router = APIRouter()
 
+# main.py calls set_engine() after building the Engine. Injecting it avoids a
+# circular import (main imports this module) and makes the retrieval failure
+# mode explicit: if no engine is registered, endpoints say so instead of
+# quietly returning no precedent.
+_engine = None
+
+
+def set_engine(engine) -> None:
+    global _engine
+    _engine = engine
+
+
+def get_engine():
+    return _engine
+
 
 # ------------------------------------------------------------- models
 
@@ -59,14 +74,22 @@ def _window(minutes: int):
 
 
 def _retrieve_neighbours(issue: str, k: int = 5):
-    """Reuse the existing engine so retrieval behaviour stays identical."""
+    """Retrieve similar past incidents. Returns (neighbours, note).
+
+    `note` is non-empty when retrieval could not run, so a caller can report
+    the gap rather than present "no similar incidents" as a finding.
+    """
+    engine = get_engine()
+    if engine is None:
+        return [], ("retrieval unavailable: no engine registered "
+                    "(the API was started without the search index)")
     try:
-        from main import engine
-        neighbours, _ = __import__("rag.retrieve", fromlist=["retrieve"]).retrieve(
-            engine.kb, issue, k=k)
-        return [engine._describe(c) for c in neighbours]
-    except Exception:
-        return []
+        from rag.retrieve import retrieve
+        neighbours, _trace = retrieve(engine.kb, issue, k=k)
+        return [engine._describe(c) for c in neighbours], ""
+    except Exception as e:
+        # Most often a missing OPENAI_API_KEY, since the query must be embedded.
+        return [], f"retrieval failed: {type(e).__name__}: {e}"
 
 
 # ------------------------------------------------------------ feature 1
@@ -101,8 +124,8 @@ def observability_signals(service: Optional[str] = None,
 def investigate_endpoint(req: InvestigateRequest):
     """Full multi-agent investigation: evidence, causality, timeline, remediation."""
     from agents import investigate
-    neighbours = _retrieve_neighbours(req.issue) if req.retrieve else []
-    return investigate(
+    neighbours, note = _retrieve_neighbours(req.issue) if req.retrieve else ([], "")
+    report = investigate(
         req.issue,
         window=_window(req.window_minutes),
         neighbours=neighbours,
@@ -112,6 +135,9 @@ def investigate_endpoint(req: InvestigateRequest):
         remediate=req.remediate,
         hints={"service": req.service} if req.service else None,
     )
+    if note:
+        report.setdefault("warnings", []).append(note)
+    return report
 
 
 # ------------------------------------------------------------ feature 3
@@ -163,11 +189,13 @@ def causal_endpoint(req: CausalRequest):
     if req.collect_live:
         signals, _ = collect_signals(window,
                                      {"service": req.service} if req.service else {})
-    neighbours = _retrieve_neighbours(req.issue)
+    neighbours, note = _retrieve_neighbours(req.issue)
     pairs = [(n["id"], n.get("root_cause", "")) for n in neighbours]
     result = analyse_causally(text=req.issue, signals=signals,
                               service_graph=load_default_graph(), neighbours=pairs)
     result["separated"] = separate_symptoms(result)
+    if note:
+        result["warnings"] = [note]
     return result
 
 
@@ -191,9 +219,12 @@ def timeline_endpoint(req: CausalRequest):
 def remediation_endpoint(req: RemediationRequest):
     """Propose remediation. Returns a plan; executes nothing."""
     from remediation import build_plan
-    neighbours = _retrieve_neighbours(req.issue) if req.retrieve else []
-    return build_plan(req.issue, cause=req.cause, neighbours=neighbours,
+    neighbours, note = _retrieve_neighbours(req.issue) if req.retrieve else ([], "")
+    plan = build_plan(req.issue, cause=req.cause, neighbours=neighbours,
                       use_llm=req.use_llm)
+    if note:
+        plan["warnings"] = [note]
+    return plan
 
 
 @router.post("/remediation/approve", tags=["remediation"])

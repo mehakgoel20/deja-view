@@ -18,8 +18,7 @@ from __future__ import annotations
 import time
 from concurrent.futures import ThreadPoolExecutor
 
-from .base import (FINDING_GAP, FINDING_HYPOTHESIS, FINDING_RECOMMENDATION,
-                   Agent, Context, Finding)
+from .base import FINDING_GAP, FINDING_HYPOTHESIS, Agent, Context, Finding
 from .investigator import RootCauseInvestigator
 from .specialists import (DependencyAgent, HistoricalIncidentAgent,
                           LogAnalysisAgent, MetricsAnalysisAgent)
@@ -34,8 +33,7 @@ def build_context(text: str, *, window=None, service_graph=None, kb=None,
                   neighbours=None, reported_at=None, use_llm=True,
                   collect_live=True, hints=None) -> Context:
     """Gather every source of evidence once, for all agents to share."""
-    from observability import (TimeWindow, collect_signals, correlate,
-                               utcnow)
+    from observability import TimeWindow, collect_signals, correlate
     from causal import analyse_causally
     from timeline import reconstruct
 
@@ -55,8 +53,10 @@ def build_context(text: str, *, window=None, service_graph=None, kb=None,
              if isinstance(n, dict) and "id" in n]
     causal = analyse_causally(text=text, signals=signals,
                               service_graph=service_graph, neighbours=pairs)
-    tl = reconstruct(signals, window,
-                     reported_at=reported_at or (utcnow() if signals else None),
+    # Only place the report on the timeline when we actually know when it was
+    # made. Defaulting to "now" produced a detection-delay number that looked
+    # precise but measured the age of the signals instead.
+    tl = reconstruct(signals, window, reported_at=reported_at,
                      reported_text=text)
 
     ctx = Context(text=text, window=window, signals=signals,

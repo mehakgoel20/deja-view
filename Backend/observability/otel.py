@@ -95,6 +95,21 @@ class OTelProvider(Provider):
                 continue
             procs = t.get("processes") or {}
             svc = (procs.get(root.get("processID"), {}) or {}).get("serviceName", service)
+            # Parent/child spans give the call direction, which is the one
+            # thing only traces can tell us. Feed it to the dependency graph.
+            edges = []
+            by_id = {s.get("spanID"): s for s in spans}
+            for s in spans:
+                for ref in s.get("references", []) or []:
+                    if ref.get("refType") != "CHILD_OF":
+                        continue
+                    parent = by_id.get(ref.get("spanID"))
+                    if not parent:
+                        continue
+                    p_svc = (procs.get(parent.get("processID"), {}) or {}).get("serviceName")
+                    c_svc = (procs.get(s.get("processID"), {}) or {}).get("serviceName")
+                    if p_svc and c_svc and p_svc != c_svc:
+                        edges.append((p_svc, c_svc))
             out.append({
                 "trace_id": t.get("traceID"),
                 "service": svc,
@@ -102,6 +117,7 @@ class OTelProvider(Provider):
                 "at": at,
                 "duration_ms": round(root.get("duration", 0) / 1000, 1),
                 "span_count": len(spans),
+                "edges": edges,
             })
         return out
 
@@ -117,9 +133,11 @@ class OTelProvider(Provider):
         for t in traces:
             key = (t.get("service"), t.get("operation"))
             g = grouped.setdefault(key, {"count": 0, "at": t["at"], "trace_ids": [],
-                                         "duration_ms": t.get("duration_ms")})
+                                         "duration_ms": t.get("duration_ms"),
+                                         "edges": set()})
             g["count"] += 1
             g["at"] = min(g["at"], t["at"])
+            g["edges"].update(t.get("edges") or [])
             if len(g["trace_ids"]) < 5:
                 g["trace_ids"].append(t.get("trace_id"))
 
@@ -137,6 +155,10 @@ class OTelProvider(Provider):
                 service=svc,
                 detail={"operation": op, "count": g["count"],
                         "trace_ids": g["trace_ids"],
-                        "duration_ms": g["duration_ms"], "backend": self.flavour},
+                        "duration_ms": g["duration_ms"], "backend": self.flavour,
+                        # consumed by ServiceGraph.from_signals
+                        "calls": sorted(g["edges"]),
+                        "caller": (sorted(g["edges"])[0][0] if g["edges"] else None),
+                        "callee": (sorted(g["edges"])[0][1] if g["edges"] else None)},
             ))
         return signals

@@ -237,6 +237,26 @@ def _code_locations(text: str, neighbours) -> list[dict]:
     return [{"location": k, "why": v, "source": "evidence"} for k, v in list(found.items())[:6]]
 
 
+# Most actions a responder can actually hold in their head at once. Beyond
+# this the plan stops being a plan.
+PER_HORIZON_CAP = {HORIZON_IMMEDIATE: 4, HORIZON_CORRECTIVE: 4,
+                   HORIZON_PREVENTIVE: 4, HORIZON_CONFIG: 3}
+
+
+def _cap_per_horizon(actions: list[Action]) -> list[Action]:
+    """Keep the best few per horizon, preferring precedent then lower risk."""
+    rank = {"precedent": 0, "playbook": 1, "llm": 2}
+    risk_rank = {RISK_LOW: 0, RISK_MEDIUM: 1, RISK_HIGH: 2}
+    kept: list[Action] = []
+    for horizon, cap in PER_HORIZON_CAP.items():
+        group = [a for a in actions if a.horizon == horizon]
+        group.sort(key=lambda a: (rank.get(a.source, 3), risk_rank.get(a.risk, 1)))
+        kept += group[:cap]
+    # anything with an unexpected horizon is kept rather than silently dropped
+    kept += [a for a in actions if a.horizon not in PER_HORIZON_CAP]
+    return kept
+
+
 def _dedupe(actions: list[Action]) -> list[Action]:
     seen, out = set(), []
     for a in actions:
@@ -275,7 +295,7 @@ def build_plan(text: str, cause: str = "", ctx=None, neighbours=None,
             code_locations.append({"location": c["location"], "why": c["why"],
                                    "source": "model-suggested"})
 
-    actions = _dedupe(actions)
+    actions = _cap_per_horizon(_dedupe(actions))
     order = {HORIZON_IMMEDIATE: 0, HORIZON_CORRECTIVE: 1,
              HORIZON_PREVENTIVE: 2, HORIZON_CONFIG: 3}
     risk_order = {RISK_LOW: 0, RISK_MEDIUM: 1, RISK_HIGH: 2}

@@ -119,11 +119,11 @@ class ServiceGraph:
         for s in signals:
             if s.service:
                 g.add_service(s.service)
-            caller = (s.detail or {}).get("caller")
-            callee = (s.detail or {}).get("callee") or s.service
-            if caller and callee and caller != callee:
-                g.add_dependency(caller, callee, "sync")
-                g.g.edges[caller, callee]["inferred"] = True
+            # Trace signals carry every caller -> callee pair they observed.
+            for caller, callee in (s.detail or {}).get("calls", []) or []:
+                if caller and callee and caller != callee:
+                    g.add_dependency(caller, callee, "sync")
+                    g.g.edges[caller, callee]["inferred"] = True
         return g
 
     # ---- queries --------------------------------------------------------
